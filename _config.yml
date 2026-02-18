@@ -1,4 +1,5 @@
 title: "Philip A. LeMaitre"
+logo: "/assets/images/IMG_0184.JPG"
 description: "Doctoral Researcher • Notes on quantum ML, agency, and foundations"
 url: "https://antiphoton47.github.io"   # change to your domain later
 baseurl: ""
@@ -6,11 +7,17 @@ baseurl: ""
 remote_theme: "mmistakes/minimal-mistakes@4.26.2"
 minimal_mistakes_skin: "dark"           # try: default, air, dark, neon, mint, sunrise
 
+permalink: /:categories/:title/
+breadcrumbs: true
+
+enable_copy_code_button: true
+
 plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-seo-tag
   - jekyll-include-cache
+  - jekyll-archives
 
 author:
   name: "Philip A. LeMaitre"
@@ -39,9 +46,10 @@ defaults:
       layout: single
       author_profile: true
       read_time: true
-      comments: false
+      comments: true
       share: true
       related: true
+      show_date: true
   - scope:
       path: ""
       type: pages
