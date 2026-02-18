@@ -1,0 +1,69 @@
+title: "Your Name"
+description: "Researcher • Notes on quantum ML, agency, and foundations"
+url: "https://your-username.github.io"   # change to your domain later
+baseurl: ""
+
+remote_theme: "mmistakes/minimal-mistakes@4.26.2"
+minimal_mistakes_skin: "dark"           # try: default, air, dark, neon, mint, sunrise
+
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-include-cache
+
+author:
+  name: "Your Name"
+  avatar: "/assets/images/avatar.png"
+  bio: "Research interests: quantum ML, foundations, agency, thermodynamics of learning."
+  location: "Vienna"
+  links:
+    - label: "Email"
+      icon: "fas fa-envelope"
+      url: "mailto:you@domain.com"
+    - label: "GitHub"
+      icon: "fab fa-github"
+      url: "https://github.com/your-username"
+    - label: "Scholar"
+      icon: "fas fa-graduation-cap"
+      url: "https://scholar.google.com/"
+    - label: "ORCID"
+      icon: "fab fa-orcid"
+      url: "https://orcid.org/"
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      comments: false
+      share: true
+      related: true
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+
+paginate: 8
+paginate_path: /page:num/
+search: true
+
+feed:
+  path: feed.xml
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  math_engine: mathjax
+  syntax_highlighter: rouge
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
