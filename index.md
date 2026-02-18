@@ -1,14 +1,14 @@
 ---
 layout: home
 author_profile: true
-title: "Home"
+title: "Oh Quantum! My Quantum!"
 header:
   overlay_filter: "0.5"
-  overlay_image: /assets/images/header.jpg
-excerpt: "Short tagline goes here."
+  overlay_image: /assets/images/M42_SpitzerCzernetz_1080.JPG
+excerpt: "What I hate is ignorance, smallness of imagination, the eye that sees no farther than its own lashes. All things are possible. Who you are is limited by who you think you are. - Egyptian Book of the Dead"
 ---
 
-Welcome! This is my personal website and blog.
+Welcome to my personal website and blog, dear Qubitzers!
 
 {% include email_subscribe.html %}
 
