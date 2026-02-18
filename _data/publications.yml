@@ -1,0 +1,9 @@
+- title: "Example Paper Title"
+  authors: "Your Name, Coauthor One, Coauthor Two"
+  venue: "Journal / Conference"
+  year: 2025
+  links:
+    - label: "PDF"
+      url: "https://arxiv.org/"
+    - label: "Code"
+      url: "https://github.com/"

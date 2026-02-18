@@ -1,0 +1,13 @@
+main:
+  - title: "About"
+    url: /about/
+  - title: "Research"
+    url: /research/
+  - title: "Publications"
+    url: /publications/
+  - title: "Media"
+    url: /media/
+  - title: "Blog"
+    url: /posts/
+  - title: "Contact"
+    url: /contact/
