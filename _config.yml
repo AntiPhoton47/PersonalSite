@@ -1,6 +1,6 @@
-title: "Your Name"
-description: "Researcher • Notes on quantum ML, agency, and foundations"
-url: "https://your-username.github.io"   # change to your domain later
+title: "Philip A. LeMaitre"
+description: "Doctoral Researcher • Notes on quantum ML, agency, and foundations"
+url: "https://antiphoton47.github.io"   # change to your domain later
 baseurl: ""
 
 remote_theme: "mmistakes/minimal-mistakes@4.26.2"
@@ -13,23 +13,23 @@ plugins:
   - jekyll-include-cache
 
 author:
-  name: "Your Name"
+  name: "Philip A. LeMaitre"
   avatar: "/assets/images/avatar.png"
-  bio: "Research interests: quantum ML, foundations, agency, thermodynamics of learning."
-  location: "Vienna"
+  bio: "Research Interests: Quantum Machine Learning, Quantum Foundations, Artificial Intelligence, Quantum Gravity, Relativistic Quantum Information."
+  location: "Earth"
   links:
     - label: "Email"
       icon: "fas fa-envelope"
-      url: "mailto:you@domain.com"
+      url: "mailto:Philip.Lemaitre@uibk.ac.at"
     - label: "GitHub"
       icon: "fab fa-github"
-      url: "https://github.com/your-username"
-    - label: "Scholar"
+      url: "https://github.com/AntiPhoton47"
+    - label: "Google Scholar"
       icon: "fas fa-graduation-cap"
-      url: "https://scholar.google.com/"
+      url: "https://scholar.google.ca/citations?hl=en&user=mw53fQgAAAAJ"
     - label: "ORCID"
       icon: "fab fa-orcid"
-      url: "https://orcid.org/"
+      url: "https://orcid.org/0000-0002-0414-5202"
 
 defaults:
   - scope:
