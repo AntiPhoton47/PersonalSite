@@ -68,6 +68,18 @@ defaults:
       layout: single
       author_profile: true
 
+repository: AntiPhoton47/PersonalSite
+
+comments:
+  provider: "giscus"
+  giscus:
+    repo_id: "R_kgDORS3efA"
+    category_name: "Blog Comments"
+    category_id: "DIC_kwDORS3efM4C2vOU"
+    discussion_term: "pathname"
+    reactions_enabled: "1"
+    theme: "dark"
+
 paginate: 8
 paginate_path: /page:num/
 search: true
