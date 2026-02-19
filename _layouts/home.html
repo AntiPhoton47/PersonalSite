@@ -12,11 +12,11 @@ layout: archive
   {% assign posts = site.posts %}
 {% endif %}
 
-{% include bottom-hero.html %}
-
 {% assign entries_layout = page.entries_layout | default: 'list' %}
 <div class="entries-{{ entries_layout }}">
   {% include documents-collection.html entries=posts type=entries_layout %}
 </div>
 
 {% include paginator.html %}
+
+{% include bottom-hero.html %}
