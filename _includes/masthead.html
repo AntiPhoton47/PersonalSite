@@ -12,6 +12,11 @@
           {% if site.subtitle %}<span class="site-subtitle">{{ site.subtitle | escape_once | strip }}</span>{% endif %}
         </a>
         <ul class="visible-links">
+          <li class="masthead__menu-item">
+            <button class="btn btn--inverse btn--small" onclick="toggleTheme()">
+              🌗
+            </button>
+          </li>
           {%- for link in site.data.navigation.main -%}
             <li class="masthead__menu-item">
               <a
@@ -20,11 +25,6 @@
                 {% if link.target %} target="{{ link.target }}"{% endif %}
               >{{ link.title }}</a>
             </li>
-          <li class="masthead__menu-item">
-            <button class="btn btn--inverse btn--small" onclick="toggleTheme()">
-              🌗
-            </button>
-          </li>
           {%- endfor -%}
         </ul>
         {% if site.search == true %}
