@@ -20,6 +20,11 @@ plugins:
   - jekyll-include-cache
   - jekyll-archives
   - jekyll-scholar
+  - jekyll-webmention_io
+
+webmentions:
+  username: "YOUR_WEBMENTION_IO_USERNAME"
+  # optional caching / limits available—see plugin docs
 
 author:
   name: "Philip A. LeMaitre"
