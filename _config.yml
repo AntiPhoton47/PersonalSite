@@ -68,6 +68,9 @@ defaults:
       layout: single
       author_profile: true
 
+lunr:
+  search_within_pages: true
+
 repository: AntiPhoton47/PersonalSite
 
 comments:
