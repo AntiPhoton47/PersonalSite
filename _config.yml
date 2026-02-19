@@ -79,6 +79,16 @@ scholar:
   sort_by: year,month
   order: descending
 
+jekyll-archives:
+  enabled: []
+  layout: archive
+  permalinks:
+    year: '/:year/'
+    month: '/:year/:month/'
+    day: '/:year/:month/:day/'
+    tag: '/tag/:name/'
+    category: '/category/:name/'
+
 repository: AntiPhoton47/PersonalSite
 
 comments:
