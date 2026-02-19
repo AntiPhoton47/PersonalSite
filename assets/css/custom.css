@@ -66,21 +66,9 @@
   position: relative;         /* keep it in flow */
   overflow: hidden;
   z-index: 0;                 /* prevent overlapping other elements */
-}
-
-.bottom-hero-fullbleed .page__hero--overlay {
-  overflow: hidden;
-}
-  margin-right: -50vw;
-  width: 100vw;
-  margin-top: 2rem;
-}
-
-.bottom-hero-fullbleed .page__hero--overlay {
   min-height: 320px;
   display: flex;
   align-items: flex-end;
-  z-index: 0;
 }
 
 .sidebar,
