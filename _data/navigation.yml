@@ -7,6 +7,8 @@ main:
     url: /publications/
   - title: "Media"
     url: /media/
+  - title: "Outreach"
+    url: /outreach/
   - title: "Blog"
     url: /posts/
   - title: "Contact"
