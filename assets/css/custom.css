@@ -71,9 +71,16 @@
   align-items: flex-end;
 }
 
-.sidebar,
-.page__meta,
-.page__content {
+/* Ensure the bottom hero never overlays sidebar/author profile */
+.bottom-hero-fullbleed {
+  clear: both;
   position: relative;
-  z-index: 1;
+  z-index: 0;
+}
+
+/* Keep overlay internals from creating stacking weirdness */
+.bottom-hero-fullbleed .page__hero--overlay,
+.bottom-hero-fullbleed .page__hero--overlay * {
+  position: relative;
+  z-index: 0;
 }
