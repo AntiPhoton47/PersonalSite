@@ -7,7 +7,6 @@ baseurl: ""
 remote_theme: "mmistakes/minimal-mistakes@4.26.2"
 minimal_mistakes_skin: "dark"           # try: default, air, dark, neon, mint, sunrise
 
-permalink: /:categories/:title/
 breadcrumbs: true
 
 enable_copy_code_button: true
@@ -20,6 +19,7 @@ plugins:
   - jekyll-seo-tag
   - jekyll-include-cache
   - jekyll-archives
+  - jekyll-scholar
 
 author:
   name: "Philip A. LeMaitre"
@@ -70,6 +70,14 @@ defaults:
 
 lunr:
   search_within_pages: true
+
+scholar:
+  style: apa
+  locale: en
+  bibliography: assets/files/publications.bib
+  bibliography_template: bib
+  sort_by: year,month
+  order: descending
 
 repository: AntiPhoton47/PersonalSite
 
