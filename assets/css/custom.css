@@ -50,3 +50,14 @@
   font-size: 1rem;
   opacity: 0.9;
 }
+
+/* Break out of the archive/content width so it spans full page width */
+.bottom-hero-fullbleed {
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  width: 100vw;
+  margin-top: 2rem;
+}
