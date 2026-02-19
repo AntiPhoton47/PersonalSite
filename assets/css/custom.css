@@ -52,12 +52,32 @@
 }
 
 /* Break out of the archive/content width so it spans full page width */
+
 .bottom-hero-fullbleed {
-  position: relative;
-  left: 50%;
-  right: 50%;
-  margin-left: -50vw;
+  margin-top: 2rem;
+  margin-bottom: 0;          /* optional */
+  width: 100%;
+}
+
+.bottom-hero-fullbleed .page__hero--overlay {
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  position: relative;         /* keep it in flow */
+  overflow: hidden;
+  z-index: 0;                 /* prevent overlapping other elements */
+}
+
+.bottom-hero-fullbleed .page__hero--overlay {
+  overflow: hidden;
+}
   margin-right: -50vw;
   width: 100vw;
   margin-top: 2rem;
+}
+
+.bottom-hero-fullbleed .page__hero--overlay {
+  min-height: 320px;
+  display: flex;
+  align-items: flex-end;
 }
