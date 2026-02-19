@@ -1,0 +1,15 @@
+{% if page.bottom_hero_image and page.bottom_hero_text %}
+<section class="page__hero page__hero--overlay"
+  style="background-image: url('{{ page.bottom_hero_image | relative_url }}');">
+  <div class="wrapper">
+    <h2 class="page__title" style="margin-bottom: 0.5rem;">
+      {{ page.bottom_hero_text }}
+    </h2>
+    {% if page.bottom_hero_author %}
+      <p class="page__lead" style="margin-top: 0;">
+        — {{ page.bottom_hero_author }}
+      </p>
+    {% endif %}
+  </div>
+</section>
+{% endif %}
