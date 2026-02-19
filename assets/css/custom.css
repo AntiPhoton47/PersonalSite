@@ -1,33 +1,52 @@
-.home-quote-block {
-  margin-top: 2rem;
+.bottom-overlay-banner {
+  position: relative;
+  margin-top: 2.5rem;
+  border-radius: 1rem;
+  overflow: hidden;
 }
 
-.home-quote-image {
-  width: 100%;
-  height: auto;
-  border-radius: 0.75rem;
-  display: block;
+/* Use a fixed height to mimic a hero/splash header */
+.bottom-overlay-banner__image {
+  height: 320px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-.home-quote {
-  margin: 1rem auto 0 auto;
-  max-width: 52rem;
-  padding: 1.1rem 1.25rem;
-  border-left: 0.35rem solid rgba(128, 128, 128, 0.6);
-  background: rgba(128, 128, 128, 0.08);
-  border-radius: 0.75rem;
+/* Dark overlay like the header overlay_filter */
+.bottom-overlay-banner__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
 }
 
-.home-quote p {
+/* Quote positioning */
+.bottom-overlay-banner__content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  padding: 1.5rem;
+}
+
+.bottom-overlay-banner__quote {
   margin: 0;
-  font-size: 1.15rem;
-  line-height: 1.6;
-  font-style: italic;
+  max-width: 52rem;
+  color: #fff;
+  border-left: 0.35rem solid rgba(255, 255, 255, 0.65);
+  padding-left: 1rem;
 }
 
-.home-quote footer {
-  margin-top: 0.75rem;
-  font-size: 0.95rem;
-  opacity: 0.85;
-  font-style: normal;
+.bottom-overlay-banner__quote p {
+  margin: 0;
+  font-size: 1.35rem;
+  line-height: 1.35;
+  font-style: italic;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
+}
+
+.bottom-overlay-banner__quote footer {
+  margin-top: 0.6rem;
+  font-size: 1rem;
+  opacity: 0.9;
 }
