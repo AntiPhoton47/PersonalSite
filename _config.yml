@@ -12,6 +12,8 @@ breadcrumbs: true
 
 enable_copy_code_button: true
 
+teaser: /assets/images/Crab_MultiChandra_960.JPG
+
 plugins:
   - jekyll-feed
   - jekyll-sitemap
