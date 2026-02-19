@@ -1,0 +1,33 @@
+.home-quote-block {
+  margin-top: 2rem;
+}
+
+.home-quote-image {
+  width: 100%;
+  height: auto;
+  border-radius: 0.75rem;
+  display: block;
+}
+
+.home-quote {
+  margin: 1rem auto 0 auto;
+  max-width: 52rem;
+  padding: 1.1rem 1.25rem;
+  border-left: 0.35rem solid rgba(128, 128, 128, 0.6);
+  background: rgba(128, 128, 128, 0.08);
+  border-radius: 0.75rem;
+}
+
+.home-quote p {
+  margin: 0;
+  font-size: 1.15rem;
+  line-height: 1.6;
+  font-style: italic;
+}
+
+.home-quote footer {
+  margin-top: 0.75rem;
+  font-size: 0.95rem;
+  opacity: 0.85;
+  font-style: normal;
+}
