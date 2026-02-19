@@ -68,6 +68,15 @@ defaults:
       layout: single
       author_profile: true
 
+social:
+  links:
+    - "https://github.com/AntiPhoton47"
+    - "https://orcid.org/0000-0002-0414-5202"
+    - "https://scholar.google.ca/citations?hl=en&user=mw53fQgAAAAJ"
+    - "www.linkedin.com/in/phil-lemaitre"
+    - "https://bsky.app/profile/contextguy.bsky.social"
+    - "https://x.com/Philontre"
+
 lunr:
   search_within_pages: true
 
