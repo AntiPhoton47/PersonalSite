@@ -8,4 +8,4 @@ permalink: /publications/
 ---
 
 ## BibTeX
-- [Download BibTeX](/assets/files/publications.bib)
+- [Download BibTeX](/assets/bib/publications.bib)
