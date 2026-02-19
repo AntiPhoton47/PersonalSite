@@ -37,6 +37,15 @@ author:
     - label: "ORCID"
       icon: "fab fa-orcid"
       url: "https://orcid.org/0000-0002-0414-5202"
+    - label: "LinkedIn"
+      icon: "fa-brands fa-linkedin-in"
+      url: "www.linkedin.com/in/phil-lemaitre"
+    - label: "BlueSky"
+      icon: "fa-brands fa-bluesky"
+      url: "https://bsky.app/profile/contextguy.bsky.social"
+    - label: "X"
+      icon: "fa-brands fa-x-twitter"
+      url: "https://x.com/Philontre"
 
 defaults:
   - scope:
