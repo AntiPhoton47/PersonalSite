@@ -5,3 +5,28 @@
   };
 </script>
 <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<link id="mm-light" rel="stylesheet" href="{{ '/assets/css/main-light.css' | relative_url }}">
+<link id="mm-dark" rel="stylesheet" href="{{ '/assets/css/main-dark.css' | relative_url }}" disabled>
+
+<script>
+  (function () {
+    const key = "mm-theme";
+    const saved = localStorage.getItem(key);
+    const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const mode = saved || (prefersDark ? "dark" : "light");
+
+    function apply(mode) {
+      document.getElementById("mm-dark").disabled = (mode !== "dark");
+      document.getElementById("mm-light").disabled = (mode === "dark");
+      localStorage.setItem(key, mode);
+    }
+
+    window.toggleTheme = function () {
+      const current = document.getElementById("mm-dark").disabled ? "light" : "dark";
+      apply(current === "light" ? "dark" : "light");
+    };
+
+    apply(mode);
+  })();
+</script>
