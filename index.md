@@ -17,13 +17,17 @@ Posts appear below automatically.
 
 ---
 
-## 
+<div class="bottom-overlay-banner">
+  <div class="bottom-overlay-banner__image"
+       style="background-image: url('{{ '/assets/images/IMG_7705.JPG' | relative_url }}');">
+  </div>
 
-<div class="home-quote-block">
-  <img src="{{ '/assets/images/IMG_7705.JPG' | relative_url }}" alt="Quote background image" class="home-quote-image">
+  <div class="bottom-overlay-banner__overlay"></div>
 
-  <blockquote class="home-quote">
-    <p>“What I hate is ignorance, smallness of imagination, the eye that sees no farther than its own lashes. All things are possible. Who you are is limited by who you think you are.”</p>
-    <footer>— Egyptian Book of the Dead</footer>
-  </blockquote>
+  <div class="bottom-overlay-banner__content">
+    <blockquote class="bottom-overlay-banner__quote">
+      <p>“What I hate is ignorance, smallness of imagination, the eye that sees no farther than its own lashes. All things are possible. Who you are is limited by who you think you are.”</p>
+      <footer>— Egyptian Book of the Dead</footer>
+    </blockquote>
+  </div>
 </div>
