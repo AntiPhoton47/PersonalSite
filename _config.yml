@@ -87,7 +87,7 @@ lunr:
   search_within_pages: true
 
 scholar:
-  style: apa
+  style: assets/csl/my-style.csl
   locale: en
   bibliography: publications.bib
   bibliography_template: bib
