@@ -84,3 +84,33 @@
   position: relative;
   z-index: 0;
 }
+
+.pub-card {
+  padding: 1rem 1.1rem;
+  margin: 1rem 0;
+  border: 1px solid rgba(128,128,128,0.25);
+  border-radius: 0.75rem;
+  background: rgba(128,128,128,0.06);
+}
+
+.pub-citation {
+  font-size: 1.05rem;
+  line-height: 1.5;
+}
+
+.pub-links {
+  margin-top: 0.6rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.pub-abstract {
+  margin-top: 0.8rem;
+}
+.pub-abstract summary {
+  cursor: pointer;
+}
+.pub-abstract p {
+  margin-top: 0.6rem;
+}
