@@ -3,6 +3,8 @@ title: "Research"
 permalink: /research/
 ---
 
+The group I am part of: https://www.uibk.ac.at/en/th-physik/qic-group/
+
 Describe your research themes and projects.
 
 ## Themes
