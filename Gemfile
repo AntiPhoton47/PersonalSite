@@ -6,6 +6,7 @@ group :jekyll_plugins do
   # Minimal Mistakes remote theme requirements
   gem "jekyll-remote-theme"
   gem "jekyll-include-cache"
+  gem "jekyll-feed"
 
   # Your plugins
   gem "jekyll-archives"
