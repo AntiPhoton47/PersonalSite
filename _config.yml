@@ -88,7 +88,7 @@ lunr:
 scholar:
   style: apa
   locale: en
-  bibliography: assets/bib/publications.bib
+  bibliography: publications.bib
   bibliography_template: bib
   sort_by: year,month
   order: descending
