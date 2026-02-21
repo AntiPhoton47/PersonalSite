@@ -85,34 +85,51 @@
   z-index: 0;
 }
 
-.pub-card {
-  padding: 1rem 1.1rem;
-  margin: 1rem 0;
-  border: 1px solid rgba(128,128,128,0.25);
+.pub-item {
+  padding: 0.9rem 1rem;
+  margin: 0.9rem 0;
+  border: 1px solid rgba(128,128,128,0.22);
   border-radius: 0.75rem;
   background: rgba(128,128,128,0.06);
 }
 
-.pub-citation {
-  font-size: 1.05rem;
-  line-height: 1.5;
+.pub-title {
+  font-size: 1.12rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.pub-title a {
+  text-decoration: none;
+}
+
+.pub-meta {
+  margin-top: 0.25rem;
+  font-size: 0.95rem;
+  opacity: 0.9;
+  line-height: 1.4;
+}
+
+.pub-meta .pub-venue {
+  margin-left: 0.4rem;
+}
+
+.pub-meta .pub-year {
+  margin-left: 0.35rem;
 }
 
 .pub-links {
-  margin-top: 0.6rem;
+  margin-top: 0.55rem;
   display: flex;
   flex-wrap: wrap;
   gap: 0.4rem;
 }
 
 .pub-abstract {
-  margin-top: 0.8rem;
+  margin-top: 0.7rem;
 }
 .pub-abstract summary {
   cursor: pointer;
-}
-.pub-abstract p {
-  margin-top: 0.6rem;
 }
 
 .footer-banner {
