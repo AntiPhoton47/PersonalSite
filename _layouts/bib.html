@@ -1,32 +1,56 @@
 ---
 ---
-<div class="pub-card">
-  <div class="pub-citation">
-    {{ reference }}
+
+<div class="pub-item">
+
+  {%- comment -%} Title line {%- endcomment -%}
+  <div class="pub-title">
+    {% if entry.url %}
+      <a href="{{ entry.url }}">{{ entry.title }}</a>
+    {% elsif entry.doi %}
+      <a href="https://doi.org/{{ entry.doi }}">{{ entry.title }}</a>
+    {% else %}
+      {{ entry.title }}
+    {% endif %}
   </div>
 
+  {%- comment -%} Meta line: authors + venue + year {%- endcomment -%}
+  <div class="pub-meta">
+    <span class="pub-authors">{{ entry.author }}</span>
+    {% if entry.journal %}
+      <span class="pub-venue"><em>{{ entry.journal }}</em></span>
+    {% elsif entry.booktitle %}
+      <span class="pub-venue"><em>{{ entry.booktitle }}</em></span>
+    {% elsif entry.publisher %}
+      <span class="pub-venue"><em>{{ entry.publisher }}</em></span>
+    {% endif %}
+    {% if entry.year %}
+      <span class="pub-year">({{ entry.year }})</span>
+    {% endif %}
+  </div>
+
+  {%- comment -%} Optional links row {%- endcomment -%}
   <div class="pub-links">
-    {% if entry.doi %}
-      <a class="btn btn--primary btn--small" href="https://doi.org/{{ entry.doi }}">DOI</a>
-    {% endif %}
-
-    {% if entry.url %}
-      <a class="btn btn--info btn--small" href="{{ entry.url }}">URL</a>
-    {% endif %}
-
-    {% if entry.arxiv %}
-      <a class="btn btn--info btn--small" href="https://arxiv.org/abs/{{ entry.arxiv }}">arXiv</a>
-    {% endif %}
-
     {% if entry.pdf %}
       <a class="btn btn--success btn--small" href="{{ entry.pdf | relative_url }}">PDF</a>
     {% endif %}
+    {% if entry.arxiv %}
+      <a class="btn btn--info btn--small" href="https://arxiv.org/abs/{{ entry.arxiv }}">arXiv</a>
+    {% endif %}
+    {% if entry.doi %}
+      <a class="btn btn--primary btn--small" href="https://doi.org/{{ entry.doi }}">DOI</a>
+    {% endif %}
+    {% if entry.url %}
+      <a class="btn btn--inverse btn--small" href="{{ entry.url }}">Link</a>
+    {% endif %}
   </div>
 
+  {%- comment -%} Optional abstract toggle {%- endcomment -%}
   {% if entry.abstract %}
     <details class="pub-abstract">
-      <summary><strong>Abstract</strong></summary>
-      <p>{{ entry.abstract | markdownify }}</p>
+      <summary>Abstract</summary>
+      <div>{{ entry.abstract | markdownify }}</div>
     </details>
   {% endif %}
+
 </div>
