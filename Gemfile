@@ -18,3 +18,5 @@ end
 
 # Jekyll 4 on Ruby 3 often needs this explicitly
 gem "webrick"
+
+gem "jemoji"
