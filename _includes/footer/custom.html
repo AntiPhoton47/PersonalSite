@@ -1,0 +1,22 @@
+{% if site.footer_banner_image %}
+<section class="footer-banner"
+  style="background-image: url('{{ site.footer_banner_image | relative_url }}');">
+
+  <div class="footer-banner__overlay"></div>
+
+  <div class="footer-banner__content wrapper">
+    {% if site.footer_banner_text %}
+      <h2 class="footer-banner__text">
+        {{ site.footer_banner_text }}
+      </h2>
+    {% endif %}
+
+    {% if site.footer_banner_author %}
+      <p class="footer-banner__author">
+        — {{ site.footer_banner_author }}
+      </p>
+    {% endif %}
+  </div>
+
+</section>
+{% endif %}
