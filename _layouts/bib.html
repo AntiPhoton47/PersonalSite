@@ -1,8 +1,7 @@
 ---
 ---
 
-<div class="pub-item">
-
+<div class="pub-card">
   {%- comment -%} Title line {%- endcomment -%}
   <div class="pub-title">
     {% if entry.url %}
@@ -21,13 +20,19 @@
       <span class="pub-venue"><em>{{ entry.journal }}</em></span>
     {% elsif entry.booktitle %}
       <span class="pub-venue"><em>{{ entry.booktitle }}</em></span>
-    {% elsif entry.publisher %}
-      <span class="pub-venue"><em>{{ entry.publisher }}</em></span>
     {% endif %}
     {% if entry.year %}
       <span class="pub-year">({{ entry.year }})</span>
     {% endif %}
   </div>
+
+  {%- comment -%} Optional abstract toggle {%- endcomment -%}
+  {% if entry.abstract %}
+    <details class="pub-abstract">
+      <summary>Abstract</summary>
+      <div>{{ entry.abstract | markdownify }}</div>
+    </details>
+  {% endif %}
 
   {%- comment -%} Optional links row {%- endcomment -%}
   <div class="pub-links">
@@ -44,13 +49,4 @@
       <a class="btn btn--inverse btn--small" href="{{ entry.url }}">Link</a>
     {% endif %}
   </div>
-
-  {%- comment -%} Optional abstract toggle {%- endcomment -%}
-  {% if entry.abstract %}
-    <details class="pub-abstract">
-      <summary>Abstract</summary>
-      <div>{{ entry.abstract | markdownify }}</div>
-    </details>
-  {% endif %}
-
 </div>
