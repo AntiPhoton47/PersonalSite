@@ -7,6 +7,10 @@ baseurl: ""
 remote_theme: "mmistakes/minimal-mistakes@4.26.2"
 minimal_mistakes_skin: "dark"           # try: default, air, dark, neon, mint, sunrise
 
+footer_banner_image: /assets/images/IMG_7705.JPG
+footer_banner_text: "What I hate is ignorance, smallness of imagination, the eye that sees no farther than its own lashes. All things are possible. Who you are is limited by who you think you are."
+footer_banner_author: "Egyptian Book of the Dead"
+
 breadcrumbs: true
 
 enable_copy_code_button: true
