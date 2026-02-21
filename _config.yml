@@ -26,6 +26,7 @@ plugins:
   - jekyll-archives
   - jekyll-scholar
   - jekyll-webmention_io
+  - jemoji
 
 webmentions:
   username: "YOUR_WEBMENTION_IO_USERNAME"
