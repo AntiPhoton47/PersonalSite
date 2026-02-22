@@ -1,7 +1,7 @@
 title: "Philip A. LeMaitre"
 logo: "/assets/images/IMG_0184.JPG"
 description: "Doctoral Researcher • Notes on quantum ML, agency, and foundations"
-url: "https://antiphoton47.github.io"   # change to your domain later
+url: "https://phillemaitre.com"   # change to your domain later
 baseurl: ""
 
 remote_theme: "mmistakes/minimal-mistakes@4.26.2"
