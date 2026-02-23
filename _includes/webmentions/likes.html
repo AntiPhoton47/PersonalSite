@@ -1,0 +1,12 @@
+{% assign url = include.url %}
+{% assign likes = webmentions_likes url %}
+{% if likes and likes.size > 0 %}
+  <h4>Likes</h4>
+  <div class="wm-grid">
+    {% for wm in likes %}
+      <a class="wm-face" href="{{ wm.author.url | default: wm.url }}" rel="nofollow">
+        {% if wm.author.photo %}<img src="{{ wm.author.photo }}" alt="{{ wm.author.name | escape }}">{% endif %}
+      </a>
+    {% endfor %}
+  </div>
+{% endif %}
