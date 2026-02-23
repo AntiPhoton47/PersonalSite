@@ -1,0 +1,20 @@
+{% assign url = include.url %}
+{% assign replies = webmentions_replies url %}
+{% if replies and replies.size > 0 %}
+  <h4>Replies</h4>
+  <div class="wm-list">
+    {% for wm in replies %}
+      <div class="wm-item">
+        <div class="wm-meta">
+          {% if wm.author.photo %}<img class="wm-avatar" src="{{ wm.author.photo }}" alt="">{% endif %}
+          <strong>{{ wm.author.name }}</strong>
+          {% if wm.published %}<span class="wm-date">{{ wm.published }}</span>{% endif %}
+          <a href="{{ wm.url }}" rel="nofollow">permalink</a>
+        </div>
+        <div class="wm-content">
+          {{ wm.content.html | default: wm.content.text | default: wm.summary | default: wm.name }}
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+{% endif %}
