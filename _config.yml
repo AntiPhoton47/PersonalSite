@@ -28,12 +28,32 @@ plugins:
   - jekyll-webmention_io
   - jemoji
 
-
 webmentions:
   username: "phillemaitre.com"
   token: "v1fVrE3TpR2IkBl01MxfaQ"
   # Optional: keep builds fast and avoid huge fetches
   limit: 200
+  cache_folder: .cache             # commit this folder or cache it in Actions
+  max_attempts: 5
+  templates:
+    count: _includes/webmentions/count.html
+    likes: _includes/webmentions/likes.html
+    reposts: _includes/webmentions/reposts.html
+    replies: _includes/webmentions/replies.html
+    links: _includes/webmentions/links.html
+    posts: _includes/webmentions/posts.html
+    webmentions: _includes/webmentions/webmentions.html
+  bad_uri_policy:
+    unsupported:
+      policy: ban
+    error:
+      policy: ignore
+    failure:
+      policy: retry
+      retry_delay: [ 1, 12, 48, 120 ]
+      max_retries: 5
+    whitelist:
+      - "^https://brid.gy/publish/"
 
 author:
   name: "Philip A. LeMaitre"
