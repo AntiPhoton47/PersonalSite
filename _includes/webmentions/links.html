@@ -1,0 +1,13 @@
+{% assign url = include.url %}
+{% assign links = webmentions_links url %}
+{% if links and links.size > 0 %}
+  <h4>Mentions</h4>
+  <ul>
+    {% for wm in links %}
+      <li>
+        <a href="{{ wm.url }}" rel="nofollow">{{ wm.name | default: wm.url }}</a>
+        {% if wm.author and wm.author.name %} — {{ wm.author.name }}{% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+{% endif %}
