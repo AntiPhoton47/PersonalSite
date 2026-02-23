@@ -1,5 +1,6 @@
 ---
 layout: home
+toc: false
 author_profile: true
 title: "Oh Quantum! My Quantum!"
 header:
@@ -16,6 +17,5 @@ Welcome to my personal website and blog, dear Qubitzers!
 {% include email_subscribe.html %}
 
 ## Latest posts
-Posts appear below automatically.
 
 ---
