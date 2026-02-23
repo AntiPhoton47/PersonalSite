@@ -97,6 +97,7 @@ defaults:
       show_date: true
       toc: true
       toc_sticky: true
+      show_blog_archive: true
   - scope:
       path: ""
       type: pages
