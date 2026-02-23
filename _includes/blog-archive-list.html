@@ -1,0 +1,17 @@
+{% assign groups = site.posts | group_by_exp: "p", "p.date | date: '%Y-%m'" %}
+
+<div class="blog-archive-widget">
+  <h4 class="nav__title">Archive</h4>
+  <ul class="blog-archive-list">
+    {% for g in groups %}
+      {% assign year = g.name | slice: 0, 4 %}
+      {% assign month = g.name | slice: 5, 2 %}
+      {% assign label = g.items[0].date | date: "%B %Y" %}
+      <li>
+        <a href="{{ '/blog/' | append: year | append: '/' | append: month | append: '/' | relative_url }}">
+          {{ label }}
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</div>
