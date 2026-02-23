@@ -11,6 +11,10 @@
 <link id="mm-light" rel="stylesheet" href="{{ '/assets/css/main-light.css' | relative_url }}">
 <link id="mm-dark" rel="stylesheet" href="{{ '/assets/css/main-dark.css' | relative_url }}" disabled>
 
+{% if site.webmentions %}
+  {% webmentions_head %}
+{% endif %}
+
 <script>
   (function () {
     const key = "mm-theme";
