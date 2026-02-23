@@ -28,9 +28,12 @@ plugins:
   - jekyll-webmention_io
   - jemoji
 
+
 webmentions:
-  username: "YOUR_WEBMENTION_IO_USERNAME"
-  # optional caching / limits available—see plugin docs
+  username: "phillemaitre.com"
+  token: "v1fVrE3TpR2IkBl01MxfaQ"
+  # Optional: keep builds fast and avoid huge fetches
+  limit: 200
 
 author:
   name: "Philip A. LeMaitre"
