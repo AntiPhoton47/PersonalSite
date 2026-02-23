@@ -1,0 +1,7 @@
+{% assign url = include.url %}
+{% assign count = webmentions_count url %}
+{% if count and count > 0 %}
+  <h3>Reactions & Replies ({{ count }})</h3>
+{% else %}
+  <h3>Reactions & Replies</h3>
+{% endif %}
