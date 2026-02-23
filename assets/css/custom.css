@@ -169,3 +169,42 @@
   margin-top: 0.5rem;
   opacity: 0.9;
 }
+
+.webmentions h4 { margin-top: 1rem; }
+
+.wm-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.wm-face img {
+  width: 36px;
+  height: 36px;
+  border-radius: 999px;
+  object-fit: cover;
+  display: block;
+}
+
+.wm-list .wm-item {
+  padding: 0.75rem 0.9rem;
+  margin: 0.6rem 0;
+  border: 1px solid rgba(128,128,128,0.22);
+  border-radius: 0.75rem;
+  background: rgba(128,128,128,0.06);
+}
+
+.wm-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+  opacity: 0.95;
+}
+
+.wm-avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  object-fit: cover;
+}
