@@ -1,0 +1,9 @@
+{% assign url = include.url | default: page.url | absolute_url %}
+<div class="webmentions">
+  {% include webmentions/count.html url=url %}
+
+  {% include webmentions/likes.html url=url %}
+  {% include webmentions/reposts.html url=url %}
+  {% include webmentions/replies.html url=url %}
+  {% include webmentions/links.html url=url %}
+</div>
