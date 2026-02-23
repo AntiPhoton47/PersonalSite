@@ -1,0 +1,12 @@
+{% assign url = include.url %}
+{% assign reposts = webmentions_reposts url %}
+{% if reposts and reposts.size > 0 %}
+  <h4>Reposts</h4>
+  <div class="wm-grid">
+    {% for wm in reposts %}
+      <a class="wm-face" href="{{ wm.author.url | default: wm.url }}" rel="nofollow">
+        {% if wm.author.photo %}<img src="{{ wm.author.photo }}" alt="{{ wm.author.name | escape }}">{% endif %}
+      </a>
+    {% endfor %}
+  </div>
+{% endif %}
