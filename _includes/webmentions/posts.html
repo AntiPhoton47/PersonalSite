@@ -1,0 +1,8 @@
+{% assign url = include.url %}
+{% assign posts = webmentions_posts url %}
+{% if posts and posts.size > 0 %}
+  <h4>All</h4>
+  {% for wm in posts %}
+    <p><a href="{{ wm.url }}" rel="nofollow">{{ wm.name | default: wm.url }}</a></p>
+  {% endfor %}
+{% endif %}
