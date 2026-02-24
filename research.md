@@ -21,13 +21,24 @@ I love physics.
 
 ## Publications
 
+Below is a list of my publications, with the arXiv versions [here](https://arxiv.org/search/?searchtype=author&query=LeMaitre%2C+P+A).
+
 {% bibliography %}
 
-## BibTeX
-- [Download BibTeX](/_bibliography/publications.bib)
+My publication list is also available to download as a [BibTeX](/_bibliography/publications.bib) file.
+
+## Publication Codes
+
+The following publications have an associated GitHub repository that contains the code used to obtain some or all of the results and to generate the plots:
+- A Universal Quantum Computer from Relativistic Motion \ [repo](https://github.com/AntiPhoton47/RVQC)
+- Harvesting Contextuality from the Vacuum \ [repo](https://github.com/AntiPhoton47/Contextuality-Harvesting)
+- Gaussian Basis Functions for a Polymer Self-Consistent Field Theory of Atoms \ [repo](https://github.com/AntiPhoton47/quantum-chem)
+- On the Origins of Spontaneous Spherical Symmetry-Breaking in Open-Shell Atoms Through Polymer Self-Consistent Field Theory \ [repo](https://github.com/AntiPhoton47/quantum-chem)
+- Multi-Excitation Projective Simulation with a Many-Body Physics Inspired Inductive Bias \ [repo](https://github.com/MariusKrumm/ManyBodyMEPS)
 
 ## Current Projects
-[Add sections with links to papers, code, and blog posts.]: #
+
+
 
 ## Conference Talks
 - 15th Relativistic Quantum Information North Conference: [A Universal Quantum Computer From Relativistic Motion](https://www.youtube.com/live/pAlDsCJH-ds?si=Mc8rZPqEzI948X2d) (3:26:54) / [slides](/assets/files/RVQCNapoli2025.pptx)
@@ -41,6 +52,3 @@ I love physics.
 ## Conference Posters
 - QISS 2025 Conference: A Universal Quantum Computer from Relativistic Motion / [poster](/assets/files/RVQC_QISS_2025_Poster.pdf)
 - 6th Seefeld Quantum Information Workshop: Quantum Multi-Excitation Projective Simulation / [poster](/assets/files/Quantum_MEPS_Seefeld_Poster.pdf)
-
-[## Videos]: #
-[Embed YouTube/Vimeo (replace the URL): <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allowfullscreen></iframe>]: #
