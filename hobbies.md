@@ -12,3 +12,21 @@ permalink: /hobbies/
 
 
 ## Books
+
+
+## Movies
+
+
+## Opera
+
+
+## Art
+
+
+## Painting & Sketching
+
+
+## Writing
+
+
+## Gaming
