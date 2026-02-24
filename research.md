@@ -30,8 +30,8 @@ I love physics.
 [Add sections with links to papers, code, and blog posts.]: #
 
 ## Conference Talks
-- 15th Relativistic Quantum Information North Conference: [A Universal Quantum Computer From Relativistic Motion](https://www.youtube.com/live/pAlDsCJH-ds?si=Mc8rZPqEzI948X2d)(3:26:54) / [slides](#)
-- 14th Relativistic Quantum Information North Conference: [A Universal Quantum Computer From Relativistic Motion](https://www.youtube.com/live/catSoE4G3WM?si=MojXIYPkMvzSPx70)(32:48) / [slides](#)
+- 15th Relativistic Quantum Information North Conference: [A Universal Quantum Computer From Relativistic Motion](https://www.youtube.com/live/pAlDsCJH-ds?si=Mc8rZPqEzI948X2d) (3:26:54) / [slides](#)
+- 14th Relativistic Quantum Information North Conference: [A Universal Quantum Computer From Relativistic Motion](https://www.youtube.com/live/catSoE4G3WM?si=MojXIYPkMvzSPx70) (32:48) / [slides](#)
 - Innsbruck-Konstanz-Hannover Meeting on Physics and Philosophy [slides](#)
 - DPG Spring Meeting 2024: A Multi-Excitation Projective Simulation Agent [slides](#)
 - 36th Symposium on Chemical Physics: Spontaneous Spherical Symmetry-Breaking in Open-Shell Atoms Through Polymer Self-Consistent Field Theory [slides](#)
