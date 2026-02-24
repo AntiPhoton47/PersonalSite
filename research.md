@@ -30,17 +30,17 @@ I love physics.
 [Add sections with links to papers, code, and blog posts.]: #
 
 ## Conference Talks
-- 15th Relativistic Quantum Information North Conference: [A Universal Quantum Computer From Relativistic Motion](https://www.youtube.com/live/pAlDsCJH-ds?si=Mc8rZPqEzI948X2d) (3:26:54) / [slides](#)
-- 14th Relativistic Quantum Information North Conference: [A Universal Quantum Computer From Relativistic Motion](https://www.youtube.com/live/catSoE4G3WM?si=MojXIYPkMvzSPx70) (32:48) / [slides](#)
-- Innsbruck-Konstanz-Hannover Meeting on Physics and Philosophy [slides](#)
-- DPG Spring Meeting 2024: A Multi-Excitation Projective Simulation Agent [slides](#)
-- 36th Symposium on Chemical Physics: Spontaneous Spherical Symmetry-Breaking in Open-Shell Atoms Through Polymer Self-Consistent Field Theory [slides](#)
-- 2022 Canadian Association of Physicists Congress: Atomic Shell Structure in a Polymer-Based Approach to Orbital-Free Density-Functional Theory [slides](#)
-- Canadian Undergraduate Physics Conference 2019: Thin-Shells as Neutron Stars: A Simple Stellar Model With Great Insight [slides](#)
+- 15th Relativistic Quantum Information North Conference: [A Universal Quantum Computer From Relativistic Motion](https://www.youtube.com/live/pAlDsCJH-ds?si=Mc8rZPqEzI948X2d) (3:26:54) / [slides](/assets/files/RVQCNapoli2025.pptx)
+- 14th Relativistic Quantum Information North Conference: [A Universal Quantum Computer From Relativistic Motion](https://www.youtube.com/live/catSoE4G3WM?si=MojXIYPkMvzSPx70) (32:48) / [slides](/assets/files/RQMLPrague2024.pptx)
+- Innsbruck-Konstanz-Hannover Meeting on Physics and Philosophy [slides](/assets/files/)
+- DPG Spring Meeting 2024: A Multi-Excitation Projective Simulation Agent [slides](/assets/files/MEPS DPG Presentation.pptx)
+- 36th Symposium on Chemical Physics: Spontaneous Spherical Symmetry-Breaking in Open-Shell Atoms Through Polymer Self-Consistent Field Theory [slides](/assets/files/UW 36th Symposium on Chemical Physics Presentation.pptx)
+- 2022 Canadian Association of Physicists Congress: Atomic Shell Structure in a Polymer-Based Approach to Orbital-Free Density-Functional Theory [slides](/assets/files/CAP 2022 Presentation.pptx)
+- Canadian Undergraduate Physics Conference 2019: Thin-Shells as Neutron Stars: A Simple Stellar Model With Great Insight [slides](/assets/files/CUPC Presentation.pptx)
 
 ## Conference Posters
-- QISS 2025 Conference: A Universal Quantum Computer from Relativistic Motion / [poster](#)
-- 6th Seefeld Quantum Information Workshop: Quantum Multi-Excitation Projective Simulation / [poster](#)
+- QISS 2025 Conference: A Universal Quantum Computer from Relativistic Motion / [poster](/assets/files/RVQC QISS 2025 Poster.pdf)
+- 6th Seefeld Quantum Information Workshop: Quantum Multi-Excitation Projective Simulation / [poster](/assets/files/Quantum MEPS Seefeld Poster.pdf)
 
 [## Videos]: #
 [Embed YouTube/Vimeo (replace the URL): <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video player" frameborder="0" allowfullscreen></iframe>]: #
