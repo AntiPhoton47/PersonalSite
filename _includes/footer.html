@@ -18,7 +18,7 @@
 
     {% unless site.atom_feed.hide %}
       <li><a href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ '/feed.xml' | relative_url }}{% endif %}"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].feed_label | default: "Feed" }}</a></li>
-      <li><a href="{{ '/sitemap.xml' | relative_url }}"><i class="fas fa-sitemap" aria-hidden="true"></i> Sitemap</a></li>
+      <li><a href="{{ '/sitemap/' | relative_url }}"><i class="fas fa-sitemap" aria-hidden="true"></i> Sitemap</a></li>
       <li><a href="{{ '/privacy/' | relative_url }}"><i class="fas fa-shield-alt" aria-hidden="true"></i> Privacy</a></li>
     {% endunless %}
   </ul>
