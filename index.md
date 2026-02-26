@@ -13,6 +13,4 @@ Welcome to my personal website and blog, dear Qubitzers!
 
 {% include email_subscribe.html %}
 
-## Latest posts
-
 ---
