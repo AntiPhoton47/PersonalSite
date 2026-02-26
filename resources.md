@@ -10,6 +10,25 @@ It's a big world out there, and there is so much to see and do, maybe a bit too 
 
 ## Current Initiatives and Institutions
 
+### Initiatives
+
+- [Without Spacetime](https://withoutspacetime.org/) (WOST)
+- [Relativistic Quantum Information COST](https://rqi-cost.org/)
+- [International Society for Relativistic Quantum Information](https://www.isrqi.net/)
+- [BridgeQG](https://web.infn.it/BridgeQG/)
+- [Centre for SpaceTime and the Quantum](https://www.cstq.org/)
+
+### Institutions
+
+- [Institute for Quantum Information and Quantum Optics Vienna](https://www.iqoqi-vienna.at/)
+- [Perimeter Institute for Theoretical Physics](https://perimeterinstitute.ca/)
+- [Nordic Institute for Theoretical Physics](https://nordita.org/)
+- [Institute for Theoretical Physics ETH Zurich](https://itp.phys.ethz.ch/)
+- [Max Planck Institute for Physics, Munich](https://www.mpp.mpg.de/en/)
+
+### Hubs
+
+- [Quantiki](https://quantiki.org/)
 
 ## Courses
 
