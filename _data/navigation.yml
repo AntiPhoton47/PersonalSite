@@ -11,3 +11,11 @@ main:
     url: /resources/
   - title: "Hobbies"
     url: /hobbies/
+
+footer:
+  - title: ""
+    children:
+      - title: "RSS"
+        url: /feed.xml
+      - title: "Sitemap"
+        url: /sitemap.md
