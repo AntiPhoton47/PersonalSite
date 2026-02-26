@@ -4,9 +4,7 @@ title: "Sitemap"
 permalink: /sitemap/
 ---
 
-{% include base_path %}
-
-A comprehensive overview of all content on this website. For search engines, an [XML version]({{ base_path }}/sitemap.xml) is available.
+You can also view the machine-readable XML sitemap [here]({{ "/sitemap.xml" | relative_url }}).
 
 ## Pages
 {% for page in site.pages %}
