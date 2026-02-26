@@ -4,6 +4,14 @@ layout: archive
 
 {{ content }}
 
+<p><strong>DEBUG:</strong> posts={{ site.posts | size }}, paginator={{ paginator | jsonify }}</p>
+
+<ul>
+  {% for p in site.posts limit: 5 %}
+    <li>{{ p.date }} — {{ p.title }}</li>
+  {% endfor %}
+</ul>
+
 <h3 class="archive__subtitle">{{ site.data.ui-text[site.locale].recent_posts | default: "Recent Posts" }}</h3>
 
 {% if paginator %}
