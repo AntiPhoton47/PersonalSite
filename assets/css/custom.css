@@ -228,3 +228,35 @@
   max-height: 50vh;
   overflow: auto;
 }
+
+.subscribe-box {
+  padding: 1rem 1.1rem;
+  margin: 1.25rem 0 2rem 0;
+  border: 1px solid rgba(128,128,128,0.25);
+  border-radius: 0.75rem;
+  background: rgba(128,128,128,0.06);
+}
+
+.subscribe-title {
+  margin: 0 0 0.35rem 0;
+  font-size: 1.15rem;
+}
+
+.subscribe-text {
+  margin: 0 0 0.85rem 0;
+  opacity: 0.9;
+}
+
+/* Make ConvertKit form inputs match your theme a bit better */
+.subscribe-box input[type="email"],
+.subscribe-box input[type="text"] {
+  width: 100%;
+  padding: 0.55rem 0.7rem;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(128,128,128,0.35);
+}
+
+.subscribe-box button,
+.subscribe-box input[type="submit"] {
+  margin-top: 0.6rem;
+}
