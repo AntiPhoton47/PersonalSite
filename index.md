@@ -10,7 +10,9 @@ excerpt: "A space of infinite possibility."
 show_blog_archive: true
 ---
 
-Welcome to my personal website and blog, dear Qubitzers!
+Welcome to my personal website and blog, dear Qubitzers! Take your shoes off and stay a while, why don't you. 
+
+Disclaimer: the views expressed on the site are my own and do not necessarily reflect the views of my colleagues, employers, affiliations, or anyone else mentioned on the site.
 
 {% include email_subscribe.html %}
 
