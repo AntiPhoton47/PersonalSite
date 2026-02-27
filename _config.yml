@@ -31,7 +31,6 @@ plugins:
 
 webmentions:
   username: "phillemaitre.com"
-  token: "v1fVrE3TpR2IkBl01MxfaQ"
   # Optional: keep builds fast and avoid huge fetches
   limit: 200
   cache_folder: .cache             # commit this folder or cache it in Actions
