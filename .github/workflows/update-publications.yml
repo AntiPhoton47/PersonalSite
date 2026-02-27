@@ -1,9 +1,9 @@
-name: Update publications + CV
+name: Update publications + build CV PDF
 
 on:
   workflow_dispatch:
   schedule:
-    - cron: "17 3 * * *"   # daily 03:17 UTC  [oai_citation:6‡GitHub Docs](https://docs.github.com/actions/using-workflows/events-that-trigger-workflows?utm_source=chatgpt.com)
+    - cron: "17 3 * * *"  # daily
 
 permissions:
   contents: write
@@ -14,6 +14,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      # ---- Python: update bib + render LaTeX fragment ----
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
@@ -26,22 +27,35 @@ jobs:
 
       - name: Update BibTeX from ORCID/DOI
         env:
-          ORCID_TOKEN: ${{ secrets.ORCID_TOKEN }}   # optional
+          ORCID_TOKEN: ${{ secrets.ORCID_TOKEN }}  # optional
         run: |
           python scripts/update_publications.py \
             --orcid "YOUR-ORCID-ID" \
-            --bib "assets/bib/publications.bib"
+            --bib "_bibliography/publications.bib"
 
       - name: Render CV publications fragment
         run: |
           python scripts/render_cv.py \
             --bib "_bibliography/publications.bib" \
-            --out "cv/auto_publications.tex"
+            --out "CV/auto_publications.tex"
 
+      # ---- LaTeX: build CV PDF via Tectonic ----
+      - name: Install Tectonic
+        run: |
+          curl -L https://github.com/tectonic-typesetting/tectonic/releases/download/tectonic%400.15.0/tectonic-0.15.0-x86_64-unknown-linux-gnu.tar.gz \
+            | tar -xz
+          sudo mv tectonic /usr/local/bin/tectonic
+          tectonic --version
+
+      - name: Build CV PDF
+        run: |
+          bash scripts/build_cv.sh
+
+      # ---- Commit changes ----
       - name: Commit changes (if any)
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add assets/bib/publications.bib cv/auto_publications.tex
-          git diff --cached --quiet || git commit -m "Auto-update publications + CV"
+          git add _bibliography/publications.bib CV/auto_publications.tex assets/files/Phil_LeMaitre_CV.pdf
+          git diff --cached --quiet || git commit -m "Auto-update publications + CV PDF"
           git push
