@@ -3,7 +3,7 @@ name: Update publications + build CV PDF
 on:
   workflow_dispatch:
   schedule:
-    - cron: "17 3 * * *"  # daily
+    - cron: "17 3 1 * *"  # monthly
 
 permissions:
   contents: write
@@ -30,7 +30,7 @@ jobs:
           ORCID_TOKEN: ${{ secrets.ORCID_TOKEN }}  # optional
         run: |
           python scripts/update_publications.py \
-            --orcid "YOUR-ORCID-ID" \
+            --orcid "0000-0002-0414-5202" \
             --bib "_bibliography/publications.bib"
 
       - name: Render CV publications fragment
