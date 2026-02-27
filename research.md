@@ -6,7 +6,7 @@ permalink: /research/
 Below you will find all information on my research interests and activities, including a list of my publications, talks, and posters.
 
 ## CV
-- [Download CV](/assets/files/Phil_LeMaitre_CV_2021.pdf)
+- [Download CV](/assets/files/CV/Phil_LeMaitre_CV.pdf)
 
 ## Research Statement
 
