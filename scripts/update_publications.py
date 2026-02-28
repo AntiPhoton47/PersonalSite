@@ -14,6 +14,7 @@ import json
 import os
 import re
 import sys
+import base64
 from typing import Any, Dict, List, Optional, Tuple
 
 import requests
@@ -32,15 +33,16 @@ def slug_key(title: str, year: str) -> str:
     t = re.sub(r"[^a-z0-9]+", "-", title.lower()).strip("-")
     return f"{t}-{year}" if year else t
 
-def get_orcid_works(orcid: str, token: Optional[str] = None) -> List[Dict[str, Any]]:
+def get_orcid_works(orcid_id: str, token: str):
     """
     Read public works from ORCID. If you have a public API token, include it.
     ORCID supports reading public data; for robust usage use tokens/credentials.  [oai_citation:4‡ORCID](https://info.orcid.org/documentation/api-tutorials/api-tutorial-read-data-on-a-record/?utm_source=chatgpt.com)
     """
-    url = f"{ORCID_API}/{orcid}/works"
-    headers = {"Accept": "application/json"}
-    if token:
-        headers["Authorization"] = f"Bearer {token}"
+    url = f"https://api.orcid.org/v3.0/{orcid_id}/works"
+    headers = {
+        "Accept": "application/json",
+        "Authorization": f"Bearer {token}"
+    }
     r = requests.get(url, headers=headers, timeout=30)
     r.raise_for_status()
     data = r.json()
@@ -51,6 +53,27 @@ def get_orcid_works(orcid: str, token: Optional[str] = None) -> List[Dict[str, A
         for s in summaries:
             items.append(s)
     return items
+
+def get_orcid_token(client_id: str, client_secret: str) -> str:
+    token_url = "https://orcid.org/oauth/token"
+
+    auth = (client_id, client_secret)
+
+    data = {
+        "grant_type": "client_credentials",
+        "scope": "/read-public"
+    }
+
+    r = requests.post(token_url, auth=auth, data=data)
+
+    if r.status_code != 200:
+        raise RuntimeError(f"Failed to obtain ORCID token: {r.text}")
+
+    token = r.json().get("access_token")
+    if not token:
+        raise RuntimeError("No access token returned by ORCID")
+
+    return token
 
 def extract_doi(work: Dict[str, Any]) -> Optional[str]:
     ext_ids = work.get("external-ids", {}).get("external-id", [])
@@ -173,13 +196,19 @@ def parse_single_bib_entry(bib: str) -> Dict[str, str]:
     return db.entries[0]
 
 def main() -> int:
+    client_id = os.getenv("ORCID_CLIENT_ID")
+    client_secret = os.getenv("ORCID_CLIENT_SECRET")
+    
+    if not client_id or not client_secret:
+        raise RuntimeError("Missing ORCID credentials")
+    
     ap = argparse.ArgumentParser()
     ap.add_argument("--orcid", required=True, help="Your ORCID iD (e.g. 0000-0002-....)")
     ap.add_argument("--bib", required=True, help="Path to publications.bib")
-    ap.add_argument("--token", default=os.getenv("ORCID_TOKEN"), help="Optional ORCID token")
     args = ap.parse_args()
 
-    works = get_orcid_works(args.orcid, token=args.token)
+    token = get_orcid_token(client_id, client_secret)
+    works = get_orcid_works(args.orcid, token=token)
     db = load_bib(args.bib)
 
     for w in works:
