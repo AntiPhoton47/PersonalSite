@@ -2,19 +2,17 @@
 <ul>
 {% for t in site.data.talks %}
   <li>
-    {% if t.event and t.event != "" %}
-      {{ t.event }}:
-    {% endif %}
+    {% if t.event and t.event != "" %}{{ t.event }}:{% endif %}
 
-    {%- assign main_link = t.links.video | default: t.links.pdf -%}
+    {%- assign main_link = t.links.video | default: t.links.slides | default: t.links.pdf | default: t.links.file -%}
     <a href="{{ main_link | relative_url }}">{{ t.title }}</a>
 
-    {% if t.duration and t.duration != "" %}
-      ({{ t.duration }})
-    {% endif %}
+    {% if t.duration and t.duration != "" %} ({{ t.duration }}){% endif %}
 
-    {% if t.links.slides %}
+    {% if t.links.slides and t.links.slides contains "http" %}
       / <a href="{{ t.links.slides }}">slides</a>
+    {% elsif t.links.slides %}
+      / <a href="{{ t.links.slides | relative_url }}">slides</a>
     {% endif %}
   </li>
 {% endfor %}
@@ -24,12 +22,14 @@
 <ul>
 {% for p in site.data.posters %}
   <li>
-    {% if p.event and p.event != "" %}
-      {{ p.event }}:
-    {% endif %}
-    <a href="{{ p.links.pdf | relative_url }}">{{ p.title }}</a>
-    {% if p.links.slides %}
+    {% if p.event and p.event != "" %}{{ p.event }}:{% endif %}
+    {%- assign main_link = p.links.slides | default: p.links.pdf | default: p.links.file -%}
+    <a href="{{ main_link | relative_url }}">{{ p.title }}</a>
+
+    {% if p.links.slides and p.links.slides contains "http" %}
       / <a href="{{ p.links.slides }}">slides</a>
+    {% elsif p.links.slides %}
+      / <a href="{{ p.links.slides | relative_url }}">slides</a>
     {% endif %}
   </li>
 {% endfor %}
