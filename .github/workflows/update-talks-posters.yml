@@ -25,7 +25,7 @@ jobs:
       - name: Install deps
         run: |
           python -m pip install --upgrade pip
-          pip install pypdf pyyaml requests
+          pip install pypdf pyyaml requests python-pptx
 
       - name: Update YAML (with enrichment)
         env:
