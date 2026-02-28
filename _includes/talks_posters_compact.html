@@ -1,0 +1,36 @@
+<h2 id="conference-talks">Conference Talks</h2>
+<ul>
+{% for t in site.data.talks %}
+  <li>
+    {% if t.event and t.event != "" %}
+      {{ t.event }}:
+    {% endif %}
+
+    {%- assign main_link = t.links.video | default: t.links.pdf -%}
+    <a href="{{ main_link | relative_url }}">{{ t.title }}</a>
+
+    {% if t.duration and t.duration != "" %}
+      ({{ t.duration }})
+    {% endif %}
+
+    {% if t.links.slides %}
+      / <a href="{{ t.links.slides }}">slides</a>
+    {% endif %}
+  </li>
+{% endfor %}
+</ul>
+
+<h2 id="conference-posters">Conference Posters</h2>
+<ul>
+{% for p in site.data.posters %}
+  <li>
+    {% if p.event and p.event != "" %}
+      {{ p.event }}:
+    {% endif %}
+    <a href="{{ p.links.pdf | relative_url }}">{{ p.title }}</a>
+    {% if p.links.slides %}
+      / <a href="{{ p.links.slides }}">slides</a>
+    {% endif %}
+  </li>
+{% endfor %}
+</ul>
