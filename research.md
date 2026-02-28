@@ -25,7 +25,7 @@ Below is a list of my publications, with the arXiv versions [here](https://arxiv
 
 {% bibliography %}
 
-My publication list is also available to download as a [BibTeX](/_bibliography/publications.bib) file.
+My publication list is also available to download as a [BibTex](/_bibliography/publications.bib) file.
 
 ## Publication Codes
 
