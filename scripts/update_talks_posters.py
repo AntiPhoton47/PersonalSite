@@ -12,6 +12,7 @@ from typing import Any, Dict, List, Optional, Tuple
 import requests
 import yaml
 from pypdf import PdfReader
+from pptx import Presentation
 
 DOI_RE = re.compile(r"\b10\.\d{4,9}/[-._;()/:A-Z0-9]+\b", re.I)
 ARXIV_RE = re.compile(r"\b(?:arXiv:)?\s*([0-9]{4}\.[0-9]{4,5})(v\d+)?\b", re.I)
@@ -64,6 +65,56 @@ def safe_get(url: str, headers: Optional[Dict[str, str]] = None, params: Optiona
         return None
 
 
+def load_yaml_list(path: Path) -> List[Dict[str, Any]]:
+    if not path.exists():
+        return []
+    with path.open("r", encoding="utf-8") as f:
+        data = yaml.safe_load(f) or []
+        return data if isinstance(data, list) else []
+
+
+def save_yaml_list(path: Path, items: List[Dict[str, Any]]) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with path.open("w", encoding="utf-8") as f:
+        yaml.safe_dump(items, f, sort_keys=False, allow_unicode=True)
+
+
+def load_sidecar_override(asset_path: Path) -> Dict[str, Any]:
+    """
+    Optional per-file override: same name as asset but .yml
+    Example: talk.pptx -> talk.yml
+    """
+    yml = asset_path.with_suffix(".yml")
+    if not yml.exists():
+        return {}
+    with yml.open("r", encoding="utf-8") as f:
+        data = yaml.safe_load(f) or {}
+        return data if isinstance(data, dict) else {}
+
+
+def merge_preserve(existing: Dict[str, Any], incoming: Dict[str, Any]) -> Dict[str, Any]:
+    """
+    Preserve existing non-empty fields; fill missing from incoming.
+    For dicts like links: merge keys.
+    """
+    out = dict(existing)
+    for k, v in incoming.items():
+        if k == "links" and isinstance(v, dict):
+            out.setdefault("links", {})
+            for lk, lv in v.items():
+                if lk not in out["links"] or not out["links"][lk]:
+                    out["links"][lk] = lv
+            continue
+
+        if k not in out or out[k] in ("", None, [], {}):
+            out[k] = v
+    return out
+
+
+# -----------------------
+# Extract metadata from assets
+# -----------------------
+
 def pdf_extract(path: Path) -> Dict[str, Any]:
     reader = PdfReader(str(path))
     meta = reader.metadata or {}
@@ -74,7 +125,6 @@ def pdf_extract(path: Path) -> Dict[str, Any]:
 
     title = mget("/Title")
     author = mget("/Author")
-    subject = mget("/Subject")
     creation = mget("/CreationDate")
 
     first_page_text = ""
@@ -102,62 +152,76 @@ def pdf_extract(path: Path) -> Dict[str, Any]:
             pass
 
     return {
-        "pdf_title": title,
-        "pdf_author": author,
-        "pdf_subject": subject,
-        "first_page": first_page_text,
+        "title": title,
+        "authors_hint": author,
+        "text": first_page_text,
         "doi": doi,
         "arxiv": arxiv,
         "created": created_iso,
     }
 
 
-def load_yaml_list(path: Path) -> List[Dict[str, Any]]:
-    if not path.exists():
-        return []
-    with path.open("r", encoding="utf-8") as f:
-        data = yaml.safe_load(f) or []
-        return data if isinstance(data, list) else []
-
-
-def save_yaml_list(path: Path, items: List[Dict[str, Any]]) -> None:
-    path.parent.mkdir(parents=True, exist_ok=True)
-    with path.open("w", encoding="utf-8") as f:
-        yaml.safe_dump(items, f, sort_keys=False, allow_unicode=True)
-
-
-def load_sidecar_override(pdf_path: Path) -> Dict[str, Any]:
+def pptx_extract(path: Path) -> Dict[str, Any]:
     """
-    Optional per-file override: same name as pdf but .yml
-    Example: assets/media/talks/foo.pdf -> assets/media/talks/foo.yml
+    Extract title + text from first slide (and some overall text).
+    PPTX metadata is often sparse, so we mainly use slide content.
     """
-    yml = pdf_path.with_suffix(".yml")
-    if not yml.exists():
-        return {}
-    with yml.open("r", encoding="utf-8") as f:
-        data = yaml.safe_load(f) or {}
-        return data if isinstance(data, dict) else {}
+    prs = Presentation(str(path))
+
+    title = ""
+    all_text = []
+    first_slide_text = ""
+
+    if prs.slides:
+        slide0 = prs.slides[0]
+        # Title placeholder if present
+        try:
+            if slide0.shapes.title and slide0.shapes.title.text:
+                title = slide0.shapes.title.text.strip()
+        except Exception:
+            pass
+
+        texts0 = []
+        for sh in slide0.shapes:
+            if hasattr(sh, "text") and sh.text:
+                texts0.append(sh.text)
+        first_slide_text = "\n".join(texts0).strip()
+
+    # Grab text from first few slides for DOI/arXiv detection
+    for i, slide in enumerate(prs.slides[:4]):
+        for sh in slide.shapes:
+            if hasattr(sh, "text") and sh.text:
+                all_text.append(sh.text)
+
+    text = "\n".join(all_text).strip()
+
+    doi = None
+    arxiv = None
+    if text:
+        md = DOI_RE.search(text)
+        if md:
+            doi = md.group(0)
+        ma = ARXIV_RE.search(text)
+        if ma:
+            arxiv = ma.group(1)
+
+    return {
+        "title": title,
+        "authors_hint": "",
+        "text": first_slide_text or text,
+        "doi": doi,
+        "arxiv": arxiv,
+        "created": "",  # pptx creation time not reliably present
+    }
 
 
-def merge_preserve(existing: Dict[str, Any], incoming: Dict[str, Any]) -> Dict[str, Any]:
-    """
-    Preserve existing non-empty fields; fill missing from incoming.
-    For dicts like links: merge keys.
-    """
-    out = dict(existing)
-
-    for k, v in incoming.items():
-        if k == "links" and isinstance(v, dict):
-            out.setdefault("links", {})
-            for lk, lv in v.items():
-                if lk not in out["links"] or not out["links"][lk]:
-                    out["links"][lk] = lv
-            continue
-
-        if k not in out or out[k] in ("", None, [], {}):
-            out[k] = v
-
-    return out
+def extract_asset(path: Path) -> Dict[str, Any]:
+    ext = path.suffix.lower()
+    if ext == ".pdf":
+        return pdf_extract(path)
+    if ext == ".pptx":
+        return pptx_extract(path)
+    return {}
 
 
 # -----------------------
@@ -202,7 +266,6 @@ def enrich_from_doi(doi: str) -> Dict[str, Any]:
         elif len(parts) == 1:
             date_iso = f"{parts[0]:04d}-01-01"
 
-    venue = data.get("container-title", "")
     url = data.get("URL") or f"https://doi.org/{doi}"
 
     out: Dict[str, Any] = {"links": {"doi": url}, "doi": doi}
@@ -210,8 +273,6 @@ def enrich_from_doi(doi: str) -> Dict[str, Any]:
         out["title"] = title
     if authors:
         out["authors"] = authors
-    if venue:
-        out["venue"] = venue
     if date_iso:
         out["date"] = date_iso
     return out
@@ -282,11 +343,12 @@ def enrich_from_openalex(title: str, author_hint: Optional[str] = None) -> Dict[
     if not best or best_score < 0.60:
         return {}
 
-    out: Dict[str, Any] = {"links": {}}
+    out: Dict[str, Any] = {"links": {"openalex": best.get("id", "")}}
     if best.get("title"):
         out["title"] = best["title"]
     if best.get("publication_date"):
         out["date"] = best["publication_date"]
+
     authors = [a.get("author", {}).get("display_name", "") for a in (best.get("authorships") or [])]
     authors = [a for a in authors if a]
     if authors:
@@ -297,9 +359,9 @@ def enrich_from_openalex(title: str, author_hint: Optional[str] = None) -> Dict[
         doi = doi.replace("https://doi.org/", "")
     if doi:
         out["doi"] = doi
+        out.setdefault("links", {})
         out["links"]["doi"] = f"https://doi.org/{doi}"
 
-    out["links"]["openalex"] = best.get("id", "")
     return out
 
 
@@ -309,12 +371,7 @@ def enrich_from_openalex(title: str, author_hint: Optional[str] = None) -> Dict[
 
 def serpapi_search(query: str, api_key: str, num: int = 5) -> List[Dict[str, str]]:
     url = "https://serpapi.com/search.json"
-    params = {
-        "engine": "google",
-        "q": query,
-        "api_key": api_key,
-        "num": str(num),
-    }
+    params = {"engine": "google", "q": query, "api_key": api_key, "num": str(num)}
     r = safe_get(url, params=params)
     if not r:
         return []
@@ -339,12 +396,10 @@ def fetch_page_text(url: str) -> str:
         return ""
     html = r.text
 
-    # Prefer og:description (often the abstract/summary)
     og_desc = re.search(r'<meta[^>]+property=["\']og:description["\'][^>]+content=["\'](.*?)["\']', html, re.I)
     if og_desc:
         return norm(og_desc.group(1))
 
-    # Otherwise strip to text (crude but dependency-free)
     html = re.sub(r"(?is)<(script|style).*?>.*?</\1>", " ", html)
     text = re.sub(r"(?s)<.*?>", " ", html)
     return norm(text)
@@ -363,13 +418,11 @@ def validate_candidate(entry: Dict[str, Any], candidate: Dict[str, str], your_na
     if surname and surname in blob:
         score += 0.15
 
-    # event boost if any meaningful overlap
     if event:
         ev_tokens = [t for t in re.findall(r"[a-z0-9]+", event.lower()) if len(t) > 3]
         if any(t in blob for t in ev_tokens[:4]):
             score += 0.10
 
-    # slight penalty for common aggregators (not conference pages)
     link = (candidate.get("link") or "").lower()
     if any(x in link for x in ["scholar.google", "researchgate", "semanticscholar", "dblp.org"]):
         score -= 0.10
@@ -401,27 +454,23 @@ def enrich_from_conference_web(entry: Dict[str, Any], your_name: str, api_key: s
     best = scored[0][1]
     url = best["link"]
     text = fetch_page_text(url)
-    if not text:
-        return {"links": {"listing": url}}
 
-    # Abstract heuristic: try to find region near the title; else first chunk
+    out: Dict[str, Any] = {"links": {"listing": url}}
+    if not text:
+        return out
+
+    # Abstract heuristic (short)
     abstract = ""
     low = text.lower()
     t_low = title.lower()
     anchor = t_low[: min(40, len(t_low))]
     pos = low.find(anchor)
-    if pos != -1:
-        abstract = text[pos: pos + 900]
-    else:
-        abstract = text[:900]
-
-    abstract = abstract.strip()
+    abstract = (text[pos: pos + 900] if pos != -1 else text[:900]).strip()
     if abstract:
         abstract = abstract[:500].rsplit(" ", 1)[0] + "…"
+        if not entry.get("abstract"):
+            out["abstract"] = abstract
 
-    out: Dict[str, Any] = {"links": {"listing": url}}
-    if abstract and not entry.get("abstract"):
-        out["abstract"] = abstract
     return out
 
 
@@ -429,24 +478,35 @@ def enrich_from_conference_web(entry: Dict[str, Any], your_name: str, api_key: s
 # Entry build + enrich
 # -----------------------
 
-def build_base_entry(kind: str, pdf_path: Path, baseurl: str) -> Dict[str, Any]:
-    fid = stable_id_from_path(pdf_path)
+def build_base_entry(kind: str, asset_path: Path, baseurl: str) -> Dict[str, Any]:
+    fid = stable_id_from_path(asset_path)
+    fn = parse_filename(asset_path.stem)
+    extracted = extract_asset(asset_path)
+    sidecar = load_sidecar_override(asset_path)
 
-    fn = parse_filename(pdf_path.stem)
-    pdf = pdf_extract(pdf_path)
-    sidecar = load_sidecar_override(pdf_path)
-
-    date = sidecar.get("date") or fn.get("date") or pdf.get("created") or ""
-    title = sidecar.get("title") or pdf.get("pdf_title") or guess_title_from_slug(fn.get("slug_title", pdf_path.stem))
+    date = sidecar.get("date") or fn.get("date") or extracted.get("created") or ""
+    title = sidecar.get("title") or extracted.get("title") or guess_title_from_slug(fn.get("slug_title", asset_path.stem))
     event = sidecar.get("event") or fn.get("event_guess") or ""
 
-    doi = sidecar.get("doi") or pdf.get("doi")
-    arxiv = sidecar.get("arxiv") or pdf.get("arxiv")
+    doi = sidecar.get("doi") or extracted.get("doi")
+    arxiv = sidecar.get("arxiv") or extracted.get("arxiv")
 
-    # Link building
-    pdf_link = f"/{pdf_path.as_posix()}"
+    rel_link = f"/{asset_path.as_posix()}"
     if baseurl:
-        pdf_link = f"{baseurl.rstrip('/')}/{pdf_path.as_posix()}"
+        rel_link = f"{baseurl.rstrip('/')}/{asset_path.as_posix()}"
+
+    links: Dict[str, Any] = {}
+    ext = asset_path.suffix.lower()
+    if ext == ".pdf":
+        links["pdf"] = rel_link
+    elif ext == ".pptx":
+        links["slides"] = rel_link  # treat pptx as slides
+    else:
+        links["file"] = rel_link
+
+    # Apply sidecar links (video, external slides, etc.)
+    if "links" in sidecar and isinstance(sidecar["links"], dict):
+        links.update(sidecar["links"])
 
     entry: Dict[str, Any] = {
         "id": fid,
@@ -459,21 +519,19 @@ def build_base_entry(kind: str, pdf_path: Path, baseurl: str) -> Dict[str, Any]:
         "location": sidecar.get("location", ""),
         "authors": sidecar.get("authors", []),
         "tags": sidecar.get("tags", []),
-        "links": {"pdf": pdf_link},
+        "links": links,
         "abstract": sidecar.get("abstract", ""),
     }
 
     if doi:
         entry["doi"] = doi
         entry["links"].setdefault("doi", f"https://doi.org/{doi}")
-
     if arxiv:
         entry["arxiv"] = arxiv
         entry["links"].setdefault("arxiv", f"https://arxiv.org/abs/{arxiv}")
 
-    # Bring in extra links from sidecar (slides/video etc.)
-    if "links" in sidecar and isinstance(sidecar["links"], dict):
-        entry["links"].update(sidecar["links"])
+    # If the file is PPTX, also keep a stable download link in links.file
+    entry["links"].setdefault("file", rel_link)
 
     return entry
 
@@ -497,7 +555,6 @@ def enrich_entry(entry: Dict[str, Any], your_name: str, serpapi_key: Optional[st
                 hint = entry["authors"][0].split()[-1]
             enriched = merge_preserve(enriched, enrich_from_openalex(entry.get("title", ""), author_hint=hint))
 
-    # Final fallback: conference listing/abstract page search
     if serpapi_key and your_name:
         if (not entry.get("abstract")) or (not entry.get("links", {}).get("listing")):
             enriched = merge_preserve(enriched, enrich_from_conference_web(entry, your_name=your_name, api_key=serpapi_key))
@@ -516,8 +573,8 @@ def upsert_by_id(items: List[Dict[str, Any]], new_item: Dict[str, Any]) -> List[
 
 def main() -> int:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--talks_dir", default="assets/media/talks")
-    ap.add_argument("--posters_dir", default="assets/media/posters")
+    ap.add_argument("--talks_dir", default="assets/files/talks")
+    ap.add_argument("--posters_dir", default="assets/files/posters")
     ap.add_argument("--out_talks", default="_data/talks.yml")
     ap.add_argument("--out_posters", default="_data/posters.yml")
     ap.add_argument("--baseurl", default="")  # "" for custom domain; "/PersonalSite" for project sites
@@ -529,13 +586,23 @@ def main() -> int:
     talks = load_yaml_list(Path(args.out_talks))
     posters = load_yaml_list(Path(args.out_posters))
 
-    for p in sorted(Path(args.talks_dir).glob("*.pdf")):
+    def iter_assets(folder: str) -> List[Path]:
+        p = Path(folder)
+        if not p.exists():
+            return []
+        out = []
+        for f in sorted(p.glob("*")):
+            if f.suffix.lower() in (".pdf", ".pptx"):
+                out.append(f)
+        return out
+
+    for p in iter_assets(args.talks_dir):
         e = build_base_entry("talk", p, args.baseurl)
         if args.enrich:
             e = enrich_entry(e, your_name=args.your_name, serpapi_key=(args.serpapi_key or None))
         talks = upsert_by_id(talks, e)
 
-    for p in sorted(Path(args.posters_dir).glob("*.pdf")):
+    for p in iter_assets(args.posters_dir):
         e = build_base_entry("poster", p, args.baseurl)
         if args.enrich:
             e = enrich_entry(e, your_name=args.your_name, serpapi_key=(args.serpapi_key or None))
