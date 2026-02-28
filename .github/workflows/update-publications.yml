@@ -25,14 +25,15 @@ jobs:
           python -m pip install --upgrade pip
           pip install requests bibtexparser jinja2
 
-      - name: Update BibTeX from ORCID/DOI
+      - name: Update BibTeX from ORCID
         env:
-          ORCID_TOKEN: ${{ secrets.ORCID_TOKEN }}  # optional
+          ORCID_CLIENT_ID: ${{ secrets.ORCID_CLIENT_ID }}
+          ORCID_CLIENT_SECRET: ${{ secrets.ORCID_CLIENT_SECRET }}
         run: |
           python scripts/update_publications.py \
             --orcid "0000-0002-0414-5202" \
             --bib "_bibliography/publications.bib"
-
+            
       - name: Render CV publications fragment
         run: |
           python scripts/render_cv.py \
