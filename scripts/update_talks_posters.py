@@ -188,7 +188,9 @@ def pptx_extract(path: Path) -> Dict[str, Any]:
         first_slide_text = "\n".join(texts0).strip()
 
     # Grab text from first few slides for DOI/arXiv detection
-    for i, slide in enumerate(prs.slides[:4]):
+    for i, slide in enumerate(prs.slides):
+        if i >= 4:
+            break
         for sh in slide.shapes:
             if hasattr(sh, "text") and sh.text:
                 all_text.append(sh.text)
@@ -216,13 +218,16 @@ def pptx_extract(path: Path) -> Dict[str, Any]:
 
 
 def extract_asset(path: Path) -> Dict[str, Any]:
-    ext = path.suffix.lower()
-    if ext == ".pdf":
-        return pdf_extract(path)
-    if ext == ".pptx":
-        return pptx_extract(path)
-    return {}
-
+    try:
+        ext = path.suffix.lower()
+        if ext == ".pdf":
+            return pdf_extract(path)
+        if ext == ".pptx":
+            return pptx_extract(path)
+        return {}
+    except Exception:
+        # Fail soft: still allow filename-based entry creation
+        return {"title": "", "authors_hint": "", "text": "", "doi": None, "arxiv": None, "created": ""}
 
 # -----------------------
 # Enrichment sources
@@ -597,16 +602,22 @@ def main() -> int:
         return out
 
     for p in iter_assets(args.talks_dir):
-        e = build_base_entry("talk", p, args.baseurl)
-        if args.enrich:
-            e = enrich_entry(e, your_name=args.your_name, serpapi_key=(args.serpapi_key or None))
-        talks = upsert_by_id(talks, e)
+        try:
+            e = build_base_entry("talk", p, args.baseurl)
+            if args.enrich:
+                e = enrich_entry(e, your_name=args.your_name, serpapi_key=(args.serpapi_key or None))
+            talks = upsert_by_id(talks, e)
+        except Exception as ex:
+            print(f"WARNING: failed to process {p}: {ex}")
 
     for p in iter_assets(args.posters_dir):
-        e = build_base_entry("poster", p, args.baseurl)
-        if args.enrich:
-            e = enrich_entry(e, your_name=args.your_name, serpapi_key=(args.serpapi_key or None))
-        posters = upsert_by_id(posters, e)
+        try:
+            e = build_base_entry("poster", p, args.baseurl)
+            if args.enrich:
+                e = enrich_entry(e, your_name=args.your_name, serpapi_key=(args.serpapi_key or None))
+            posters = upsert_by_id(posters, e)
+        except Exception as ex:
+            print(f"WARNING: failed to process {p}: {ex}")
 
     def sort_key(x: Dict[str, Any]) -> str:
         return x.get("date") or "0000-00-00"
