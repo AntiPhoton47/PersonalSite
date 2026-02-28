@@ -43,6 +43,8 @@ I have a number of interesting projects currently occupying my time, with many c
 - Equipping projective simulation to handle larger percept and action spaces in an interpretable way
 - Some more exotic setups for the contextuality harvesting protocol that I developed
 
+[{% include talks_posters_compact.html %}]: #
+
 ## Conference Talks
 - 15th Relativistic Quantum Information North Conference: [A Universal Quantum Computer From Relativistic Motion](https://www.youtube.com/live/pAlDsCJH-ds?si=Mc8rZPqEzI948X2d) (3:26:54) / [slides](/assets/files/RVQCNapoli2025.pptx)
 - 14th Relativistic Quantum Information North Conference: [A Universal Quantum Computer From Relativistic Motion](https://www.youtube.com/live/catSoE4G3WM?si=MojXIYPkMvzSPx70) (32:48) / [slides](/assets/files/RQMLPrague2024.pptx)
