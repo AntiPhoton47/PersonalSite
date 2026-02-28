@@ -21,7 +21,3 @@ end
 gem "webrick"
 
 gem "jemoji"
-
-gem "bibtexparser"
-gem "jinja2"
-gem "requests"
