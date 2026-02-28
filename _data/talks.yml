@@ -1,1 +1,140 @@
-[]
+- id: 2025-09-16_GroupRetreat_0f01eb46
+  type: talk
+  title: Relativistic Quantum Computing and Machine Learning
+  event: ''
+  date: '2025-09-16'
+  duration: ''
+  kind: Talk
+  location: ''
+  authors:
+  - Eric Aspling
+  - Michael Lawler
+  tags: []
+  links:
+    slides: /assets/files/talks/2025-09-16_GroupRetreat.pptx
+    arxiv: https://arxiv.org/abs/2402.10173
+    file: /assets/files/talks/2025-09-16_GroupRetreat.pptx
+  abstract: ''
+  arxiv: '2402.10173'
+- id: 2025-06-25_RVQC_RQIN_1a33931e
+  type: talk
+  title: A Universal Quantum Computer From Relativistic Motion
+  event: RQIN
+  date: '2025-06-25'
+  duration: ''
+  kind: Talk
+  location: ''
+  authors:
+  - Eric Aspling
+  - Michael Lawler
+  tags: []
+  links:
+    slides: /assets/files/talks/2025-06-25_RVQC_RQIN.pptx
+    arxiv: https://arxiv.org/abs/2402.10173
+    file: /assets/files/talks/2025-06-25_RVQC_RQIN.pptx
+    listing: https://arxiv.org/abs/2411.00105
+  abstract: We present an explicit construction of a relativistic quantum computing
+    architecture using a variational quantum circuit approach that is shown to allow
+    for universal quantum computing. The variational quantum circuit consists of tunable
+    single-qubit rotations and entangling gates that are implemented successively.
+    The single qubit rotations are parameterized by the proper time intervals of the
+    qubits&#39; trajectories and can be tuned by varying their relativistic motion
+    in spacetime. The…
+  arxiv: '2402.10173'
+- id: 2024-08-07_RQML_RQIN_35881414
+  type: talk
+  title: A Universal Quantum Computer From Relativistic Motion
+  event: RQIN
+  date: '2024-08-07'
+  duration: ''
+  kind: Talk
+  location: ''
+  authors:
+  - Eric Aspling
+  - Michael Lawler
+  tags: []
+  links:
+    slides: /assets/files/talks/2024-08-07_RQML_RQIN.pptx
+    arxiv: https://arxiv.org/abs/2402.10173
+    file: /assets/files/talks/2024-08-07_RQML_RQIN.pptx
+    listing: https://arxiv.org/abs/2411.00105
+  abstract: We present an explicit construction of a relativistic quantum computing
+    architecture using a variational quantum circuit approach that is shown to allow
+    for universal quantum computing. The variational quantum circuit consists of tunable
+    single-qubit rotations and entangling gates that are implemented successively.
+    The single qubit rotations are parameterized by the proper time intervals of the
+    qubits&#39; trajectories and can be tuned by varying their relativistic motion
+    in spacetime. The…
+  arxiv: '2402.10173'
+- id: 2024-03-20_MEPS_DPG_7a163ee9
+  type: talk
+  title: A Multi-Excitation Projective Simulation Agent
+  event: DPG
+  date: '2024-03-20'
+  duration: ''
+  kind: Talk
+  location: ''
+  authors:
+  - Philip A. LeMaitre
+  - Marius Krumm
+  - Hans J. Briegel
+  tags: []
+  links:
+    slides: /assets/files/talks/2024-03-20_MEPS_DPG.pptx
+    arxiv: https://arxiv.org/abs/2402.10192
+    file: /assets/files/talks/2024-03-20_MEPS_DPG.pptx
+  abstract: ''
+  arxiv: '2402.10192'
+- id: 2022-11-05_Polymer_SCFT_UW_36th_Symposium_ChemPhys_98e4e10e
+  type: talk
+  title: Spontaneous Spherical Symmetry-Breaking in Open-Shell Atoms Through Polymer
+    Self-Consistent Field Theory
+  event: ChemPhys
+  date: '2022-11-05'
+  duration: ''
+  kind: Talk
+  location: ''
+  authors:
+  - Philip A. LeMaitre
+  - R. B. Thompson
+  tags: []
+  links:
+    slides: /assets/files/talks/2022-11-05_Polymer_SCFT_UW_36th_Symposium_ChemPhys.pptx
+    file: /assets/files/talks/2022-11-05_Polymer_SCFT_UW_36th_Symposium_ChemPhys.pptx
+    openalex: https://openalex.org/W4317039816
+    doi: https://doi.org/10.1063/5.0131364
+  abstract: ''
+  doi: 10.1063/5.0131364
+- id: 2022-06-07_Polymer_SCFT_CAP_00160cd8
+  type: talk
+  title: Atomic Shell Structure IN A Polymer-Based Approach to Orbital-Free Density-Functional
+    Theory
+  event: CAP
+  date: '2022-06-07'
+  duration: ''
+  kind: Talk
+  location: ''
+  authors: []
+  tags: []
+  links:
+    slides: /assets/files/talks/2022-06-07_Polymer_SCFT_CAP.pptx
+    file: /assets/files/talks/2022-06-07_Polymer_SCFT_CAP.pptx
+  abstract: ''
+- id: 2019-11-20_compact_stars_CUPC_2c8aac5b
+  type: talk
+  title: PowerPoint Presentation
+  event: CUPC
+  date: '2019-11-20'
+  duration: ''
+  kind: Talk
+  location: ''
+  authors:
+  - Philip LeMaitre
+  - Eric Poisson
+  tags: []
+  links:
+    pdf: /assets/files/talks/2019-11-20_compact_stars_CUPC.pdf
+    arxiv: https://arxiv.org/abs/1909.06253
+    file: /assets/files/talks/2019-11-20_compact_stars_CUPC.pdf
+  abstract: ''
+  arxiv: '1909.06253'
