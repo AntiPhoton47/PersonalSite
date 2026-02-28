@@ -1,0 +1,43 @@
+name: Update talks/posters metadata
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "assets/files/talks/**"
+      - "assets/files/posters/**"
+      - "scripts/update_talks_posters.py"
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install deps
+        run: |
+          python -m pip install --upgrade pip
+          pip install pypdf pyyaml requests
+
+      - name: Update YAML (with enrichment)
+        env:
+          SERPAPI_KEY: ${{ secrets.SERPAPI_KEY }}
+          AUTHOR_NAME: "Philip A. LeMaitre"
+        run: |
+          python scripts/update_talks_posters.py --enrich --your_name "$AUTHOR_NAME"
+
+      - name: Commit changes (if any)
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add _data/talks.yml _data/posters.yml
+          git diff --cached --quiet || git commit -m "Auto-update talks/posters index"
+          git push
