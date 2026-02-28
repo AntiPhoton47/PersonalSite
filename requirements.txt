@@ -1,0 +1,5 @@
+requests
+bibtexparser
+jinja2
+pypdf
+pyyaml
