@@ -1,0 +1,33 @@
+owners:
+  - AntiPhoton47
+
+candidate_repos:
+  - AntiPhoton47/RVQC
+  - AntiPhoton47/Contextuality-Harvesting
+  - AntiPhoton47/quantum-chem
+  - MariusKrumm/ManyBodyMEPS
+
+title_aliases:
+  gaussian-basis-functions-for-a-polymer-self-consistent-field-theory-of-atoms-2023:
+    - Gaussian Basis Functions for an Orbital-Free-Related Density Functional Theory of Atoms
+  universal-quantum-computer-from-relativistic-motion-2024:
+    - A Universal Quantum Computer From Relativistic Motion
+
+manual_repos:
+  gaussian-basis-functions-for-a-polymer-self-consistent-field-theory-of-atoms-2023: https://github.com/AntiPhoton47/quantum-chem
+  on-the-origins-of-spontaneous-spherical-symmetry-breaking-in-open-shell-atoms-through-polymer-self-consistent-field-theory-2022: https://github.com/AntiPhoton47/quantum-chem
+  multi-excitation-projective-simulation-with-a-many-body-physics-inspired-inductive-bias-2024: https://github.com/MariusKrumm/ManyBodyMEPS
+
+display_titles:
+  universal-quantum-computer-from-relativistic-motion-2024: A Universal Quantum Computer from Relativistic Motion
+  harvesting-contextuality-from-the-vacuum-2025: Harvesting Contextuality from the Vacuum
+  gaussian-basis-functions-for-a-polymer-self-consistent-field-theory-of-atoms-2023: Gaussian Basis Functions for a Polymer Self-Consistent Field Theory of Atoms
+  on-the-origins-of-spontaneous-spherical-symmetry-breaking-in-open-shell-atoms-through-polymer-self-consistent-field-theory-2022: On the Origins of Spontaneous Spherical Symmetry-Breaking in Open-Shell Atoms Through Polymer Self-Consistent Field Theory
+  multi-excitation-projective-simulation-with-a-many-body-physics-inspired-inductive-bias-2024: Multi-Excitation Projective Simulation with a Many-Body Physics Inspired Inductive Bias
+
+display_order:
+  - universal-quantum-computer-from-relativistic-motion-2024
+  - harvesting-contextuality-from-the-vacuum-2025
+  - gaussian-basis-functions-for-a-polymer-self-consistent-field-theory-of-atoms-2023
+  - on-the-origins-of-spontaneous-spherical-symmetry-breaking-in-open-shell-atoms-through-polymer-self-consistent-field-theory-2022
+  - multi-excitation-projective-simulation-with-a-many-body-physics-inspired-inductive-bias-2024

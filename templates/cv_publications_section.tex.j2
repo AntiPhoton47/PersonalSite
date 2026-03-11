@@ -1,9 +1,6 @@
 % AUTO-GENERATED. DO NOT EDIT BY HAND.
-\section*{Research}
-
 {% for e in entries %}
-\noindent{\large\textbf{{{ e.title_tex }}}}\\
-{\small {{ e.authors_tex }}{% if e.venue_tex %} --- {{ e.venue_tex }}{% endif %}{% if e.year %} ({{ e.year }}){% endif %}}\\
-{% if e.url %}{\small\url{ {{ e.url }} }}\\{% endif %}
+\noindent{% if e.url %}\href{ {{- e.url -}} }{ {{- e.citation_tex -}} }{% else %}{{ e.citation_tex }}{% endif %}
+
 \vspace{0.6em}
 {% endfor %}

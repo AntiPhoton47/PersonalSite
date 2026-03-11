@@ -1,22 +1,35 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-CV_TEX="CV/Phil_LeMaitre_CV.tex"
-OUT_DIR="assets/files/CV"
-OUT_PDF="${OUT_DIR}/Phil_LeMaitre_CV.pdf"
+ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+CV_DIR="${ROOT_DIR}/assets/files/CV"
+CV_TEX="${CV_DIR}/Phil_LeMaitre_CV.tex"
+OUT_PDF="${CV_DIR}/Phil_LeMaitre_CV.pdf"
 
-mkdir -p "${OUT_DIR}"
+mkdir -p "${CV_DIR}"
 
-# Tectonic writes the PDF to the same directory as the .tex by default.
-# We compile into a temp build dir and then copy the output PDF where we want it.
 BUILD_DIR="$(mktemp -d)"
-cp -r cv "${BUILD_DIR}/cv"
+trap 'rm -rf "${BUILD_DIR}"' EXIT
+cp -R "${CV_DIR}" "${BUILD_DIR}/CV"
 
-pushd "${BUILD_DIR}/cv" >/dev/null
+pushd "${ROOT_DIR}" >/dev/null
+python3 scripts/update_talks_posters.py
+python3 scripts/render_cv.py \
+  --bib _bibliography/publications.bib \
+  --out assets/files/CV/auto_publications.tex
 
-# Compile (run enough times automatically)
-tectonic -X compile Phil_LeMaitre_CV.tex --outdir .
+pushd "${BUILD_DIR}/CV" >/dev/null
+if command -v tectonic >/dev/null 2>&1; then
+  tectonic -X compile "$(basename "${CV_TEX}")" --outdir .
+elif command -v pdflatex >/dev/null 2>&1; then
+  pdflatex -interaction=nonstopmode -halt-on-error "$(basename "${CV_TEX}")" >/dev/null
+  pdflatex -interaction=nonstopmode -halt-on-error "$(basename "${CV_TEX}")" >/dev/null
+else
+  echo "Neither tectonic nor pdflatex is installed." >&2
+  exit 1
+fi
 
+popd >/dev/null
 popd >/dev/null
 
 cp "${BUILD_DIR}/CV/Phil_LeMaitre_CV.pdf" "${OUT_PDF}"

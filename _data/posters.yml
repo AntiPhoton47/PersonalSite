@@ -1,37 +1,18 @@
-- id: 2025-04-11_RVQC_QISS_2025_7707a73f
-  type: poster
-  title: Presentazione standard di PowerPoint
-  event: '2025'
+- id: poster-qiss-2025
+  kind: poster
+  event: QISS 2025 Conference
+  title: A Universal Quantum Computer from Relativistic Motion
   date: '2025-04-11'
   duration: ''
-  kind: Poster
-  location: ''
-  authors:
-  - Eric Aspling
-  - Michael Lawler
-  tags: []
   links:
-    pdf: /assets/files/posters/2025-04-11_RVQC_QISS_2025.pdf
-    arxiv: https://arxiv.org/abs/2402.10173
-    file: /assets/files/posters/2025-04-11_RVQC_QISS_2025.pdf
-  abstract: ''
-  arxiv: '2402.10173'
-- id: 2024-06-26_Quantum_MEPS_SeefeldQI_466461a2
-  type: poster
-  title: Quantum Meps
-  event: SeefeldQI
+    poster: /assets/files/posters/2025-04-11_RVQC_QISS_2025.pdf
+  site_order: 1
+- id: poster-seefeld-2024
+  kind: poster
+  event: 6th Seefeld Quantum Information Workshop
+  title: Quantum Multi-Excitation Projective Simulation
   date: '2024-06-26'
   duration: ''
-  kind: Poster
-  location: ''
-  authors:
-  - Philip A. LeMaitre
-  - Marius Krumm
-  - Hans J. Briegel
-  tags: []
   links:
-    pdf: /assets/files/posters/2024-06-26_Quantum_MEPS_SeefeldQI.pdf
-    arxiv: https://arxiv.org/abs/2402.10192
-    file: /assets/files/posters/2024-06-26_Quantum_MEPS_SeefeldQI.pdf
-  abstract: ''
-  arxiv: '2402.10192'
+    poster: /assets/files/posters/2024-06-26_Quantum_MEPS_SeefeldQI.pdf
+  site_order: 2

@@ -1,0 +1,174 @@
+entries:
+  - id: talk-rqin-2025
+    kind: talk
+    asset: assets/files/talks/2025-06-25_RVQC_RQIN.pptx
+    include_in_site: true
+    include_in_cv: true
+    title: A Universal Quantum Computer From Relativistic Motion
+    site_title: A Universal Quantum Computer From Relativistic Motion
+    cv_title: A Universal Quantum Computer From Relativistic Motion
+    event: 15th Relativistic Quantum Information North Conference
+    cv_event_line: 15th Relativistic Quantum Information North Conference, University of Naples Federico II, Napoli, Italy
+    date: "2025-06-25"
+    cv_date_text: June. 2025
+    site_order: 1
+    duration: "3:26:54"
+    links:
+      video: https://www.youtube.com/live/pAlDsCJH-ds?si=Mc8rZPqEzI948X2d
+
+  - id: talk-ikhh-2025
+    kind: talk
+    asset: assets/files/talks/2025-09-16_GroupRetreat.pptx
+    include_in_site: true
+    include_in_cv: false
+    title: ""
+    site_title: ""
+    cv_title: ""
+    event: Innsbruck-Konstanz-Hannover Meeting on Physics and Philosophy
+    cv_event_line: ""
+    date: "2025-09-16"
+    cv_date_text: ""
+    site_order: 3
+    duration: ""
+    links: {}
+
+  - id: talk-agents-2024
+    kind: talk
+    include_in_site: false
+    include_in_cv: true
+    title: Physical Characteristics and Manifestations of Agents
+    site_title: ""
+    cv_title: Physical Characteristics and Manifestations of Agents
+    event: Innsbruck-Konstanz-Hannover Meeting on Physics and Philosophy
+    cv_event_line: Innsbruck-Konstanz-Hannover Meeting on Physics and Philosophy, Maria Waldrast, Austria
+    date: "2024-09-01"
+    cv_date_text: Sep. 2024
+    duration: ""
+    links: {}
+
+  - id: talk-rqin-2024
+    kind: talk
+    asset: assets/files/talks/2024-08-07_RQML_RQIN.pptx
+    include_in_site: true
+    include_in_cv: true
+    title: A Universal Quantum Computer From Relativistic Motion
+    site_title: A Universal Quantum Computer From Relativistic Motion
+    cv_title: A Universal Quantum Computer From Relativistic Motion
+    event: 14th Relativistic Quantum Information North Conference
+    cv_event_line: 14th Relativistic Quantum Information North Conference, Charles University, Prague, Czechia
+    date: "2024-08-07"
+    cv_date_text: Aug. 2024
+    site_order: 2
+    duration: "32:48"
+    links:
+      video: https://www.youtube.com/live/catSoE4G3WM?si=MojXIYPkMvzSPx70
+
+  - id: talk-dpg-2024
+    kind: talk
+    asset: assets/files/talks/2024-03-20_MEPS_DPG.pptx
+    include_in_site: true
+    include_in_cv: true
+    title: A Multi-Excitation Projective Simulation Agent
+    site_title: A Multi-Excitation Projective Simulation Agent
+    cv_title: A Multi-Excitation Projective Simulation Agent
+    event: DPG Spring Meeting 2024
+    cv_event_line: DPG Spring Meeting 2024, T\"U Berlin, Berlin, Germany
+    date: "2024-03-20"
+    cv_date_text: Mar. 2024
+    site_order: 4
+    duration: ""
+    links: {}
+
+  - id: poster-sep-2023
+    kind: poster
+    include_in_site: false
+    include_in_cv: true
+    title: Towards a Multi-Excitation Projective Simulation Agent
+    site_title: ""
+    cv_title: Towards a Multi-Excitation Projective Simulation Agent
+    event: Innsbruck-Konstanz Meeting on Physics and Philosophy
+    cv_event_line: Innsbruck-Konstanz Meeting on Physics and Philosophy, Lamm Hotel, Bregenz, Austria
+    date: "2023-09-01"
+    cv_date_text: Sep. 2023
+    duration: ""
+    links: {}
+
+  - id: talk-uw-2022
+    kind: talk
+    asset: assets/files/talks/2022-11-05_Polymer_SCFT_UW_36th_Symposium_ChemPhys.pptx
+    include_in_site: true
+    include_in_cv: true
+    title: Spontaneous Spherical Symmetry-Breaking in Open-Shell Atoms Through Polymer Self-Consistent Field Theory
+    site_title: Spontaneous Spherical Symmetry-Breaking in Open-Shell Atoms Through Polymer Self-Consistent Field Theory
+    cv_title: Spontaneous Spherical Symmetry-Breaking in Open-Shell Atoms Through Polymer Self-Consistent Field Theory
+    event: 36th Symposium on Chemical Physics
+    cv_event_line: 36th Symposium on Chemical Physics, University of Waterloo, Waterloo, Canada
+    date: "2022-11-05"
+    cv_date_text: Nov. 2022
+    site_order: 5
+    duration: ""
+    links: {}
+
+  - id: talk-cap-2022
+    kind: talk
+    asset: assets/files/talks/2022-06-07_Polymer_SCFT_CAP.pptx
+    include_in_site: true
+    include_in_cv: true
+    title: Atomic Shell Structure in a Polymer-Based Approach to Orbital-Free Density-Functional Theory
+    site_title: Atomic Shell Structure in a Polymer-Based Approach to Orbital-Free Density-Functional Theory
+    cv_title: Atomic Shell Structure in a Polymer-Based Approach to Orbital-Free Density-Functional Theory
+    event: 2022 Canadian Association of Physicists Congress
+    cv_event_line: 2022 Canadian Association of Physicists Congress, McMaster University, Hamilton, Canada
+    date: "2022-06-07"
+    cv_date_text: June 2022
+    site_order: 6
+    duration: ""
+    links: {}
+
+  - id: talk-cupc-2019
+    kind: talk
+    asset: assets/files/talks/2019-11-20_compact_stars_CUPC.pdf
+    include_in_site: true
+    include_in_cv: true
+    title: "Thin-Shells as Neutron Stars: A Simple Stellar Model With Great Insight"
+    site_title: "Thin-Shells as Neutron Stars: A Simple Stellar Model With Great Insight"
+    cv_title: "Thin-Shells as Neutron Stars: A Simple Stellar Model With Great Insight"
+    event: Canadian Undergraduate Physics Conference 2019
+    cv_event_line: Canadian Undergraduate Physics Conference 2019, McGill University, Montreal, Canada
+    date: "2019-11-20"
+    cv_date_text: Nov. 2019
+    site_order: 7
+    duration: ""
+    links: {}
+
+  - id: poster-qiss-2025
+    kind: poster
+    asset: assets/files/posters/2025-04-11_RVQC_QISS_2025.pdf
+    include_in_site: true
+    include_in_cv: true
+    title: A Universal Quantum Computer from Relativistic Motion
+    site_title: A Universal Quantum Computer from Relativistic Motion
+    cv_title: A Universal Quantum Computer from Relativistic Motion
+    event: QISS 2025 Conference
+    cv_event_line: QISS 2025 Conference, University of Vienna, Vienna, Austria
+    date: "2025-04-11"
+    cv_date_text: April 2025
+    site_order: 1
+    duration: ""
+    links: {}
+
+  - id: poster-seefeld-2024
+    kind: poster
+    asset: assets/files/posters/2024-06-26_Quantum_MEPS_SeefeldQI.pdf
+    include_in_site: true
+    include_in_cv: true
+    title: Quantum Multi-Excitation Projective Simulation
+    site_title: Quantum Multi-Excitation Projective Simulation
+    cv_title: Quantum Multi-Excitation Projective Simulation
+    event: 6th Seefeld Quantum Information Workshop
+    cv_event_line: 6th Seefeld Quantum Information Workshop, Wellnesshotel Schönruh, Seefeld, Austria
+    date: "2024-06-26"
+    cv_date_text: June 2024
+    site_order: 2
+    duration: ""
+    links: {}

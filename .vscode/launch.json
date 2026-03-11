@@ -1,0 +1,13 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "/Users/munga/PycharmProjects/PersonalWebsite/PersonalSite",
+      "program": "/Users/munga/PycharmProjects/PersonalWebsite/PersonalSite/build/Debug/outDebug"
+    }
+  ]
+}

@@ -30,11 +30,13 @@ My publication list is also available to download as a [BibTeX]({{ '/assets/file
 ## Publication Codes
 
 The following publications have an associated GitHub repository that contains the code used to obtain some or all of the results and to generate the plots:
+<!-- publication-codes:start -->
 - A Universal Quantum Computer from Relativistic Motion / [repo](https://github.com/AntiPhoton47/RVQC)
 - Harvesting Contextuality from the Vacuum / [repo](https://github.com/AntiPhoton47/Contextuality-Harvesting)
 - Gaussian Basis Functions for a Polymer Self-Consistent Field Theory of Atoms / [repo](https://github.com/AntiPhoton47/quantum-chem)
 - On the Origins of Spontaneous Spherical Symmetry-Breaking in Open-Shell Atoms Through Polymer Self-Consistent Field Theory / [repo](https://github.com/AntiPhoton47/quantum-chem)
 - Multi-Excitation Projective Simulation with a Many-Body Physics Inspired Inductive Bias / [repo](https://github.com/MariusKrumm/ManyBodyMEPS)
+<!-- publication-codes:end -->
 
 ## Current Projects
 
@@ -43,4 +45,17 @@ I have a number of interesting projects currently occupying my time, with many c
 - Equipping projective simulation to handle larger percept and action spaces in an interpretable way
 - Some more exotic setups for the contextuality harvesting protocol that I developed
 
-{% include talks_posters_compact.html %}
+<!-- presentations:start -->
+## Conference Talks
+- 15th Relativistic Quantum Information North Conference: [A Universal Quantum Computer From Relativistic Motion](https://www.youtube.com/live/pAlDsCJH-ds?si=Mc8rZPqEzI948X2d) (3:26:54) / [slides](/assets/files/talks/2025-06-25_RVQC_RQIN.pptx)
+- 14th Relativistic Quantum Information North Conference: [A Universal Quantum Computer From Relativistic Motion](https://www.youtube.com/live/catSoE4G3WM?si=MojXIYPkMvzSPx70) (32:48) / [slides](/assets/files/talks/2024-08-07_RQML_RQIN.pptx)
+- Innsbruck-Konstanz-Hannover Meeting on Physics and Philosophy / [slides](/assets/files/talks/2025-09-16_GroupRetreat.pptx)
+- DPG Spring Meeting 2024: A Multi-Excitation Projective Simulation Agent / [slides](/assets/files/talks/2024-03-20_MEPS_DPG.pptx)
+- 36th Symposium on Chemical Physics: Spontaneous Spherical Symmetry-Breaking in Open-Shell Atoms Through Polymer Self-Consistent Field Theory / [slides](/assets/files/talks/2022-11-05_Polymer_SCFT_UW_36th_Symposium_ChemPhys.pptx)
+- 2022 Canadian Association of Physicists Congress: Atomic Shell Structure in a Polymer-Based Approach to Orbital-Free Density-Functional Theory / [slides](/assets/files/talks/2022-06-07_Polymer_SCFT_CAP.pptx)
+- Canadian Undergraduate Physics Conference 2019: Thin-Shells as Neutron Stars: A Simple Stellar Model With Great Insight / [slides](/assets/files/talks/2019-11-20_compact_stars_CUPC.pdf)
+
+## Conference Posters
+- QISS 2025 Conference: A Universal Quantum Computer from Relativistic Motion / [poster](/assets/files/posters/2025-04-11_RVQC_QISS_2025.pdf)
+- 6th Seefeld Quantum Information Workshop: Quantum Multi-Excitation Projective Simulation / [poster](/assets/files/posters/2024-06-26_Quantum_MEPS_SeefeldQI.pdf)
+<!-- presentations:end -->
