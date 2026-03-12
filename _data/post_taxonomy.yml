@@ -1,0 +1,54 @@
+categories:
+  outreach:
+    description: Public engagement, science communication, teaching, events, or demos.
+    keywords:
+      - outreach
+      - high school
+      - students
+      - booth
+      - workshop
+      - public talk
+      - science communication
+      - demo
+      - event
+  leisure:
+    description: Music, travel, hobbies, culture, or personal-life posts.
+    keywords:
+      - concert
+      - music
+      - rap
+      - travel
+      - hobby
+      - leisure
+      - weekend
+      - festival
+  research:
+    description: Research updates, papers, methods, ideas, and academic work.
+    keywords:
+      - research
+      - quantum
+      - paper
+      - publication
+      - model
+      - simulation
+      - relativistic
+      - experiment
+      - manuscript
+
+tags:
+  outreach:
+    keywords: [outreach, booth, workshop, students, event, demo]
+  teaching:
+    keywords: [teaching, lecture, class, students, pedagogy]
+  ai:
+    keywords: [ai, artificial intelligence, machine learning, model, chatbot, diffusion]
+  quantum:
+    keywords: [quantum, qubit, relativistic quantum information, qml]
+  research:
+    keywords: [research, paper, publication, manuscript]
+  music:
+    keywords: [music, concert, rap, hip hop, album]
+  travel:
+    keywords: [travel, trip, train, flight, city]
+  philosophy:
+    keywords: [philosophy, agent, agency, foundations]

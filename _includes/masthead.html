@@ -13,8 +13,16 @@
         </a>
         <ul class="visible-links">
           <li class="masthead__menu-item">
-            <button class="btn btn--inverse btn--small" onclick="toggleTheme()">
-              🌗
+            <button class="theme-toggle" type="button" onclick="toggleTheme()" aria-label="Toggle light and dark mode" title="Toggle theme">
+              <span class="theme-toggle__icon theme-toggle__icon--sun" aria-hidden="true">
+                <i class="fas fa-sun"></i>
+              </span>
+              <span class="theme-toggle__track" aria-hidden="true">
+                <span class="theme-toggle__thumb"></span>
+              </span>
+              <span class="theme-toggle__icon theme-toggle__icon--moon" aria-hidden="true">
+                <i class="fas fa-moon"></i>
+              </span>
             </button>
           </li>
           {%- for link in site.data.navigation.main -%}

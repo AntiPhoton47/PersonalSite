@@ -1,0 +1,53 @@
+---
+layout: default
+---
+
+{% if page.header.overlay_color or page.header.overlay_image or page.header.image %}
+  {% include page__hero.html %}
+{% elsif page.header.video.id and page.header.video.provider %}
+  {% include page__hero_video.html %}
+{% endif %}
+
+{% if page.url != "/" and site.breadcrumbs %}
+  {% unless paginator %}
+    {% include breadcrumbs.html %}
+  {% endunless %}
+{% endif %}
+
+{% assign archive_posts = page.posts | default: empty %}
+{% assign archive_title = page.title %}
+{% if archive_title == nil or archive_title == "" %}
+  {% if page.type == "year" and page.date %}
+    {% assign archive_title = page.date | date: "%Y" %}
+  {% elsif page.type == "month" and page.date %}
+    {% assign archive_title = page.date | date: "%B %Y" %}
+  {% elsif page.type == "day" and page.date %}
+    {% assign archive_title = page.date | date: "%B %-d, %Y" %}
+  {% endif %}
+{% endif %}
+
+<div id="main" role="main">
+  {% include sidebar.html %}
+
+  <div class="archive">
+    {% unless page.header.overlay_color or page.header.overlay_image %}
+      <h1 id="page-title" class="page__title"{% if page.locale %} lang="{{ page.locale }}"{% endif %}>{{ archive_title }}</h1>
+    {% endunless %}
+
+    {% if page.type == "category" %}
+      <p class="archive__subtitle">Posts filed under this category.</p>
+    {% elsif page.type == "tag" %}
+      <p class="archive__subtitle">Posts tagged with this label.</p>
+    {% elsif page.type == "year" %}
+      <p class="archive__subtitle">Posts published this year.</p>
+    {% endif %}
+
+    {% if archive_posts and archive_posts.size > 0 %}
+      {% for post in archive_posts %}
+        {% include archive-single.html type="list" %}
+      {% endfor %}
+    {% else %}
+      {{ content }}
+    {% endif %}
+  </div>
+</div>

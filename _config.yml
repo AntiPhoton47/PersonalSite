@@ -112,7 +112,7 @@ social:
     - "https://github.com/AntiPhoton47"
     - "https://orcid.org/0000-0002-0414-5202"
     - "https://scholar.google.ca/citations?hl=en&user=mw53fQgAAAAJ"
-    - "www.linkedin.com/in/phil-lemaitre"
+    - "https://www.linkedin.com/in/phil-lemaitre"
     - "https://bsky.app/profile/contextguy.bsky.social"
     - "https://x.com/Philontre"
 
@@ -128,14 +128,23 @@ scholar:
   order: descending
 
 jekyll-archives:
-  enabled: []
+  enabled:
+    - year
+    - categories
+    - tags
   layout: archive
   permalinks:
     year: '/:year/'
-    month: '/:year/:month/'
-    day: '/:year/:month/:day/'
     tag: '/tag/:name/'
     category: '/category/:name/'
+
+category_archive:
+  type: jekyll-archives
+  path: /category/
+
+tag_archive:
+  type: jekyll-archives
+  path: /tag/
 
 repository: AntiPhoton47/PersonalSite
 
@@ -149,8 +158,6 @@ comments:
     reactions_enabled: "1"
     theme: "dark"
 
-paginate: 8
-paginate_path: /page:num/
 search: true
 
 feed:

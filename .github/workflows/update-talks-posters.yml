@@ -7,6 +7,7 @@ on:
       - "assets/files/talks/**"
       - "assets/files/posters/**"
       - "scripts/update_talks_posters.py"
+      - "_data/presentations_source.yml"
 
 permissions:
   contents: write
@@ -25,19 +26,31 @@ jobs:
       - name: Install deps
         run: |
           python -m pip install --upgrade pip
-          pip install pypdf pyyaml requests python-pptx
+          pip install -r requirements-tools.txt
 
-      - name: Update YAML (with enrichment)
-        env:
-          SERPAPI_KEY: ${{ secrets.SERPAPI_KEY }}
-          AUTHOR_NAME: "Philip A. LeMaitre"
+      - name: Update talks/posters outputs
         run: |
-          python scripts/update_talks_posters.py --enrich --your_name "$AUTHOR_NAME"
+          python scripts/update_talks_posters.py --check-online
+
+      - name: Install Tectonic
+        run: |
+          curl -L https://github.com/tectonic-typesetting/tectonic/releases/download/tectonic%400.15.0/tectonic-0.15.0-x86_64-unknown-linux-gnu.tar.gz \
+            | tar -xz
+          sudo mv tectonic /usr/local/bin/tectonic
+
+      - name: Rebuild CV
+        run: |
+          bash scripts/build_cv.sh
 
       - name: Commit changes (if any)
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add _data/talks.yml _data/posters.yml
+          git add \
+            _data/talks.yml \
+            _data/posters.yml \
+            research.md \
+            assets/files/CV/auto_presentations.tex \
+            assets/files/CV/Phil_LeMaitre_CV.pdf
           git diff --cached --quiet || git commit -m "Auto-update talks/posters index"
           git push

@@ -14,7 +14,7 @@ group :jekyll_plugins do
   # Your plugins
   gem "jekyll-archives"
   gem "jekyll-scholar", "~> 7.2"
-  gem "jekyll-webmention_io"
+  gem "jekyll-webmention_io", "~> 4.1"
 end
 
 # Jekyll 4 on Ruby 3 often needs this explicitly

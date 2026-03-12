@@ -6,10 +6,9 @@
 </script>
 <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 
-<link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}">
-
 <link id="mm-light" rel="stylesheet" href="{{ '/assets/css/main-light.css' | relative_url }}">
 <link id="mm-dark" rel="stylesheet" href="{{ '/assets/css/main-dark.css' | relative_url }}" disabled>
+<link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}?v={{ site.time | date: '%s' }}">
 
 {% if site.webmentions %}
   {% webmentions_head %}
@@ -25,6 +24,7 @@
     function apply(mode) {
       document.getElementById("mm-dark").disabled = (mode !== "dark");
       document.getElementById("mm-light").disabled = (mode === "dark");
+      document.documentElement.dataset.themeMode = mode;
       localStorage.setItem(key, mode);
     }
 
@@ -37,22 +37,5 @@
   })();
 </script>
 
-<script src="https://giscus.app/client.js"
-        data-repo="AntiPhoton47/PersonalSite"
-        data-repo-id="R_kgDORS3efA"
-        data-category="Blog Comments"
-        data-category-id="DIC_kwDORS3efM4C2vOU"
-        data-mapping="pathname"
-        data-strict="0"
-        data-reactions-enabled="1"
-        data-emit-metadata="0"
-        data-input-position="bottom"
-        data-theme="dark"
-        data-lang="en"
-        data-loading="lazy"
-        crossorigin="anonymous"
-        async>
-</script>
-
 <script data-goatcounter="https://academicgoat.goatcounter.com/count"
-        async src="//gc.zgo.at/count.js"></script>
+        async src="https://gc.zgo.at/count.js"></script>

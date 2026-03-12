@@ -1,0 +1,14 @@
+<div class="page__comments">
+  {% capture comments_label %}{{ site.data.ui-text[site.locale].comments_label | default: "Comments" }}{% endcapture %}
+  {% case site.comments.provider %}
+    {% when "giscus" %}
+      <h4 class="page__comments-title">{{ comments_label }}</h4>
+      <div class="comments-note">
+        <p>Giscus comments require a GitHub account. If you do not have one, you can still send feedback by <a href="mailto:Philip.Lemaitre@uibk.ac.at?subject={{ page.title | url_encode }}">emailing me directly</a>.</p>
+      </div>
+      <section id="giscus-comments"></section>
+      {% include comments-providers/giscus.html %}
+    {% else %}
+      {% include /comments-providers/custom.html %}
+  {% endcase %}
+</div>
