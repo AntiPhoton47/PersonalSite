@@ -10,7 +10,7 @@
      class="btn btn--x-twitter"
      onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
      title="{{ share_label }} X">
-    <i class="fa-brands fa-fw fa-x-twitter" aria-hidden="true"></i><span> X</span>
+    <i class="fab fa-fw fa-x-twitter fa-brands" aria-hidden="true"></i><span> X</span>
   </a>
 
   <a href="https://bsky.app/intent/compose?text={{ share_text | url_encode }}"
@@ -24,21 +24,21 @@
      class="btn btn--facebook"
      onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
      title="{{ share_label }} Facebook">
-    <i class="fa-brands fa-fw fa-facebook-f" aria-hidden="true"></i><span> Facebook</span>
+    <i class="fab fa-fw fa-facebook-f fa-brands fa-facebook-f" aria-hidden="true"></i><span> Facebook</span>
   </a>
 
   <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ share_url | url_encode }}&title={{ page.title | url_encode }}"
      class="btn btn--linkedin"
      onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
      title="{{ share_label }} LinkedIn">
-    <i class="fa-brands fa-fw fa-linkedin-in" aria-hidden="true"></i><span> LinkedIn</span>
+    <i class="fab fa-fw fa-linkedin-in fa-brands fa-linkedin-in" aria-hidden="true"></i><span> LinkedIn</span>
   </a>
 
   <a href="https://www.reddit.com/submit?url={{ share_url | url_encode }}&title={{ page.title | url_encode }}"
      class="btn btn--reddit"
      onclick="window.open(this.href, 'window', 'left=20,top=20,width=900,height=650,toolbar=1,resizable=0'); return false;"
      title="{{ share_label }} Reddit">
-    <i class="fa-brands fa-fw fa-reddit-alien" aria-hidden="true"></i><span> Reddit</span>
+    <i class="fab fa-fw fa-reddit-alien fa-brands fa-reddit-alien" aria-hidden="true"></i><span> Reddit</span>
   </a>
 
   <a href="mailto:?subject={{ page.title | url_encode }}&body={{ share_text | url_encode }}"

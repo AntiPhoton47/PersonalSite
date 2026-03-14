@@ -80,7 +80,7 @@
 
 <link id="mm-light" rel="stylesheet" href="/assets/css/main-light.css">
 <link id="mm-dark" rel="stylesheet" href="/assets/css/main-dark.css" disabled>
-<link rel="stylesheet" href="/assets/css/custom.css?v=1773522016">
+<link rel="stylesheet" href="/assets/css/custom.css?v=1773524949">
 
 <script type="application/ld+json">
 {
@@ -161,6 +161,7 @@
       document.getElementById("mm-light").disabled = (mode === "dark");
       document.documentElement.dataset.themeMode = mode;
       localStorage.setItem(key, mode);
+      window.dispatchEvent(new CustomEvent("themechange", { detail: { mode } }));
     }
 
     window.toggleTheme = function () {
@@ -351,6 +352,9 @@
   
 
 
+
+
+
 <div id="main" class="page-shell page-shell--single" role="main">
   
   <div class="sidebar sticky">
@@ -490,7 +494,7 @@
     
     
 
-    <div class="page__inner-wrap page-shell__inner">
+    <div class="page__inner-wrap page-shell__inner page-shell__inner--with-toc">
       
         <header class="page-shell__header">
           
@@ -508,15 +512,12 @@
       
 
       
-        
-        
         <aside class="sidebar__right page-shell__toc sticky">
           <nav class="toc">
             <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
             <ul class="toc__menu"><li><a href="#starter-pack">Starter Pack</a></li><li><a href="#courses">Courses</a></li><li><a href="#research-notes">Research Notes</a></li><li><a href="#mini-explainers">Mini-Explainers</a></li><li><a href="#current-initiatives-and-institutions">Current Initiatives and Institutions</a><ul><li><a href="#initiatives">Initiatives</a></li><li><a href="#institutions">Institutions</a></li><li><a href="#hubs">Hubs</a></li></ul></li></ul>
           </nav>
         </aside>
-        
       
 
       <section class="page__content page-shell__content" itemprop="text">
@@ -1087,6 +1088,9 @@
       
 
       
+
+
+
 
       
       

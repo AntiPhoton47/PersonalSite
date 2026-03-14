@@ -1,0 +1,29 @@
+{% assign previous = page.previous %}
+{% assign next = page.next %}
+{% if previous or next %}
+<nav class="post-pagination-grid" aria-label="Post pagination">
+  {% if previous %}
+    <a href="{{ previous.url | relative_url }}" class="post-pagination-grid__item" rel="prev">
+      <span class="post-pagination-grid__label">Previous</span>
+      <span class="post-pagination-grid__title">{{ previous.title }}</span>
+    </a>
+  {% else %}
+    <div class="post-pagination-grid__item post-pagination-grid__item--disabled" aria-disabled="true">
+      <span class="post-pagination-grid__label">Previous</span>
+      <span class="post-pagination-grid__title">No earlier post</span>
+    </div>
+  {% endif %}
+
+  {% if next %}
+    <a href="{{ next.url | relative_url }}" class="post-pagination-grid__item" rel="next">
+      <span class="post-pagination-grid__label">Next</span>
+      <span class="post-pagination-grid__title">{{ next.title }}</span>
+    </a>
+  {% else %}
+    <div class="post-pagination-grid__item post-pagination-grid__item--disabled" aria-disabled="true">
+      <span class="post-pagination-grid__label">Next</span>
+      <span class="post-pagination-grid__title">No newer post</span>
+    </div>
+  {% endif %}
+</nav>
+{% endif %}

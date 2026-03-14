@@ -86,7 +86,7 @@
 
 <link id="mm-light" rel="stylesheet" href="/assets/css/main-light.css">
 <link id="mm-dark" rel="stylesheet" href="/assets/css/main-dark.css" disabled>
-<link rel="stylesheet" href="/assets/css/custom.css?v=1773522016">
+<link rel="stylesheet" href="/assets/css/custom.css?v=1773524949">
 
 <script type="application/ld+json">
 {
@@ -183,6 +183,7 @@
       document.getElementById("mm-light").disabled = (mode === "dark");
       document.documentElement.dataset.themeMode = mode;
       localStorage.setItem(key, mode);
+      window.dispatchEvent(new CustomEvent("themechange", { detail: { mode } }));
     }
 
     window.toggleTheme = function () {
@@ -434,6 +435,9 @@
   
 
 
+
+
+
 <div id="main" class="page-shell page-shell--single" role="main">
   
   <div class="sidebar sticky">
@@ -577,9 +581,6 @@
       
 
       
-        
-        
-      
 
       <section class="page__content page-shell__content" itemprop="text">
         <p>This past weekend was an old school hip hop fan’s dream: I got to see Onyx at a smaller venue in Innsbruck on Thursday night, then Wu-Tang Clan and Mobb Deep in Vienna the next night! So many classics performed with such raw energy, it was a thing of beauty. I think C.R.E.A.M. by Wu-Tang Clan and Slam! by Onyx were my favourite performances. I also got to meet Onyx and their whole crew by chance the day after their performance on my way to Vienna, with Fredro Starr coming over and sitting next to me for most of the ride; what a cool dude.</p>
@@ -637,7 +638,7 @@
      class="btn btn--x-twitter"
      onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
      title="Share on X">
-    <i class="fa-brands fa-fw fa-x-twitter" aria-hidden="true"></i><span> X</span>
+    <i class="fab fa-fw fa-x-twitter fa-brands" aria-hidden="true"></i><span> X</span>
   </a>
 
   <a href="https://bsky.app/intent/compose?text=Back+to+Back+Rap+Concerts+http%3A%2F%2Flocalhost%3A4000%2Fleisure%2F2026%2F03%2F09%2FConcerts.html"
@@ -651,21 +652,21 @@
      class="btn btn--facebook"
      onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
      title="Share on Facebook">
-    <i class="fa-brands fa-fw fa-facebook-f" aria-hidden="true"></i><span> Facebook</span>
+    <i class="fab fa-fw fa-facebook-f fa-brands fa-facebook-f" aria-hidden="true"></i><span> Facebook</span>
   </a>
 
   <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Fleisure%2F2026%2F03%2F09%2FConcerts.html&title=Back+to+Back+Rap+Concerts"
      class="btn btn--linkedin"
      onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
      title="Share on LinkedIn">
-    <i class="fa-brands fa-fw fa-linkedin-in" aria-hidden="true"></i><span> LinkedIn</span>
+    <i class="fab fa-fw fa-linkedin-in fa-brands fa-linkedin-in" aria-hidden="true"></i><span> LinkedIn</span>
   </a>
 
   <a href="https://www.reddit.com/submit?url=http%3A%2F%2Flocalhost%3A4000%2Fleisure%2F2026%2F03%2F09%2FConcerts.html&title=Back+to+Back+Rap+Concerts"
      class="btn btn--reddit"
      onclick="window.open(this.href, 'window', 'left=20,top=20,width=900,height=650,toolbar=1,resizable=0'); return false;"
      title="Share on Reddit">
-    <i class="fa-brands fa-fw fa-reddit-alien" aria-hidden="true"></i><span> Reddit</span>
+    <i class="fab fa-fw fa-reddit-alien fa-brands fa-reddit-alien" aria-hidden="true"></i><span> Reddit</span>
   </a>
 
   <a href="mailto:?subject=Back+to+Back+Rap+Concerts&body=Back+to+Back+Rap+Concerts+http%3A%2F%2Flocalhost%3A4000%2Fleisure%2F2026%2F03%2F09%2FConcerts.html"
@@ -677,15 +678,24 @@
 
 
       
-  <nav class="pagination">
-    
-      <a href="/outreach/2026/02/25/MIP-Tag.html" class="pagination--pager" title="MIP Tag Outreach Event Today
-">Previous</a>
-    
-    
-      <a href="#" class="pagination--pager disabled">Next</a>
-    
-  </nav>
+
+
+<nav class="post-pagination-grid" aria-label="Post pagination">
+  
+    <a href="/outreach/2026/02/25/MIP-Tag.html" class="post-pagination-grid__item" rel="prev">
+      <span class="post-pagination-grid__label">Previous</span>
+      <span class="post-pagination-grid__title">MIP Tag Outreach Event Today</span>
+    </a>
+  
+
+  
+    <div class="post-pagination-grid__item post-pagination-grid__item--disabled" aria-disabled="true">
+      <span class="post-pagination-grid__label">Next</span>
+      <span class="post-pagination-grid__title">No newer post</span>
+    </div>
+  
+</nav>
+
 
 
       
@@ -704,9 +714,7 @@
   
   
       <h4 class="page__comments-title">Comments</h4>
-      <div class="comments-note">
-        <p>Giscus comments require a GitHub account. If you do not have one, you can still send feedback by <a href="mailto:Philip.Lemaitre@uibk.ac.at?subject=Back+to+Back+Rap+Concerts">emailing me directly</a>.</p>
-      </div>
+      <p class="comments-note">Giscus comments require a GitHub account. If you do not have one, you can still send feedback by <a href="mailto:Philip.Lemaitre@uibk.ac.at?subject=Back+to+Back+Rap+Concerts">emailing me directly</a>.</p>
       <section id="giscus-comments"></section>
       <script>
   'use strict';
@@ -718,26 +726,54 @@
       return;
     }
 
-    var script = document.createElement('script');
+    function giscusTheme() {
+      var mode = document.documentElement.dataset.themeMode || 'dark';
+      return mode === 'light' ? 'transparent_light' : 'transparent_dark';
+    }
 
-    script.setAttribute('src', 'https://giscus.app/client.js');
-    script.setAttribute('data-repo', 'antiphoton47/personalsite');
-    script.setAttribute('data-repo-id', 'R_kgDORS3efA');
-    script.setAttribute('data-category', 'Blog Comments');
-    script.setAttribute('data-category-id', 'DIC_kwDORS3efM4C2vOU');
-    script.setAttribute('data-mapping', 'pathname');
-    script.setAttribute('data-strict', '0');
-    script.setAttribute('data-reactions-enabled', '1');
-    script.setAttribute('data-emit-metadata', '0');
-    script.setAttribute('data-input-position', 'top');
-    script.setAttribute('data-theme', 'dark');
-    script.setAttribute('data-lang',  'en');
-    
-    script.setAttribute('crossorigin', 'anonymous');
+    function ensureScript() {
+      if (commentContainer.querySelector('script[src="https://giscus.app/client.js"]')) {
+        return;
+      }
 
-    script.setAttribute('async', '');
+      var script = document.createElement('script');
+      script.setAttribute('src', 'https://giscus.app/client.js');
+      script.setAttribute('data-repo', 'antiphoton47/personalsite');
+      script.setAttribute('data-repo-id', 'R_kgDORS3efA');
+      script.setAttribute('data-category', 'Blog Comments');
+      script.setAttribute('data-category-id', 'DIC_kwDORS3efM4C2vOU');
+      script.setAttribute('data-mapping', 'pathname');
+      script.setAttribute('data-strict', '0');
+      script.setAttribute('data-reactions-enabled', '1');
+      script.setAttribute('data-emit-metadata', '0');
+      script.setAttribute('data-input-position', 'top');
+      script.setAttribute('data-theme', giscusTheme());
+      script.setAttribute('data-lang', 'en');
+      script.setAttribute('crossorigin', 'anonymous');
+      script.setAttribute('async', '');
+      commentContainer.appendChild(script);
+    }
 
-    commentContainer.appendChild(script);
+    function updateTheme() {
+      var frame = document.querySelector('iframe.giscus-frame');
+      if (!frame) {
+        return;
+      }
+
+      frame.contentWindow.postMessage(
+        {
+          giscus: {
+            setConfig: {
+              theme: giscusTheme()
+            }
+          }
+        },
+        'https://giscus.app'
+      );
+    }
+
+    ensureScript();
+    window.addEventListener('themechange', updateTheme);
   })();
 </script>
 
@@ -756,79 +792,64 @@
 
 
 <div class="page__related">
-  <h2 class="page__related-title">Keep exploring</h2>
-  <div class="grid__wrapper">
-    
-      
-      
-      
-      
-      
-      
-    
-
-    
-      
-        
-        
-        
-        
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-      <div class="archive__item-teaser">
-        <img src="/assets/images/Crab_MultiChandra_960.JPG" alt="">
+  <section class="home-carousel-section page__related-section">
+    <div class="home-carousel-section__header">
+      <div>
+        <h2 class="page__related-title">Other posts</h2>
       </div>
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/outreach/2026/02/25/MIP-Tag.html" rel="permalink">MIP Tag Outreach Event Today
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-      
-      <span class="page__meta-date">
-        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
-        
-        <time datetime="2026-02-25T10:00:00+01:00">February 25, 2026</time>
-      </span>
-    
-
-    <span class="page__meta-sep"></span>
-
+      <div class="home-carousel-section__actions">
+        <div class="carousel-controls">
+          <button type="button" class="carousel-controls__button" data-carousel-prev="related-posts" aria-label="Previous">
+            <span aria-hidden="true">&larr;</span>
+          </button>
+          <button type="button" class="carousel-controls__button" data-carousel-next="related-posts" aria-label="Next">
+            <span aria-hidden="true">&rarr;</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="home-carousel page__related-grid" data-carousel-track="related-posts">
     
       
       
-
-      <span class="page__meta-readtime">
-        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
-        
-          less than 1 minute read
-        
-      </span>
+      
+      
+      
+      
     
-  </p>
 
-
-    <p class="archive__item-excerpt" itemprop="description">High school students coming to learn about AI and physics
-</p>
-  </article>
-</div>
-
+    
+      
+        
+        
+        
+        <article class="page__related-card">
+          
+          
+            <a class="page__related-card__image" href="/outreach/2026/02/25/MIP-Tag.html">
+              <img src="/assets/images/IMG_6115.JPG" alt="MIP Tag Outreach Event Today">
+            </a>
+          
+          <h3 class="page__related-card__title"><a href="/outreach/2026/02/25/MIP-Tag.html">MIP Tag Outreach Event Today</a></h3>
+          <p class="page__related-card__meta">
+            <time datetime="2026-02-25T10:00:00+01:00">February 25, 2026</time>
+            
+              <span>1 min read</span>
+            
+          </p>
+          
+            <p class="page__related-card__excerpt">High school students coming to learn about AI and physics</p>
+          
+        </article>
         
         
         
       
     
-  </div>
+    </div>
+  </section>
 
+  <h2 class="page__related-title page__related-title--destinations">Keep exploring</h2>
   <div class="related-destinations">
     <a class="related-destinations__card" href="/posts/#explore-topics">
       <span class="related-destinations__title">Browse by topic</span>
@@ -913,26 +934,54 @@
       return;
     }
 
-    var script = document.createElement('script');
+    function giscusTheme() {
+      var mode = document.documentElement.dataset.themeMode || 'dark';
+      return mode === 'light' ? 'transparent_light' : 'transparent_dark';
+    }
 
-    script.setAttribute('src', 'https://giscus.app/client.js');
-    script.setAttribute('data-repo', 'antiphoton47/personalsite');
-    script.setAttribute('data-repo-id', 'R_kgDORS3efA');
-    script.setAttribute('data-category', 'Blog Comments');
-    script.setAttribute('data-category-id', 'DIC_kwDORS3efM4C2vOU');
-    script.setAttribute('data-mapping', 'pathname');
-    script.setAttribute('data-strict', '0');
-    script.setAttribute('data-reactions-enabled', '1');
-    script.setAttribute('data-emit-metadata', '0');
-    script.setAttribute('data-input-position', 'top');
-    script.setAttribute('data-theme', 'dark');
-    script.setAttribute('data-lang',  'en');
-    
-    script.setAttribute('crossorigin', 'anonymous');
+    function ensureScript() {
+      if (commentContainer.querySelector('script[src="https://giscus.app/client.js"]')) {
+        return;
+      }
 
-    script.setAttribute('async', '');
+      var script = document.createElement('script');
+      script.setAttribute('src', 'https://giscus.app/client.js');
+      script.setAttribute('data-repo', 'antiphoton47/personalsite');
+      script.setAttribute('data-repo-id', 'R_kgDORS3efA');
+      script.setAttribute('data-category', 'Blog Comments');
+      script.setAttribute('data-category-id', 'DIC_kwDORS3efM4C2vOU');
+      script.setAttribute('data-mapping', 'pathname');
+      script.setAttribute('data-strict', '0');
+      script.setAttribute('data-reactions-enabled', '1');
+      script.setAttribute('data-emit-metadata', '0');
+      script.setAttribute('data-input-position', 'top');
+      script.setAttribute('data-theme', giscusTheme());
+      script.setAttribute('data-lang', 'en');
+      script.setAttribute('crossorigin', 'anonymous');
+      script.setAttribute('async', '');
+      commentContainer.appendChild(script);
+    }
 
-    commentContainer.appendChild(script);
+    function updateTheme() {
+      var frame = document.querySelector('iframe.giscus-frame');
+      if (!frame) {
+        return;
+      }
+
+      frame.contentWindow.postMessage(
+        {
+          giscus: {
+            setConfig: {
+              theme: giscusTheme()
+            }
+          }
+        },
+        'https://giscus.app'
+      );
+    }
+
+    ensureScript();
+    window.addEventListener('themechange', updateTheme);
   })();
 </script>
 

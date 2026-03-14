@@ -18,6 +18,14 @@ layout: default
   {% endunless %}
 {% endif %}
 
+{% assign has_page_toc = false %}
+{% if page.toc %}
+  {% capture generated_toc %}{% include toc.html sanitize=true html=content h_min=1 h_max=6 class="toc__menu" skip_no_ids=true %}{% endcapture %}
+  {% if generated_toc contains "<li" %}
+    {% assign has_page_toc = true %}
+  {% endif %}
+{% endif %}
+
 <div id="main" class="page-shell page-shell--single" role="main">
   {% include sidebar.html %}
 
@@ -27,7 +35,7 @@ layout: default
     {% if page.date %}<meta itemprop="datePublished" content="{{ page.date | date_to_xmlschema }}">{% endif %}
     {% if page.last_modified_at %}<meta itemprop="dateModified" content="{{ page.last_modified_at | date_to_xmlschema }}">{% endif %}
 
-    <div class="page__inner-wrap page-shell__inner">
+    <div class="page__inner-wrap page-shell__inner{% if has_page_toc %} page-shell__inner--with-toc{% endif %}">
       {% unless page.header.overlay_color or page.header.overlay_image %}
         <header class="page-shell__header">
           {% if page.collection == "posts" %}
@@ -47,16 +55,13 @@ layout: default
         </header>
       {% endunless %}
 
-      {% if page.toc %}
-        {% capture generated_toc %}{% include toc.html sanitize=true html=content h_min=1 h_max=6 class="toc__menu" skip_no_ids=true %}{% endcapture %}
-        {% if generated_toc contains "<li" %}
+      {% if has_page_toc %}
         <aside class="sidebar__right page-shell__toc {% if page.toc_sticky %}sticky{% endif %}">
           <nav class="toc">
             <header><h4 class="nav__title"><i class="fas fa-{{ page.toc_icon | default: 'file-alt' }}"></i> {{ page.toc_label | default: site.data.ui-text[site.locale].toc_label | default: "On this page" }}</h4></header>
             {{ generated_toc }}
           </nav>
         </aside>
-        {% endif %}
       {% endif %}
 
       <section class="page__content page-shell__content" itemprop="text">

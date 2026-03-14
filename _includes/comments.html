@@ -3,9 +3,7 @@
   {% case site.comments.provider %}
     {% when "giscus" %}
       <h4 class="page__comments-title">{{ comments_label }}</h4>
-      <div class="comments-note">
-        <p>Giscus comments require a GitHub account. If you do not have one, you can still send feedback by <a href="mailto:Philip.Lemaitre@uibk.ac.at?subject={{ page.title | url_encode }}">emailing me directly</a>.</p>
-      </div>
+      <p class="comments-note">Giscus comments require a GitHub account. If you do not have one, you can still send feedback by <a href="mailto:Philip.Lemaitre@uibk.ac.at?subject={{ page.title | url_encode }}">emailing me directly</a>.</p>
       <section id="giscus-comments"></section>
       {% include comments-providers/giscus.html %}
     {% else %}

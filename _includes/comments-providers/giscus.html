@@ -1,0 +1,60 @@
+<script>
+  'use strict';
+
+  (function () {
+    var commentContainer = document.querySelector('#giscus-comments');
+
+    if (!commentContainer) {
+      return;
+    }
+
+    function giscusTheme() {
+      var mode = document.documentElement.dataset.themeMode || 'dark';
+      return mode === 'light' ? 'transparent_light' : 'transparent_dark';
+    }
+
+    function ensureScript() {
+      if (commentContainer.querySelector('script[src="https://giscus.app/client.js"]')) {
+        return;
+      }
+
+      var script = document.createElement('script');
+      script.setAttribute('src', 'https://giscus.app/client.js');
+      script.setAttribute('data-repo', 'antiphoton47/personalsite');
+      script.setAttribute('data-repo-id', '{{ site.comments.giscus.repo_id }}');
+      script.setAttribute('data-category', '{{ site.comments.giscus.category_name }}');
+      script.setAttribute('data-category-id', '{{ site.comments.giscus.category_id }}');
+      script.setAttribute('data-mapping', '{{ site.comments.giscus.discussion_term | default: "pathname" }}');
+      script.setAttribute('data-strict', '0');
+      script.setAttribute('data-reactions-enabled', '{{ site.comments.giscus.reactions_enabled | default: "1" }}');
+      script.setAttribute('data-emit-metadata', '0');
+      script.setAttribute('data-input-position', 'top');
+      script.setAttribute('data-theme', giscusTheme());
+      script.setAttribute('data-lang', 'en');
+      script.setAttribute('crossorigin', 'anonymous');
+      script.setAttribute('async', '');
+      commentContainer.appendChild(script);
+    }
+
+    function updateTheme() {
+      var frame = document.querySelector('iframe.giscus-frame');
+      if (!frame) {
+        return;
+      }
+
+      frame.contentWindow.postMessage(
+        {
+          giscus: {
+            setConfig: {
+              theme: giscusTheme()
+            }
+          }
+        },
+        'https://giscus.app'
+      );
+    }
+
+    ensureScript();
+    window.addEventListener('themechange', updateTheme);
+  })();
+</script>

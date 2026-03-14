@@ -3,8 +3,23 @@
 {% assign shown_urls = "|" %}
 
 <div class="page__related">
-  <h2 class="page__related-title">{{ site.data.ui-text[site.locale].related_label | default: "Keep exploring" }}</h2>
-  <div class="grid__wrapper">
+  <section class="home-carousel-section page__related-section">
+    <div class="home-carousel-section__header">
+      <div>
+        <h2 class="page__related-title">Other posts</h2>
+      </div>
+      <div class="home-carousel-section__actions">
+        <div class="carousel-controls">
+          <button type="button" class="carousel-controls__button" data-carousel-prev="related-posts" aria-label="Previous">
+            <span aria-hidden="true">&larr;</span>
+          </button>
+          <button type="button" class="carousel-controls__button" data-carousel-next="related-posts" aria-label="Next">
+            <span aria-hidden="true">&rarr;</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="home-carousel page__related-grid" data-carousel-track="related-posts">
     {% for post in candidate_posts %}
       {% if post.id == page.id %}{% continue %}{% endif %}
       {% assign shares_topic = false %}
@@ -19,7 +34,24 @@
         {% endif %}
       {% endfor %}
       {% if shares_topic %}
-        {% include archive-single.html type="grid" %}
+        <article class="page__related-card">
+          {% assign teaser = post.header.teaser | default: post.header.overlay_image | default: post.image %}
+          {% if teaser %}
+            <a class="page__related-card__image" href="{{ post.url | relative_url }}">
+              <img src="{% if teaser contains '://' %}{{ teaser }}{% else %}{{ teaser | relative_url }}{% endif %}" alt="{{ post.title }}">
+            </a>
+          {% endif %}
+          <h3 class="page__related-card__title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+          <p class="page__related-card__meta">
+            <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>
+            {% if post.read_time %}
+              <span>{{ post.content | number_of_words | divided_by: 180 | at_least: 1 }} min read</span>
+            {% endif %}
+          </p>
+          {% if post.excerpt %}
+            <p class="page__related-card__excerpt">{{ post.excerpt | strip_html | truncate: 120 }}</p>
+          {% endif %}
+        </article>
         {% assign shown_posts = shown_posts | plus: 1 %}
         {% assign shown_urls = shown_urls | append: post.url | append: "|" %}
       {% endif %}
@@ -31,14 +63,33 @@
         {% if post.id == page.id %}{% continue %}{% endif %}
         {% assign post_token = "|" | append: post.url | append: "|" %}
         {% if shown_urls contains post_token %}{% continue %}{% endif %}
-        {% include archive-single.html type="grid" %}
+        <article class="page__related-card">
+          {% assign teaser = post.header.teaser | default: post.header.overlay_image | default: post.image %}
+          {% if teaser %}
+            <a class="page__related-card__image" href="{{ post.url | relative_url }}">
+              <img src="{% if teaser contains '://' %}{{ teaser }}{% else %}{{ teaser | relative_url }}{% endif %}" alt="{{ post.title }}">
+            </a>
+          {% endif %}
+          <h3 class="page__related-card__title"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+          <p class="page__related-card__meta">
+            <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>
+            {% if post.read_time %}
+              <span>{{ post.content | number_of_words | divided_by: 180 | at_least: 1 }} min read</span>
+            {% endif %}
+          </p>
+          {% if post.excerpt %}
+            <p class="page__related-card__excerpt">{{ post.excerpt | strip_html | truncate: 120 }}</p>
+          {% endif %}
+        </article>
         {% assign shown_posts = shown_posts | plus: 1 %}
         {% assign shown_urls = shown_urls | append: post.url | append: "|" %}
         {% if shown_posts >= 4 %}{% break %}{% endif %}
       {% endfor %}
     {% endif %}
-  </div>
+    </div>
+  </section>
 
+  <h2 class="page__related-title page__related-title--destinations">{{ site.data.ui-text[site.locale].related_label | default: "Keep exploring" }}</h2>
   <div class="related-destinations">
     <a class="related-destinations__card" href="{{ '/posts/#explore-topics' | relative_url }}">
       <span class="related-destinations__title">Browse by topic</span>
