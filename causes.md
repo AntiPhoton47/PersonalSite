@@ -54,7 +54,7 @@ Here are some places to get started:
 
 ### Democritization of Knowledge
 
-One idea that has become the poster child of the information revolution is the widespread availability and accessibility of knowledge. Never in our history as a species has it been as easy to find the information that you need, and yet, there are still many people without access. I guess maximizing shareholder value is more important than making sure people have the resources they need to succeed. Luckily there are some great organizations fighting for our right to know.
+One idea that has become the poster child of the information revolution is the widespread availability and accessibility of knowledge. Never in our history as a species has it been as easy to find the information that you need, and yet, there are still many people without access. Luckily there are some great organizations fighting for our right to know.
 
 I am a huge supporter of open source software projects and the broader movement overall. The free availability of software to inspect and do as you please with has helped science and many other areas of endeavour flourish. 
 
