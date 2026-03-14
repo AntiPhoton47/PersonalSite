@@ -1,0 +1,196 @@
+notebook-demo:
+  markdown_blocks:
+  - '# Notebook demo
+
+
+    This notebook is executed during the site build. Its markdown narrative, printed
+    output, and generated plot are embedded into the page.'
+  params:
+    max_n: 7
+  plots:
+  - /assets/generated/code/notebook-demo/plot-1.png
+  source_code: 'import matplotlib.pyplot as plt
+
+
+    params = globals().get("CODE_EXAMPLE_PARAMS", {})
+
+    max_n = int(params.get("max_n", 7))
+
+
+    xs = list(range(max_n + 1))
+
+    ys = [value ** 2 for value in xs]
+
+
+    plt.figure(figsize=(6.4, 3.8))
+
+    plt.bar(xs, ys, color="#22c55e")
+
+    plt.title("Squares")
+
+    plt.xlabel("n")
+
+    plt.ylabel("n^2")
+
+    plt.tight_layout()
+
+    plt.show()
+
+
+    print(f"Computed squares up to {max_n}:", ys)'
+  source_url: /assets/code/notebook_demo.ipynb
+  stderr: ''
+  stdout: '<Figure size 640x380 with 1 Axes>
+
+    Computed squares up to 7: [0, 1, 4, 9, 16, 25, 36, 49]'
+  success: true
+  title: Notebook demo
+  type: notebook
+notebook-demo-explainer:
+  markdown_blocks:
+  - '# Notebook demo
+
+
+    This notebook is executed during the site build. Its markdown narrative, printed
+    output, and generated plot are embedded into the page.'
+  params:
+    max_n: 5
+  plots:
+  - /assets/generated/code/notebook-demo-explainer/plot-1.png
+  source_code: 'import matplotlib.pyplot as plt
+
+
+    params = globals().get("CODE_EXAMPLE_PARAMS", {})
+
+    max_n = int(params.get("max_n", 7))
+
+
+    xs = list(range(max_n + 1))
+
+    ys = [value ** 2 for value in xs]
+
+
+    plt.figure(figsize=(6.4, 3.8))
+
+    plt.bar(xs, ys, color="#22c55e")
+
+    plt.title("Squares")
+
+    plt.xlabel("n")
+
+    plt.ylabel("n^2")
+
+    plt.tight_layout()
+
+    plt.show()
+
+
+    print(f"Computed squares up to {max_n}:", ys)'
+  source_url: /assets/code/notebook_demo.ipynb
+  stderr: ''
+  stdout: '<Figure size 640x380 with 1 Axes>
+
+    Computed squares up to 5: [0, 1, 4, 9, 16, 25]'
+  success: true
+  title: Notebook explainer (small system)
+  type: notebook
+notebook-demo-wide:
+  markdown_blocks:
+  - '# Notebook demo
+
+
+    This notebook is executed during the site build. Its markdown narrative, printed
+    output, and generated plot are embedded into the page.'
+  params:
+    max_n: 11
+  plots:
+  - /assets/generated/code/notebook-demo-wide/plot-1.png
+  source_code: 'import matplotlib.pyplot as plt
+
+
+    params = globals().get("CODE_EXAMPLE_PARAMS", {})
+
+    max_n = int(params.get("max_n", 7))
+
+
+    xs = list(range(max_n + 1))
+
+    ys = [value ** 2 for value in xs]
+
+
+    plt.figure(figsize=(6.4, 3.8))
+
+    plt.bar(xs, ys, color="#22c55e")
+
+    plt.title("Squares")
+
+    plt.xlabel("n")
+
+    plt.ylabel("n^2")
+
+    plt.tight_layout()
+
+    plt.show()
+
+
+    print(f"Computed squares up to {max_n}:", ys)'
+  source_url: /assets/code/notebook_demo.ipynb
+  stderr: ''
+  stdout: '<Figure size 640x380 with 1 Axes>
+
+    Computed squares up to 11: [0, 1, 4, 9, 16, 25, 36, 49, 64, 81, 100, 121]'
+  success: true
+  title: Notebook demo (wider range)
+  type: notebook
+sine-wave-demo:
+  markdown_blocks: []
+  params:
+    amplitude: 1.0
+    frequency: 1.0
+    step: 0.05
+  plots:
+  - /assets/generated/code/sine-wave-demo/plot-1.png
+  source_code: "\"\"\"Sine wave demo\"\"\"\n\nfrom math import pi, sin\n\nimport matplotlib.pyplot\
+    \ as plt\n\nPARAMS = globals().get(\"CODE_EXAMPLE_PARAMS\", {})\nAMPLITUDE = float(PARAMS.get(\"\
+    amplitude\", 1.0))\nFREQUENCY = float(PARAMS.get(\"frequency\", 1.0))\nSTEP =\
+    \ float(PARAMS.get(\"step\", 0.05))\n\nsample_count = max(2, int(round(12.5 /\
+    \ STEP)) + 1)\nxs = [index * STEP for index in range(sample_count)]\nys = [AMPLITUDE\
+    \ * sin(2 * pi * FREQUENCY * value) for value in xs]\n\nplt.figure(figsize=(7,\
+    \ 3.8))\nplt.plot(xs, ys, color=\"#0ea5e9\", linewidth=2.4, label=f\"{AMPLITUDE:.2f}\
+    \ sin(2\u03C0 {FREQUENCY:.2f} x)\")\nplt.axhline(0.0, color=\"#94a3b8\", linewidth=1,\
+    \ linestyle=\"--\")\nplt.xlabel(\"x\")\nplt.ylabel(\"Amplitude\")\nplt.title(\"\
+    Sine wave\")\nplt.legend()\nplt.tight_layout()\nplt.show()\n\nprint(f\"Generated\
+    \ {len(xs)} sample points with amplitude={AMPLITUDE} and frequency={FREQUENCY}.\"\
+    )"
+  source_url: /assets/code/sine_wave_demo.py
+  stderr: ''
+  stdout: Generated 251 sample points with amplitude=1.0 and frequency=1.0.
+  success: true
+  title: Sine wave demo
+  type: python
+sine-wave-demo-high-frequency:
+  markdown_blocks: []
+  params:
+    amplitude: 0.8
+    frequency: 2.5
+    step: 0.04
+  plots:
+  - /assets/generated/code/sine-wave-demo-high-frequency/plot-1.png
+  source_code: "\"\"\"Sine wave demo\"\"\"\n\nfrom math import pi, sin\n\nimport matplotlib.pyplot\
+    \ as plt\n\nPARAMS = globals().get(\"CODE_EXAMPLE_PARAMS\", {})\nAMPLITUDE = float(PARAMS.get(\"\
+    amplitude\", 1.0))\nFREQUENCY = float(PARAMS.get(\"frequency\", 1.0))\nSTEP =\
+    \ float(PARAMS.get(\"step\", 0.05))\n\nsample_count = max(2, int(round(12.5 /\
+    \ STEP)) + 1)\nxs = [index * STEP for index in range(sample_count)]\nys = [AMPLITUDE\
+    \ * sin(2 * pi * FREQUENCY * value) for value in xs]\n\nplt.figure(figsize=(7,\
+    \ 3.8))\nplt.plot(xs, ys, color=\"#0ea5e9\", linewidth=2.4, label=f\"{AMPLITUDE:.2f}\
+    \ sin(2\u03C0 {FREQUENCY:.2f} x)\")\nplt.axhline(0.0, color=\"#94a3b8\", linewidth=1,\
+    \ linestyle=\"--\")\nplt.xlabel(\"x\")\nplt.ylabel(\"Amplitude\")\nplt.title(\"\
+    Sine wave\")\nplt.legend()\nplt.tight_layout()\nplt.show()\n\nprint(f\"Generated\
+    \ {len(xs)} sample points with amplitude={AMPLITUDE} and frequency={FREQUENCY}.\"\
+    )"
+  source_url: /assets/code/sine_wave_demo.py
+  stderr: ''
+  stdout: Generated 313 sample points with amplitude=0.8 and frequency=2.5.
+  success: true
+  title: Sine wave demo (high frequency)
+  type: python

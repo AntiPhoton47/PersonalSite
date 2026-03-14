@@ -86,7 +86,86 @@
 
 <link id="mm-light" rel="stylesheet" href="/assets/css/main-light.css">
 <link id="mm-dark" rel="stylesheet" href="/assets/css/main-dark.css" disabled>
-<link rel="stylesheet" href="/assets/css/custom.css?v=1773302670">
+<link rel="stylesheet" href="/assets/css/custom.css?v=1773522016">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Philip A. LeMaitre",
+  "url": "http://localhost:4000",
+  "description": "Doctoral Researcher • Notes on quantum ML, agency, and foundations",
+  "publisher": {
+    "@type": "Person",
+    "name": "Philip A. LeMaitre",
+    "url": "http://localhost:4000"
+  },
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "http://localhost:4000/search/?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Philip A. LeMaitre",
+  "url": "http://localhost:4000",
+  "image": "http://localhost:4000/assets/images/IMG_2215.JPG",
+  "jobTitle": "Doctoral Researcher",
+  "affiliation": {
+    "@type": "CollegeOrUniversity",
+    "name": "University of Innsbruck"
+  },
+  "sameAs": [
+    
+      "https://github.com/AntiPhoton47",
+    
+      "https://orcid.org/0000-0002-0414-5202",
+    
+      "https://scholar.google.ca/citations?hl=en&user=mw53fQgAAAAJ",
+    
+      "https://www.linkedin.com/in/phil-lemaitre",
+    
+      "https://bsky.app/profile/contextguy.bsky.social",
+    
+      "https://x.com/Philontre"
+    
+  ]
+}
+</script>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "MIP Tag Outreach Event Today",
+  "description": "High school students coming to learn about AI and physics",
+  "datePublished": "2026-02-25T10:00:00+01:00",
+  
+  "author": {
+    "@type": "Person",
+    "name": "Philip A. LeMaitre"
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "Philip A. LeMaitre"
+  },
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "http://localhost:4000/outreach/2026/02/25/MIP-Tag.html"
+  },
+  "image": "http://localhost:4000/assets/images/IMG_6115.JPG",
+  "articleSection": ["outreach"],
+  "keywords": "outreach"
+}
+</script>
+
+
 
 
   <link rel="dns-prefetch" href="https://webmention.io"><link rel="preconnect" href="https://webmention.io"><link rel="preconnect" href="ws://webmention.io:8080"><link rel="pingback" href="https://webmention.io/phillemaitre.com/xmlrpc"><link rel="webmention" href="https://webmention.io/phillemaitre.com/webmention">
@@ -117,6 +196,50 @@
 
 <script data-goatcounter="https://academicgoat.goatcounter.com/count"
         async src="https://gc.zgo.at/count.js"></script>
+
+<script>
+  window.sitePostUrls = [
+    
+      "/leisure/2026/03/09/Concerts.html",
+    
+      "/outreach/2026/02/25/MIP-Tag.html"
+    
+  ];
+
+  document.addEventListener("click", function (event) {
+    const trigger = event.target.closest("[data-random-post]");
+    if (!trigger || !window.sitePostUrls || window.sitePostUrls.length === 0) {
+      return;
+    }
+
+    const choice = window.sitePostUrls[Math.floor(Math.random() * window.sitePostUrls.length)];
+    if (choice) {
+      window.location.href = choice;
+    }
+  });
+
+  function scrollCarousel(id, direction) {
+    const track = document.querySelector(`[data-carousel-track="${id}"]`);
+    if (!track) {
+      return;
+    }
+    const step = Math.max(track.clientWidth * 0.82, 280);
+    track.scrollBy({ left: direction * step, behavior: "smooth" });
+  }
+
+  document.addEventListener("click", function (event) {
+    const prev = event.target.closest("[data-carousel-prev]");
+    const next = event.target.closest("[data-carousel-next]");
+
+    if (prev) {
+      scrollCarousel(prev.getAttribute("data-carousel-prev"), -1);
+    }
+
+    if (next) {
+      scrollCarousel(next.getAttribute("data-carousel-next"), 1);
+    }
+  });
+</script>
 
   </head>
 
@@ -167,6 +290,12 @@
                 
                 
               >Research</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/causes/"
+                
+                
+              >Causes</a>
             </li><li class="masthead__menu-item">
               <a
                 href="/outreach/"
@@ -305,7 +434,7 @@
   
 
 
-<div id="main" role="main">
+<div id="main" class="page-shell page-shell--single" role="main">
   
   <div class="sidebar sticky">
   
@@ -438,20 +567,21 @@
 
 
 
-  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+  <article class="page page-shell__main" itemscope itemtype="https://schema.org/CreativeWork">
     <meta itemprop="headline" content="MIP Tag Outreach Event Today">
     <meta itemprop="description" content="High school students coming to learn about AI and physics">
     <meta itemprop="datePublished" content="2026-02-25T10:00:00+01:00">
     
 
-    <div class="page__inner-wrap">
+    <div class="page__inner-wrap page-shell__inner">
       
 
-      <section class="page__content" itemprop="text">
+      
         
-          
-          
         
+      
+
+      <section class="page__content page-shell__content" itemprop="text">
         <p>Today is the Mathematik-Informatik-Physik (MIP) tag outreach event at the university, and my group has set up a cool, partially interactive booth.</p>
 
 <p>The booth consists of the interactive reinforcement learning platform that I mentioned in the outreach section of my website, which is a huge hit for the students, along with a modular research poster that explains some of the research projects in the group and the relevant concepts associated with it; we designed it so that the volunteers at the booth can switch in their preferred topic. We also have an “ask-me-anything” card game where the students can ask us about our experiences studying physics and what it took to get there. Lastly, we designed a self-contained station where a diffusion model chatbot can generate images based on student input, then generate quantum circuits and explain how the process works.</p>
@@ -461,11 +591,15 @@
         
       </section>
 
-      <footer class="page__meta">
+      
+
+
+      
+      
+      
+      <footer class="page__meta page-shell__footer">
         
-        
-  
-  <p class="page__taxonomy">
+        <p class="page__taxonomy">
     <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
     <span itemprop="keywords">
     
@@ -492,8 +626,8 @@
         
 
   <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2026-02-25T10:00:00+01:00">February 25, 2026</time></p>
-
       </footer>
+      
 
       <section class="page__share">
   
@@ -507,7 +641,7 @@
      class="btn btn--x-twitter"
      onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
      title="Share on X">
-    <i class="fab fa-fw fa-x-twitter" aria-hidden="true"></i><span> X</span>
+    <i class="fa-brands fa-fw fa-x-twitter" aria-hidden="true"></i><span> X</span>
   </a>
 
   <a href="https://bsky.app/intent/compose?text=MIP+Tag+Outreach+Event+Today+http%3A%2F%2Flocalhost%3A4000%2Foutreach%2F2026%2F02%2F25%2FMIP-Tag.html"
@@ -521,21 +655,21 @@
      class="btn btn--facebook"
      onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
      title="Share on Facebook">
-    <i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span>
+    <i class="fa-brands fa-fw fa-facebook-f" aria-hidden="true"></i><span> Facebook</span>
   </a>
 
   <a href="https://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2Flocalhost%3A4000%2Foutreach%2F2026%2F02%2F25%2FMIP-Tag.html&title=MIP+Tag+Outreach+Event+Today"
      class="btn btn--linkedin"
      onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;"
      title="Share on LinkedIn">
-    <i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span>
+    <i class="fa-brands fa-fw fa-linkedin-in" aria-hidden="true"></i><span> LinkedIn</span>
   </a>
 
   <a href="https://www.reddit.com/submit?url=http%3A%2F%2Flocalhost%3A4000%2Foutreach%2F2026%2F02%2F25%2FMIP-Tag.html&title=MIP+Tag+Outreach+Event+Today"
      class="btn btn--reddit"
      onclick="window.open(this.href, 'window', 'left=20,top=20,width=900,height=650,toolbar=1,resizable=0'); return false;"
      title="Share on Reddit">
-    <i class="fab fa-fw fa-reddit-alien" aria-hidden="true"></i><span> Reddit</span>
+    <i class="fa-brands fa-fw fa-reddit-alien" aria-hidden="true"></i><span> Reddit</span>
   </a>
 
   <a href="mailto:?subject=MIP+Tag+Outreach+Event+Today&body=MIP+Tag+Outreach+Event+Today+http%3A%2F%2Flocalhost%3A4000%2Foutreach%2F2026%2F02%2F25%2FMIP-Tag.html"
@@ -622,13 +756,27 @@
 
   
     
+
+
+
 <div class="page__related">
-  
-  <h2 class="page__related-title">You May Also Enjoy</h2>
+  <h2 class="page__related-title">Keep exploring</h2>
   <div class="grid__wrapper">
     
       
       
+      
+      
+      
+      
+    
+
+    
+      
+        
+        
+        
+        
 
 
 
@@ -678,7 +826,26 @@
   </article>
 </div>
 
+        
+        
+        
+      
     
+  </div>
+
+  <div class="related-destinations">
+    <a class="related-destinations__card" href="/posts/#explore-topics">
+      <span class="related-destinations__title">Browse by topic</span>
+      <span class="related-destinations__text">Move sideways into category, tag, and year archives.</span>
+    </a>
+    <a class="related-destinations__card" href="/research/">
+      <span class="related-destinations__title">Research overview</span>
+      <span class="related-destinations__text">Jump from blog posts into papers, talks, posters, and code.</span>
+    </a>
+    <a class="related-destinations__card" href="/resources/">
+      <span class="related-destinations__title">Resources</span>
+      <span class="related-destinations__text">Explore notes, explainers, and rendered code examples.</span>
+    </a>
   </div>
 </div>
 

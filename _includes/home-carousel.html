@@ -1,0 +1,26 @@
+{% assign carousel_id = include.id | default: 'carousel' %}
+<section class="home-carousel-section">
+  <div class="home-carousel-section__header">
+    <div>
+      {% if include.kicker %}<p class="section-kicker">{{ include.kicker }}</p>{% endif %}
+      {% if include.title %}<h2>{{ include.title }}</h2>{% endif %}
+      {% if include.lede %}<p class="home-carousel-section__lede">{{ include.lede }}</p>{% endif %}
+    </div>
+    <div class="home-carousel-section__actions">
+      {% if include.see_all_label and include.see_all_url %}
+        <a class="home-carousel-section__see-all" href="{{ include.see_all_url | relative_url }}">{{ include.see_all_label }}</a>
+      {% endif %}
+      <div class="carousel-controls">
+        <button type="button" class="carousel-controls__button" data-carousel-prev="{{ carousel_id }}" aria-label="Previous">
+          <span aria-hidden="true">&larr;</span>
+        </button>
+        <button type="button" class="carousel-controls__button" data-carousel-next="{{ carousel_id }}" aria-label="Next">
+          <span aria-hidden="true">&rarr;</span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="home-carousel" data-carousel-track="{{ carousel_id }}">
+    {{ include.content }}
+  </div>
+</section>

@@ -1,0 +1,65 @@
+{% assign example = site.data.code_examples[include.slug] %}
+{% if example %}
+  {% assign code_title = include.title | default: example.title %}
+  <section class="code-example">
+    {% if code_title %}
+      <h3 class="code-example__title">{{ code_title }}</h3>
+    {% endif %}
+
+    {% if include.description %}
+      <p class="code-example__description">{{ include.description }}</p>
+    {% endif %}
+
+    {% if example.params and example.params.size > 0 %}
+      <div class="code-example__params">
+        <strong>Parameters:</strong>
+        {% for pair in example.params %}
+          <code>{{ pair[0] }}={{ pair[1] }}</code>{% unless forloop.last %} {% endunless %}
+        {% endfor %}
+      </div>
+    {% endif %}
+
+    {% if example.markdown_blocks and example.markdown_blocks.size > 0 %}
+      <div class="code-example__narrative">
+        {% for block in example.markdown_blocks %}
+          {{ block | markdownify }}
+        {% endfor %}
+      </div>
+    {% endif %}
+
+    {% if example.plots and example.plots.size > 0 %}
+      <div class="code-example__plots">
+        {% for plot in example.plots %}
+          <figure class="code-example__plot">
+            <img src="{{ plot | relative_url }}" alt="{{ code_title | default: include.slug }} plot {{ forloop.index }}">
+          </figure>
+        {% endfor %}
+      </div>
+    {% endif %}
+
+    {% if example.stdout and example.stdout != "" %}
+      <div class="code-example__block">
+        <h4 class="code-example__label">Output</h4>
+        <pre class="code-example__output"><code>{{ example.stdout | escape }}</code></pre>
+      </div>
+    {% endif %}
+
+    {% if example.stderr and example.stderr != "" %}
+      <div class="code-example__block code-example__block--error">
+        <h4 class="code-example__label">Errors</h4>
+        <pre class="code-example__output"><code>{{ example.stderr | escape }}</code></pre>
+      </div>
+    {% endif %}
+
+    {% unless include.show_source == "false" %}
+      <details class="code-example__source">
+        <summary>{% if example.type == "notebook" %}Notebook Code{% else %}Source Code{% endif %}</summary>
+        <pre><code class="language-python">{{ example.source_code | escape }}</code></pre>
+      </details>
+    {% endunless %}
+  </section>
+{% else %}
+  <div class="notice--warning">
+    Code example <code>{{ include.slug }}</code> has not been rendered yet. Run <code>python3 scripts/render_code_examples.py</code>.
+  </div>
+{% endif %}

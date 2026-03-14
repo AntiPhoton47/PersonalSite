@@ -1,0 +1,10 @@
+{% if include.title %}<h2>{{ include.title }}</h2>{% endif %}
+{% if include.intro %}<p>{{ include.intro }}</p>{% endif %}
+<div class="site-crosslinks">
+  {% for item in include.links %}
+    <a class="site-crosslinks__card" href="{{ item.url | relative_url }}">
+      <span class="site-crosslinks__title">{{ item.title }}</span>
+      <span class="site-crosslinks__text">{{ item.text }}</span>
+    </a>
+  {% endfor %}
+</div>

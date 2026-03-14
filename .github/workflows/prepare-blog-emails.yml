@@ -1,0 +1,92 @@
+name: Prepare blog email campaigns
+
+on:
+  workflow_dispatch:
+  push:
+    branches: ["main"]
+    paths:
+      - "_posts/**"
+      - "scripts/generate_blog_email.py"
+      - "requirements-tools.txt"
+      - "_config.yml"
+      - ".github/workflows/prepare-blog-emails.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install Python deps
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements-tools.txt
+
+      - name: Detect changed posts
+        id: changed-posts
+        shell: bash
+        run: |
+          if [[ "${{ github.event_name }}" == "workflow_dispatch" || "${{ github.event.before }}" == "0000000000000000000000000000000000000000" ]]; then
+            mapfile -t POSTS < <(git ls-files '_posts/*.md' | sort | tail -n 1)
+          else
+            mapfile -t POSTS < <(git diff --name-only "${{ github.event.before }}" "${{ github.sha }}" -- '_posts/*.md')
+          fi
+
+          if [[ ${#POSTS[@]} -eq 0 ]]; then
+            echo "has_posts=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          {
+            echo "has_posts=true"
+            echo "posts<<EOF"
+            printf '%s\n' "${POSTS[@]}"
+            echo "EOF"
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Generate email campaign packages
+        if: steps.changed-posts.outputs.has_posts == 'true'
+        shell: bash
+        run: |
+          mapfile -t POSTS <<'EOF'
+          ${{ steps.changed-posts.outputs.posts }}
+          EOF
+          python scripts/generate_blog_email.py "${POSTS[@]}"
+
+      - name: Commit outbox updates
+        if: steps.changed-posts.outputs.has_posts == 'true'
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add newsletter_outbox
+          git diff --cached --quiet || git commit -m "Prepare blog email campaign outbox [skip ci]"
+          git push
+
+      - name: Workflow summary
+        if: steps.changed-posts.outputs.has_posts == 'true'
+        shell: bash
+        run: |
+          {
+            echo "## Newsletter outbox updated"
+            echo
+            echo "Generated EmailOctopus-ready campaign packages for:"
+            while IFS= read -r post; do
+              echo "- \`$post\`"
+            done <<'EOF'
+          ${{ steps.changed-posts.outputs.posts }}
+          EOF
+            echo
+            echo "Files were written under \`newsletter_outbox/\`."
+            echo "Use \`campaign.html\` or \`campaign.txt\` when creating the EmailOctopus campaign."
+          } >> "$GITHUB_STEP_SUMMARY"

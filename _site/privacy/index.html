@@ -80,7 +80,70 @@
 
 <link id="mm-light" rel="stylesheet" href="/assets/css/main-light.css">
 <link id="mm-dark" rel="stylesheet" href="/assets/css/main-dark.css" disabled>
-<link rel="stylesheet" href="/assets/css/custom.css?v=1773302670">
+<link rel="stylesheet" href="/assets/css/custom.css?v=1773522016">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Philip A. LeMaitre",
+  "url": "http://localhost:4000",
+  "description": "Doctoral Researcher • Notes on quantum ML, agency, and foundations",
+  "publisher": {
+    "@type": "Person",
+    "name": "Philip A. LeMaitre",
+    "url": "http://localhost:4000"
+  },
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "http://localhost:4000/search/?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Philip A. LeMaitre",
+  "url": "http://localhost:4000",
+  "image": "http://localhost:4000/assets/images/IMG_2215.JPG",
+  "jobTitle": "Doctoral Researcher",
+  "affiliation": {
+    "@type": "CollegeOrUniversity",
+    "name": "University of Innsbruck"
+  },
+  "sameAs": [
+    
+      "https://github.com/AntiPhoton47",
+    
+      "https://orcid.org/0000-0002-0414-5202",
+    
+      "https://scholar.google.ca/citations?hl=en&user=mw53fQgAAAAJ",
+    
+      "https://www.linkedin.com/in/phil-lemaitre",
+    
+      "https://bsky.app/profile/contextguy.bsky.social",
+    
+      "https://x.com/Philontre"
+    
+  ]
+}
+</script>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Privacy Policy",
+  "description": "Doctoral Researcher • Notes on quantum ML, agency, and foundations",
+  "url": "http://localhost:4000/privacy/"
+}
+</script>
+
+
 
 
   <link rel="dns-prefetch" href="https://webmention.io"><link rel="preconnect" href="https://webmention.io"><link rel="preconnect" href="ws://webmention.io:8080"><link rel="pingback" href="https://webmention.io/phillemaitre.com/xmlrpc"><link rel="webmention" href="https://webmention.io/phillemaitre.com/webmention">
@@ -111,6 +174,50 @@
 
 <script data-goatcounter="https://academicgoat.goatcounter.com/count"
         async src="https://gc.zgo.at/count.js"></script>
+
+<script>
+  window.sitePostUrls = [
+    
+      "/leisure/2026/03/09/Concerts.html",
+    
+      "/outreach/2026/02/25/MIP-Tag.html"
+    
+  ];
+
+  document.addEventListener("click", function (event) {
+    const trigger = event.target.closest("[data-random-post]");
+    if (!trigger || !window.sitePostUrls || window.sitePostUrls.length === 0) {
+      return;
+    }
+
+    const choice = window.sitePostUrls[Math.floor(Math.random() * window.sitePostUrls.length)];
+    if (choice) {
+      window.location.href = choice;
+    }
+  });
+
+  function scrollCarousel(id, direction) {
+    const track = document.querySelector(`[data-carousel-track="${id}"]`);
+    if (!track) {
+      return;
+    }
+    const step = Math.max(track.clientWidth * 0.82, 280);
+    track.scrollBy({ left: direction * step, behavior: "smooth" });
+  }
+
+  document.addEventListener("click", function (event) {
+    const prev = event.target.closest("[data-carousel-prev]");
+    const next = event.target.closest("[data-carousel-next]");
+
+    if (prev) {
+      scrollCarousel(prev.getAttribute("data-carousel-prev"), -1);
+    }
+
+    if (next) {
+      scrollCarousel(next.getAttribute("data-carousel-next"), 1);
+    }
+  });
+</script>
 
   </head>
 
@@ -161,6 +268,12 @@
                 
                 
               >Research</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/causes/"
+                
+                
+              >Causes</a>
             </li><li class="masthead__menu-item">
               <a
                 href="/outreach/"
@@ -238,7 +351,7 @@
   
 
 
-<div id="main" role="main">
+<div id="main" class="page-shell page-shell--single" role="main">
   
   <div class="sidebar sticky">
   
@@ -371,37 +484,42 @@
 
 
 
-  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+  <article class="page page-shell__main" itemscope itemtype="https://schema.org/CreativeWork">
     <meta itemprop="headline" content="Privacy Policy">
     
     
     
 
-    <div class="page__inner-wrap">
+    <div class="page__inner-wrap page-shell__inner">
       
-        <header>
+        <header class="page-shell__header">
+          
+          <p class="section-kicker">Page</p>
+          
           <h1 id="page-title" class="page__title" itemprop="headline">
             <a href="http://localhost:4000/privacy/" itemprop="url">Privacy Policy
 </a>
           </h1>
+          
           
 
 
         </header>
       
 
-      <section class="page__content" itemprop="text">
+      
         
-          
-          
-          <aside class="sidebar__right sticky">
-            <nav class="toc">
-              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
-              <ul class="toc__menu"><li><a href="#analytics">Analytics</a></li><li><a href="#e-mail-subscription">E-mail Subscription</a></li></ul>
-            </nav>
-          </aside>
-          
         
+        <aside class="sidebar__right page-shell__toc sticky">
+          <nav class="toc">
+            <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+            <ul class="toc__menu"><li><a href="#analytics">Analytics</a></li><li><a href="#e-mail-subscription">E-mail Subscription</a></li></ul>
+          </nav>
+        </aside>
+        
+      
+
+      <section class="page__content page-shell__content" itemprop="text">
         <h2 id="analytics">Analytics</h2>
 
 <p>This website uses GoatCounter, a privacy-friendly analytics service. GoatCounter does not use tracking cookies and does not store personal data.
@@ -409,20 +527,17 @@ IP addresses are anonymized and not stored in identifiable form. The purpose of 
 
 <h2 id="e-mail-subscription">E-mail Subscription</h2>
 
-<p>This site collects email addresses via ConvertKit for the purpose of sending blog updates. Emails are processed and stored by ConvertKit according to their privacy policy. You can unsubscribe at any time.</p>
+<p>This site may collect email addresses via EmailOctopus for the purpose of sending blog updates. Emails are processed and stored by EmailOctopus according to their privacy policy. You can unsubscribe at any time.</p>
 
         
       </section>
 
-      <footer class="page__meta">
-        
-        
+      
 
 
-
-        
-
-      </footer>
+      
+      
+      
 
       
 

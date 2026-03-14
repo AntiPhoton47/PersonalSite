@@ -14,14 +14,40 @@
   </div>
 
   {%- comment -%} Meta line: authors + venue + year {%- endcomment -%}
+  {% assign venue = entry.journal | default: entry.booktitle | default: entry.publisher %}
+  {% assign venue_has_year = false %}
+  {% assign venue_has_volume = false %}
+  {% assign venue_has_pages = false %}
+  {% assign venue_has_number = false %}
+  {% if venue and entry.year and venue contains entry.year %}
+    {% assign venue_has_year = true %}
+  {% endif %}
+  {% if venue and entry.volume and venue contains entry.volume %}
+    {% assign venue_has_volume = true %}
+  {% endif %}
+  {% if venue and entry.pages and venue contains entry.pages %}
+    {% assign venue_has_pages = true %}
+  {% endif %}
+  {% if venue and entry.number and venue contains entry.number %}
+    {% assign venue_has_number = true %}
+  {% endif %}
   <div class="pub-meta">
     <span class="pub-authors">{{ entry.author }}</span>
-    {% if entry.journal %}
-      <span class="pub-venue"><em>{{ entry.journal }}</em></span>
-    {% elsif entry.booktitle %}
-      <span class="pub-venue"><em>{{ entry.booktitle }}</em></span>
+    {% if venue %}
+      <span class="pub-venue"><em>{{ venue }}</em></span>
     {% endif %}
-    {% if entry.year %}
+    {% if entry.volume and venue_has_volume == false %}
+      <span class="pub-volume">{{ entry.volume }}</span>
+    {% endif %}
+    {% if entry.number and venue_has_number == false and venue_has_volume == false %}
+      <span class="pub-issue">({{ entry.number }})</span>
+    {% elsif entry.number and venue_has_number == false and entry.volume %}
+      <span class="pub-issue">({{ entry.number }})</span>
+    {% endif %}
+    {% if entry.pages and venue_has_pages == false %}
+      <span class="pub-pages">{{ entry.pages }}</span>
+    {% endif %}
+    {% if entry.year and venue_has_year == false %}
       <span class="pub-year">({{ entry.year }})</span>
     {% endif %}
   </div>

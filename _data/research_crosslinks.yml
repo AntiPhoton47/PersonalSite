@@ -1,0 +1,9 @@
+- title: "Browse the blog by topic"
+  text: "Use the blog index to hop between categories, tags, and yearly archives."
+  url: /posts/#explore-topics
+- title: "See code-backed demos"
+  text: "The resources page includes rendered notebooks and Python demos."
+  url: /resources/
+- title: "Outreach and public-facing work"
+  text: "For a different slice of the same interests, see the outreach page."
+  url: /outreach/

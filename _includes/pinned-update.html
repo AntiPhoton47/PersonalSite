@@ -1,0 +1,30 @@
+{% assign banners = site.data.site_highlights.homepage_banners %}
+{% if banners and banners.size > 0 %}
+  {% capture pinned_updates_content %}
+    {% for banner in banners %}
+      <article class="pinned-update carousel-card">
+        <p class="section-kicker">{{ banner.label }}</p>
+        <div class="pinned-update__body">
+          <div>
+            <h3>{{ banner.title }}</h3>
+            <p>{{ banner.text }}</p>
+          </div>
+          {% if banner.links %}
+          <div class="pinned-update__links">
+            {% for link in banner.links %}
+              <a href="{{ link.url | relative_url }}">{{ link.label }}</a>
+            {% endfor %}
+          </div>
+          {% endif %}
+        </div>
+      </article>
+    {% endfor %}
+  {% endcapture %}
+  {% include home-carousel.html
+    id="pinned-updates"
+    title="Pinned Updates"
+    lede="Major updates and useful entry points that deserve more than a one-off mention."
+    see_all_label="See all updates"
+    see_all_url="/pinned-updates/"
+    content=pinned_updates_content %}
+{% endif %}

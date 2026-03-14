@@ -1,16 +1,44 @@
 {% if page.series %}
   {% assign series_posts = site.posts | where: "series", page.series | sort: "series_part" %}
-  <hr>
-  <h3>Series: {{ page.series }}</h3>
-  <ol>
+  {% assign series_meta = site.data.series[page.series] %}
+  {% assign previous_in_series = nil %}
+  {% assign next_in_series = nil %}
   {% for p in series_posts %}
-    <li>
-      {% if p.url == page.url %}
-        <strong>{{ p.title }}</strong>
-      {% else %}
-        <a href="{{ p.url | relative_url }}">{{ p.title }}</a>
-      {% endif %}
-    </li>
+    {% if p.url == page.url %}
+      {% assign next_in_series = series_posts[forloop.index] %}
+      {% break %}
+    {% endif %}
+    {% assign previous_in_series = p %}
   {% endfor %}
-  </ol>
+  <section class="series-block">
+    <p class="section-kicker">Series</p>
+    <div class="series-block__header">
+      <div>
+        <h2>{{ series_meta.title | default: page.series }}</h2>
+        {% if series_meta.description %}<p>{{ series_meta.description }}</p>{% endif %}
+      </div>
+      {% if page.series_part %}
+        <p class="series-block__part">Part {{ page.series_part }} of {{ series_posts | size }}</p>
+      {% endif %}
+    </div>
+    <ol class="series-block__list">
+    {% for p in series_posts %}
+      <li class="{% if p.url == page.url %}is-current{% endif %}">
+        {% if p.url == page.url %}
+          <strong>{{ p.title }}</strong>
+        {% else %}
+          <a href="{{ p.url | relative_url }}">{{ p.title }}</a>
+        {% endif %}
+      </li>
+    {% endfor %}
+    </ol>
+    <div class="series-block__nav">
+      {% if previous_in_series %}
+        <a href="{{ previous_in_series.url | relative_url }}">Previous in series</a>
+      {% endif %}
+      {% if next_in_series %}
+        <a href="{{ next_in_series.url | relative_url }}">Next in series</a>
+      {% endif %}
+    </div>
+  </section>
 {% endif %}

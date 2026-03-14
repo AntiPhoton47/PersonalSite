@@ -9,6 +9,7 @@
 <link id="mm-light" rel="stylesheet" href="{{ '/assets/css/main-light.css' | relative_url }}">
 <link id="mm-dark" rel="stylesheet" href="{{ '/assets/css/main-dark.css' | relative_url }}" disabled>
 <link rel="stylesheet" href="{{ '/assets/css/custom.css' | relative_url }}?v={{ site.time | date: '%s' }}">
+{% include structured-data.html %}
 
 {% if site.webmentions %}
   {% webmentions_head %}
@@ -39,3 +40,45 @@
 
 <script data-goatcounter="https://academicgoat.goatcounter.com/count"
         async src="https://gc.zgo.at/count.js"></script>
+
+<script>
+  window.sitePostUrls = [
+    {% for post in site.posts %}
+      {{ post.url | relative_url | jsonify }}{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ];
+
+  document.addEventListener("click", function (event) {
+    const trigger = event.target.closest("[data-random-post]");
+    if (!trigger || !window.sitePostUrls || window.sitePostUrls.length === 0) {
+      return;
+    }
+
+    const choice = window.sitePostUrls[Math.floor(Math.random() * window.sitePostUrls.length)];
+    if (choice) {
+      window.location.href = choice;
+    }
+  });
+
+  function scrollCarousel(id, direction) {
+    const track = document.querySelector(`[data-carousel-track="${id}"]`);
+    if (!track) {
+      return;
+    }
+    const step = Math.max(track.clientWidth * 0.82, 280);
+    track.scrollBy({ left: direction * step, behavior: "smooth" });
+  }
+
+  document.addEventListener("click", function (event) {
+    const prev = event.target.closest("[data-carousel-prev]");
+    const next = event.target.closest("[data-carousel-next]");
+
+    if (prev) {
+      scrollCarousel(prev.getAttribute("data-carousel-prev"), -1);
+    }
+
+    if (next) {
+      scrollCarousel(next.getAttribute("data-carousel-next"), 1);
+    }
+  });
+</script>

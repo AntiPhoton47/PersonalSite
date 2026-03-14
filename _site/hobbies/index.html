@@ -80,7 +80,70 @@
 
 <link id="mm-light" rel="stylesheet" href="/assets/css/main-light.css">
 <link id="mm-dark" rel="stylesheet" href="/assets/css/main-dark.css" disabled>
-<link rel="stylesheet" href="/assets/css/custom.css?v=1773302670">
+<link rel="stylesheet" href="/assets/css/custom.css?v=1773522016">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Philip A. LeMaitre",
+  "url": "http://localhost:4000",
+  "description": "Doctoral Researcher • Notes on quantum ML, agency, and foundations",
+  "publisher": {
+    "@type": "Person",
+    "name": "Philip A. LeMaitre",
+    "url": "http://localhost:4000"
+  },
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "http://localhost:4000/search/?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Philip A. LeMaitre",
+  "url": "http://localhost:4000",
+  "image": "http://localhost:4000/assets/images/IMG_2215.JPG",
+  "jobTitle": "Doctoral Researcher",
+  "affiliation": {
+    "@type": "CollegeOrUniversity",
+    "name": "University of Innsbruck"
+  },
+  "sameAs": [
+    
+      "https://github.com/AntiPhoton47",
+    
+      "https://orcid.org/0000-0002-0414-5202",
+    
+      "https://scholar.google.ca/citations?hl=en&user=mw53fQgAAAAJ",
+    
+      "https://www.linkedin.com/in/phil-lemaitre",
+    
+      "https://bsky.app/profile/contextguy.bsky.social",
+    
+      "https://x.com/Philontre"
+    
+  ]
+}
+</script>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Hobbies",
+  "description": "Doctoral Researcher • Notes on quantum ML, agency, and foundations",
+  "url": "http://localhost:4000/hobbies/"
+}
+</script>
+
+
 
 
   <link rel="dns-prefetch" href="https://webmention.io"><link rel="preconnect" href="https://webmention.io"><link rel="preconnect" href="ws://webmention.io:8080"><link rel="pingback" href="https://webmention.io/phillemaitre.com/xmlrpc"><link rel="webmention" href="https://webmention.io/phillemaitre.com/webmention">
@@ -111,6 +174,50 @@
 
 <script data-goatcounter="https://academicgoat.goatcounter.com/count"
         async src="https://gc.zgo.at/count.js"></script>
+
+<script>
+  window.sitePostUrls = [
+    
+      "/leisure/2026/03/09/Concerts.html",
+    
+      "/outreach/2026/02/25/MIP-Tag.html"
+    
+  ];
+
+  document.addEventListener("click", function (event) {
+    const trigger = event.target.closest("[data-random-post]");
+    if (!trigger || !window.sitePostUrls || window.sitePostUrls.length === 0) {
+      return;
+    }
+
+    const choice = window.sitePostUrls[Math.floor(Math.random() * window.sitePostUrls.length)];
+    if (choice) {
+      window.location.href = choice;
+    }
+  });
+
+  function scrollCarousel(id, direction) {
+    const track = document.querySelector(`[data-carousel-track="${id}"]`);
+    if (!track) {
+      return;
+    }
+    const step = Math.max(track.clientWidth * 0.82, 280);
+    track.scrollBy({ left: direction * step, behavior: "smooth" });
+  }
+
+  document.addEventListener("click", function (event) {
+    const prev = event.target.closest("[data-carousel-prev]");
+    const next = event.target.closest("[data-carousel-next]");
+
+    if (prev) {
+      scrollCarousel(prev.getAttribute("data-carousel-prev"), -1);
+    }
+
+    if (next) {
+      scrollCarousel(next.getAttribute("data-carousel-next"), 1);
+    }
+  });
+</script>
 
   </head>
 
@@ -161,6 +268,12 @@
                 
                 
               >Research</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/causes/"
+                
+                
+              >Causes</a>
             </li><li class="masthead__menu-item">
               <a
                 href="/outreach/"
@@ -238,7 +351,7 @@
   
 
 
-<div id="main" role="main">
+<div id="main" class="page-shell page-shell--single" role="main">
   
   <div class="sidebar sticky">
   
@@ -371,67 +484,164 @@
 
 
 
-  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+  <article class="page page-shell__main" itemscope itemtype="https://schema.org/CreativeWork">
     <meta itemprop="headline" content="Hobbies">
     
     
     
 
-    <div class="page__inner-wrap">
+    <div class="page__inner-wrap page-shell__inner">
       
-        <header>
+        <header class="page-shell__header">
+          
+          <p class="section-kicker">Page</p>
+          
           <h1 id="page-title" class="page__title" itemprop="headline">
             <a href="http://localhost:4000/hobbies/" itemprop="url">Hobbies
 </a>
           </h1>
+          
           
 
 
         </header>
       
 
-      <section class="page__content" itemprop="text">
+      
         
-          
-          
-          <aside class="sidebar__right sticky">
-            <nav class="toc">
-              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
-              <ul class="toc__menu"><li><a href="#travel">Travel</a></li><li><a href="#photography">Photography</a></li><li><a href="#books">Books</a></li><li><a href="#movies">Movies</a></li><li><a href="#opera">Opera</a></li><li><a href="#art">Art</a></li><li><a href="#painting--sketching">Painting &amp; Sketching</a></li><li><a href="#writing">Writing</a></li><li><a href="#gaming">Gaming</a></li></ul>
-            </nav>
-          </aside>
-          
         
-        <h2 id="travel">Travel</h2>
+        <aside class="sidebar__right page-shell__toc sticky">
+          <nav class="toc">
+            <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+            <ul class="toc__menu"><li><a href="#travel">Travel</a></li><li><a href="#photography">Photography</a></li><li><a href="#books">Books</a></li><li><a href="#movies">Movies</a></li><li><a href="#opera">Opera</a></li><li><a href="#art">Art</a></li><li><a href="#painting--sketching">Painting &amp; Sketching</a></li><li><a href="#writing">Writing</a></li></ul>
+          </nav>
+        </aside>
+        
+      
+
+      <section class="page__content page-shell__content" itemprop="text">
+        <p>This page is the less academic side of the site. A lot of these interests overlap with how I think about research anyway: attention, aesthetics, curiosity, patience, and the pleasure of slowly getting better at something difficult.</p>
+
+<h2 id="travel">Travel</h2>
+
+<p>Travel is one of the main ways I reset perspective. Conferences, trains, museums, mountains, and unfamiliar routines all seem to force a more attentive mode of living than ordinary weeks do. I especially like travel that combines a strong sense of place with room to walk, think, and observe.</p>
+
+<p>Some of the awesome places I have been to:</p>
+<ul>
+  <li>Amsterdam, The Netherlands</li>
+  <li>Antwerp, Belgium</li>
+  <li>Athens, Greece</li>
+  <li>Barcelona, Spain</li>
+  <li>Basel, Switzerland</li>
+  <li>Berlin, Germany</li>
+  <li>Bratislava, Slovakia</li>
+  <li>Bridgetown, Barbados</li>
+  <li>Budapest, Hungary</li>
+  <li>Cape Town, South Africa</li>
+  <li>Chania, Greece</li>
+  <li>Edinburgh, UK</li>
+  <li>Firenze, Italy</li>
+  <li>Giza, Egypt</li>
+  <li>Istanbul, Türkiye</li>
+  <li>Köln, Germany</li>
+  <li>Krakow, Poland</li>
+  <li>London, UK</li>
+  <li>Luxor, Egypt</li>
+  <li>Madrid, Spain</li>
+  <li>Milano, Italy</li>
+  <li>Munich, Germany</li>
+  <li>Napoli, Italy</li>
+  <li>New York City, USA</li>
+  <li>Paris, France</li>
+  <li>Prague, Czechia</li>
+  <li>Roma, Italy</li>
+  <li>Sevilla, Spain</li>
+  <li>Toronto, Canada</li>
+  <li>Tulum, Mexico</li>
+  <li>Venizia, Italy</li>
+  <li>Wien, Austria</li>
+</ul>
 
 <h2 id="photography">Photography</h2>
 
+<p>Photography makes me look harder at things I would otherwise pass by too quickly. I am especially drawn to light, texture, architecture, landscapes, and the accidental geometry of everyday scenes. A good photograph feels like a small act of attention.</p>
+
 <h2 id="books">Books</h2>
+
+<p>I like books that reward rereading: philosophy, literary fiction, history of ideas, and science books that are actually written well. I am less interested in consuming a high volume of books than in finding the ones that permanently sharpen how I think.</p>
 
 <h2 id="movies">Movies</h2>
 
+<p>Film scratches a different itch than books. I tend to enjoy movies with a strong atmosphere, visual patience, clear stylistic point of view, or strong character development rather than a purely plot-driven spectacle. That is not to say that a good plot wont rope me in. Let it be known that I am also a sucker for science fiction, even if it normally would not be the best of movies.</p>
+
+<p>Here are some movie lists I compiled:</p>
+<ul>
+  <li><a href="https://boxd.it/guS7q">Science Fiction Classics</a></li>
+  <li><a href="https://boxd.it/5AUc6">Right in the Feels</a></li>
+</ul>
+
 <h2 id="opera">Opera</h2>
+
+<p>Opera is one of those art forms that feels slightly absurd until it suddenly feels indispensable. The plots may not be overly complex but the emotional force delivered by the actors through their singing and the beautiful classical music that accompanies it is second to none.</p>
+
+<p>Some of my favourite operas:</p>
+<ul>
+  <li>Carmen, Bizet</li>
+  <li>Die Zauberflöte, Mozart</li>
+  <li>Don Giovanni, Mozart</li>
+  <li>La Traviata, Verdi</li>
+  <li>Le Nozze di Figaro, Mozart</li>
+  <li>Tosca, Puccini</li>
+</ul>
 
 <h2 id="art">Art</h2>
 
+<p>Museums and galleries are among my favourite places to wander. Whether it be contemporary art or medieval art, everything has something unique to say which will captivate you if you let it. I love all art, but I find myself enjoying modern impressionist and expressionist paintings along with renaissance masters like Caravaggio and Michelangelo. I also love the absurdity and lack of spatial perspective of medieval art. Contemporary art can be hit or miss for me and part of its beauty is my lack of expectation for what I will see, but when I see a piece I really like, it will hold my attention for longer than the visit.</p>
+
+<p>Some of my favourite galleries:</p>
+<ul>
+  <li>Albertina, Wien</li>
+  <li>Alte Pinakothek, Munich</li>
+  <li>Collezione Peggy Guggenheim, Venezia</li>
+  <li>Galleria dell’Accademia di Firenze, Firenze</li>
+  <li>Gemäldegalerie, Berlin</li>
+  <li>Gemäldegalerie Alte Meister, Dresden</li>
+  <li>Kunsthaus Zürich, Zürich</li>
+  <li>Kunsthistorisches Museum Wien, Wien</li>
+  <li>Leopold Museum, Wien</li>
+  <li>Musei Vaticana, Vatican City</li>
+  <li>Museo Nacional Centro de Arte Reina Sofia, Madrid</li>
+  <li>Museo Nacional del Prado, Madrid</li>
+  <li>Palazzo Pitti, Firenze</li>
+  <li>Picasso Museum Barcelona, Barcelona</li>
+  <li>Rijksmuseum, Amsterdam</li>
+  <li>Schloss Belvedere, Wien</li>
+  <li>Tate Modern, London</li>
+  <li>The National Gallery, London</li>
+  <li>Thyssen-Bornemisza National Museum, Madrid</li>
+  <li>Uffizi Galleries, Firenze</li>
+  <li>Van Gogh Museum, Amsterdam</li>
+</ul>
+
 <h2 id="painting--sketching">Painting &amp; Sketching</h2>
+
+<p>Painting and sketching are slower and more humbling than photography, which is part of why I value them. They make it much harder to fake attention. Even a rough sketch changes how you look at shape, proportion, and color.</p>
 
 <h2 id="writing">Writing</h2>
 
-<h2 id="gaming">Gaming</h2>
+<p>Writing matters to me both as expression and as a tool for thought. A lot of the time I only know what I think once I have tried to put it into sentences that can survive being read the next day.</p>
+
+<p>I am currently trying to coerce myself into writing short stories, so hopefully this will pan out to be a great creative outlet for me, in addition to the blog I have just started. Stay tuned for some light reading.</p>
 
         
       </section>
 
-      <footer class="page__meta">
-        
-        
+      
 
 
-
-        
-
-      </footer>
+      
+      
+      
 
       
 

@@ -14,6 +14,4 @@ Welcome to my personal website and blog, dear Qubitzers! Take your shoes off and
 
 Disclaimer: the views expressed on the site are my own and do not necessarily reflect the views of my colleagues, employers, affiliations, or anyone else mentioned on the site.
 
-{% include email_subscribe.html %}
-
 ---

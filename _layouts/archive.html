@@ -26,28 +26,44 @@ layout: default
   {% endif %}
 {% endif %}
 
-<div id="main" role="main">
+<div id="main" class="page-shell page-shell--archive" role="main">
   {% include sidebar.html %}
 
-  <div class="archive">
+  <div class="archive page-shell__main">
     {% unless page.header.overlay_color or page.header.overlay_image %}
-      <h1 id="page-title" class="page__title"{% if page.locale %} lang="{{ page.locale }}"{% endif %}>{{ archive_title }}</h1>
+      <header class="page-shell__header">
+        <p class="section-kicker">Explore</p>
+        <h1 id="page-title" class="page__title"{% if page.locale %} lang="{{ page.locale }}"{% endif %}>{{ archive_title }}</h1>
+        {% if page.excerpt %}<p class="page-shell__lede">{{ page.excerpt | markdownify | strip_html }}</p>{% endif %}
+      </header>
     {% endunless %}
 
     {% if page.type == "category" %}
-      <p class="archive__subtitle">Posts filed under this category.</p>
+      <p class="archive__subtitle page-shell__subtitle">Posts filed under this category.</p>
     {% elsif page.type == "tag" %}
-      <p class="archive__subtitle">Posts tagged with this label.</p>
+      <p class="archive__subtitle page-shell__subtitle">Posts tagged with this label.</p>
     {% elsif page.type == "year" %}
-      <p class="archive__subtitle">Posts published this year.</p>
+      <p class="archive__subtitle page-shell__subtitle">Posts published this year.</p>
     {% endif %}
 
-    {% if archive_posts and archive_posts.size > 0 %}
-      {% for post in archive_posts %}
-        {% include archive-single.html type="list" %}
-      {% endfor %}
-    {% else %}
-      {{ content }}
+    {% if page.type == "category" or page.type == "tag" or page.type == "year" %}
+      <div class="archive__navigator">
+        <a class="archive__navigator-link" href="{{ '/posts/#explore-topics' | relative_url }}">Browse all topics</a>
+        <a class="archive__navigator-link" href="{{ '/feed.xml' | relative_url }}">Follow the blog via RSS</a>
+        <button class="archive__navigator-link archive__navigator-link--button" type="button" data-random-post>Open a random post</button>
+      </div>
     {% endif %}
+
+    <div class="page-shell__content page-shell__content--archive">
+      {% if archive_posts and archive_posts.size > 0 %}
+        <div class="archive__listing">
+          {% for post in archive_posts %}
+            {% include archive-single.html type="list" %}
+          {% endfor %}
+        </div>
+      {% else %}
+        {{ content }}
+      {% endif %}
+    </div>
   </div>
 </div>

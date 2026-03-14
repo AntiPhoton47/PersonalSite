@@ -1,0 +1,18 @@
+<section class="research-timeline">
+  <div class="research-timeline__header">
+    <div>
+      <p class="section-kicker">Trajectory</p>
+      <h2>Research Timeline</h2>
+    </div>
+    <p class="research-timeline__lede">A compact view of how the themes on the site connect over time.</p>
+  </div>
+  <div class="research-timeline__items">
+    {% for item in site.data.research_timeline %}
+      <article class="research-timeline__item">
+        <p class="research-timeline__year">{{ item.year }}</p>
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.text }}</p>
+      </article>
+    {% endfor %}
+  </div>
+</section>

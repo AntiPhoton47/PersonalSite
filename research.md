@@ -19,6 +19,9 @@ I am chiefly interested in how concepts from quantum foundations -- such as cont
 - AI for scientific discovery
 - Knowledge in quantum theory
 
+{% include research-timeline.html %}
+{% include research-graph.html %}
+
 ## Publications
 
 Below is a list of my publications, with the arXiv versions [here](https://arxiv.org/search/?searchtype=author&query=LeMaitre%2C+P+A).
@@ -45,6 +48,8 @@ I have a number of interesting projects currently occupying my time, with many c
 - Equipping projective simulation to handle larger percept and action spaces in an interpretable way
 - Some more exotic setups for the contextuality harvesting protocol that I developed
 
+{% include lay-summaries.html %}
+
 <!-- presentations:start -->
 ## Conference Talks
 - 15th Relativistic Quantum Information North Conference: [A Universal Quantum Computer From Relativistic Motion](https://www.youtube.com/live/pAlDsCJH-ds?si=Mc8rZPqEzI948X2d) (3:26:54) / [slides](/assets/files/talks/2025-06-25_RVQC_RQIN.pptx)
@@ -59,3 +64,12 @@ I have a number of interesting projects currently occupying my time, with many c
 - QISS 2025 Conference: A Universal Quantum Computer from Relativistic Motion / [poster](/assets/files/posters/2025-04-11_RVQC_QISS_2025.pdf)
 - 6th Seefeld Quantum Information Workshop: Quantum Multi-Excitation Projective Simulation / [poster](/assets/files/posters/2024-06-26_Quantum_MEPS_SeefeldQI.pdf)
 <!-- presentations:end -->
+
+## Media Appearances
+
+My colleague and I were interviewed by the science journalist Karmela Padavic-Callaghan from the magazine New Scientist about our paper "A Universal Quantum Computer from Relativistic Motion." They wrote a piece about it [here](https://www.newscientist.com/article/2477409-we-can-build-quantum-computers-using-the-rules-of-special-relativity/). Unfortunately it is behind a paywall but I have a copy of it that I am happy to send to those interested upon request.
+
+{% include site-crosslinks.html
+  title="Where to go next"
+  intro="If you want a different angle on the same work, these are the quickest routes through the rest of the site."
+  links=site.data.research_crosslinks %}

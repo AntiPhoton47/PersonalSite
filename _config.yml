@@ -17,6 +17,17 @@ enable_copy_code_button: true
 
 teaser: /assets/images/Crab_MultiChandra_960.JPG
 
+newsletter:
+  provider: emailoctopus
+  title: "Get new posts by email"
+  description: "No spam, just updates when I publish."
+  campaign_subject_prefix: "New on Philip A. LeMaitre:"
+  emailoctopus:
+    form_script_url: ""
+    form_id: ""
+  kit:
+    embed_html: ""
+
 plugins:
   - jekyll-feed
   - jekyll-sitemap
@@ -174,3 +185,4 @@ exclude:
   - Gemfile.lock
   - node_modules
   - vendor
+  - newsletter_outbox

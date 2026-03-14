@@ -1,0 +1,13 @@
+- slug: sine-wave-demo
+  source: sine_wave_demo.py
+  title: Sine wave demo
+  params:
+    amplitude: 1.0
+    frequency: 1.0
+    step: 0.05
+
+- slug: notebook-demo
+  source: notebook_demo.ipynb
+  title: Notebook demo
+  params:
+    max_n: 7

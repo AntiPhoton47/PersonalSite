@@ -1,0 +1,89 @@
+{% assign featured_posts = site.posts | where: "featured", true %}
+{% if featured_posts.size == 0 %}
+  {% assign featured_posts = site.posts | slice: 0, 2 %}
+{% endif %}
+{% assign recent_posts = site.posts | slice: 0, 8 %}
+
+<section class="home-discovery">
+  <div class="home-discovery__hero">
+    <div class="home-discovery__copy">
+      <p class="section-kicker">Fresh paths through the site</p>
+      <h2>Research notes, outreach stories, and personal updates worth reading.</h2>
+      <p class="home-discovery__lede">Find what you are looking for quickly and in style.</p>
+    </div>
+    <div class="home-discovery__actions">
+      <a class="discovery-action discovery-action--search" href="{{ '/search/' | relative_url }}">
+        <span class="discovery-action__label">Search the site</span>
+        <span class="discovery-action__meta">Find posts, talks, notes, and resources.</span>
+      </a>
+      <a class="discovery-action discovery-action--topics" href="{{ '/posts/#explore-topics' | relative_url }}">
+        <span class="discovery-action__label">Browse the blog by topic</span>
+        <span class="discovery-action__meta">Jump into category, tag, and year landing pages from the blog index.</span>
+      </a>
+      <a class="discovery-action discovery-action--rss" href="{{ '/feed.xml' | relative_url }}">
+        <span class="discovery-action__label">Follow via RSS</span>
+        <span class="discovery-action__meta">Subscribe in any feed reader.</span>
+      </a>
+      <button class="discovery-action discovery-action--random" type="button" data-random-post>
+        <span class="discovery-action__label">Surprise me</span>
+        <span class="discovery-action__meta">Open a random post from the archive.</span>
+      </button>
+    </div>
+  </div>
+
+  {% capture featured_posts_content %}
+    {% for post in featured_posts %}
+      <article class="featured-post-card carousel-card">
+        <p class="featured-post-card__meta">
+          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>
+          {% if post.categories and post.categories[0] %}
+            <span>{{ post.categories[0] }}</span>
+          {% endif %}
+        </p>
+        <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+        {% if post.excerpt %}
+          <p>{{ post.excerpt | strip_html | truncate: 180 }}</p>
+        {% endif %}
+        <div class="featured-post-card__footer">
+          <a href="{{ post.url | relative_url }}">Read post</a>
+        </div>
+      </article>
+    {% endfor %}
+  {% endcapture %}
+  {% include home-carousel.html
+    id="featured-posts"
+    kicker="Featured Posts"
+    title="Start Here"
+    see_all_label="See all posts"
+    see_all_url="/posts/"
+    content=featured_posts_content %}
+
+  {% capture recent_posts_content %}
+    {% for post in recent_posts %}
+      <article class="featured-post-card carousel-card">
+        <p class="featured-post-card__meta">
+          <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%B %-d, %Y" }}</time>
+          {% if post.categories and post.categories[0] %}
+            <span>{{ post.categories[0] }}</span>
+          {% endif %}
+        </p>
+        <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+        {% if post.excerpt %}
+          <p>{{ post.excerpt | strip_html | truncate: 180 }}</p>
+        {% endif %}
+        <div class="featured-post-card__footer">
+          <a href="{{ post.url | relative_url }}">Read post</a>
+        </div>
+      </article>
+    {% endfor %}
+  {% endcapture %}
+  {% include home-carousel.html
+    id="recent-posts"
+    kicker="Recent Posts"
+    title="Latest Writing"
+    see_all_label="See all posts"
+    see_all_url="/posts/"
+    content=recent_posts_content %}
+
+  {% include topic-explorer.html mode="compact" %}
+</section>

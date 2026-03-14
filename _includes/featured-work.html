@@ -1,0 +1,60 @@
+<section class="featured-work">
+  <div class="featured-work__header">
+    <div>
+      <p class="section-kicker">Featured Work</p>
+      <h2>Papers, talks, posters, and code I am particularly proud of</h2>
+    </div>
+    <a href="{{ '/research/' | relative_url }}">See the full research page</a>
+  </div>
+
+  {% capture papers_content %}
+    {% for item in site.data.site_highlights.featured_publications %}
+      <article class="highlight-card carousel-card">
+        <p class="highlight-card__eyebrow">{{ item.category }}</p>
+        <h4><a href="{{ item.url }}">{{ item.title }}</a></h4>
+        <p>{{ item.summary }}</p>
+      </article>
+    {% endfor %}
+  {% endcapture %}
+  {% include home-carousel.html
+    id="featured-papers"
+    kicker="Papers"
+    title="Selected Papers"
+    see_all_label="See all papers"
+    see_all_url="/research/#publications"
+    content=papers_content %}
+
+  {% capture presentations_content %}
+    {% for item in site.data.site_highlights.featured_presentations %}
+      <article class="highlight-card carousel-card">
+        <p class="highlight-card__eyebrow">{{ item.category }}</p>
+        <h4><a href="{% if item.url contains '://' %}{{ item.url }}{% else %}{{ item.url | relative_url }}{% endif %}">{{ item.title }}</a></h4>
+        <p>{{ item.summary }}</p>
+      </article>
+    {% endfor %}
+  {% endcapture %}
+  {% include home-carousel.html
+    id="featured-presentations"
+    kicker="Talks and Posters"
+    title="Selected Talks and Posters"
+    see_all_label="See all talks"
+    see_all_url="/research/#conference-talks"
+    content=presentations_content %}
+
+  {% capture code_content %}
+    {% for item in site.data.site_highlights.featured_code %}
+      <article class="highlight-card carousel-card">
+        <p class="highlight-card__eyebrow">{{ item.category }}</p>
+        <h4><a href="{{ item.url }}">{{ item.title }}</a></h4>
+        <p>{{ item.summary }}</p>
+      </article>
+    {% endfor %}
+  {% endcapture %}
+  {% include home-carousel.html
+    id="featured-code"
+    kicker="Codes"
+    title="Selected Code Repositories"
+    see_all_label="See all code"
+    see_all_url="/research/#publication-codes"
+    content=code_content %}
+</section>

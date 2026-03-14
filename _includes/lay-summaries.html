@@ -1,0 +1,24 @@
+<section class="lay-summaries">
+  <div class="lay-summaries__header">
+    <div>
+      <p class="section-kicker">Less Technical Summaries</p>
+      <h2>What this work is about in plain language</h2>
+    </div>
+  </div>
+  <div class="lay-summaries__grid">
+    {% for item in site.data.site_highlights.lay_summaries %}
+      <article class="lay-summary-card">
+        <p class="lay-summary-card__audience">{{ item.audience }}</p>
+        <h3>{{ item.title }}</h3>
+        <p>{{ item.summary }}</p>
+        {% if item.links %}
+        <div class="lay-summary-card__links">
+          {% for link in item.links %}
+            <a href="{{ link.url }}">{{ link.label }}</a>
+          {% endfor %}
+        </div>
+        {% endif %}
+      </article>
+    {% endfor %}
+  </div>
+</section>

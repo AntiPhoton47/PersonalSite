@@ -4,3 +4,7 @@ jinja2
 pypdf
 pyyaml
 python-pptx
+matplotlib
+nbformat
+nbclient
+markdown

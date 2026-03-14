@@ -80,7 +80,70 @@
 
 <link id="mm-light" rel="stylesheet" href="/assets/css/main-light.css">
 <link id="mm-dark" rel="stylesheet" href="/assets/css/main-dark.css" disabled>
-<link rel="stylesheet" href="/assets/css/custom.css?v=1773302670">
+<link rel="stylesheet" href="/assets/css/custom.css?v=1773522016">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Philip A. LeMaitre",
+  "url": "http://localhost:4000",
+  "description": "Doctoral Researcher • Notes on quantum ML, agency, and foundations",
+  "publisher": {
+    "@type": "Person",
+    "name": "Philip A. LeMaitre",
+    "url": "http://localhost:4000"
+  },
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "http://localhost:4000/search/?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Philip A. LeMaitre",
+  "url": "http://localhost:4000",
+  "image": "http://localhost:4000/assets/images/IMG_2215.JPG",
+  "jobTitle": "Doctoral Researcher",
+  "affiliation": {
+    "@type": "CollegeOrUniversity",
+    "name": "University of Innsbruck"
+  },
+  "sameAs": [
+    
+      "https://github.com/AntiPhoton47",
+    
+      "https://orcid.org/0000-0002-0414-5202",
+    
+      "https://scholar.google.ca/citations?hl=en&user=mw53fQgAAAAJ",
+    
+      "https://www.linkedin.com/in/phil-lemaitre",
+    
+      "https://bsky.app/profile/contextguy.bsky.social",
+    
+      "https://x.com/Philontre"
+    
+  ]
+}
+</script>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Research",
+  "description": "Doctoral Researcher • Notes on quantum ML, agency, and foundations",
+  "url": "http://localhost:4000/research/"
+}
+</script>
+
+
 
 
   <link rel="dns-prefetch" href="https://webmention.io"><link rel="preconnect" href="https://webmention.io"><link rel="preconnect" href="ws://webmention.io:8080"><link rel="pingback" href="https://webmention.io/phillemaitre.com/xmlrpc"><link rel="webmention" href="https://webmention.io/phillemaitre.com/webmention">
@@ -111,6 +174,50 @@
 
 <script data-goatcounter="https://academicgoat.goatcounter.com/count"
         async src="https://gc.zgo.at/count.js"></script>
+
+<script>
+  window.sitePostUrls = [
+    
+      "/leisure/2026/03/09/Concerts.html",
+    
+      "/outreach/2026/02/25/MIP-Tag.html"
+    
+  ];
+
+  document.addEventListener("click", function (event) {
+    const trigger = event.target.closest("[data-random-post]");
+    if (!trigger || !window.sitePostUrls || window.sitePostUrls.length === 0) {
+      return;
+    }
+
+    const choice = window.sitePostUrls[Math.floor(Math.random() * window.sitePostUrls.length)];
+    if (choice) {
+      window.location.href = choice;
+    }
+  });
+
+  function scrollCarousel(id, direction) {
+    const track = document.querySelector(`[data-carousel-track="${id}"]`);
+    if (!track) {
+      return;
+    }
+    const step = Math.max(track.clientWidth * 0.82, 280);
+    track.scrollBy({ left: direction * step, behavior: "smooth" });
+  }
+
+  document.addEventListener("click", function (event) {
+    const prev = event.target.closest("[data-carousel-prev]");
+    const next = event.target.closest("[data-carousel-next]");
+
+    if (prev) {
+      scrollCarousel(prev.getAttribute("data-carousel-prev"), -1);
+    }
+
+    if (next) {
+      scrollCarousel(next.getAttribute("data-carousel-next"), 1);
+    }
+  });
+</script>
 
   </head>
 
@@ -161,6 +268,12 @@
                 
                 
               >Research</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/causes/"
+                
+                
+              >Causes</a>
             </li><li class="masthead__menu-item">
               <a
                 href="/outreach/"
@@ -238,7 +351,7 @@
   
 
 
-<div id="main" role="main">
+<div id="main" class="page-shell page-shell--single" role="main">
   
   <div class="sidebar sticky">
   
@@ -371,37 +484,42 @@
 
 
 
-  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+  <article class="page page-shell__main" itemscope itemtype="https://schema.org/CreativeWork">
     <meta itemprop="headline" content="Research">
     
     
     
 
-    <div class="page__inner-wrap">
+    <div class="page__inner-wrap page-shell__inner">
       
-        <header>
+        <header class="page-shell__header">
+          
+          <p class="section-kicker">Page</p>
+          
           <h1 id="page-title" class="page__title" itemprop="headline">
             <a href="http://localhost:4000/research/" itemprop="url">Research
 </a>
           </h1>
+          
           
 
 
         </header>
       
 
-      <section class="page__content" itemprop="text">
+      
         
-          
-          
-          <aside class="sidebar__right sticky">
-            <nav class="toc">
-              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
-              <ul class="toc__menu"><li><a href="#cv">CV</a></li><li><a href="#research-statement">Research Statement</a></li><li><a href="#research-themes">Research Themes</a></li><li><a href="#publications">Publications</a></li><li><a href="#publication-codes">Publication Codes</a></li><li><a href="#current-projects">Current Projects</a></li><li><a href="#conference-talks">Conference Talks</a></li><li><a href="#conference-posters">Conference Posters</a></li></ul>
-            </nav>
-          </aside>
-          
         
+        <aside class="sidebar__right page-shell__toc sticky">
+          <nav class="toc">
+            <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+            <ul class="toc__menu"><li><a href="#cv">CV</a></li><li><a href="#research-statement">Research Statement</a></li><li><a href="#research-themes">Research Themes</a></li><li><a href="#publications">Publications</a></li><li><a href="#publication-codes">Publication Codes</a></li><li><a href="#current-projects">Current Projects</a></li><li><a href="#conference-talks">Conference Talks</a></li><li><a href="#conference-posters">Conference Posters</a></li><li><a href="#media-appearances">Media Appearances</a></li></ul>
+          </nav>
+        </aside>
+        
+      
+
+      <section class="page__content page-shell__content" itemprop="text">
         <p>Below you will find all information on my research interests and activities, including a list of my publications, talks, and posters.</p>
 
 <h2 id="cv">CV</h2>
@@ -422,6 +540,106 @@
   <li>Knowledge in quantum theory</li>
 </ul>
 
+<section class="research-timeline">
+  <div class="research-timeline__header">
+    <div>
+      <p class="section-kicker">Trajectory</p>
+      <h2>Research Timeline</h2>
+    </div>
+    <p class="research-timeline__lede">A compact view of how the themes on the site connect over time.</p>
+  </div>
+  <div class="research-timeline__items">
+    
+      <article class="research-timeline__item">
+        <p class="research-timeline__year">2019</p>
+        <h3>Gravity and Compact Objects</h3>
+        <p>Early work centered on general relativity, thin shells, and compact-object intuition.</p>
+      </article>
+    
+      <article class="research-timeline__item">
+        <p class="research-timeline__year">2022-2023</p>
+        <h3>Polymer Self-Consistent Field Theory</h3>
+        <p>Attention shifted toward quantum chemistry, orbital-free approaches, and shell structure in atoms.</p>
+      </article>
+    
+      <article class="research-timeline__item">
+        <p class="research-timeline__year">2024</p>
+        <h3>Projective Simulation and Interpretable AI</h3>
+        <p>A new thread emerged around explainable agents, hypergraph structure, and physically inspired inductive biases.</p>
+      </article>
+    
+      <article class="research-timeline__item">
+        <p class="research-timeline__year">2024-2026</p>
+        <h3>Relativistic Quantum Information</h3>
+        <p>Current work focuses on relativistic quantum computing, contextuality harvesting, and the interface between spacetime and quantum resources.</p>
+      </article>
+    
+  </div>
+</section>
+
+<section class="research-graph">
+  <div class="research-graph__header">
+    <div>
+      <p class="section-kicker">Map</p>
+      <h2>Research Graph</h2>
+    </div>
+    <p class="research-graph__lede">The main projects on the site are not isolated: they feed each other conceptually.</p>
+  </div>
+
+  <div class="research-graph__canvas">
+    <div class="research-graph__glow research-graph__glow--core" aria-hidden="true"></div>
+    <div class="research-graph__glow research-graph__glow--left" aria-hidden="true"></div>
+    <div class="research-graph__glow research-graph__glow--right" aria-hidden="true"></div>
+    <svg viewBox="0 0 800 360" class="research-graph__svg" aria-hidden="true">
+      <defs>
+        <linearGradient id="researchGraphLine" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="rgba(249, 115, 22, 0.7)"></stop>
+          <stop offset="100%" stop-color="rgba(14, 165, 233, 0.5)"></stop>
+        </linearGradient>
+      </defs>
+      <line x1="168" y1="86" x2="398" y2="116"></line>
+      <line x1="168" y1="252" x2="398" y2="116"></line>
+      <line x1="398" y1="116" x2="632" y2="86"></line>
+      <line x1="398" y1="116" x2="398" y2="254"></line>
+      <line x1="398" y1="254" x2="168" y2="252"></line>
+      <line x1="398" y1="254" x2="632" y2="252"></line>
+      <line x1="632" y1="86" x2="632" y2="252"></line>
+      <circle cx="398" cy="116" r="6"></circle>
+      <circle cx="398" cy="254" r="5"></circle>
+    </svg>
+    <div class="research-graph__node research-graph__node--left-top">
+      <span class="research-graph__tag">Foundations</span>
+      <h3>Quantum Foundations</h3>
+      <p>Contextuality, harvesting, and the structure of nonclassical resources.</p>
+    </div>
+    <div class="research-graph__node research-graph__node--left-bottom">
+      <span class="research-graph__tag">Agency</span>
+      <h3>Interpretable AI</h3>
+      <p>Projective simulation, agency, and physically motivated model structure.</p>
+    </div>
+    <div class="research-graph__node research-graph__node--center">
+      <span class="research-graph__tag">Bridge</span>
+      <h3>Spacetime and Information</h3>
+      <p>The central thread tying together relativity, knowledge, and computation.</p>
+    </div>
+    <div class="research-graph__node research-graph__node--bottom-center">
+      <span class="research-graph__tag">Discovery</span>
+      <h3>Scientific Discovery</h3>
+      <p>Using interpretable models and simulations to generate understanding instead of black-box predictions alone.</p>
+    </div>
+    <div class="research-graph__node research-graph__node--right-top">
+      <span class="research-graph__tag">Motion</span>
+      <h3>Relativistic Quantum Computing</h3>
+      <p>Motion and field-mediated interactions used as computational primitives.</p>
+    </div>
+    <div class="research-graph__node research-graph__node--right-bottom">
+      <span class="research-graph__tag">Methods</span>
+      <h3>Computational Physics</h3>
+      <p>Simulation, numerics, and polymer-inspired field-theory methods.</p>
+    </div>
+  </div>
+</section>
+
 <h2 id="publications">Publications</h2>
 
 <p>Below is a list of my publications, with the arXiv versions <a href="https://arxiv.org/search/?searchtype=author&amp;query=LeMaitre%2C+P+A">here</a>.</p>
@@ -430,10 +648,22 @@
     
       <a href="https://arxiv.org/abs/2508.11773">Harvesting Contextuality from the Vacuum</a>
     
-  </div><div class="pub-meta">
+  </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  <div class="pub-meta">
     <span class="pub-authors">LeMaitre, Philip A.</span>
     
       <span class="pub-venue"><em>Phys. Rev. D 113, 045001 (2026)</em></span>
+    
+    
+    
     
     
       <span class="pub-year">(2025)</span>
@@ -460,10 +690,22 @@
     
       <a href="https://arxiv.org/abs/2411.00105">A Universal Quantum Computer From Relativistic Motion</a>
     
-  </div><div class="pub-meta">
+  </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  <div class="pub-meta">
     <span class="pub-authors">LeMaitre, Philip A. and Perche, T. Rick and Krumm, Marius and Briegel, Hans J.</span>
     
       <span class="pub-venue"><em>Phys. Rev. Lett. 134, 190601 (2025)</em></span>
+    
+    
+    
     
     
       <span class="pub-year">(2024)</span>
@@ -490,13 +732,23 @@
     
       <a href="https://arxiv.org/abs/2402.10356">Fermion exchange in ring polymer self-consistent field theory</a>
     
-  </div><div class="pub-meta">
+  </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  <div class="pub-meta">
     <span class="pub-authors">Kealey, Malcolm A. and LeMaitre, Philip A. and Thompson, Russell B.</span>
     
       <span class="pub-venue"><em>Phys. Rev. A 109, 052819 (2024)</em></span>
     
     
-      <span class="pub-year">(2024)</span>
+    
+    
     
   </div>
     <details class="pub-abstract">
@@ -520,10 +772,22 @@
     
       <a href="https://arxiv.org/abs/2402.10192">Multi-Excitation Projective Simulation with a Many-Body Physics Inspired Inductive Bias</a>
     
-  </div><div class="pub-meta">
+  </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  <div class="pub-meta">
     <span class="pub-authors">LeMaitre, Philip A. and Krumm, Marius and Briegel, Hans J.</span>
     
       <span class="pub-venue"><em>Artificial Intelligence 352, 104489 (2026)</em></span>
+    
+    
+    
     
     
       <span class="pub-year">(2024)</span>
@@ -550,10 +814,28 @@
     
       <a href="https://doi.org/10.1002/qua.27111">Gaussian basis functions for an orbital-free-related density functional theory of atoms</a>
     
-  </div><div class="pub-meta">
+  </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  <div class="pub-meta">
     <span class="pub-authors">LeMaitre, Philip A and Thompson, Russell B</span>
     
       <span class="pub-venue"><em>International Journal of Quantum Chemistry</em></span>
+    
+    
+      <span class="pub-volume">123</span>
+    
+    
+      <span class="pub-issue">(12)</span>
+    
+    
+      <span class="pub-pages">e27111</span>
     
     
       <span class="pub-year">(2023)</span>
@@ -578,10 +860,22 @@
     
       <a href="https://arxiv.org/abs/2209.14507">On the Origins of Spontaneous Spherical Symmetry-Breaking in Open-Shell Atoms Through Polymer Self-Consistent Field Theory</a>
     
-  </div><div class="pub-meta">
+  </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  <div class="pub-meta">
     <span class="pub-authors">LeMaitre, Phil A. and Thompson, Russell B.</span>
     
       <span class="pub-venue"><em>J. Chem. Phys. 158, 064301 (2023)</em></span>
+    
+    
+    
     
     
       <span class="pub-year">(2022)</span>
@@ -608,10 +902,28 @@
     
       <a href="https://arxiv.org/abs/1909.06253">Equilibrium and stability of thin spherical shells in Newtonian and relativistic gravity</a>
     
-  </div><div class="pub-meta">
+  </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  <div class="pub-meta">
     <span class="pub-authors">LeMaitre, Philip and Poisson, Eric</span>
     
-      <span class="pub-venue"><em></em></span>
+      <span class="pub-venue"><em>Am. J. Phys.</em></span>
+    
+    
+      <span class="pub-volume">87</span>
+    
+    
+      <span class="pub-issue">(12)</span>
+    
+    
+      <span class="pub-pages">961–970</span>
     
     
       <span class="pub-year">(2019)</span>
@@ -659,6 +971,82 @@
   <li>Some more exotic setups for the contextuality harvesting protocol that I developed</li>
 </ul>
 
+<section class="lay-summaries">
+  <div class="lay-summaries__header">
+    <div>
+      <p class="section-kicker">Less Technical Summaries</p>
+      <h2>What this work is about in plain language</h2>
+    </div>
+  </div>
+  <div class="lay-summaries__grid">
+    
+      <article class="lay-summary-card">
+        <p class="lay-summary-card__audience">For non-specialists</p>
+        <h3>Harvesting Contextuality from the Vacuum</h3>
+        <p>This paper asks whether some of the strangest nonclassical features of quantum theory can be pulled out of empty space itself. The main result is that the vacuum is not just a passive background: with the right detectors and measurements, it can supply a resource called contextuality.</p>
+        
+        <div class="lay-summary-card__links">
+          
+            <a href="https://doi.org/10.1103/9ff3-4m5g">Read the paper</a>
+          
+            <a href="https://github.com/AntiPhoton47/Contextuality-Harvesting">Code</a>
+          
+        </div>
+        
+      </article>
+    
+      <article class="lay-summary-card">
+        <p class="lay-summary-card__audience">For non-specialists</p>
+        <h3>A Universal Quantum Computer from Relativistic Motion</h3>
+        <p>Instead of treating relativity as a nuisance for quantum computing, this work turns motion through spacetime into a computational tool. It shows how changing the paths of qubits and letting them interact through a field can implement a universal quantum computer.</p>
+        
+        <div class="lay-summary-card__links">
+          
+            <a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.134.190601">Read the paper</a>
+          
+            <a href="https://www.youtube.com/live/pAlDsCJH-ds?si=Mc8rZPqEzI948X2d">Watch the talk</a>
+          
+            <a href="https://github.com/AntiPhoton47/RVQC">Code</a>
+          
+        </div>
+        
+      </article>
+    
+      <article class="lay-summary-card">
+        <p class="lay-summary-card__audience">For non-specialists</p>
+        <h3>Multi-Excitation Projective Simulation</h3>
+        <p>This project extends an interpretable AI model so it can reason about several active concepts at once instead of one at a time. The payoff is a more expressive agent design that still aims to keep its decision process understandable.</p>
+        
+        <div class="lay-summary-card__links">
+          
+            <a href="https://doi.org/10.1016/j.artint.2026.104489">Read the paper</a>
+          
+            <a href="https://github.com/MariusKrumm/ManyBodyMEPS">Code</a>
+          
+        </div>
+        
+      </article>
+    
+      <article class="lay-summary-card">
+        <p class="lay-summary-card__audience">For non-specialists</p>
+        <h3>Polymer Self-Consistent Field Theory of Atoms</h3>
+        <p>These papers explore an unusual way of modeling atoms by translating quantum many-electron structure into a polymer-inspired field theory. The goal is to understand atomic shell structure and electron behavior from a fresh conceptual angle.</p>
+        
+        <div class="lay-summary-card__links">
+          
+            <a href="https://onlinelibrary.wiley.com/doi/10.1002/qua.27111">Gaussian basis paper</a>
+          
+            <a href="https://pubs.aip.org/aip/jcp/article/158/6/064301/2875147/On-the-origins-of-spontaneous-spherical-symmetry">Symmetry-breaking paper</a>
+          
+            <a href="https://github.com/AntiPhoton47/quantum-chem">Code</a>
+          
+        </div>
+        
+      </article>
+    
+  </div>
+</section>
+
 <!-- presentations:start -->
 <h2 id="conference-talks">Conference Talks</h2>
 <ul>
@@ -678,18 +1066,41 @@
 <!-- presentations:end --></li>
 </ul>
 
+<h2 id="media-appearances">Media Appearances</h2>
+
+<p>My colleague and I were interviewed by the science journalist Karmela Padavic-Callaghan from the magazine New Scientist about our paper “A Universal Quantum Computer from Relativistic Motion.” They wrote a piece about it <a href="https://www.newscientist.com/article/2477409-we-can-build-quantum-computers-using-the-rules-of-special-relativity/">here</a>. Unfortunately it is behind a paywall but I have a copy of it that I am happy to send to those interested upon request.</p>
+
+<h2>Where to go next</h2>
+<p>If you want a different angle on the same work, these are the quickest routes through the rest of the site.</p>
+<div class="site-crosslinks">
+  
+    <a class="site-crosslinks__card" href="/posts/#explore-topics">
+      <span class="site-crosslinks__title">Browse the blog by topic</span>
+      <span class="site-crosslinks__text">Use the blog index to hop between categories, tags, and yearly archives.</span>
+    </a>
+  
+    <a class="site-crosslinks__card" href="/resources/">
+      <span class="site-crosslinks__title">See code-backed demos</span>
+      <span class="site-crosslinks__text">The resources page includes rendered notebooks and Python demos.</span>
+    </a>
+  
+    <a class="site-crosslinks__card" href="/outreach/">
+      <span class="site-crosslinks__title">Outreach and public-facing work</span>
+      <span class="site-crosslinks__text">For a different slice of the same interests, see the outreach page.</span>
+    </a>
+  
+</div>
+
+
         
       </section>
 
-      <footer class="page__meta">
-        
-        
+      
 
 
-
-        
-
-      </footer>
+      
+      
+      
 
       
 

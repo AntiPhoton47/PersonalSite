@@ -1,0 +1,66 @@
+{% assign explorer_mode = include.mode | default: "full" %}
+{% assign post_years = site.posts | group_by_exp: "post", "post.date | date: '%Y'" %}
+
+<section class="topic-explorer{% if explorer_mode == 'compact' %} topic-explorer--compact{% endif %}">
+  <div class="topic-explorer__header">
+    <div>
+      <p class="section-kicker">Explore the site</p>
+      <h2 class="topic-explorer__title">
+        {% if explorer_mode == "compact" %}
+          Browse by topic
+        {% else %}
+          Topics, tags, and yearly archives
+        {% endif %}
+      </h2>
+    </div>
+    {% if explorer_mode != "compact" %}
+      <p class="topic-explorer__lede">Use these landing points to jump straight into the parts of the site that match your interests.</p>
+    {% endif %}
+  </div>
+
+  <div class="topic-explorer__grid">
+    <section class="topic-explorer__panel">
+      <h3>Categories</h3>
+      <div class="topic-pill-list">
+        {% for category_entry in site.categories %}
+          {% assign category_name = category_entry[0] %}
+          {% assign category_posts = category_entry[1] %}
+          {% assign category_info = site.data.post_taxonomy.categories[category_name] %}
+          <a class="topic-pill" href="{{ '/category/' | append: (category_name | slugify) | append: '/' | relative_url }}">
+            <span class="topic-pill__name">{{ category_name }}</span>
+            <span class="topic-pill__count">{{ category_posts | size }}</span>
+            {% if explorer_mode != "compact" and category_info and category_info.description %}
+              <span class="topic-pill__meta">{{ category_info.description }}</span>
+            {% endif %}
+          </a>
+        {% endfor %}
+      </div>
+    </section>
+
+    <section class="topic-explorer__panel">
+      <h3>Tags</h3>
+      <div class="topic-pill-list">
+        {% for tag_entry in site.tags %}
+          {% assign tag_name = tag_entry[0] %}
+          {% assign tag_posts = tag_entry[1] %}
+          <a class="topic-pill" href="{{ '/tag/' | append: (tag_name | slugify) | append: '/' | relative_url }}">
+            <span class="topic-pill__name">{{ tag_name }}</span>
+            <span class="topic-pill__count">{{ tag_posts | size }}</span>
+          </a>
+        {% endfor %}
+      </div>
+    </section>
+
+    <section class="topic-explorer__panel">
+      <h3>Years</h3>
+      <div class="topic-pill-list">
+        {% for year_group in post_years %}
+          <a class="topic-pill" href="{{ '/' | append: year_group.name | append: '/' | relative_url }}">
+            <span class="topic-pill__name">{{ year_group.name }}</span>
+            <span class="topic-pill__count">{{ year_group.items | size }}</span>
+          </a>
+        {% endfor %}
+      </div>
+    </section>
+  </div>
+</section>

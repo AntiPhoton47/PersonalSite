@@ -1,0 +1,638 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.26.2 by Michael Rose
+  Copyright 2013-2024 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Mini-Explainers - Philip A. LeMaitre</title>
+<meta name="description" content="Doctoral Researcher • Notes on quantum ML, agency, and foundations">
+
+
+  <meta name="author" content="Philip A. LeMaitre">
+  
+
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="Philip A. LeMaitre">
+<meta property="og:title" content="Mini-Explainers">
+<meta property="og:url" content="http://localhost:4000/explainers/">
+
+
+  <meta property="og:description" content="Doctoral Researcher • Notes on quantum ML, agency, and foundations">
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="canonical" href="http://localhost:4000/explainers/">
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="Philip A. LeMaitre Feed">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script type="text/javascript">
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+  window.enable_copy_code_button = true;
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@latest/css/all.min.css"></noscript>
+
+
+
+    <script>
+  window.MathJax = {
+    tex: { inlineMath: [['$', '$'], ['\\(', '\\)']] },
+    options: { skipHtmlTags: ['script','noscript','style','textarea','pre','code'] }
+  };
+</script>
+<script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+<link id="mm-light" rel="stylesheet" href="/assets/css/main-light.css">
+<link id="mm-dark" rel="stylesheet" href="/assets/css/main-dark.css" disabled>
+<link rel="stylesheet" href="/assets/css/custom.css?v=1773522016">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Philip A. LeMaitre",
+  "url": "http://localhost:4000",
+  "description": "Doctoral Researcher • Notes on quantum ML, agency, and foundations",
+  "publisher": {
+    "@type": "Person",
+    "name": "Philip A. LeMaitre",
+    "url": "http://localhost:4000"
+  },
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "http://localhost:4000/search/?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Philip A. LeMaitre",
+  "url": "http://localhost:4000",
+  "image": "http://localhost:4000/assets/images/IMG_2215.JPG",
+  "jobTitle": "Doctoral Researcher",
+  "affiliation": {
+    "@type": "CollegeOrUniversity",
+    "name": "University of Innsbruck"
+  },
+  "sameAs": [
+    
+      "https://github.com/AntiPhoton47",
+    
+      "https://orcid.org/0000-0002-0414-5202",
+    
+      "https://scholar.google.ca/citations?hl=en&user=mw53fQgAAAAJ",
+    
+      "https://www.linkedin.com/in/phil-lemaitre",
+    
+      "https://bsky.app/profile/contextguy.bsky.social",
+    
+      "https://x.com/Philontre"
+    
+  ]
+}
+</script>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Mini-Explainers",
+  "description": "Doctoral Researcher • Notes on quantum ML, agency, and foundations",
+  "url": "http://localhost:4000/explainers/"
+}
+</script>
+
+
+
+
+  <link rel="dns-prefetch" href="https://webmention.io"><link rel="preconnect" href="https://webmention.io"><link rel="preconnect" href="ws://webmention.io:8080"><link rel="pingback" href="https://webmention.io/phillemaitre.com/xmlrpc"><link rel="webmention" href="https://webmention.io/phillemaitre.com/webmention">
+
+
+<script>
+  (function () {
+    const key = "mm-theme";
+    const saved = localStorage.getItem(key);
+    const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const mode = saved || (prefersDark ? "dark" : "light");
+
+    function apply(mode) {
+      document.getElementById("mm-dark").disabled = (mode !== "dark");
+      document.getElementById("mm-light").disabled = (mode === "dark");
+      document.documentElement.dataset.themeMode = mode;
+      localStorage.setItem(key, mode);
+    }
+
+    window.toggleTheme = function () {
+      const current = document.getElementById("mm-dark").disabled ? "light" : "dark";
+      apply(current === "light" ? "dark" : "light");
+    };
+
+    apply(mode);
+  })();
+</script>
+
+<script data-goatcounter="https://academicgoat.goatcounter.com/count"
+        async src="https://gc.zgo.at/count.js"></script>
+
+<script>
+  window.sitePostUrls = [
+    
+      "/leisure/2026/03/09/Concerts.html",
+    
+      "/outreach/2026/02/25/MIP-Tag.html"
+    
+  ];
+
+  document.addEventListener("click", function (event) {
+    const trigger = event.target.closest("[data-random-post]");
+    if (!trigger || !window.sitePostUrls || window.sitePostUrls.length === 0) {
+      return;
+    }
+
+    const choice = window.sitePostUrls[Math.floor(Math.random() * window.sitePostUrls.length)];
+    if (choice) {
+      window.location.href = choice;
+    }
+  });
+
+  function scrollCarousel(id, direction) {
+    const track = document.querySelector(`[data-carousel-track="${id}"]`);
+    if (!track) {
+      return;
+    }
+    const step = Math.max(track.clientWidth * 0.82, 280);
+    track.scrollBy({ left: direction * step, behavior: "smooth" });
+  }
+
+  document.addEventListener("click", function (event) {
+    const prev = event.target.closest("[data-carousel-prev]");
+    const next = event.target.closest("[data-carousel-next]");
+
+    if (prev) {
+      scrollCarousel(prev.getAttribute("data-carousel-prev"), -1);
+    }
+
+    if (next) {
+      scrollCarousel(next.getAttribute("data-carousel-next"), 1);
+    }
+  });
+</script>
+
+  </head>
+
+  <body class="layout--single">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+          <a class="site-logo" href="/"><img src="/assets/images/IMG_0184.JPG" alt="Philip A. LeMaitre"></a>
+        
+        <a class="site-title" href="/">
+          Philip A. LeMaitre
+          
+        </a>
+        <ul class="visible-links">
+          <li class="masthead__menu-item">
+            <button class="theme-toggle" type="button" onclick="toggleTheme()" aria-label="Toggle light and dark mode" title="Toggle theme">
+              <span class="theme-toggle__icon theme-toggle__icon--sun" aria-hidden="true">
+                <i class="fas fa-sun"></i>
+              </span>
+              <span class="theme-toggle__track" aria-hidden="true">
+                <span class="theme-toggle__thumb"></span>
+              </span>
+              <span class="theme-toggle__icon theme-toggle__icon--moon" aria-hidden="true">
+                <i class="fas fa-moon"></i>
+              </span>
+            </button>
+          </li><li class="masthead__menu-item">
+              <a
+                href="/about/"
+                
+                
+              >About</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/research/"
+                
+                
+              >Research</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/causes/"
+                
+                
+              >Causes</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/outreach/"
+                
+                
+              >Outreach</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/posts/"
+                
+                
+              >Blog</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/resources/"
+                
+                
+              >Resources</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/hobbies/"
+                
+                
+              >Hobbies</a>
+            </li></ul>
+        
+        <button class="search__toggle" type="button">
+          <span class="visually-hidden">Toggle search</span>
+          <i class="fas fa-search"></i>
+        </button>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+
+  
+    
+  
+
+  
+
+  <nav class="breadcrumbs">
+    <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+      
+      
+      
+        
+          <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a href="/" itemprop="item"><span itemprop="name">Home</span></a>
+            <meta itemprop="position" content="1" />
+          </li>
+          <span class="sep">/</span>
+        
+        
+          <li class="current">Mini-Explainers</li>
+        
+      
+    </ol>
+  </nav>
+
+
+  
+
+
+<div id="main" class="page-shell page-shell--single" role="main">
+  
+
+
+  <article class="page page-shell__main" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Mini-Explainers">
+    
+    
+    
+
+    <div class="page__inner-wrap page-shell__inner">
+      
+        <header class="page-shell__header">
+          
+          <p class="section-kicker">Page</p>
+          
+          <h1 id="page-title" class="page__title" itemprop="headline">
+            <a href="http://localhost:4000/explainers/" itemprop="url">Mini-Explainers
+</a>
+          </h1>
+          
+          
+
+
+        </header>
+      
+
+      
+        
+        
+        <aside class="sidebar__right page-shell__toc sticky">
+          <nav class="toc">
+            <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+            <ul class="toc__menu"><li><a href="#discretizing-a-continuous-signal">Discretizing a Continuous Signal</a></li><li><a href="#small-growth-large-consequences">Small Growth, Large Consequences</a></li><li><a href="#why-these-exist">Why These Exist</a></li></ul>
+          </nav>
+        </aside>
+        
+      
+
+      <section class="page__content page-shell__content" itemprop="text">
+        <p>This page is for short, visual explanations of ideas that recur across the site. The aim is not to be fully rigorous, but to give an accessible picture that makes the more technical material easier to enter.</p>
+
+<h2 id="discretizing-a-continuous-signal">Discretizing a Continuous Signal</h2>
+
+<p>One recurring theme in computational physics is that smooth dynamics have to be represented in a discrete way before a machine can do anything with them. This toy example shows that move in a harmless setting: a simple sine wave sampled point by point.</p>
+
+<section class="code-example">
+    
+      <h3 class="code-example__title">Sine wave demo</h3>
+    
+
+    
+      <p class="code-example__description">A simple example of turning a smooth signal into a finite set of samples.</p>
+    
+
+    
+      <div class="code-example__params">
+        <strong>Parameters:</strong>
+        
+          <code>amplitude=1.0</code>
+        
+          <code>frequency=1.0</code>
+        
+          <code>step=0.05</code>
+        
+      </div>
+    
+
+    
+
+    
+      <div class="code-example__plots">
+        
+          <figure class="code-example__plot">
+            <img src="/assets/generated/code/sine-wave-demo/plot-1.png" alt="Sine wave demo plot 1" />
+          </figure>
+        
+      </div>
+    
+
+    
+      <div class="code-example__block">
+        <h4 class="code-example__label">Output</h4>
+        <pre class="code-example__output"><code>Generated 251 sample points with amplitude=1.0 and frequency=1.0.</code></pre>
+      </div>
+    
+
+    
+
+    
+      <details class="code-example__source">
+        <summary>Source Code</summary>
+        <pre><code class="language-python">&quot;&quot;&quot;Sine wave demo&quot;&quot;&quot;
+
+from math import pi, sin
+
+import matplotlib.pyplot as plt
+
+PARAMS = globals().get(&quot;CODE_EXAMPLE_PARAMS&quot;, {})
+AMPLITUDE = float(PARAMS.get(&quot;amplitude&quot;, 1.0))
+FREQUENCY = float(PARAMS.get(&quot;frequency&quot;, 1.0))
+STEP = float(PARAMS.get(&quot;step&quot;, 0.05))
+
+sample_count = max(2, int(round(12.5 / STEP)) + 1)
+xs = [index * STEP for index in range(sample_count)]
+ys = [AMPLITUDE * sin(2 * pi * FREQUENCY * value) for value in xs]
+
+plt.figure(figsize=(7, 3.8))
+plt.plot(xs, ys, color=&quot;#0ea5e9&quot;, linewidth=2.4, label=f&quot;{AMPLITUDE:.2f} sin(2π {FREQUENCY:.2f} x)&quot;)
+plt.axhline(0.0, color=&quot;#94a3b8&quot;, linewidth=1, linestyle=&quot;--&quot;)
+plt.xlabel(&quot;x&quot;)
+plt.ylabel(&quot;Amplitude&quot;)
+plt.title(&quot;Sine wave&quot;)
+plt.legend()
+plt.tight_layout()
+plt.show()
+
+print(f&quot;Generated {len(xs)} sample points with amplitude={AMPLITUDE} and frequency={FREQUENCY}.&quot;)</code></pre>
+      </details>
+    
+  </section>
+
+<h2 id="small-growth-large-consequences">Small Growth, Large Consequences</h2>
+
+<p>Another recurring idea in both physics and machine learning is that very simple rules can scale quickly enough to become computationally or conceptually important. This notebook uses the elementary sequence of squares as a stand-in for that broader lesson.</p>
+
+<section class="code-example">
+    
+      <h3 class="code-example__title">Notebook explainer (small system)</h3>
+    
+
+    
+      <p class="code-example__description">A tiny notebook-backed explainer about how quickly simple structures can grow.</p>
+    
+
+    
+      <div class="code-example__params">
+        <strong>Parameters:</strong>
+        
+          <code>max_n=5</code>
+        
+      </div>
+    
+
+    
+      <div class="code-example__narrative">
+        
+          <h1 id="notebook-demo">Notebook demo</h1>
+
+<p>This notebook is executed during the site build. Its markdown narrative, printed output, and generated plot are embedded into the page.</p>
+
+        
+      </div>
+    
+
+    
+      <div class="code-example__plots">
+        
+          <figure class="code-example__plot">
+            <img src="/assets/generated/code/notebook-demo-explainer/plot-1.png" alt="Notebook explainer (small system) plot 1" />
+          </figure>
+        
+      </div>
+    
+
+    
+      <div class="code-example__block">
+        <h4 class="code-example__label">Output</h4>
+        <pre class="code-example__output"><code>&lt;Figure size 640x380 with 1 Axes&gt;
+Computed squares up to 5: [0, 1, 4, 9, 16, 25]</code></pre>
+      </div>
+    
+
+    
+
+    
+      <details class="code-example__source">
+        <summary>Notebook Code</summary>
+        <pre><code class="language-python">import matplotlib.pyplot as plt
+
+params = globals().get(&quot;CODE_EXAMPLE_PARAMS&quot;, {})
+max_n = int(params.get(&quot;max_n&quot;, 7))
+
+xs = list(range(max_n + 1))
+ys = [value ** 2 for value in xs]
+
+plt.figure(figsize=(6.4, 3.8))
+plt.bar(xs, ys, color=&quot;#22c55e&quot;)
+plt.title(&quot;Squares&quot;)
+plt.xlabel(&quot;n&quot;)
+plt.ylabel(&quot;n^2&quot;)
+plt.tight_layout()
+plt.show()
+
+print(f&quot;Computed squares up to {max_n}:&quot;, ys)</code></pre>
+      </details>
+    
+  </section>
+
+<h2 id="why-these-exist">Why These Exist</h2>
+
+<p>These explainers are placeholders for a more serious library of notebook-backed essays. For now, they serve as a gentle bridge between plain-language summaries and the more technical research material elsewhere on the site.</p>
+
+        
+      </section>
+
+      
+
+
+      
+      
+      
+
+      
+
+      
+
+      
+      
+      
+    </div>
+  </article>
+
+  
+</div>
+
+      
+    </div>
+
+    
+      <div class="search-content">
+        <div class="search-content__inner-wrap"><form class="search-content__form" onkeydown="return event.key != 'Enter';" role="search">
+    <label class="sr-only" for="search">
+      Enter your search term...
+    </label>
+    <input type="search" id="search" class="search-input" tabindex="-1" placeholder="Enter your search term..." />
+  </form>
+  <div id="results" class="results"></div></div>
+
+      </div>
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        
+
+        
+
+<div class="page__footer-follow">
+  <ul class="social-icons">
+    
+
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+      <li><a href="/sitemap/"><i class="fas fa-sitemap" aria-hidden="true"></i> Sitemap</a></li>
+      <li><a href="/privacy/"><i class="fas fa-shield-alt" aria-hidden="true"></i> Privacy</a></li>
+    
+  </ul>
+</div>
+
+
+<div class="page__footer-copyright">&copy; 2026 <a href="http://localhost:4000">Philip A. LeMaitre</a>. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/jekyll-themes/minimal-mistakes/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
+
+
+
+
+
+
+  </body>
+</html>

@@ -80,7 +80,70 @@
 
 <link id="mm-light" rel="stylesheet" href="/assets/css/main-light.css">
 <link id="mm-dark" rel="stylesheet" href="/assets/css/main-dark.css" disabled>
-<link rel="stylesheet" href="/assets/css/custom.css?v=1773302670">
+<link rel="stylesheet" href="/assets/css/custom.css?v=1773522016">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Philip A. LeMaitre",
+  "url": "http://localhost:4000",
+  "description": "Doctoral Researcher • Notes on quantum ML, agency, and foundations",
+  "publisher": {
+    "@type": "Person",
+    "name": "Philip A. LeMaitre",
+    "url": "http://localhost:4000"
+  },
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "http://localhost:4000/search/?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Philip A. LeMaitre",
+  "url": "http://localhost:4000",
+  "image": "http://localhost:4000/assets/images/IMG_2215.JPG",
+  "jobTitle": "Doctoral Researcher",
+  "affiliation": {
+    "@type": "CollegeOrUniversity",
+    "name": "University of Innsbruck"
+  },
+  "sameAs": [
+    
+      "https://github.com/AntiPhoton47",
+    
+      "https://orcid.org/0000-0002-0414-5202",
+    
+      "https://scholar.google.ca/citations?hl=en&user=mw53fQgAAAAJ",
+    
+      "https://www.linkedin.com/in/phil-lemaitre",
+    
+      "https://bsky.app/profile/contextguy.bsky.social",
+    
+      "https://x.com/Philontre"
+    
+  ]
+}
+</script>
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Resources",
+  "description": "Doctoral Researcher • Notes on quantum ML, agency, and foundations",
+  "url": "http://localhost:4000/resources/"
+}
+</script>
+
+
 
 
   <link rel="dns-prefetch" href="https://webmention.io"><link rel="preconnect" href="https://webmention.io"><link rel="preconnect" href="ws://webmention.io:8080"><link rel="pingback" href="https://webmention.io/phillemaitre.com/xmlrpc"><link rel="webmention" href="https://webmention.io/phillemaitre.com/webmention">
@@ -111,6 +174,50 @@
 
 <script data-goatcounter="https://academicgoat.goatcounter.com/count"
         async src="https://gc.zgo.at/count.js"></script>
+
+<script>
+  window.sitePostUrls = [
+    
+      "/leisure/2026/03/09/Concerts.html",
+    
+      "/outreach/2026/02/25/MIP-Tag.html"
+    
+  ];
+
+  document.addEventListener("click", function (event) {
+    const trigger = event.target.closest("[data-random-post]");
+    if (!trigger || !window.sitePostUrls || window.sitePostUrls.length === 0) {
+      return;
+    }
+
+    const choice = window.sitePostUrls[Math.floor(Math.random() * window.sitePostUrls.length)];
+    if (choice) {
+      window.location.href = choice;
+    }
+  });
+
+  function scrollCarousel(id, direction) {
+    const track = document.querySelector(`[data-carousel-track="${id}"]`);
+    if (!track) {
+      return;
+    }
+    const step = Math.max(track.clientWidth * 0.82, 280);
+    track.scrollBy({ left: direction * step, behavior: "smooth" });
+  }
+
+  document.addEventListener("click", function (event) {
+    const prev = event.target.closest("[data-carousel-prev]");
+    const next = event.target.closest("[data-carousel-next]");
+
+    if (prev) {
+      scrollCarousel(prev.getAttribute("data-carousel-prev"), -1);
+    }
+
+    if (next) {
+      scrollCarousel(next.getAttribute("data-carousel-next"), 1);
+    }
+  });
+</script>
 
   </head>
 
@@ -161,6 +268,12 @@
                 
                 
               >Research</a>
+            </li><li class="masthead__menu-item">
+              <a
+                href="/causes/"
+                
+                
+              >Causes</a>
             </li><li class="masthead__menu-item">
               <a
                 href="/outreach/"
@@ -238,7 +351,7 @@
   
 
 
-<div id="main" role="main">
+<div id="main" class="page-shell page-shell--single" role="main">
   
   <div class="sidebar sticky">
   
@@ -371,48 +484,53 @@
 
 
 
-  <article class="page" itemscope itemtype="https://schema.org/CreativeWork">
+  <article class="page page-shell__main" itemscope itemtype="https://schema.org/CreativeWork">
     <meta itemprop="headline" content="Resources">
     
     
     
 
-    <div class="page__inner-wrap">
+    <div class="page__inner-wrap page-shell__inner">
       
-        <header>
+        <header class="page-shell__header">
+          
+          <p class="section-kicker">Page</p>
+          
           <h1 id="page-title" class="page__title" itemprop="headline">
             <a href="http://localhost:4000/resources/" itemprop="url">Resources
 </a>
           </h1>
+          
           
 
 
         </header>
       
 
-      <section class="page__content" itemprop="text">
+      
         
-          
-          
-          <aside class="sidebar__right sticky">
-            <nav class="toc">
-              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
-              <ul class="toc__menu"><li><a href="#starter-pack">Starter Pack</a></li><li><a href="#courses">Courses</a></li><li><a href="#research-notes">Research Notes</a></li><li><a href="#current-initiatives-and-institutions">Current Initiatives and Institutions</a><ul><li><a href="#initiatives">Initiatives</a></li><li><a href="#institutions">Institutions</a></li><li><a href="#hubs">Hubs</a></li></ul></li></ul>
-            </nav>
-          </aside>
-          
         
+        <aside class="sidebar__right page-shell__toc sticky">
+          <nav class="toc">
+            <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
+            <ul class="toc__menu"><li><a href="#starter-pack">Starter Pack</a></li><li><a href="#courses">Courses</a></li><li><a href="#research-notes">Research Notes</a></li><li><a href="#mini-explainers">Mini-Explainers</a></li><li><a href="#current-initiatives-and-institutions">Current Initiatives and Institutions</a><ul><li><a href="#initiatives">Initiatives</a></li><li><a href="#institutions">Institutions</a></li><li><a href="#hubs">Hubs</a></li></ul></li></ul>
+          </nav>
+        </aside>
+        
+      
+
+      <section class="page__content page-shell__content" itemprop="text">
         <p>It’s a big world out there, and there is so much to see and do, maybe a bit too much… While I will continue to be endlessly fascinated by our vast cosmos, it is sometimes difficult to know what events/initiatives are happening out there and where to look for resources. Luckily, I have compiled a list of current initiatives/institutions I am part of or am interested in, as well as links to courses and some research/course notes, and just general resources for those of you who want to get your feet wet in the theoretical physics aether. I hope you enjoy :)</p>
 
 <h2 id="starter-pack">Starter Pack</h2>
 
 <p>The theoretical physicist Gerard ‘t Hooft already has a very informative and comprehensive guide to becoming a theoretical physicist on their <a href="https://www.goodtheorist.science/index.html">webpage</a>, but I will try to give my own perspective coming from a different background and with a more contemporary twist.</p>
 
-<p>You absolutely must start with the basics of mathematics:</p>
+<p>You absolutely must start with the basics of mathematics. Calculus, linear algebra, and proofs are not decorative; they are the grammar of almost everything that comes later.</p>
 
-<p>Some computer science knowledge is also handy to have, although AI is becoming increasingly talented at writing code, so I will leave this up to you:</p>
+<p>Some computer science knowledge is also handy to have, especially if you want to simulate models, test ideas numerically, or move anywhere near machine learning. You do not need to become a software engineer, but you should be able to make a computer do useful work for you.</p>
 
-<p>Most theorists would discombobulate at the mention of this, and in many respects it is not necessary to be able to actively work on theoretical physics, but I think it is important that every good theorist have some grounding in philosophy.</p>
+<p>Most theorists would discombobulate at the mention of this, and in many respects it is not necessary to be able to actively work on theoretical physics, but I think it is important that every good theorist have some grounding in philosophy. Questions about explanation, evidence, abstraction, and what counts as understanding show up constantly even when people pretend they do not. You often find researchers - and arguably all people - have heavy philosophical commitments and understated assumptions that are fueling their argumentation and worldview; it helps to acknoweldge and convey these clearly, so knowing is half the battle here as usual.</p>
 
 <h2 id="courses">Courses</h2>
 
@@ -424,82 +542,487 @@
         <tr>
           <td>Proofs and Set Theory / [link]</td>
           <td>[notes]</td>
+          <td>[book]</td>
         </tr>
       </tbody>
     </table>
   </li>
-  <li>Calculus</li>
-  <li>Linear Algebra</li>
-  <li>Geometry</li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>Calculus I and II / [link]</td>
+          <td>[notes]</td>
+          <td>[book]</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>Linear Algebra / [link]</td>
+          <td>[notes]</td>
+          <td>[book]</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>Geometry / [link]</td>
+          <td>[notes]</td>
+          <td>[book]</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>Differential Equations I / [link]</td>
+          <td>[notes]</td>
+          <td>[book]</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
 </ul>
 
 <p>Computer Science Basics:</p>
 <ul>
-  <li>Introduction to Python/Julia</li>
-  <li>More Python/Julia</li>
-  <li>Introduction to Wolfram Mathematica</li>
-  <li>Introduction to Machine Learning</li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>Introduction to Python/Julia / [link]</td>
+          <td>[notes]</td>
+          <td>[book]</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>More Python/Julia / [link]</td>
+          <td>[notes]</td>
+          <td>[book]</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>Introduction to Machine Learning / [link]</td>
+          <td>[notes]</td>
+          <td>[book]</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
 </ul>
 
 <p>Philosophy Basics:</p>
 <ul>
-  <li>Introduction to Metaphysics</li>
-  <li>Introduction to Epistemology</li>
-  <li>Introduction to Philosophical Logic</li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>Introduction to Metaphysics / [link]</td>
+          <td>[notes]</td>
+          <td>[book]</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>Introduction to Epistemology / [link]</td>
+          <td>[notes]</td>
+          <td>[book]</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>Introduction to Philosophical Logic / [link]</td>
+          <td>[notes]</td>
+          <td>[book]</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
 </ul>
 
 <p>Introductory Physics:</p>
 <ul>
-  <li>Classical Mechanics I</li>
-  <li>Electromagnetism</li>
-  <li>Thermodynamics</li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>Classical Mechanics I / [link]</td>
+          <td>[notes]</td>
+          <td>[book]</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>Electromagnetism / [link]</td>
+          <td>[notes]</td>
+          <td>[book]</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>Thermodynamics / [link]</td>
+          <td>[notes]</td>
+          <td>[book]</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
 </ul>
 
 <p>Intermediate Mathematics:</p>
 <ul>
-  <li>Real Analysis</li>
-  <li>Probability Theory</li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>Vector Calculus and Real Analysis / [link]</td>
+          <td>[notes]</td>
+          <td>[book]</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>Probability Theory / [link]</td>
+          <td>[notes]</td>
+          <td>[book]</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>Mathematical Methods / [link]</td>
+          <td>[notes]</td>
+          <td>[book]</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>Differential Equations II / [link]</td>
+          <td>[notes]</td>
+          <td>[book]</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
 </ul>
 
 <p>Intermediate Physics:</p>
 <ul>
-  <li>Optics</li>
-  <li>Quantum Theory I</li>
-  <li>Special Relativity</li>
-  <li>Classical Mechanics II</li>
-  <li>Statistical Physics</li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>Optics / [link]</td>
+          <td>[notes]</td>
+          <td>[book]</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>Quantum Theory I / [link]</td>
+          <td>[notes]</td>
+          <td>[book]</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>Special Relativity / [link]</td>
+          <td>[notes]</td>
+          <td>[book]</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>Classical Mechanics II / [link]</td>
+          <td>[notes]</td>
+          <td>[book]</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>Statistical Physics / [link]</td>
+          <td>[notes]</td>
+          <td>[book]</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
 </ul>
 
 <p>Advanced Mathematics:</p>
 <ul>
-  <li>Differential Geometry</li>
-  <li>Topology</li>
-  <li>Complex Analysis</li>
-  <li>Functional Analysis</li>
-  <li>Measure Theory</li>
-  <li>Abstract Algebra and Group Theory</li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>Differential Geometry / [link]</td>
+          <td>[notes]</td>
+          <td>[book]</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>Topology / [link]</td>
+          <td>[notes]</td>
+          <td>[book]</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>Complex Analysis / [link]</td>
+          <td>[notes]</td>
+          <td>[book]</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>Functional Analysis / [link]</td>
+          <td>[notes]</td>
+          <td>[book]</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>Measure Theory / [link]</td>
+          <td>[notes]</td>
+          <td>[book]</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>Abstract Algebra and Group Theory / [link]</td>
+          <td>[notes]</td>
+          <td>[book]</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
 </ul>
 
 <p>Advanced Physics:</p>
 <ul>
-  <li>Quantum Theory II</li>
-  <li>Quantum Information Theory</li>
-  <li>Solid State Physics</li>
-  <li>Nuclear Physics</li>
-  <li>Atomic and Molecular Physics</li>
-  <li>General Relativity I</li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>Quantum Theory II / [link]</td>
+          <td>[notes]</td>
+          <td>[book]</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>Quantum Information Theory / [link]</td>
+          <td>[notes]</td>
+          <td>[book]</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>Solid State Physics / [link]</td>
+          <td>[notes]</td>
+          <td>[book]</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>Nuclear Physics / [link]</td>
+          <td>[notes]</td>
+          <td>[book]</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>Atomic and Molecular Physics / [link]</td>
+          <td>[notes]</td>
+          <td>[book]</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>General Relativity I / [link]</td>
+          <td>[notes]</td>
+          <td>[book]</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
 </ul>
 
 <p>Graduate Physics:</p>
 <ul>
-  <li>General Relativity II</li>
-  <li>Quantum Field Theory</li>
-  <li></li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>General Relativity II / [link]</td>
+          <td>[notes]</td>
+          <td>[book]</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>Quantum Field Theory / [link]</td>
+          <td>[notes]</td>
+          <td>[book]</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>Particle Physics / [link]</td>
+          <td>[notes]</td>
+          <td>[book]</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>Relativistic Quantum Information / [link]</td>
+          <td>[notes]</td>
+          <td>[book]</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>Quantum Foundations / [link]</td>
+          <td>[notes]</td>
+          <td>[book]</td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
 </ul>
 
 <h2 id="research-notes">Research Notes</h2>
 
 <p>Here I will list some useful research notes that are freely available. I also have some more basic <a href="/assets/files/resources/notes/My%20Notes.pdf">notes</a> covering useful mathematical identities and basic properties plus physics unit conventions (but beware, it is a work in progress).</p>
+
+<h2 id="mini-explainers">Mini-Explainers</h2>
+
+<p>I am starting to build short notebook-backed explainers for recurring ideas on the site. They are meant to sit between plain-language summaries and the more technical research material.</p>
+
+<ul>
+  <li><a href="/explainers/">Mini-Explainers</a> for short visual or computational explanations</li>
+  <li><a href="/research/">Research</a> for the papers, talks, posters, and lay summaries</li>
+  <li><a href="/posts/#explore-topics">Posts</a> for topic-based browsing through the blog</li>
+</ul>
 
 <h2 id="current-initiatives-and-institutions">Current Initiatives and Institutions</h2>
 
@@ -529,18 +1052,37 @@
   <li><a href="https://quantiki.org/">Quantiki</a></li>
 </ul>
 
+<h2>Keep Exploring</h2>
+<p>If you came here for notes or demos, these are the fastest ways to branch into the rest of the site.</p>
+<div class="site-crosslinks">
+  
+    <a class="site-crosslinks__card" href="/research/">
+      <span class="site-crosslinks__title">Research overview</span>
+      <span class="site-crosslinks__text">Jump to publications, talks, posters, and lay summaries of the main projects.</span>
+    </a>
+  
+    <a class="site-crosslinks__card" href="/explainers/">
+      <span class="site-crosslinks__title">Mini-Explainers</span>
+      <span class="site-crosslinks__text">Short notebook-backed explainers that sit between intuition and technical detail.</span>
+    </a>
+  
+    <a class="site-crosslinks__card" href="/posts/#explore-topics">
+      <span class="site-crosslinks__title">Browse posts by topic</span>
+      <span class="site-crosslinks__text">Use the blog page to navigate through categories, tags, and year archives.</span>
+    </a>
+  
+</div>
+
+
         
       </section>
 
-      <footer class="page__meta">
-        
-        
+      
 
 
-
-        
-
-      </footer>
+      
+      
+      
 
       
 

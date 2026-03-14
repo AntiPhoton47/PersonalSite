@@ -1,0 +1,93 @@
+homepage_banners:
+  - label: "Pinned update"
+    title: "New paper and talk cycle"
+    text: "The site now highlights work around relativistic quantum computing, contextuality harvesting, and conference material in a more navigable way."
+    links:
+      - label: "Research overview"
+        url: /research/
+      - label: "Latest blog posts"
+        url: /posts/
+  - label: "Conference material"
+    title: "Slides, posters, and videos are in one place"
+    text: "Recent conference talks and posters are linked directly from the research page, so the site now works better as a central hub for talks and related material."
+    links:
+      - label: "Conference talks"
+        url: /research/#conference-talks
+      - label: "Posters"
+        url: /research/#conference-posters
+
+featured_publications:
+  - title: "Harvesting Contextuality from the Vacuum"
+    url: "https://doi.org/10.1103/9ff3-4m5g"
+    summary: "Shows that detectors coupled to a quantum field can extract contextuality directly from the vacuum, extending the resource-harvesting program beyond entanglement."
+    category: "Paper"
+  - title: "A Universal Quantum Computer from Relativistic Motion"
+    url: "https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.134.190601"
+    summary: "Builds a quantum-computing architecture where gate operations arise from relativistic motion and field-mediated interactions."
+    category: "Paper"
+  - title: "Multi-Excitation Projective Simulation with a Many-Body Physics Inspired Inductive Bias"
+    url: "https://doi.org/10.1016/j.artint.2026.104489"
+    summary: "Introduces a more expressive and interpretable learning architecture for projective simulation using a many-body inspired inductive bias."
+    category: "Paper"
+
+featured_presentations:
+  - title: "A Universal Quantum Computer From Relativistic Motion"
+    url: "https://www.youtube.com/live/pAlDsCJH-ds?si=Mc8rZPqEzI948X2d"
+    summary: "Recorded conference talk from the 15th Relativistic Quantum Information North Conference."
+    category: "Talk"
+  - title: "A Universal Quantum Computer from Relativistic Motion"
+    url: "/assets/files/posters/2025-04-11_RVQC_QISS_2025.pdf"
+    summary: "Poster version prepared for QISS 2025."
+    category: "Poster"
+
+featured_code:
+  - title: "RVQC"
+    url: "https://github.com/AntiPhoton47/RVQC"
+    summary: "Code connected to the relativistic variational quantum computer work."
+    category: "Code"
+  - title: "Contextuality-Harvesting"
+    url: "https://github.com/AntiPhoton47/Contextuality-Harvesting"
+    summary: "Simulation code for contextuality harvesting from quantum fields."
+    category: "Code"
+  - title: "quantum-chem"
+    url: "https://github.com/AntiPhoton47/quantum-chem"
+    summary: "Codebase underlying the polymer self-consistent field theory atom papers."
+    category: "Code"
+
+lay_summaries:
+  - title: "Harvesting Contextuality from the Vacuum"
+    audience: "For non-specialists"
+    summary: "This paper asks whether some of the strangest nonclassical features of quantum theory can be pulled out of empty space itself. The main result is that the vacuum is not just a passive background: with the right detectors and measurements, it can supply a resource called contextuality."
+    links:
+      - label: "Read the paper"
+        url: "https://doi.org/10.1103/9ff3-4m5g"
+      - label: "Code"
+        url: "https://github.com/AntiPhoton47/Contextuality-Harvesting"
+  - title: "A Universal Quantum Computer from Relativistic Motion"
+    audience: "For non-specialists"
+    summary: "Instead of treating relativity as a nuisance for quantum computing, this work turns motion through spacetime into a computational tool. It shows how changing the paths of qubits and letting them interact through a field can implement a universal quantum computer."
+    links:
+      - label: "Read the paper"
+        url: "https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.134.190601"
+      - label: "Watch the talk"
+        url: "https://www.youtube.com/live/pAlDsCJH-ds?si=Mc8rZPqEzI948X2d"
+      - label: "Code"
+        url: "https://github.com/AntiPhoton47/RVQC"
+  - title: "Multi-Excitation Projective Simulation"
+    audience: "For non-specialists"
+    summary: "This project extends an interpretable AI model so it can reason about several active concepts at once instead of one at a time. The payoff is a more expressive agent design that still aims to keep its decision process understandable."
+    links:
+      - label: "Read the paper"
+        url: "https://doi.org/10.1016/j.artint.2026.104489"
+      - label: "Code"
+        url: "https://github.com/MariusKrumm/ManyBodyMEPS"
+  - title: "Polymer Self-Consistent Field Theory of Atoms"
+    audience: "For non-specialists"
+    summary: "These papers explore an unusual way of modeling atoms by translating quantum many-electron structure into a polymer-inspired field theory. The goal is to understand atomic shell structure and electron behavior from a fresh conceptual angle."
+    links:
+      - label: "Gaussian basis paper"
+        url: "https://onlinelibrary.wiley.com/doi/10.1002/qua.27111"
+      - label: "Symmetry-breaking paper"
+        url: "https://pubs.aip.org/aip/jcp/article/158/6/064301/2875147/On-the-origins-of-spontaneous-spherical-symmetry"
+      - label: "Code"
+        url: "https://github.com/AntiPhoton47/quantum-chem"

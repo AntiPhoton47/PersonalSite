@@ -11,4 +11,4 @@ IP addresses are anonymized and not stored in identifiable form. The purpose of 
 
 ## E-mail Subscription
 
-This site collects email addresses via ConvertKit for the purpose of sending blog updates. Emails are processed and stored by ConvertKit according to their privacy policy. You can unsubscribe at any time.
+This site may collect email addresses via EmailOctopus for the purpose of sending blog updates. Emails are processed and stored by EmailOctopus according to their privacy policy. You can unsubscribe at any time.

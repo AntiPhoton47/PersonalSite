@@ -1,0 +1,9 @@
+- title: "Research overview"
+  text: "Jump to publications, talks, posters, and lay summaries of the main projects."
+  url: /research/
+- title: "Mini-Explainers"
+  text: "Short notebook-backed explainers that sit between intuition and technical detail."
+  url: /explainers/
+- title: "Browse posts by topic"
+  text: "Use the blog page to navigate through categories, tags, and year archives."
+  url: /posts/#explore-topics
