@@ -33,8 +33,9 @@ I care about making difficult ideas more legible, especially in physics and math
 This is part of why I care about talks, public communication, notes, and site-building in the first place. Explanation is not secondary to understanding; it is one of the ways understanding gets tested.
 
 Here are some places to get started:
-- []()
-
+- [Science Communication Institute](https://sci.institute/)
+- [Science Connected](https://scienceconnected.org/)
+- [European Science Communication Institute](https://www.esci.eu/)
 
 ### AI, Interpretability, and Responsibility
 
@@ -42,6 +43,9 @@ A major thread in both my academic and broader interests is whether intelligent 
 
 Here are some places to get started:
 - [AI Safety Fundamentals](https://aisafetyfundamentals.com/)
+- [Centre for AI Safety](https://safe.ai/)
+- [Alliance for Secure AI](https://secureainow.org/)
+- [Future of Life Institute](https://futureoflife.org/)
 
 ### Long-Term Thinking
 
@@ -51,6 +55,7 @@ Long-term thinking can become vague if it is used as an excuse for abstraction w
 
 Here are some places to get started:
 - [Longview Philanthropy](https://longview.org/)
+- [The Long Now Foundation](https://longnow.org/)
 
 ### Democritization of Knowledge
 
@@ -61,6 +66,18 @@ I am a huge supporter of open source software projects and the broader movement 
 Here are some places to get started:
 - [arXiv](https://arxiv.org/)
 - [Open Source Initiative](https://opensource.org/)
+- [Free Software Foundation](https://www.fsf.org/)
+- [Open Knowledge Foundation](https://okfn.org/en/)
+- [UNESCO](https://www.unesco.org/en/open-access)
+
+## Citizen Science
+
+There are so much data being generated now that scientists simply cannot parse through all of it on their own. To combat this issue, many scientific projects have set up crowd-sourced platforms where they recruit everyday citizens with little to no scientific background as data analysts and research assistants. We have an abundance of humans on this planet, and these projects have shown that with the right training, they can be leveraged to help push science forward. 
+
+Here are some places to get started:
+- [Zooniverse](https://www.zooniverse.org/)
+- [European Citizen Science Platform](https://citizenscience.eu/)
+- [SciStarter](https://scistarter.org/)
 
 ## Practical Attitudes
 

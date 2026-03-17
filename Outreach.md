@@ -13,7 +13,7 @@ We recently finished putting together a booth consisting of four activities.
 
 We have an interactive reinforcement learning platform implementing the projective simulation algorithm (what is being projected on the main screen in the preceding image), where you can augment the parameters of the agent and change the environment in real-time. The website can be found [here](https://jpazem.github.io/InteractiveRLlab/).
 
-![](/assets/images/rl-lab-02-24-2026_08_19_PM.png?raw=true)
+![](/assets/images/rl-lab-03-15-2026_08_29_PM.png?raw=true)
 
 The goal of the demo is to get the agent (black dot) to reach the goal cell in the smallest number of steps consistent with the grid world, which will show up in the middle column of the interface as bright arrows along a certain path that the agent always follows, and on the rightmost column in the reward plots as increasing lines (or flat with relatively large values).
 

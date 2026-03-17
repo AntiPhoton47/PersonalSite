@@ -22,20 +22,24 @@ It's a big world out there, and there is so much to see and do, maybe a bit too 
 
 The theoretical physicist Gerard 't Hooft already has a very informative and comprehensive guide to becoming a theoretical physicist on their [webpage](https://www.goodtheorist.science/index.html), but I will try to give my own perspective coming from a different background and with a more contemporary twist.
 
-You absolutely must start with the basics of mathematics. Calculus, linear algebra, and proofs are not decorative; they are the grammar of almost everything that comes later.
+English is the lingua franca of physics and much of academia, so you have to make sure you have a working knowledge of it and that you can prove this to any institutions where you want to study. The basics of the language are quite simple and you can usually pick up what you need through ingesting media or talking to people; AI has evolved rapidly to the point where it can really help you practice the language (or any language for that matter) as well. My advice is to not worry too much about perfecting your grammar or pronunciation since English is very forgiving on both fronts, just make sure you can be understood. Of course, to become a good writer you will need to know the language better.
 
-Some computer science knowledge is also handy to have, especially if you want to simulate models, test ideas numerically, or move anywhere near machine learning. You do not need to become a software engineer, but you should be able to make a computer do useful work for you.
+Theory breathes through the language of mathematics, so you absolutely must start with the basics. Calculus, linear algebra, and proofs are not decorative; they are the grammar of almost everything that comes later.
+
+Some computer science knowledge is also handy to have, especially if you want to simulate models, test ideas numerically, or move anywhere near machine learning. You do not need to become a software engineer, but you should be able to make a computer do useful work for you. Getting familiar with languages such as Python or Julia is the best way to start since they are ubiquitous in physics and machine learning. Many theorists also like to use Wolfram Mathematica or Maple, which are very useful symbolic mathematics programs with their own syntax, but beware they are both proprietary software.
 
 Most theorists would discombobulate at the mention of this, and in many respects it is not necessary to be able to actively work on theoretical physics, but I think it is important that every good theorist have some grounding in philosophy. Questions about explanation, evidence, abstraction, and what counts as understanding show up constantly even when people pretend they do not. You often find researchers - and arguably all people - have heavy philosophical commitments and understated assumptions that are fueling their argumentation and worldview; it helps to acknoweldge and convey these clearly, so knowing is half the battle here as usual.
 
+Below I have listed some courses/subjects you should study - listed in order - to have a solid foundation.
+
 ## Courses
 
+The Perimeter Institute of Theoretical Physics in Canada has a wonderful archive of all recorded talks and lectures given there called [PIRSA](https://pirsa.org/) which I urge you to take advantage of; they have material on almost any theoretical physics topic you can imagine. [MIT](www.youtube.com/@mitocw) and [Stanford](www.youtube.com/@stanfordonline) also post many of their excellent course lectures on YouTube, which I also recommend.
+
 Mathematics Basics:
-- Proofs and Set Theory / [link] | [notes] | [book]
-- Calculus I and II / [link] | [notes] | [book]
-- Linear Algebra / [link] | [notes] | [book]
+- Arithmetic / [link] | [notes] | [book]
+- Algebra / [link] | [notes] | [book]
 - Geometry / [link] | [notes] | [book]
-- Differential Equations I / [link] | [notes] | [book]
 
 Computer Science Basics:
 - Introduction to Python/Julia / [link] | [notes] | [book]
@@ -47,9 +51,16 @@ Philosophy Basics:
 - Introduction to Epistemology / [link] | [notes] | [book]
 - Introduction to Philosophical Logic / [link] | [notes] | [book]
 
+Introductory Mathematics:
+- Proofs and Set Theory / [link] | [notes] | [book]
+- Calculus I and II / [link] | [notes] | [book]
+- Linear Algebra / [link] | [notes] | [book]
+- Differential Equations I / [link] | [notes] | [book]
+- Numerical Methods / [link] | [notes] | [book]
+
 Introductory Physics:
 - Classical Mechanics I / [link] | [notes] | [book]
-- Electromagnetism / [link] | [notes] | [book]
+- Electromagnetism I / [link] | [notes] | [book]
 - Thermodynamics / [link] | [notes] | [book]
 
 Intermediate Mathematics:
@@ -57,13 +68,15 @@ Intermediate Mathematics:
 - Probability Theory / [link] | [notes] | [book]
 - Mathematical Methods / [link] | [notes] | [book]
 - Differential Equations II / [link] | [notes] | [book]
+- Linear Algebra II / [link] | [notes] | [book]
 
 Intermediate Physics:
+- Electromagnetism II / [link] | [notes] | [book]
 - Optics / [link] | [notes] | [book]
 - Quantum Theory I / [link] | [notes] | [book]
 - Special Relativity / [link] | [notes] | [book]
 - Classical Mechanics II / [link] | [notes] | [book]
-- Statistical Physics / [link] | [notes] | [book]
+- Statistical Physics I / [link] | [notes] | [book]
 
 Advanced Mathematics:
 - Differential Geometry / [link] | [notes] | [book]
@@ -75,7 +88,9 @@ Advanced Mathematics:
 
 Advanced Physics:
 - Quantum Theory II / [link] | [notes] | [book] 
+- Statistical Physics II / [link] | [notes] | [book]
 - Quantum Information Theory / [link] | [notes] | [book]
+- Advanced Electromagnetism / [link] | [notes] | [book]
 - Solid State Physics / [link] | [notes] | [book]
 - Nuclear Physics / [link] | [notes] | [book]
 - Atomic and Molecular Physics / [link] | [notes] | [book]
@@ -122,6 +137,8 @@ Notebook runs can also be parameterized independently.
 
 
 ## Current Initiatives and Institutions
+
+Many of these initiatives/institutions/hubs are tailored towards my own interests so don't expect to find everything here.
 
 ### Initiatives
 

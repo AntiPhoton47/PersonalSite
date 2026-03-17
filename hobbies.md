@@ -7,7 +7,7 @@ This page is the less academic side of the site. A lot of these interests overla
 
 ## Travel
 
-Travel is one of the main ways I reset perspective. Conferences, trains, museums, mountains, and unfamiliar routines all seem to force a more attentive mode of living than ordinary weeks do. I especially like travel that combines a strong sense of place with room to walk, think, and observe.
+Travel is one of the main ways I reset perspective. Conferences, trains, museums, mountains, and unfamiliar routines all seem to force a more attentive mode of living than ordinary weeks do. I especially like travel that combines a strong sense of place and culture with room to walk, think, and observe.
 
 Some of the awesome places I have been to:
 - Amsterdam, The Netherlands
