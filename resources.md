@@ -107,6 +107,8 @@ Graduate Physics:
 
 Here I will list some useful research notes that are freely available. I also have some more basic [notes](/assets/files/resources/notes/My%20Notes.pdf) covering useful mathematical identities and basic properties plus physics unit conventions (but beware, it is a work in progress).
 
+
+
 ## Mini-Explainers
 
 I am starting to build short notebook-backed explainers for recurring ideas on the site. They are meant to sit between plain-language summaries and the more technical research material.
