@@ -4,8 +4,10 @@ from __future__ import annotations
 import argparse
 import os
 import re
+from datetime import datetime
 from pathlib import Path
 from typing import Any, Dict, List, Tuple
+from zipfile import ZipFile
 
 import requests
 import yaml
@@ -37,6 +39,154 @@ def save_yaml(path: Path, payload: Any) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     with path.open("w", encoding="utf-8") as handle:
         yaml.safe_dump(payload, handle, sort_keys=False, allow_unicode=True)
+
+
+def slugify(text: str) -> str:
+    text = re.sub(r"[^a-z0-9]+", "-", text.lower()).strip("-")
+    return text or "presentation"
+
+
+def normalize_text(text: str) -> str:
+    return re.sub(r"\s+", " ", text).strip()
+
+
+def format_cv_date_text(date_str: str) -> str:
+    try:
+        dt = datetime.strptime(date_str, "%Y-%m-%d")
+    except ValueError:
+        return date_str
+    return dt.strftime("%b. %Y")
+
+
+def date_from_asset_name(asset_rel: str) -> str:
+    match = re.match(r"(\d{4}-\d{2}-\d{2})_", Path(asset_rel).name)
+    return match.group(1) if match else ""
+
+
+def sort_slide_names(names: List[str]) -> List[str]:
+    def key(name: str) -> Tuple[int, str]:
+        match = re.search(r"slide(\d+)\.xml$", name)
+        return (int(match.group(1)) if match else 10_000, name)
+
+    return sorted(names, key=key)
+
+
+def extract_pptx_text_by_slide(path: Path) -> List[List[str]]:
+    slides: List[List[str]] = []
+    with ZipFile(path) as archive:
+        slide_names = sort_slide_names(
+            [name for name in archive.namelist() if name.startswith("ppt/slides/slide") and name.endswith(".xml")]
+        )
+        for slide_name in slide_names:
+            xml = archive.read(slide_name).decode("utf-8", "ignore")
+            texts = [normalize_text(text) for text in re.findall(r"<a:t>(.*?)</a:t>", xml) if normalize_text(text)]
+            slides.append(texts)
+    return slides
+
+
+def infer_title_from_slides(slides: List[List[str]]) -> str:
+    if not slides:
+        return ""
+    first_slide = slides[0]
+    for text in first_slide:
+        lower = text.lower()
+        if re.search(r"\b(january|february|march|april|may|june|july|august|september|october|november|december)\b", lower):
+            continue
+        if "philip" in lower or "lemaitre" in lower:
+            continue
+        if "phys. rev." in lower:
+            continue
+        if len(text) >= 8:
+            return text
+    return first_slide[0] if first_slide else ""
+
+
+def infer_event_line_from_slides(slides: List[List[str]]) -> str:
+    keywords = ("conference", "workshop", "meeting", "seminar", "congress", "symposium", "school")
+    for slide in slides[:12]:
+        for text in slide[:8]:
+            lower = text.lower()
+            if not any(keyword in lower for keyword in keywords):
+                continue
+            candidate = text
+            if " I " in candidate:
+                candidate = candidate.split(" I ")[0]
+            if " | " in candidate:
+                candidate = candidate.split(" | ")[0]
+            return normalize_text(candidate)
+    return ""
+
+
+def infer_title_from_filename(asset_rel: str) -> str:
+    stem = Path(asset_rel).stem
+    stem = re.sub(r"^\d{4}-\d{2}-\d{2}_", "", stem)
+    return normalize_text(stem.replace("_", " "))
+
+
+def auto_entry_from_asset(root_dir: Path, kind: str, asset_rel: str) -> Dict[str, Any]:
+    path = root_dir / asset_rel
+    date = date_from_asset_name(asset_rel)
+    title = ""
+    event_line = ""
+
+    if path.suffix.lower() == ".pptx":
+        try:
+            slides = extract_pptx_text_by_slide(path)
+        except Exception:
+            slides = []
+        title = infer_title_from_slides(slides)
+        event_line = infer_event_line_from_slides(slides)
+
+    if not title:
+        title = infer_title_from_filename(asset_rel)
+
+    event = event_line.split(",", 1)[0].strip() if event_line else ""
+    include_in_site = bool(title and event)
+    include_in_cv = bool(title and event_line and date)
+
+    return {
+        "id": f"{kind}-{slugify(Path(asset_rel).stem)}",
+        "kind": kind,
+        "asset": asset_rel,
+        "include_in_site": include_in_site,
+        "include_in_cv": include_in_cv,
+        "title": title,
+        "site_title": title if include_in_site else "",
+        "cv_title": title if include_in_cv else "",
+        "event": event,
+        "cv_event_line": event_line,
+        "date": date,
+        "cv_date_text": format_cv_date_text(date) if include_in_cv else "",
+        "site_order": 0 if include_in_site else None,
+        "duration": "",
+        "links": {},
+        "auto_generated": True,
+        "needs_review": True,
+    }
+
+
+def merge_discovered_assets(root_dir: Path, entries: List[Dict[str, Any]]) -> Tuple[List[Dict[str, Any]], List[Dict[str, Any]]]:
+    asset_inventory = {
+        "talk": scan_assets(root_dir, "assets/files/talks"),
+        "poster": scan_assets(root_dir, "assets/files/posters"),
+    }
+    existing_assets = {entry.get("asset"): entry for entry in entries if entry.get("asset")}
+    merged = list(entries)
+    discovered: List[Dict[str, Any]] = []
+
+    for kind, assets in asset_inventory.items():
+        for asset_rel in assets:
+            if asset_rel in existing_assets:
+                continue
+            entry = auto_entry_from_asset(root_dir, kind, asset_rel)
+            merged.append(entry)
+            discovered.append(entry)
+
+    for entry in merged:
+        if entry.get("auto_generated") and entry.get("include_in_site") and entry.get("site_order") is None:
+            entry["site_order"] = 0
+
+    return merged, discovered
 
 
 def relative_asset_link(root_dir: Path, asset_path: str) -> str:
@@ -99,11 +249,6 @@ def validate_entries(root_dir: Path, entries: List[Dict[str, Any]], check_online
                 url = entry.get("links", {}).get(key, "")
                 if url and not verify_url(session, url):
                     raise RuntimeError(f"Unreachable URL for {entry['id']}: {url}")
-
-    for kind, assets in asset_inventory.items():
-        unconfigured = sorted(assets - referenced_assets[kind])
-        if unconfigured:
-            raise RuntimeError(f"Unconfigured {kind} assets: {', '.join(unconfigured)}")
 
 
 def build_site_item(root_dir: Path, entry: Dict[str, Any]) -> Dict[str, Any]:
@@ -206,11 +351,16 @@ def render_cv_block(entries: List[Dict[str, Any]]) -> str:
 
 
 def sort_items(items: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
-    def key(item: Dict[str, Any]) -> Tuple[int, str]:
+    def key(item: Dict[str, Any]) -> Tuple[int, int, str]:
         order = item.get("site_order")
         if order is not None:
-            return (int(order), "")
-        return (10_000, "-" + (item.get("date") or "0000-00-00"))
+            return (0, int(order), "")
+        date = item.get("date") or "0000-00-00"
+        try:
+            ordinal = datetime.strptime(date, "%Y-%m-%d").toordinal()
+        except ValueError:
+            ordinal = 0
+        return (1, -ordinal, item.get("title") or "")
 
     return sorted(items, key=key)
 
@@ -250,6 +400,9 @@ def main() -> int:
     if not isinstance(entries, list):
         raise RuntimeError("presentations_source.yml must contain an 'entries' list")
 
+    entries, discovered = merge_discovered_assets(root_dir, entries)
+    save_yaml(Path(args.source), {"entries": entries})
+
     validate_entries(root_dir, entries, check_online=args.check_online)
 
     site_talks = sort_items([build_site_item(root_dir, entry) | {"site_order": entry.get("site_order")} for entry in entries if entry.get("include_in_site") and entry["kind"] == "talk"])
@@ -262,9 +415,10 @@ def main() -> int:
     cv_entries = sorted(entries, key=lambda item: item.get("date") or "0000-00-00", reverse=True)
     Path(args.cv_tex).write_text(render_cv_block(cv_entries), encoding="utf-8")
 
-    print(
-        f"Updated {args.out_talks}, {args.out_posters}, {args.research_md}, and {args.cv_tex}."
-    )
+    if discovered:
+        discovered_assets = ", ".join(entry["asset"] for entry in discovered)
+        print(f"Discovered new presentation assets: {discovered_assets}")
+    print(f"Updated {args.source}, {args.out_talks}, {args.out_posters}, {args.research_md}, and {args.cv_tex}.")
     return 0
 
 

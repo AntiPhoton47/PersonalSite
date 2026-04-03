@@ -52,6 +52,7 @@ I have a number of interesting projects currently occupying my time, with many c
 
 <!-- presentations:start -->
 ## Conference Talks
+- Quantum Foundations Group Seminar: A Universal Quantum Computer From Relativistic Motion / [slides](/assets/files/talks/2026-03-27_RVQC_Stockholm.pptx)
 - 15th Relativistic Quantum Information North Conference: [A Universal Quantum Computer From Relativistic Motion](https://www.youtube.com/live/pAlDsCJH-ds?si=Mc8rZPqEzI948X2d) (3:26:54) / [slides](/assets/files/talks/2025-06-25_RVQC_RQIN.pptx)
 - 14th Relativistic Quantum Information North Conference: [A Universal Quantum Computer From Relativistic Motion](https://www.youtube.com/live/catSoE4G3WM?si=MojXIYPkMvzSPx70) (32:48) / [slides](/assets/files/talks/2024-08-07_RQML_RQIN.pptx)
 - Innsbruck-Konstanz-Hannover Meeting on Physics and Philosophy / [slides](/assets/files/talks/2025-09-16_GroupRetreat.pptx)

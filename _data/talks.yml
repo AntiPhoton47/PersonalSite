@@ -1,3 +1,12 @@
+- id: talk-2026-03-27-rvqc-stockholm
+  kind: talk
+  event: Quantum Foundations Group Seminar
+  title: A Universal Quantum Computer From Relativistic Motion
+  date: '2026-03-27'
+  duration: ''
+  links:
+    slides: /assets/files/talks/2026-03-27_RVQC_Stockholm.pptx
+  site_order: 0
 - id: talk-rqin-2025
   kind: talk
   event: 15th Relativistic Quantum Information North Conference

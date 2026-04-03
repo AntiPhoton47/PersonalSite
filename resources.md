@@ -34,74 +34,75 @@ Below I have listed some courses/subjects you should study - listed in order - t
 
 ## Courses
 
-The Perimeter Institute of Theoretical Physics in Canada has a wonderful archive of all recorded talks and lectures given there called [PIRSA](https://pirsa.org/) which I urge you to take advantage of; they have material on almost any theoretical physics topic you can imagine. [MIT](www.youtube.com/@mitocw) and [Stanford](www.youtube.com/@stanfordonline) also post many of their excellent course lectures on YouTube, which I also recommend.
+The Perimeter Institute of Theoretical Physics in Canada has a wonderful archive of all recorded talks and lectures given there called [PIRSA](https://pirsa.org/) which I urge you to take advantage of; they have material on almost any theoretical physics topic you can imagine. [MIT](https://www.youtube.com/@mitocw) and [Stanford](https://www.youtube.com/@stanfordonline) also post many of their excellent course lectures on YouTube, which I also recommend.
 
 Mathematics Basics:
-- Arithmetic / [link] | [notes] | [book]
-- Algebra / [link] | [notes] | [book]
-- Geometry / [link] | [notes] | [book]
+- Arithmetic / [link](https://www.khanacademy.org/math/arithmetic-home) | [notes](https://openstax.org/books/prealgebra-2e/pages/1-introduction) | [book](https://openstax.org/details/books/prealgebra-2e)
+- Algebra / [link](https://www.khanacademy.org/math/algebra-home) | [notes](https://openstax.org/books/elementary-algebra-2e/pages/2-introduction) | [book](https://openstax.org/details/books/intermediate-algebra-2e)
+- Geometry / [link](https://www.khanacademy.org/math/geometry-home) | [notes](https://math.libretexts.org/Bookshelves/Geometry/Euclidean_Plane_and_its_Relatives_(Petrunin)) | [book](https://bookstore.ams.org/view?productcode=mbk/132)
 
 Computer Science Basics:
-- Introduction to Python/Julia / [link] | [notes] | [book]
-- More Python/Julia / [link] | [notes] | [book]
-- Introduction to Machine Learning / [link] | [notes] | [book]
+- Introduction to Python/Julia / [link](https://ocw.mit.edu/courses/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/) | [notes](https://docs.python.org/3/tutorial/) | [book](https://greenteapress.com/wp/think-python-2e/)
+- More Python/Julia / [link](https://ocw.mit.edu/courses/6-0002-introduction-to-computational-thinking-and-data-science-fall-2016/) | [notes](https://lectures.scientific-python.org/) | [book](https://jakevdp.github.io/PythonDataScienceHandbook/)
+- Introduction to Machine Learning / [link](https://developers.google.com/machine-learning/crash-course) | [notes](https://cs229.stanford.edu/materials.html) | [book](https://www.statlearning.com/)
 
 Philosophy Basics:
-- Introduction to Metaphysics / [link] | [notes] | [book]
-- Introduction to Epistemology / [link] | [notes] | [book]
-- Introduction to Philosophical Logic / [link] | [notes] | [book]
+- Introduction to Metaphysics / [link] | [notes] | [book](https://www.routledge.com/Metaphysics-A-Contemporary-Introduction/Loux/p/book/9781138639348)
+- Introduction to Epistemology / [link] | [notes] | [book](https://people.cs.rutgers.edu/~biglars/epis.pdf)
+- Introduction to Philosophical Logic / [link](https://openlogicproject.org/) | [notes](https://builds.openlogicproject.org/) | [book](https://forallx.openlogicproject.org/)
 
 Introductory Mathematics:
-- Proofs and Set Theory / [link] | [notes] | [book]
-- Calculus I and II / [link] | [notes] | [book]
-- Linear Algebra / [link] | [notes] | [book]
-- Differential Equations I / [link] | [notes] | [book]
-- Numerical Methods / [link] | [notes] | [book]
+- Proofs and Set Theory / [link](https://openlearninglibrary.mit.edu/courses/course-v1:OCW+6.042J+2T2019/about) | [notes](https://courses.csail.mit.edu/6.042/spring18/mcs.pdf) | [book](https://richardhammack.github.io/BookOfProof/)
+- Calculus I and II / [link](https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/) | [notes](https://tutorial.math.lamar.edu/) | [book](https://openstax.org/details/books/calculus-volume-1)
+- Linear Algebra / [link](https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/) | [notes](https://ocw.mit.edu/courses/18-06sc-linear-algebra-fall-2011/resources/lecture-notes/) | [book](https://math.mit.edu/~gs/linearalgebra/)
+- Differential Equations I / [link](https://ocw.mit.edu/courses/18-03sc-differential-equations-fall-2011/) | [notes](https://tutorial.math.lamar.edu/Classes/DE/DE.aspx) | [book](https://math.mit.edu/~gs/dela/)
+- Numerical Methods / [link](https://ocw.mit.edu/courses/18-335j-introduction-to-numerical-methods-spring-2019/) | [notes](https://ocw.mit.edu/courses/18-330-introduction-to-numerical-analysis-spring-2004/resources/lecture-notes/) | [book](https://www.cambridge.org/core/books/introduction-to-numerical-linear-algebra-and-optimisation/FB35273E3F1A0D696D682AAC412C522C)
 
 Introductory Physics:
-- Classical Mechanics I / [link] | [notes] | [book]
-- Electromagnetism I / [link] | [notes] | [book]
-- Thermodynamics / [link] | [notes] | [book]
+- Classical Mechanics I / [link](https://ocw.mit.edu/courses/8-012-physics-i-classical-mechanics-fall-2008/) | [notes](https://www.damtp.cam.ac.uk/user/tong/relativity.html) | [book](https://www.cambridge.org/core/books/introduction-to-classical-mechanics/5303D704C9FCBDF592E8D895FC21F982)
+- Electromagnetism I / [link](https://ocw.mit.edu/courses/8-02-physics-ii-electricity-and-magnetism-spring-2019/) | [notes](https://www.damtp.cam.ac.uk/user/tong/justem.html) | [book](https://openstax.org/books/university-physics-volume-2/pages/1-introduction)
+- Thermodynamics / [link](https://ocw.mit.edu/courses/8-044-statistical-physics-i-spring-2013/) | [notes](https://www.damtp.cam.ac.uk/user/tong/statphys.html) | [book](https://www.pearson.com/en-us/subject-catalog/p/an-introduction-to-thermal-physics/P200000003099/9780201380279)
 
 Intermediate Mathematics:
 - Vector Calculus and Real Analysis / [link] | [notes] | [book]
-- Probability Theory / [link] | [notes] | [book]
-- Mathematical Methods / [link] | [notes] | [book]
-- Differential Equations II / [link] | [notes] | [book]
+- Probability Theory / [link](https://stat110.hsites.harvard.edu/) | [notes](https://stat110.hsites.harvard.edu/strategic-practice-problems) | [book](https://probabilitybook.net/)
+- Mathematical Methods / [link](https://ocw.mit.edu/courses/3-016-mathematics-for-materials-scientists-and-engineers-fall-2005/) | [notes](https://ocw.mit.edu/courses/3-016-mathematics-for-materials-scientists-and-engineers-fall-2005/pages/lecture-notes/) | [book](https://www.cambridge.org/core/books/mathematical-methods-for-physics-and-engineering/911A43AE1CF224743D32707FCC4AE0EB)
+- Differential Equations II / [link](https://ocw.mit.edu/courses/18-034-honors-differential-equations-spring-2009/) | [notes](https://ocw.mit.edu/courses/18-034-honors-differential-equations-spring-2009/resources/mit18_034s09_lec06/) | [book](https://math.mit.edu/~gs/dela/)
 - Linear Algebra II / [link] | [notes] | [book]
 
 Intermediate Physics:
-- Electromagnetism II / [link] | [notes] | [book]
-- Optics / [link] | [notes] | [book]
-- Quantum Theory I / [link] | [notes] | [book]
-- Special Relativity / [link] | [notes] | [book]
-- Classical Mechanics II / [link] | [notes] | [book]
-- Statistical Physics I / [link] | [notes] | [book]
+- Electromagnetism II / [link](https://ocw.mit.edu/courses/8-07-electromagnetism-ii-fall-2012/) | [notes](https://ocw.mit.edu/courses/8-07-electromagnetism-ii-fall-2012/resources/mit8_07f12_ln1/) | [book](https://openstax.org/books/university-physics-volume-2/pages/1-introduction)
+- Optics / [link](https://ocw.mit.edu/courses/2-71-optics-spring-2009/) | [notes](https://ocw.mit.edu/courses/2-71-optics-spring-2009/resources/lecture-notes/) | [book](https://www.pearson.com/en-us/subject-catalog/p/optics/P200000006793/9780137526420)
+- Quantum Theory I / [link](https://ocw.mit.edu/courses/8-04-quantum-physics-i-spring-2016/) | [notes](https://ocw.mit.edu/courses/8-04-quantum-physics-i-spring-2016/download/) | [book](https://mitpress.mit.edu/9780262046138/mastering-quantum-mechanics/)
+- Special Relativity / [link](https://ocw.mit.edu/courses/8-20-introduction-to-special-relativity-january-iap-2021/) | [notes](https://ocw.mit.edu/courses/8-20-introduction-to-special-relativity-january-iap-2021/resources/lecture-notes/) | [book](https://www.cambridge.org/core/books/introduction-to-classical-mechanics/5303D704C9FCBDF592E8D895FC21F982)
+- Classical Mechanics II / [link](https://ocw.mit.edu/courses/8-223-classical-mechanics-ii-january-iap-2017/) | [notes](https://ocw.mit.edu/courses/8-223-classical-mechanics-ii-january-iap-2017/pages/lecture-notes/) | [book](https://global.oup.com/academic/product/classical-mechanics-9781891389221)
+- Statistical Physics I / [link](https://www.damtp.cam.ac.uk/user/tong/statphys.html) | [notes](https://www.damtp.cam.ac.uk/user/us248/Lectures/Notes/statphys.pdf) | [book](https://www.pearson.com/en-us/subject-catalog/p/an-introduction-to-thermal-physics/P200000003099/9780201380279)
 
 Advanced Mathematics:
-- Differential Geometry / [link] | [notes] | [book]
-- Topology / [link] | [notes] | [book]
-- Complex Analysis / [link] | [notes] | [book]
-- Functional Analysis / [link] | [notes] | [book]
-- Measure Theory / [link] | [notes] | [book]
-- Abstract Algebra and Group Theory / [link] | [notes] | [book]
+- Differential Geometry / [link](https://ocw.mit.edu/courses/18-950-differential-geometry-fall-2008/) | [notes](https://ocw.mit.edu/courses/18-950-differential-geometry-fall-2008/resources/lecture-notes/) | [book](https://link.springer.com/book/10.1007/978-981-15-1739-6)
+- Topology / [link](https://ocw.mit.edu/courses/18-901-introduction-to-topology-fall-2004/) | [notes](https://ocw.mit.edu/courses/18-901-introduction-to-topology-fall-2004/pages/lecture-notes/) | [book](https://www.pearson.com/en-us/subject-catalog/p/Munkres-Topology-Classic-Version-2nd-Edition/P200000006299/9780134689517)
+- Complex Analysis / [link](https://ocw.mit.edu/courses/18-04-complex-variables-with-applications-fall-1999/) | [notes](https://complexanalysis.org/) | [book](https://www.cambridge.org/highereducation/books/complex-analysis/6B37DF4AB124D4FB3A16869448D5E31D)
+- Functional Analysis / [link](https://ocw.mit.edu/courses/18-102-introduction-to-functional-analysis-spring-2021/) | [notes](https://ocw.mit.edu/courses/18-102-introduction-to-functional-analysis-spring-2021/resources/lecture-notes/) | [book](https://link.springer.com/book/10.1007/978-3-031-09149-0)
+- Measure Theory / [link](https://ocw.mit.edu/courses/18-125-measure-and-integration-fall-2003/) | [notes](https://ocw.mit.edu/courses/18-125-measure-and-integration-fall-2003/resources/lecture-notes/) | [book](https://link.springer.com/book/10.1007/978-1-4684-9440-2)
+- Abstract Algebra and Group Theory / [link](https://ocw.mit.edu/courses/18-701-algebra-i-fall-2010/) | [notes](https://ocw.mit.edu/courses/res-18-011-algebra-i-student-notes-fall-2021/mit18_701f21_full_lec_new.pdf) | [book](https://openmathbooks.org/aatar/aata.html)
 
 Advanced Physics:
-- Quantum Theory II / [link] | [notes] | [book] 
-- Statistical Physics II / [link] | [notes] | [book]
-- Quantum Information Theory / [link] | [notes] | [book]
-- Advanced Electromagnetism / [link] | [notes] | [book]
-- Solid State Physics / [link] | [notes] | [book]
-- Nuclear Physics / [link] | [notes] | [book]
-- Atomic and Molecular Physics / [link] | [notes] | [book]
-- General Relativity I / [link] | [notes] | [book]
+- Quantum Theory II / [link](https://ocw.mit.edu/courses/8-05-quantum-physics-ii-fall-2013/) | [notes](https://ocw.mit.edu/courses/8-05-quantum-physics-ii-fall-2013/download/) | [book](https://mitpress.mit.edu/9780262046138/mastering-quantum-mechanics/) 
+- Statistical Physics II / [link](https://ocw.mit.edu/courses/8-08-statistical-physics-ii-spring-2005/) | [notes](https://ocw.mit.edu/courses/8-08-statistical-physics-ii-spring-2005/resources/lecture-notes/) | [book](https://www.cambridge.org/core/books/statistical-physics-of-fields/06F49D11030FB3108683F413269DE945)
+- Quantum Information Theory / [link](https://www.ocw.mit.edu/courses/8-370x-quantum-information-science-i-spring-2018/) | [notes](https://www.theory.caltech.edu/~preskill/ph219/chap5_15.pdf) | [book](https://www.cambridge.org/highereducation/books/quantum-computation-and-quantum-information/01E10196D0A682A6AEFFEA52D53BE9AE)
+- Advanced Electromagnetism / [link](https://ocw.mit.edu/courses/6-635-advanced-electromagnetism-spring-2003/) | [notes](https://ocw.mit.edu/courses/6-635-advanced-electromagnetism-spring-2003/download/) | [book](https://link.springer.com/book/10.1007/978-981-16-7802-8)
+- Solid State Physics / [link](https://ocw.mit.edu/courses/8-511-theory-of-solids-i-fall-2004/) | [notes](https://ocw.mit.edu/courses/8-511-theory-of-solids-i-fall-2004/pages/lecture-notes/) | [book](https://global.oup.com/academic/product/the-oxford-solid-state-basics-9780199680764)
+- Nuclear Physics / [link](https://ocw.mit.edu/courses/8-701-introduction-to-nuclear-and-particle-physics-fall-2020/) | [notes](https://ocw.mit.edu/courses/8-701-introduction-to-nuclear-and-particle-physics-fall-2020/resources/lecture-notes/) | [book](https://www.cambridge.org/core/books/an-introduction-to-nuclear-physics/61ECD8D140962EF68B6E4BD5137B4C5B)
+- Atomic and Molecular Physics / [link](https://ocw.mit.edu/courses/8-421-atomic-and-optical-physics-i-spring-2014/) | [notes](https://www-thphys.physics.ox.ac.uk/people/SteveSimon/texmlhtml/LectureNotes.html) | [book](https://global.oup.com/academic/product/atomic-physics-9780198506959)
+- General Relativity I / [link](https://www.preposterousuniverse.com/grnotes/) | [notes](https://www.preposterousuniverse.com/wp-content/uploads/grnotes-one.pdf) | [book](https://www.cambridge.org/highereducation/books/spacetime-and-geometry/38EDABF9E2BADCE6FBCF2B22DC12BFFE)
 
 Graduate Physics:
-- General Relativity II / [link] | [notes] | [book]
-- Quantum Field Theory / [link] | [notes] | [book]
-- Particle Physics / [link] | [notes] | [book]
-- Relativistic Quantum Information / [link] | [notes] | [book]
-- Quantum Foundations / [link] | [notes] | [book]
+- General Relativity II / [link](https://ocw.mit.edu/courses/8-962-general-relativity-spring-2020/) | [notes](https://ocw.mit.edu/courses/8-962-general-relativity-spring-2020/resources/lecture-notes/) | [book](https://www.cambridge.org/highereducation/books/spacetime-and-geometry/38EDABF9E2BADCE6FBCF2B22DC12BFFE)
+- Quantum Field Theory / [link](https://ocw.mit.edu/courses/8-324-relativistic-quantum-field-theory-ii-fall-2010/) | [notes](https://www.damtp.cam.ac.uk/user/tong/qft.htm) | [book](https://academic.oup.com/book/36442)
+- Particle Physics / [link](https://ocw.mit.edu/courses/8-701-introduction-to-nuclear-and-particle-physics-fall-2020/) | [notes](https://ocw.mit.edu/courses/8-701-introduction-to-nuclear-and-particle-physics-fall-2020/resources/lecture-notes/) | [book](https://www.cambridge.org/core/books/introduction-to-elementary-particle-physics/FB7841E74DFEE051D81AD953E81E10DE)
+- Relativistic Quantum Information / [link](https://pirsa.org/c25064) | [notes] | [book]
+- Quantum Foundations / [link](https://pirsa.org/24010062) | [notes](https://pdf.pirsa.org/files/24010062.pdf) | [book](https://www.cambridge.org/core/books/foundations-of-quantum-mechanics/7D2F34BA2F54B51FBB33D557B2058D8E)
+- Quantum Gravity / [link](https://pirsa.org/c25014) | [notes] | [book]
 
 ## Research Notes
 
