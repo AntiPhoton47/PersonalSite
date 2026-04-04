@@ -17,7 +17,7 @@
      class="btn btn--bluesky"
      onclick="window.open(this.href, 'window', 'left=20,top=20,width=700,height=650,toolbar=1,resizable=0'); return false;"
      title="{{ share_label }} Bluesky">
-    <i class="fa-brands fa-bluesky" aria-hidden="true"></i><span> Bluesky</span>
+    <span class="share-button__mark share-button__mark--bluesky" aria-hidden="true">B</span><span>Bluesky</span>
   </a>
 
   <a href="https://www.facebook.com/sharer/sharer.php?u={{ share_url | url_encode }}"
@@ -44,6 +44,6 @@
   <a href="mailto:?subject={{ page.title | url_encode }}&body={{ share_text | url_encode }}"
      class="btn btn--inverse"
      title="{{ share_label }} Email">
-    <i class="fas fa-fw fa-envelope" aria-hidden="true"></i><span> Email</span>
+    <span class="share-button__mark share-button__mark--email" aria-hidden="true">@</span><span>Email</span>
   </a>
 </section>
