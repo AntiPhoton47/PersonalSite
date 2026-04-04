@@ -47,8 +47,8 @@ Computer Science Basics:
 - Introduction to Machine Learning / [link](https://developers.google.com/machine-learning/crash-course) | [notes](https://cs229.stanford.edu/materials.html) | [book](https://www.statlearning.com/)
 
 Philosophy Basics:
-- Introduction to Metaphysics / [link] | [notes] | [book](https://www.routledge.com/Metaphysics-A-Contemporary-Introduction/Loux/p/book/9781138639348)
-- Introduction to Epistemology / [link] | [notes] | [book](https://people.cs.rutgers.edu/~biglars/epis.pdf)
+- Introduction to Metaphysics / [link](https://www.mit.edu/~shaslang/courses/221syll.html) | [notes](https://plato.stanford.edu/entries/metaphysics/) | [book](https://www.routledge.com/Metaphysics-A-Contemporary-Introduction/Loux/p/book/9781138639348)
+- Introduction to Epistemology / [link](https://web.mit.edu/24.211/www/syllabus.html) | [notes](https://plato.stanford.edu/entries/epistemology/) | [book](https://people.cs.rutgers.edu/~biglars/epis.pdf)
 - Introduction to Philosophical Logic / [link](https://openlogicproject.org/) | [notes](https://builds.openlogicproject.org/) | [book](https://forallx.openlogicproject.org/)
 
 Introductory Mathematics:
@@ -64,11 +64,11 @@ Introductory Physics:
 - Thermodynamics / [link](https://ocw.mit.edu/courses/8-044-statistical-physics-i-spring-2013/) | [notes](https://www.damtp.cam.ac.uk/user/tong/statphys.html) | [book](https://www.pearson.com/en-us/subject-catalog/p/an-introduction-to-thermal-physics/P200000003099/9780201380279)
 
 Intermediate Mathematics:
-- Vector Calculus and Real Analysis / [link] | [notes] | [book]
+- Vector Calculus and Real Analysis / [link](https://ocw.mit.edu/courses/18-02sc-multivariable-calculus-fall-2010/) | [notes](https://ocw.mit.edu/courses/18-100a-real-analysis-fall-2020/download/) | [book](https://www.matrixeditions.com/UnifiedApproach.html)
 - Probability Theory / [link](https://stat110.hsites.harvard.edu/) | [notes](https://stat110.hsites.harvard.edu/strategic-practice-problems) | [book](https://probabilitybook.net/)
 - Mathematical Methods / [link](https://ocw.mit.edu/courses/3-016-mathematics-for-materials-scientists-and-engineers-fall-2005/) | [notes](https://ocw.mit.edu/courses/3-016-mathematics-for-materials-scientists-and-engineers-fall-2005/pages/lecture-notes/) | [book](https://www.cambridge.org/core/books/mathematical-methods-for-physics-and-engineering/911A43AE1CF224743D32707FCC4AE0EB)
 - Differential Equations II / [link](https://ocw.mit.edu/courses/18-034-honors-differential-equations-spring-2009/) | [notes](https://ocw.mit.edu/courses/18-034-honors-differential-equations-spring-2009/resources/mit18_034s09_lec06/) | [book](https://math.mit.edu/~gs/dela/)
-- Linear Algebra II / [link] | [notes] | [book]
+- Linear Algebra II / [link](https://ocw.mit.edu/courses/18-700-linear-algebra-fall-2013/) | [notes](https://ocw.mit.edu/courses/18-700-linear-algebra-fall-2013/download/) | [book](https://link.springer.com/book/10.1007/978-3-031-41026-0)
 
 Intermediate Physics:
 - Electromagnetism II / [link](https://ocw.mit.edu/courses/8-07-electromagnetism-ii-fall-2012/) | [notes](https://ocw.mit.edu/courses/8-07-electromagnetism-ii-fall-2012/resources/mit8_07f12_ln1/) | [book](https://openstax.org/books/university-physics-volume-2/pages/1-introduction)
@@ -100,14 +100,32 @@ Graduate Physics:
 - General Relativity II / [link](https://ocw.mit.edu/courses/8-962-general-relativity-spring-2020/) | [notes](https://ocw.mit.edu/courses/8-962-general-relativity-spring-2020/resources/lecture-notes/) | [book](https://www.cambridge.org/highereducation/books/spacetime-and-geometry/38EDABF9E2BADCE6FBCF2B22DC12BFFE)
 - Quantum Field Theory / [link](https://ocw.mit.edu/courses/8-324-relativistic-quantum-field-theory-ii-fall-2010/) | [notes](https://www.damtp.cam.ac.uk/user/tong/qft.htm) | [book](https://academic.oup.com/book/36442)
 - Particle Physics / [link](https://ocw.mit.edu/courses/8-701-introduction-to-nuclear-and-particle-physics-fall-2020/) | [notes](https://ocw.mit.edu/courses/8-701-introduction-to-nuclear-and-particle-physics-fall-2020/resources/lecture-notes/) | [book](https://www.cambridge.org/core/books/introduction-to-elementary-particle-physics/FB7841E74DFEE051D81AD953E81E10DE)
-- Relativistic Quantum Information / [link](https://pirsa.org/c25064) | [notes] | [book]
+- Relativistic Quantum Information / [link](https://pirsa.org/c25064) | [notes](https://pdf.pirsa.org/files/15050109.pdf) | [book](https://www.mdpi.com/books/reprint/2971-relativistic-quantum-information)
 - Quantum Foundations / [link](https://pirsa.org/24010062) | [notes](https://pdf.pirsa.org/files/24010062.pdf) | [book](https://www.cambridge.org/core/books/foundations-of-quantum-mechanics/7D2F34BA2F54B51FBB33D557B2058D8E)
-- Quantum Gravity / [link](https://pirsa.org/c25014) | [notes] | [book]
+- Quantum Gravity / [link](https://pirsa.org/c25014) | [notes](https://pdf.pirsa.org/files/25030027.pdf) | [book](https://www.cambridge.org/core/books/introduction-to-quantum-effects-in-gravity/23A1F0C929D8985A5A3DB319E9808AE8)
 
 ## Research Notes
 
 Here I will list some useful research notes that are freely available. I also have some more basic [notes](/assets/files/resources/notes/My%20Notes.pdf) covering useful mathematical identities and basic properties plus physics unit conventions (but beware, it is a work in progress).
 
+### Background Primers
+
+- Contextuality and nonclassical resources / [notes](https://web.mit.edu/anandn/www/6.s979/index.html)
+- Unruh-DeWitt detectors and field-mediated interactions / [notes](https://arxiv.org/abs/1309.7281)
+- Relativistic quantum information primer / [notes](https://link.springer.com/chapter/10.1007/978-3-642-02871-7_8)
+- Projective simulation and interpretable agents / [notes](https://arxiv.org/abs/1305.1578)
+
+### Paper Companion Notes
+
+- Relativistic variational quantum circuits / [slides](/assets/files/talks/2026-03-27_RVQC_Stockholm.pptx) | [paper](https://arxiv.org/abs/2411.00105)
+- Harvesting contextuality from the vacuum / [paper](https://arxiv.org/abs/2508.11773)
+- Multi-excitation projective simulation / [slides](/assets/files/talks/2024-03-20_MEPS_DPG.pptx) | [poster](/assets/files/posters/2024-06-26_Quantum_MEPS_SeefeldQI.pdf) | [paper](https://arxiv.org/abs/2402.10192)
+
+### Technical References
+
+- Conventions and identities for relativistic quantum theory / [notes](/assets/files/resources/notes/My%20Notes.pdf)
+- Gaussian states, detectors, and correlation functions / [notes](https://arxiv.org/abs/2001.10010)
+- Hypergraphs, tensors, and many-body-inspired truncations / [notes](https://www2.physik.uni-muenchen.de/lehre/vorlesungen/sose_20/tensor_networks_20/skript/index.html)
 
 
 ## Mini-Explainers

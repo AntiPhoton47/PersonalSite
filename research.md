@@ -10,7 +10,9 @@ Below you will find all information on my research interests and activities, inc
 
 ## Research Statement
 
-I am chiefly interested in how concepts from quantum foundations -- such as contextuality -- interact with relativity, informing us about the nature of spacetime, and the development of interpretable AI models that have physical awareness. Both of these branches are a means of understanding what we can possibly know about our environment.
+My research lies at the intersection of quantum foundations, relativistic quantum information, and interpretable artificial intelligence. A central theme running through this work is the role of physical structure in constraining what can be learned, processed, and operationally accessed by an agent embedded in the world. On one side, I study how nonclassical resources such as contextuality behave in relativistic and quantum-field-theoretic settings, with the broader aim of understanding what these resources can tell us about spacetime, causality, and the limits of physical knowledge. This includes work on contextuality harvesting from quantum fields and on relativistic models of quantum computation in which motion and field-mediated interactions become computational resources in their own right.
+
+In parallel, I work on interpretable learning models, especially projective simulation and its extensions, where physically motivated structure can be used both to improve performance and to preserve conceptual transparency. Here I am interested in the extent to which ideas from physics, such as locality, few-body structure, and dynamical constraints, can serve as useful inductive biases for learning agents without sacrificing interpretability. Taken together, these research directions reflect a common concern: how the formal structure of a theory shapes what systems can represent, infer, and do. I am particularly interested in problems where foundational questions and constructive models inform one another, so that advances in quantum theory, relativity, and machine learning can each sharpen the others.
 
 ## Research Themes
 - Contextuality in relativistic settings and QFT
