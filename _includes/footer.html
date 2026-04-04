@@ -11,15 +11,32 @@
     {% if site.footer.links %}
       {% for link in site.footer.links %}
         {% if link.label and link.url %}
-          <li><a href="{{ link.url }}" rel="nofollow noopener noreferrer"><i class="{{ link.icon | default: 'fas fa-link' }}" aria-hidden="true"></i> {{ link.label | escape_once | strip }}</a></li>
+          {% assign footer_icon = "link" %}
+          {% assign footer_label = link.label | downcase %}
+          {% if footer_label contains "email" %}
+            {% assign footer_icon = "email" %}
+          {% elsif footer_label contains "github" %}
+            {% assign footer_icon = "github" %}
+          {% elsif footer_label contains "scholar" %}
+            {% assign footer_icon = "scholar" %}
+          {% elsif footer_label contains "orcid" %}
+            {% assign footer_icon = "orcid" %}
+          {% elsif footer_label contains "linkedin" %}
+            {% assign footer_icon = "linkedin" %}
+          {% elsif footer_label contains "blue" %}
+            {% assign footer_icon = "bluesky" %}
+          {% elsif footer_label == "x" %}
+            {% assign footer_icon = "x" %}
+          {% endif %}
+          <li><a href="{{ link.url }}" rel="nofollow noopener noreferrer">{% include icon-mark.html name=footer_icon label=link.label %} {{ link.label | escape_once | strip }}</a></li>
         {% endif %}
       {% endfor %}
     {% endif %}
 
     {% unless site.atom_feed.hide %}
-      <li><a href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ '/feed.xml' | relative_url }}{% endif %}"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].feed_label | default: "Feed" }}</a></li>
-      <li><a href="{{ '/sitemap/' | relative_url }}"><i class="fas fa-sitemap" aria-hidden="true"></i> Sitemap</a></li>
-      <li><a href="{{ '/privacy/' | relative_url }}"><i class="fas fa-shield-alt" aria-hidden="true"></i> Privacy</a></li>
+      <li><a href="{% if site.atom_feed.path %}{{ site.atom_feed.path }}{% else %}{{ '/feed.xml' | relative_url }}{% endif %}">{% include icon-mark.html name="rss" label="Feed" %} {{ site.data.ui-text[site.locale].feed_label | default: "Feed" }}</a></li>
+      <li><a href="{{ '/sitemap/' | relative_url }}">{% include icon-mark.html name="sitemap" label="Sitemap" %} Sitemap</a></li>
+      <li><a href="{{ '/privacy/' | relative_url }}">{% include icon-mark.html name="privacy" label="Privacy" %} Privacy</a></li>
     {% endunless %}
   </ul>
 </div>

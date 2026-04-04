@@ -1,7 +1,7 @@
 {% if page.categories and page.categories[0] %}
   {% assign categories_sorted = page.categories | sort_natural %}
   <p class="page__taxonomy">
-    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].categories_label | default: "Categories:" }} </strong>
+    <strong>{% include icon-mark.html name="folder" label="Categories" %} {{ site.data.ui-text[site.locale].categories_label | default: "Categories:" }} </strong>
     <span itemprop="keywords">
     {% for category_word in categories_sorted %}
       {% assign category_slug = category_word | slugify %}
@@ -14,7 +14,7 @@
 {% if page.tags and page.tags[0] %}
   {% assign tags_sorted = page.tags | sort_natural %}
   <p class="page__taxonomy">
-    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> {{ site.data.ui-text[site.locale].tags_label | default: "Tags:" }} </strong>
+    <strong>{% include icon-mark.html name="tags" label="Tags" %} {{ site.data.ui-text[site.locale].tags_label | default: "Tags:" }} </strong>
     <span itemprop="keywords">
     {% for tag_word in tags_sorted %}
       {% assign tag_slug = tag_word | slugify %}

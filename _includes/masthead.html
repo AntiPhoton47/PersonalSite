@@ -15,13 +15,13 @@
           <li class="masthead__menu-item">
             <button class="theme-toggle" type="button" onclick="toggleTheme()" aria-label="Toggle light and dark mode" title="Toggle theme">
               <span class="theme-toggle__icon theme-toggle__icon--sun" aria-hidden="true">
-                <i class="fas fa-sun"></i>
+                <span class="theme-toggle__glyph">☼</span>
               </span>
               <span class="theme-toggle__track" aria-hidden="true">
                 <span class="theme-toggle__thumb"></span>
               </span>
               <span class="theme-toggle__icon theme-toggle__icon--moon" aria-hidden="true">
-                <i class="fas fa-moon"></i>
+                <span class="theme-toggle__glyph">☾</span>
               </span>
             </button>
           </li>
@@ -38,7 +38,7 @@
         {% if site.search == true %}
         <button class="search__toggle" type="button">
           <span class="visually-hidden">{{ site.data.ui-text[site.locale].search_label | default: "Toggle search" }}</span>
-          <i class="fas fa-search"></i>
+          <span class="search__toggle-glyph" aria-hidden="true">⌕</span>
         </button>
         {% endif %}
         <button class="greedy-nav__toggle hidden" type="button">
