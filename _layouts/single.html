@@ -104,7 +104,9 @@ layout: default
         {% endif %}
 
         {% if page.collection == "posts" and site.comments.provider and page.comments %}
-          {% include comments.html %}
+          {% capture comments_label %}{{ site.data.ui-text[site.locale].comments_label | default: "Comments" }}{% endcapture %}
+          <h4 class="page__comments-title page__comments-title--outer">{{ comments_label }}</h4>
+          {% include comments.html show_title=false %}
         {% endif %}
       </div>
       {% endif %}
