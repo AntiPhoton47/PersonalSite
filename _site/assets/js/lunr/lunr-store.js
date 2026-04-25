@@ -11,11 +11,17 @@ var store = [{
         "url": "/leisure/2026/03/09/Concerts.html",
         "teaser": "/assets/images/Crab_MultiChandra_960.JPG"
       },{
+        "title": "My Nordic Adventure",
+        "excerpt":" ","categories": ["leisure","research"],
+        "tags": ["leisure","research"],
+        "url": "/leisure/research/2026/04/02/Nordic-Vacation.html",
+        "teaser": "/assets/images/Crab_MultiChandra_960.JPG"
+      },{
     "title": "Outreach",
     "excerpt":"I am the co-organizer of the public outreach events for the Briegel group at the University of Innsbruck, where our aim is to engage students of all ages with the research carried out in the group and the basic principles behind artificial intelligence. We recently finished putting together a booth...","url": "http://localhost:4000/outreach/"
   },{
     "title": "About",
-    "excerpt":"I am a theoretical physics doctoral student working in the group of Hans Briegel at the University of Innsbruck. My research experience is based mostly in general relativity, reinforcement learning, quantum chemistry, and scientific computing. My research interests currently reside primarily in the overlap between quantum foundations and information, artificial...","url": "http://localhost:4000/about/"
+    "excerpt":"I am a theoretical physics PhD candidate in the group of Hans Briegel at the University of Innsbruck. My background is somewhat broad by design: across my studies and research I have worked in general relativity, quantum chemistry, scientific computing, reinforcement learning, and quantum information, and I have found that...","url": "http://localhost:4000/about/"
   },{
     "title": "Causes",
     "excerpt":"This page collects a few causes and value commitments that matter to me outside of my formal research program. It is not meant to be exhaustive, but it does reflect the kinds of problems and communities I think are worth paying attention to. Values I care a lot about intellectual...","url": "http://localhost:4000/causes/"
@@ -33,13 +39,13 @@ var store = [{
     "excerpt":"These are the major updates and entry points currently highlighted on the homepage. Pinned update New paper and talk cycle The site now highlights work around relativistic quantum computing, contextuality harvesting, and conference material in a more navigable way. Research overview Latest blog posts Conference material Slides, posters, and videos...","url": "http://localhost:4000/pinned-updates/"
   },{
     "title": "Blog",
-    "excerpt":"    Archive                                                         March 2026                                                                     February 2026                                            Explore the site                            Browse by topic                                              Categories                                                                          outreach             1                                                                                          leisure             1                                                          Tags                                                               outreach             1                                                                  leisure             1                                             Years                                         2026             2                                      ","url": "http://localhost:4000/posts/"
+    "excerpt":"    Archive                                                         April 2026                                                                     March 2026                                                                     February 2026                                            Explore the site                            Browse by topic                                              Categories                                                                          outreach             1                                                                                          leisure             2                                                                                          research             1                                                          Tags                                                               outreach             1                                                                  leisure             2                                                                  research             1                                             Years                                         2026             3                                      ","url": "http://localhost:4000/posts/"
   },{
     "title": "Privacy Policy",
     "excerpt":"Analytics This website uses GoatCounter, a privacy-friendly analytics service. GoatCounter does not use tracking cookies and does not store personal data. IP addresses are anonymized and not stored in identifiable form. The purpose of analytics is solely to understand general site traffic and improve content. No data is shared with...","url": "http://localhost:4000/privacy/"
   },{
     "title": "Research",
-    "excerpt":"Below you will find all information on my research interests and activities, including a list of my publications, talks, and posters. CV Download CV Research Statement I am chiefly interested in how concepts from quantum foundations – such as contextuality – interact with relativity, informing us about the nature of...","url": "http://localhost:4000/research/"
+    "excerpt":"Below you will find all information on my research interests and activities, including a list of my publications, talks, and posters. CV Download CV Research Statement My research lies at the intersection of quantum foundations, relativistic quantum information, and interpretable artificial intelligence. A central theme running through this work is...","url": "http://localhost:4000/research/"
   },{
     "title": "Resources",
     "excerpt":"It’s a big world out there, and there is so much to see and do, maybe a bit too much… While I will continue to be endlessly fascinated by our vast cosmos, it is sometimes difficult to know what events/initiatives are happening out there and where to look for resources....","url": "http://localhost:4000/resources/"
@@ -48,7 +54,7 @@ var store = [{
     "excerpt":" ","url": "http://localhost:4000/search/"
   },{
     "title": "Sitemap",
-    "excerpt":"You can also view the machine-readable XML sitemap here. Pages Oh Quantum! My Quantum! About leisure outreach Causes Mini-Explainers Hobbies Outreach Pinned Updates Blog Privacy Policy Research Resources Search Sitemap leisure outreach Posts Back to Back Rap Concerts — March 9, 2026 MIP Tag Outreach Event Today — February 25,...","url": "http://localhost:4000/sitemap/"
+    "excerpt":"You can also view the machine-readable XML sitemap here. Pages Oh Quantum! My Quantum! About leisure outreach research Causes Mini-Explainers Hobbies Outreach Pinned Updates Blog Privacy Policy Research Resources Search Sitemap leisure outreach research Posts My Nordic Adventure — April 2, 2026 Back to Back Rap Concerts — March 9,...","url": "http://localhost:4000/sitemap/"
   },{
     "title": "outreach",
     "excerpt":"","url": "http://localhost:4000/tag/outreach/"
@@ -56,9 +62,15 @@ var store = [{
     "title": "leisure",
     "excerpt":"","url": "http://localhost:4000/tag/leisure/"
   },{
+    "title": "research",
+    "excerpt":"","url": "http://localhost:4000/tag/research/"
+  },{
     "title": "outreach",
     "excerpt":"","url": "http://localhost:4000/category/outreach/"
   },{
     "title": "leisure",
     "excerpt":"","url": "http://localhost:4000/category/leisure/"
+  },{
+    "title": "research",
+    "excerpt":"","url": "http://localhost:4000/category/research/"
   }]

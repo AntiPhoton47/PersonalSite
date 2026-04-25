@@ -80,7 +80,7 @@
 
 <link id="mm-light" rel="stylesheet" href="/assets/css/main-light.css">
 <link id="mm-dark" rel="stylesheet" href="/assets/css/main-dark.css" disabled>
-<link rel="stylesheet" href="/assets/css/custom.css?v=1773603163">
+<link rel="stylesheet" href="/assets/css/custom.css?v=1775314693">
 
 <script type="application/ld+json">
 {
@@ -178,6 +178,8 @@
 
 <script>
   window.sitePostUrls = [
+    
+      "/leisure/research/2026/04/02/Nordic-Vacation.html",
     
       "/leisure/2026/03/09/Concerts.html",
     
@@ -515,7 +517,7 @@
         <aside class="sidebar__right page-shell__toc sticky">
           <nav class="toc">
             <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On this page</h4></header>
-            <ul class="toc__menu"><li><a href="#starter-pack">Starter Pack</a></li><li><a href="#courses">Courses</a></li><li><a href="#research-notes">Research Notes</a></li><li><a href="#mini-explainers">Mini-Explainers</a></li><li><a href="#current-initiatives-and-institutions">Current Initiatives and Institutions</a><ul><li><a href="#initiatives">Initiatives</a></li><li><a href="#institutions">Institutions</a></li><li><a href="#hubs">Hubs</a></li></ul></li></ul>
+            <ul class="toc__menu"><li><a href="#starter-pack">Starter Pack</a></li><li><a href="#courses">Courses</a></li><li><a href="#research-notes">Research Notes</a><ul><li><a href="#background-primers">Background Primers</a></li><li><a href="#paper-companion-notes">Paper Companion Notes</a></li><li><a href="#technical-references">Technical References</a></li></ul></li><li><a href="#mini-explainers">Mini-Explainers</a></li><li><a href="#current-initiatives-and-institutions">Current Initiatives and Institutions</a><ul><li><a href="#initiatives">Initiatives</a></li><li><a href="#institutions">Institutions</a></li><li><a href="#hubs">Hubs</a></li></ul></li></ul>
           </nav>
         </aside>
       
@@ -527,13 +529,19 @@
 
 <p>The theoretical physicist Gerard ‘t Hooft already has a very informative and comprehensive guide to becoming a theoretical physicist on their <a href="https://www.goodtheorist.science/index.html">webpage</a>, but I will try to give my own perspective coming from a different background and with a more contemporary twist.</p>
 
-<p>You absolutely must start with the basics of mathematics. Calculus, linear algebra, and proofs are not decorative; they are the grammar of almost everything that comes later.</p>
+<p>English is the lingua franca of physics and much of academia, so you have to make sure you have a working knowledge of it and that you can prove this to any institutions where you want to study. The basics of the language are quite simple and you can usually pick up what you need through ingesting media or talking to people; AI has evolved rapidly to the point where it can really help you practice the language (or any language for that matter) as well. My advice is to not worry too much about perfecting your grammar or pronunciation since English is very forgiving on both fronts, just make sure you can be understood. Of course, to become a good writer you will need to know the language better.</p>
 
-<p>Some computer science knowledge is also handy to have, especially if you want to simulate models, test ideas numerically, or move anywhere near machine learning. You do not need to become a software engineer, but you should be able to make a computer do useful work for you.</p>
+<p>Theory breathes through the language of mathematics, so you absolutely must start with the basics. Calculus, linear algebra, and proofs are not decorative; they are the grammar of almost everything that comes later.</p>
+
+<p>Some computer science knowledge is also handy to have, especially if you want to simulate models, test ideas numerically, or move anywhere near machine learning. You do not need to become a software engineer, but you should be able to make a computer do useful work for you. Getting familiar with languages such as Python or Julia is the best way to start since they are ubiquitous in physics and machine learning. Many theorists also like to use Wolfram Mathematica or Maple, which are very useful symbolic mathematics programs with their own syntax, but beware they are both proprietary software.</p>
 
 <p>Most theorists would discombobulate at the mention of this, and in many respects it is not necessary to be able to actively work on theoretical physics, but I think it is important that every good theorist have some grounding in philosophy. Questions about explanation, evidence, abstraction, and what counts as understanding show up constantly even when people pretend they do not. You often find researchers - and arguably all people - have heavy philosophical commitments and understated assumptions that are fueling their argumentation and worldview; it helps to acknoweldge and convey these clearly, so knowing is half the battle here as usual.</p>
 
+<p>Below I have listed some courses/subjects you should study - listed in order - to have a solid foundation.</p>
+
 <h2 id="courses">Courses</h2>
+
+<p>The Perimeter Institute of Theoretical Physics in Canada has a wonderful archive of all recorded talks and lectures given there called <a href="https://pirsa.org/">PIRSA</a> which I urge you to take advantage of; they have material on almost any theoretical physics topic you can imagine. <a href="https://www.youtube.com/@mitocw">MIT</a> and <a href="https://www.youtube.com/@stanfordonline">Stanford</a> also post many of their excellent course lectures on YouTube, which I also recommend.</p>
 
 <p>Mathematics Basics:</p>
 <ul>
@@ -541,9 +549,9 @@
     <table>
       <tbody>
         <tr>
-          <td>Proofs and Set Theory / [link]</td>
-          <td>[notes]</td>
-          <td>[book]</td>
+          <td>Arithmetic / <a href="https://www.khanacademy.org/math/arithmetic-home">link</a></td>
+          <td><a href="https://openstax.org/books/prealgebra-2e/pages/1-introduction">notes</a></td>
+          <td><a href="https://openstax.org/details/books/prealgebra-2e">book</a></td>
         </tr>
       </tbody>
     </table>
@@ -552,9 +560,9 @@
     <table>
       <tbody>
         <tr>
-          <td>Calculus I and II / [link]</td>
-          <td>[notes]</td>
-          <td>[book]</td>
+          <td>Algebra / <a href="https://www.khanacademy.org/math/algebra-home">link</a></td>
+          <td><a href="https://openstax.org/books/elementary-algebra-2e/pages/2-introduction">notes</a></td>
+          <td><a href="https://openstax.org/details/books/intermediate-algebra-2e">book</a></td>
         </tr>
       </tbody>
     </table>
@@ -563,31 +571,9 @@
     <table>
       <tbody>
         <tr>
-          <td>Linear Algebra / [link]</td>
-          <td>[notes]</td>
-          <td>[book]</td>
-        </tr>
-      </tbody>
-    </table>
-  </li>
-  <li>
-    <table>
-      <tbody>
-        <tr>
-          <td>Geometry / [link]</td>
-          <td>[notes]</td>
-          <td>[book]</td>
-        </tr>
-      </tbody>
-    </table>
-  </li>
-  <li>
-    <table>
-      <tbody>
-        <tr>
-          <td>Differential Equations I / [link]</td>
-          <td>[notes]</td>
-          <td>[book]</td>
+          <td>Geometry / <a href="https://www.khanacademy.org/math/geometry-home">link</a></td>
+          <td><a href="https://math.libretexts.org/Bookshelves/Geometry/Euclidean_Plane_and_its_Relatives_(Petrunin)">notes</a></td>
+          <td><a href="https://bookstore.ams.org/view?productcode=mbk/132">book</a></td>
         </tr>
       </tbody>
     </table>
@@ -600,9 +586,9 @@
     <table>
       <tbody>
         <tr>
-          <td>Introduction to Python/Julia / [link]</td>
-          <td>[notes]</td>
-          <td>[book]</td>
+          <td>Introduction to Python/Julia / <a href="https://ocw.mit.edu/courses/6-0001-introduction-to-computer-science-and-programming-in-python-fall-2016/">link</a></td>
+          <td><a href="https://docs.python.org/3/tutorial/">notes</a></td>
+          <td><a href="https://greenteapress.com/wp/think-python-2e/">book</a></td>
         </tr>
       </tbody>
     </table>
@@ -611,9 +597,9 @@
     <table>
       <tbody>
         <tr>
-          <td>More Python/Julia / [link]</td>
-          <td>[notes]</td>
-          <td>[book]</td>
+          <td>More Python/Julia / <a href="https://ocw.mit.edu/courses/6-0002-introduction-to-computational-thinking-and-data-science-fall-2016/">link</a></td>
+          <td><a href="https://lectures.scientific-python.org/">notes</a></td>
+          <td><a href="https://jakevdp.github.io/PythonDataScienceHandbook/">book</a></td>
         </tr>
       </tbody>
     </table>
@@ -622,9 +608,9 @@
     <table>
       <tbody>
         <tr>
-          <td>Introduction to Machine Learning / [link]</td>
-          <td>[notes]</td>
-          <td>[book]</td>
+          <td>Introduction to Machine Learning / <a href="https://developers.google.com/machine-learning/crash-course">link</a></td>
+          <td><a href="https://cs229.stanford.edu/materials.html">notes</a></td>
+          <td><a href="https://www.statlearning.com/">book</a></td>
         </tr>
       </tbody>
     </table>
@@ -637,9 +623,9 @@
     <table>
       <tbody>
         <tr>
-          <td>Introduction to Metaphysics / [link]</td>
-          <td>[notes]</td>
-          <td>[book]</td>
+          <td>Introduction to Metaphysics / <a href="https://www.mit.edu/~shaslang/courses/221syll.html">link</a></td>
+          <td><a href="https://plato.stanford.edu/entries/metaphysics/">notes</a></td>
+          <td><a href="https://www.routledge.com/Metaphysics-A-Contemporary-Introduction/Loux/p/book/9781138639348">book</a></td>
         </tr>
       </tbody>
     </table>
@@ -648,9 +634,9 @@
     <table>
       <tbody>
         <tr>
-          <td>Introduction to Epistemology / [link]</td>
-          <td>[notes]</td>
-          <td>[book]</td>
+          <td>Introduction to Epistemology / <a href="https://web.mit.edu/24.211/www/syllabus.html">link</a></td>
+          <td><a href="https://plato.stanford.edu/entries/epistemology/">notes</a></td>
+          <td><a href="https://people.cs.rutgers.edu/~biglars/epis.pdf">book</a></td>
         </tr>
       </tbody>
     </table>
@@ -659,9 +645,68 @@
     <table>
       <tbody>
         <tr>
-          <td>Introduction to Philosophical Logic / [link]</td>
-          <td>[notes]</td>
-          <td>[book]</td>
+          <td>Introduction to Philosophical Logic / <a href="https://openlogicproject.org/">link</a></td>
+          <td><a href="https://builds.openlogicproject.org/">notes</a></td>
+          <td><a href="https://forallx.openlogicproject.org/">book</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+</ul>
+
+<p>Introductory Mathematics:</p>
+<ul>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>Proofs and Set Theory / <a href="https://openlearninglibrary.mit.edu/courses/course-v1:OCW+6.042J+2T2019/about">link</a></td>
+          <td><a href="https://courses.csail.mit.edu/6.042/spring18/mcs.pdf">notes</a></td>
+          <td><a href="https://richardhammack.github.io/BookOfProof/">book</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>Calculus I and II / <a href="https://ocw.mit.edu/courses/18-01sc-single-variable-calculus-fall-2010/">link</a></td>
+          <td><a href="https://tutorial.math.lamar.edu/">notes</a></td>
+          <td><a href="https://openstax.org/details/books/calculus-volume-1">book</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>Linear Algebra / <a href="https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/">link</a></td>
+          <td><a href="https://ocw.mit.edu/courses/18-06sc-linear-algebra-fall-2011/resources/lecture-notes/">notes</a></td>
+          <td><a href="https://math.mit.edu/~gs/linearalgebra/">book</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>Differential Equations I / <a href="https://ocw.mit.edu/courses/18-03sc-differential-equations-fall-2011/">link</a></td>
+          <td><a href="https://tutorial.math.lamar.edu/Classes/DE/DE.aspx">notes</a></td>
+          <td><a href="https://math.mit.edu/~gs/dela/">book</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>Numerical Methods / <a href="https://ocw.mit.edu/courses/18-335j-introduction-to-numerical-methods-spring-2019/">link</a></td>
+          <td><a href="https://ocw.mit.edu/courses/18-330-introduction-to-numerical-analysis-spring-2004/resources/lecture-notes/">notes</a></td>
+          <td><a href="https://www.cambridge.org/core/books/introduction-to-numerical-linear-algebra-and-optimisation/FB35273E3F1A0D696D682AAC412C522C">book</a></td>
         </tr>
       </tbody>
     </table>
@@ -674,9 +719,9 @@
     <table>
       <tbody>
         <tr>
-          <td>Classical Mechanics I / [link]</td>
-          <td>[notes]</td>
-          <td>[book]</td>
+          <td>Classical Mechanics I / <a href="https://ocw.mit.edu/courses/8-012-physics-i-classical-mechanics-fall-2008/">link</a></td>
+          <td><a href="https://www.damtp.cam.ac.uk/user/tong/relativity.html">notes</a></td>
+          <td><a href="https://www.cambridge.org/core/books/introduction-to-classical-mechanics/5303D704C9FCBDF592E8D895FC21F982">book</a></td>
         </tr>
       </tbody>
     </table>
@@ -685,9 +730,9 @@
     <table>
       <tbody>
         <tr>
-          <td>Electromagnetism / [link]</td>
-          <td>[notes]</td>
-          <td>[book]</td>
+          <td>Electromagnetism I / <a href="https://ocw.mit.edu/courses/8-02-physics-ii-electricity-and-magnetism-spring-2019/">link</a></td>
+          <td><a href="https://www.damtp.cam.ac.uk/user/tong/justem.html">notes</a></td>
+          <td><a href="https://openstax.org/books/university-physics-volume-2/pages/1-introduction">book</a></td>
         </tr>
       </tbody>
     </table>
@@ -696,9 +741,9 @@
     <table>
       <tbody>
         <tr>
-          <td>Thermodynamics / [link]</td>
-          <td>[notes]</td>
-          <td>[book]</td>
+          <td>Thermodynamics / <a href="https://ocw.mit.edu/courses/8-044-statistical-physics-i-spring-2013/">link</a></td>
+          <td><a href="https://www.damtp.cam.ac.uk/user/tong/statphys.html">notes</a></td>
+          <td><a href="https://www.pearson.com/en-us/subject-catalog/p/an-introduction-to-thermal-physics/P200000003099/9780201380279">book</a></td>
         </tr>
       </tbody>
     </table>
@@ -711,9 +756,9 @@
     <table>
       <tbody>
         <tr>
-          <td>Vector Calculus and Real Analysis / [link]</td>
-          <td>[notes]</td>
-          <td>[book]</td>
+          <td>Vector Calculus and Real Analysis / <a href="https://ocw.mit.edu/courses/18-02sc-multivariable-calculus-fall-2010/">link</a></td>
+          <td><a href="https://ocw.mit.edu/courses/18-100a-real-analysis-fall-2020/download/">notes</a></td>
+          <td><a href="https://www.matrixeditions.com/UnifiedApproach.html">book</a></td>
         </tr>
       </tbody>
     </table>
@@ -722,9 +767,9 @@
     <table>
       <tbody>
         <tr>
-          <td>Probability Theory / [link]</td>
-          <td>[notes]</td>
-          <td>[book]</td>
+          <td>Probability Theory / <a href="https://stat110.hsites.harvard.edu/">link</a></td>
+          <td><a href="https://stat110.hsites.harvard.edu/strategic-practice-problems">notes</a></td>
+          <td><a href="https://probabilitybook.net/">book</a></td>
         </tr>
       </tbody>
     </table>
@@ -733,9 +778,9 @@
     <table>
       <tbody>
         <tr>
-          <td>Mathematical Methods / [link]</td>
-          <td>[notes]</td>
-          <td>[book]</td>
+          <td>Mathematical Methods / <a href="https://ocw.mit.edu/courses/3-016-mathematics-for-materials-scientists-and-engineers-fall-2005/">link</a></td>
+          <td><a href="https://ocw.mit.edu/courses/3-016-mathematics-for-materials-scientists-and-engineers-fall-2005/pages/lecture-notes/">notes</a></td>
+          <td><a href="https://www.cambridge.org/core/books/mathematical-methods-for-physics-and-engineering/911A43AE1CF224743D32707FCC4AE0EB">book</a></td>
         </tr>
       </tbody>
     </table>
@@ -744,9 +789,20 @@
     <table>
       <tbody>
         <tr>
-          <td>Differential Equations II / [link]</td>
-          <td>[notes]</td>
-          <td>[book]</td>
+          <td>Differential Equations II / <a href="https://ocw.mit.edu/courses/18-034-honors-differential-equations-spring-2009/">link</a></td>
+          <td><a href="https://ocw.mit.edu/courses/18-034-honors-differential-equations-spring-2009/resources/mit18_034s09_lec06/">notes</a></td>
+          <td><a href="https://math.mit.edu/~gs/dela/">book</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>Linear Algebra II / <a href="https://ocw.mit.edu/courses/18-700-linear-algebra-fall-2013/">link</a></td>
+          <td><a href="https://ocw.mit.edu/courses/18-700-linear-algebra-fall-2013/download/">notes</a></td>
+          <td><a href="https://link.springer.com/book/10.1007/978-3-031-41026-0">book</a></td>
         </tr>
       </tbody>
     </table>
@@ -759,9 +815,9 @@
     <table>
       <tbody>
         <tr>
-          <td>Optics / [link]</td>
-          <td>[notes]</td>
-          <td>[book]</td>
+          <td>Electromagnetism II / <a href="https://ocw.mit.edu/courses/8-07-electromagnetism-ii-fall-2012/">link</a></td>
+          <td><a href="https://ocw.mit.edu/courses/8-07-electromagnetism-ii-fall-2012/resources/mit8_07f12_ln1/">notes</a></td>
+          <td><a href="https://openstax.org/books/university-physics-volume-2/pages/1-introduction">book</a></td>
         </tr>
       </tbody>
     </table>
@@ -770,9 +826,9 @@
     <table>
       <tbody>
         <tr>
-          <td>Quantum Theory I / [link]</td>
-          <td>[notes]</td>
-          <td>[book]</td>
+          <td>Optics / <a href="https://ocw.mit.edu/courses/2-71-optics-spring-2009/">link</a></td>
+          <td><a href="https://ocw.mit.edu/courses/2-71-optics-spring-2009/resources/lecture-notes/">notes</a></td>
+          <td><a href="https://www.pearson.com/en-us/subject-catalog/p/optics/P200000006793/9780137526420">book</a></td>
         </tr>
       </tbody>
     </table>
@@ -781,9 +837,9 @@
     <table>
       <tbody>
         <tr>
-          <td>Special Relativity / [link]</td>
-          <td>[notes]</td>
-          <td>[book]</td>
+          <td>Quantum Theory I / <a href="https://ocw.mit.edu/courses/8-04-quantum-physics-i-spring-2016/">link</a></td>
+          <td><a href="https://ocw.mit.edu/courses/8-04-quantum-physics-i-spring-2016/download/">notes</a></td>
+          <td><a href="https://mitpress.mit.edu/9780262046138/mastering-quantum-mechanics/">book</a></td>
         </tr>
       </tbody>
     </table>
@@ -792,9 +848,9 @@
     <table>
       <tbody>
         <tr>
-          <td>Classical Mechanics II / [link]</td>
-          <td>[notes]</td>
-          <td>[book]</td>
+          <td>Special Relativity / <a href="https://ocw.mit.edu/courses/8-20-introduction-to-special-relativity-january-iap-2021/">link</a></td>
+          <td><a href="https://ocw.mit.edu/courses/8-20-introduction-to-special-relativity-january-iap-2021/resources/lecture-notes/">notes</a></td>
+          <td><a href="https://www.cambridge.org/core/books/introduction-to-classical-mechanics/5303D704C9FCBDF592E8D895FC21F982">book</a></td>
         </tr>
       </tbody>
     </table>
@@ -803,9 +859,20 @@
     <table>
       <tbody>
         <tr>
-          <td>Statistical Physics / [link]</td>
-          <td>[notes]</td>
-          <td>[book]</td>
+          <td>Classical Mechanics II / <a href="https://ocw.mit.edu/courses/8-223-classical-mechanics-ii-january-iap-2017/">link</a></td>
+          <td><a href="https://ocw.mit.edu/courses/8-223-classical-mechanics-ii-january-iap-2017/pages/lecture-notes/">notes</a></td>
+          <td><a href="https://global.oup.com/academic/product/classical-mechanics-9781891389221">book</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>Statistical Physics I / <a href="https://www.damtp.cam.ac.uk/user/tong/statphys.html">link</a></td>
+          <td><a href="https://www.damtp.cam.ac.uk/user/us248/Lectures/Notes/statphys.pdf">notes</a></td>
+          <td><a href="https://www.pearson.com/en-us/subject-catalog/p/an-introduction-to-thermal-physics/P200000003099/9780201380279">book</a></td>
         </tr>
       </tbody>
     </table>
@@ -818,9 +885,9 @@
     <table>
       <tbody>
         <tr>
-          <td>Differential Geometry / [link]</td>
-          <td>[notes]</td>
-          <td>[book]</td>
+          <td>Differential Geometry / <a href="https://ocw.mit.edu/courses/18-950-differential-geometry-fall-2008/">link</a></td>
+          <td><a href="https://ocw.mit.edu/courses/18-950-differential-geometry-fall-2008/resources/lecture-notes/">notes</a></td>
+          <td><a href="https://link.springer.com/book/10.1007/978-981-15-1739-6">book</a></td>
         </tr>
       </tbody>
     </table>
@@ -829,9 +896,9 @@
     <table>
       <tbody>
         <tr>
-          <td>Topology / [link]</td>
-          <td>[notes]</td>
-          <td>[book]</td>
+          <td>Topology / <a href="https://ocw.mit.edu/courses/18-901-introduction-to-topology-fall-2004/">link</a></td>
+          <td><a href="https://ocw.mit.edu/courses/18-901-introduction-to-topology-fall-2004/pages/lecture-notes/">notes</a></td>
+          <td><a href="https://www.pearson.com/en-us/subject-catalog/p/Munkres-Topology-Classic-Version-2nd-Edition/P200000006299/9780134689517">book</a></td>
         </tr>
       </tbody>
     </table>
@@ -840,9 +907,9 @@
     <table>
       <tbody>
         <tr>
-          <td>Complex Analysis / [link]</td>
-          <td>[notes]</td>
-          <td>[book]</td>
+          <td>Complex Analysis / <a href="https://ocw.mit.edu/courses/18-04-complex-variables-with-applications-fall-1999/">link</a></td>
+          <td><a href="https://complexanalysis.org/">notes</a></td>
+          <td><a href="https://www.cambridge.org/highereducation/books/complex-analysis/6B37DF4AB124D4FB3A16869448D5E31D">book</a></td>
         </tr>
       </tbody>
     </table>
@@ -851,9 +918,9 @@
     <table>
       <tbody>
         <tr>
-          <td>Functional Analysis / [link]</td>
-          <td>[notes]</td>
-          <td>[book]</td>
+          <td>Functional Analysis / <a href="https://ocw.mit.edu/courses/18-102-introduction-to-functional-analysis-spring-2021/">link</a></td>
+          <td><a href="https://ocw.mit.edu/courses/18-102-introduction-to-functional-analysis-spring-2021/resources/lecture-notes/">notes</a></td>
+          <td><a href="https://link.springer.com/book/10.1007/978-3-031-09149-0">book</a></td>
         </tr>
       </tbody>
     </table>
@@ -862,9 +929,9 @@
     <table>
       <tbody>
         <tr>
-          <td>Measure Theory / [link]</td>
-          <td>[notes]</td>
-          <td>[book]</td>
+          <td>Measure Theory / <a href="https://ocw.mit.edu/courses/18-125-measure-and-integration-fall-2003/">link</a></td>
+          <td><a href="https://ocw.mit.edu/courses/18-125-measure-and-integration-fall-2003/resources/lecture-notes/">notes</a></td>
+          <td><a href="https://link.springer.com/book/10.1007/978-1-4684-9440-2">book</a></td>
         </tr>
       </tbody>
     </table>
@@ -873,9 +940,9 @@
     <table>
       <tbody>
         <tr>
-          <td>Abstract Algebra and Group Theory / [link]</td>
-          <td>[notes]</td>
-          <td>[book]</td>
+          <td>Abstract Algebra and Group Theory / <a href="https://ocw.mit.edu/courses/18-701-algebra-i-fall-2010/">link</a></td>
+          <td><a href="https://ocw.mit.edu/courses/res-18-011-algebra-i-student-notes-fall-2021/mit18_701f21_full_lec_new.pdf">notes</a></td>
+          <td><a href="https://openmathbooks.org/aatar/aata.html">book</a></td>
         </tr>
       </tbody>
     </table>
@@ -888,9 +955,9 @@
     <table>
       <tbody>
         <tr>
-          <td>Quantum Theory II / [link]</td>
-          <td>[notes]</td>
-          <td>[book]</td>
+          <td>Quantum Theory II / <a href="https://ocw.mit.edu/courses/8-05-quantum-physics-ii-fall-2013/">link</a></td>
+          <td><a href="https://ocw.mit.edu/courses/8-05-quantum-physics-ii-fall-2013/download/">notes</a></td>
+          <td><a href="https://mitpress.mit.edu/9780262046138/mastering-quantum-mechanics/">book</a></td>
         </tr>
       </tbody>
     </table>
@@ -899,9 +966,9 @@
     <table>
       <tbody>
         <tr>
-          <td>Quantum Information Theory / [link]</td>
-          <td>[notes]</td>
-          <td>[book]</td>
+          <td>Statistical Physics II / <a href="https://ocw.mit.edu/courses/8-08-statistical-physics-ii-spring-2005/">link</a></td>
+          <td><a href="https://ocw.mit.edu/courses/8-08-statistical-physics-ii-spring-2005/resources/lecture-notes/">notes</a></td>
+          <td><a href="https://www.cambridge.org/core/books/statistical-physics-of-fields/06F49D11030FB3108683F413269DE945">book</a></td>
         </tr>
       </tbody>
     </table>
@@ -910,9 +977,9 @@
     <table>
       <tbody>
         <tr>
-          <td>Solid State Physics / [link]</td>
-          <td>[notes]</td>
-          <td>[book]</td>
+          <td>Quantum Information Theory / <a href="https://www.ocw.mit.edu/courses/8-370x-quantum-information-science-i-spring-2018/">link</a></td>
+          <td><a href="https://www.theory.caltech.edu/~preskill/ph219/chap5_15.pdf">notes</a></td>
+          <td><a href="https://www.cambridge.org/highereducation/books/quantum-computation-and-quantum-information/01E10196D0A682A6AEFFEA52D53BE9AE">book</a></td>
         </tr>
       </tbody>
     </table>
@@ -921,9 +988,9 @@
     <table>
       <tbody>
         <tr>
-          <td>Nuclear Physics / [link]</td>
-          <td>[notes]</td>
-          <td>[book]</td>
+          <td>Advanced Electromagnetism / <a href="https://ocw.mit.edu/courses/6-635-advanced-electromagnetism-spring-2003/">link</a></td>
+          <td><a href="https://ocw.mit.edu/courses/6-635-advanced-electromagnetism-spring-2003/download/">notes</a></td>
+          <td><a href="https://link.springer.com/book/10.1007/978-981-16-7802-8">book</a></td>
         </tr>
       </tbody>
     </table>
@@ -932,9 +999,9 @@
     <table>
       <tbody>
         <tr>
-          <td>Atomic and Molecular Physics / [link]</td>
-          <td>[notes]</td>
-          <td>[book]</td>
+          <td>Solid State Physics / <a href="https://ocw.mit.edu/courses/8-511-theory-of-solids-i-fall-2004/">link</a></td>
+          <td><a href="https://ocw.mit.edu/courses/8-511-theory-of-solids-i-fall-2004/pages/lecture-notes/">notes</a></td>
+          <td><a href="https://global.oup.com/academic/product/the-oxford-solid-state-basics-9780199680764">book</a></td>
         </tr>
       </tbody>
     </table>
@@ -943,9 +1010,31 @@
     <table>
       <tbody>
         <tr>
-          <td>General Relativity I / [link]</td>
-          <td>[notes]</td>
-          <td>[book]</td>
+          <td>Nuclear Physics / <a href="https://ocw.mit.edu/courses/8-701-introduction-to-nuclear-and-particle-physics-fall-2020/">link</a></td>
+          <td><a href="https://ocw.mit.edu/courses/8-701-introduction-to-nuclear-and-particle-physics-fall-2020/resources/lecture-notes/">notes</a></td>
+          <td><a href="https://www.cambridge.org/core/books/an-introduction-to-nuclear-physics/61ECD8D140962EF68B6E4BD5137B4C5B">book</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>Atomic and Molecular Physics / <a href="https://ocw.mit.edu/courses/8-421-atomic-and-optical-physics-i-spring-2014/">link</a></td>
+          <td><a href="https://www-thphys.physics.ox.ac.uk/people/SteveSimon/texmlhtml/LectureNotes.html">notes</a></td>
+          <td><a href="https://global.oup.com/academic/product/atomic-physics-9780198506959">book</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>General Relativity I / <a href="https://www.preposterousuniverse.com/grnotes/">link</a></td>
+          <td><a href="https://www.preposterousuniverse.com/wp-content/uploads/grnotes-one.pdf">notes</a></td>
+          <td><a href="https://www.cambridge.org/highereducation/books/spacetime-and-geometry/38EDABF9E2BADCE6FBCF2B22DC12BFFE">book</a></td>
         </tr>
       </tbody>
     </table>
@@ -958,9 +1047,9 @@
     <table>
       <tbody>
         <tr>
-          <td>General Relativity II / [link]</td>
-          <td>[notes]</td>
-          <td>[book]</td>
+          <td>General Relativity II / <a href="https://ocw.mit.edu/courses/8-962-general-relativity-spring-2020/">link</a></td>
+          <td><a href="https://ocw.mit.edu/courses/8-962-general-relativity-spring-2020/resources/lecture-notes/">notes</a></td>
+          <td><a href="https://www.cambridge.org/highereducation/books/spacetime-and-geometry/38EDABF9E2BADCE6FBCF2B22DC12BFFE">book</a></td>
         </tr>
       </tbody>
     </table>
@@ -969,9 +1058,9 @@
     <table>
       <tbody>
         <tr>
-          <td>Quantum Field Theory / [link]</td>
-          <td>[notes]</td>
-          <td>[book]</td>
+          <td>Quantum Field Theory / <a href="https://ocw.mit.edu/courses/8-324-relativistic-quantum-field-theory-ii-fall-2010/">link</a></td>
+          <td><a href="https://www.damtp.cam.ac.uk/user/tong/qft.htm">notes</a></td>
+          <td><a href="https://academic.oup.com/book/36442">book</a></td>
         </tr>
       </tbody>
     </table>
@@ -980,9 +1069,9 @@
     <table>
       <tbody>
         <tr>
-          <td>Particle Physics / [link]</td>
-          <td>[notes]</td>
-          <td>[book]</td>
+          <td>Particle Physics / <a href="https://ocw.mit.edu/courses/8-701-introduction-to-nuclear-and-particle-physics-fall-2020/">link</a></td>
+          <td><a href="https://ocw.mit.edu/courses/8-701-introduction-to-nuclear-and-particle-physics-fall-2020/resources/lecture-notes/">notes</a></td>
+          <td><a href="https://www.cambridge.org/core/books/introduction-to-elementary-particle-physics/FB7841E74DFEE051D81AD953E81E10DE">book</a></td>
         </tr>
       </tbody>
     </table>
@@ -991,9 +1080,9 @@
     <table>
       <tbody>
         <tr>
-          <td>Relativistic Quantum Information / [link]</td>
-          <td>[notes]</td>
-          <td>[book]</td>
+          <td>Relativistic Quantum Information / <a href="https://pirsa.org/c25064">link</a></td>
+          <td><a href="https://pdf.pirsa.org/files/15050109.pdf">notes</a></td>
+          <td><a href="https://www.mdpi.com/books/reprint/2971-relativistic-quantum-information">book</a></td>
         </tr>
       </tbody>
     </table>
@@ -1002,9 +1091,20 @@
     <table>
       <tbody>
         <tr>
-          <td>Quantum Foundations / [link]</td>
-          <td>[notes]</td>
-          <td>[book]</td>
+          <td>Quantum Foundations / <a href="https://pirsa.org/24010062">link</a></td>
+          <td><a href="https://pdf.pirsa.org/files/24010062.pdf">notes</a></td>
+          <td><a href="https://www.cambridge.org/core/books/foundations-of-quantum-mechanics/7D2F34BA2F54B51FBB33D557B2058D8E">book</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>Quantum Gravity / <a href="https://pirsa.org/c25014">link</a></td>
+          <td><a href="https://pdf.pirsa.org/files/25030027.pdf">notes</a></td>
+          <td><a href="https://www.cambridge.org/core/books/introduction-to-quantum-effects-in-gravity/23A1F0C929D8985A5A3DB319E9808AE8">book</a></td>
         </tr>
       </tbody>
     </table>
@@ -1014,6 +1114,50 @@
 <h2 id="research-notes">Research Notes</h2>
 
 <p>Here I will list some useful research notes that are freely available. I also have some more basic <a href="/assets/files/resources/notes/My%20Notes.pdf">notes</a> covering useful mathematical identities and basic properties plus physics unit conventions (but beware, it is a work in progress).</p>
+
+<h3 id="background-primers">Background Primers</h3>
+
+<ul>
+  <li>Contextuality and nonclassical resources / <a href="https://web.mit.edu/anandn/www/6.s979/index.html">notes</a></li>
+  <li>Unruh-DeWitt detectors and field-mediated interactions / <a href="https://arxiv.org/abs/1309.7281">notes</a></li>
+  <li>Relativistic quantum information primer / <a href="https://link.springer.com/chapter/10.1007/978-3-642-02871-7_8">notes</a></li>
+  <li>Projective simulation and interpretable agents / <a href="https://arxiv.org/abs/1305.1578">notes</a></li>
+</ul>
+
+<h3 id="paper-companion-notes">Paper Companion Notes</h3>
+
+<ul>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>Relativistic variational quantum circuits / <a href="/assets/files/talks/2026-03-27_RVQC_Stockholm.pptx">slides</a></td>
+          <td><a href="https://arxiv.org/abs/2411.00105">paper</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+  <li>Harvesting contextuality from the vacuum / <a href="https://arxiv.org/abs/2508.11773">paper</a></li>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>Multi-excitation projective simulation / <a href="/assets/files/talks/2024-03-20_MEPS_DPG.pptx">slides</a></td>
+          <td><a href="/assets/files/posters/2024-06-26_Quantum_MEPS_SeefeldQI.pdf">poster</a></td>
+          <td><a href="https://arxiv.org/abs/2402.10192">paper</a></td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+</ul>
+
+<h3 id="technical-references">Technical References</h3>
+
+<ul>
+  <li>Conventions and identities for relativistic quantum theory / <a href="/assets/files/resources/notes/My%20Notes.pdf">notes</a></li>
+  <li>Gaussian states, detectors, and correlation functions / <a href="https://arxiv.org/abs/2001.10010">notes</a></li>
+  <li>Hypergraphs, tensors, and many-body-inspired truncations / <a href="https://www2.physik.uni-muenchen.de/lehre/vorlesungen/sose_20/tensor_networks_20/skript/index.html">notes</a></li>
+</ul>
 
 <h2 id="mini-explainers">Mini-Explainers</h2>
 
@@ -1026,6 +1170,8 @@
 </ul>
 
 <h2 id="current-initiatives-and-institutions">Current Initiatives and Institutions</h2>
+
+<p>Many of these initiatives/institutions/hubs are tailored towards my own interests so don’t expect to find everything here.</p>
 
 <h3 id="initiatives">Initiatives</h3>
 
