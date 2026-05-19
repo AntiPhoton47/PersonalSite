@@ -259,6 +259,7 @@ def build_site_item(root_dir: Path, entry: Dict[str, Any]) -> Dict[str, Any]:
         "title": entry.get("site_title") or entry["title"],
         "date": entry["date"],
         "duration": entry.get("duration", ""),
+        "invited": bool(entry.get("invited")),
         "links": dict(entry.get("links", {})),
     }
     asset = entry.get("asset")
@@ -275,6 +276,8 @@ def render_site_block(talks: List[Dict[str, Any]], posters: List[Dict[str, Any]]
     lines = [RESEARCH_MARKER_START, "## Conference Talks"]
     for talk in talks:
         prefix = f"- {talk['event']}"
+        if talk.get("invited"):
+            prefix += " (invited talk)"
         title = (talk.get("title") or "").strip()
         video = talk.get("links", {}).get("video", "")
         slides = talk.get("links", {}).get("slides", "")
@@ -330,8 +333,11 @@ def render_cv_block(entries: List[Dict[str, Any]]) -> str:
         lines.append(
             rf"\textbf{{LeMaitre, Philip A.}}. “{talk['cv_title']}”. \\"
         )
+        event_line = talk["cv_event_line"]
+        if talk.get("invited"):
+            event_line = f"Invited talk, {event_line}"
         lines.append(
-            rf"{talk['cv_event_line']} \hfill\textit{{{{{talk['cv_date_text']}}}}}"
+            rf"{event_line} \hfill\textit{{{{{talk['cv_date_text']}}}}}"
         )
         lines.append("")
 

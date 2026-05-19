@@ -4,6 +4,7 @@
   title: A Universal Quantum Computer from Relativistic Motion
   date: '2025-04-11'
   duration: ''
+  invited: false
   links:
     poster: /assets/files/posters/2025-04-11_RVQC_QISS_2025.pdf
   site_order: 1
@@ -13,6 +14,7 @@
   title: Quantum Multi-Excitation Projective Simulation
   date: '2024-06-26'
   duration: ''
+  invited: false
   links:
     poster: /assets/files/posters/2024-06-26_Quantum_MEPS_SeefeldQI.pdf
   site_order: 2

@@ -1,9 +1,20 @@
+- id: talk-2026-03-26-context-harvest-hannover
+  kind: talk
+  event: Quantum Information Group Seminar
+  title: Harvesting Contextuality from the Vacuum
+  date: '2026-05-19'
+  duration: ''
+  invited: true
+  links:
+    slides: /assets/files/talks/2026-03-26_Context_Harvest_Hannover.pptx
+  site_order: -1
 - id: talk-2026-03-27-rvqc-stockholm
   kind: talk
   event: Quantum Foundations Group Seminar
   title: A Universal Quantum Computer From Relativistic Motion
   date: '2026-03-27'
   duration: ''
+  invited: true
   links:
     slides: /assets/files/talks/2026-03-27_RVQC_Stockholm.pptx
   site_order: 0
@@ -13,6 +24,7 @@
   title: A Universal Quantum Computer From Relativistic Motion
   date: '2025-06-25'
   duration: '3:26:54'
+  invited: false
   links:
     video: https://www.youtube.com/live/pAlDsCJH-ds?si=Mc8rZPqEzI948X2d
     slides: /assets/files/talks/2025-06-25_RVQC_RQIN.pptx
@@ -23,6 +35,7 @@
   title: A Universal Quantum Computer From Relativistic Motion
   date: '2024-08-07'
   duration: '32:48'
+  invited: false
   links:
     video: https://www.youtube.com/live/catSoE4G3WM?si=MojXIYPkMvzSPx70
     slides: /assets/files/talks/2024-08-07_RQML_RQIN.pptx
@@ -33,6 +46,7 @@
   title: ''
   date: '2025-09-16'
   duration: ''
+  invited: false
   links:
     slides: /assets/files/talks/2025-09-16_GroupRetreat.pptx
   site_order: 3
@@ -42,6 +56,7 @@
   title: A Multi-Excitation Projective Simulation Agent
   date: '2024-03-20'
   duration: ''
+  invited: false
   links:
     slides: /assets/files/talks/2024-03-20_MEPS_DPG.pptx
   site_order: 4
@@ -52,6 +67,7 @@
     Self-Consistent Field Theory
   date: '2022-11-05'
   duration: ''
+  invited: false
   links:
     slides: /assets/files/talks/2022-11-05_Polymer_SCFT_UW_36th_Symposium_ChemPhys.pptx
   site_order: 5
@@ -62,6 +78,7 @@
     Theory
   date: '2022-06-07'
   duration: ''
+  invited: false
   links:
     slides: /assets/files/talks/2022-06-07_Polymer_SCFT_CAP.pptx
   site_order: 6
@@ -71,6 +88,7 @@
   title: 'Thin-Shells as Neutron Stars: A Simple Stellar Model With Great Insight'
   date: '2019-11-20'
   duration: ''
+  invited: false
   links:
     slides: /assets/files/talks/2019-11-20_compact_stars_CUPC.pdf
   site_order: 7
