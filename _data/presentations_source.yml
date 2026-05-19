@@ -21,10 +21,11 @@ entries:
   asset: assets/files/talks/2025-09-16_GroupRetreat.pptx
   include_in_site: true
   include_in_cv: false
-  title: ''
-  site_title: ''
+  title: Relativistic Quantum Computing and Machine Learning
+  site_title: Relativistic Quantum Computing and Machine Learning
   cv_title: ''
   event: Innsbruck-Konstanz-Hannover Meeting on Physics and Philosophy
+  site_event_line: Innsbruck-Konstanz-Hannover Meeting on Physics and Philosophy (2025)
   cv_event_line: ''
   date: '2025-09-16'
   cv_date_text: ''
@@ -160,6 +161,22 @@ entries:
   site_order: 1
   duration: ''
   links: {}
+- id: poster-2026-04-23-contextuality-harvesting-bratislava-2026
+  kind: poster
+  asset: assets/files/posters/2026-04-23_Contextuality_Harvesting_Bratislava_2026.pdf
+  include_in_site: true
+  include_in_cv: true
+  title: Harvesting Contextuality from the Vacuum
+  site_title: Harvesting Contextuality from the Vacuum
+  cv_title: Harvesting Contextuality from the Vacuum
+  event: Observers and Causality in Quantum Gravity Conference
+  cv_event_line: Observers and Causality in Quantum Gravity Conference, Bratislava,
+    Slovakia
+  date: '2026-04-23'
+  cv_date_text: April 2026
+  site_order: -1
+  duration: ''
+  links: {}
 - id: poster-seefeld-2024
   kind: poster
   asset: assets/files/posters/2024-06-26_Quantum_MEPS_SeefeldQI.pdf
@@ -185,6 +202,7 @@ entries:
   site_title: A Universal Quantum Computer From Relativistic Motion
   cv_title: A Universal Quantum Computer From Relativistic Motion
   event: Quantum Foundations Group Seminar
+  site_event_line: Quantum Foundations Group Seminar, NORDITA, Stockholm (March 2026)
   cv_event_line: Quantum Foundations Group Seminar, NORDITA, Stockholm
   date: '2026-03-27'
   cv_date_text: Mar. 2026
@@ -203,9 +221,11 @@ entries:
   site_title: Harvesting Contextuality from the Vacuum
   cv_title: Harvesting Contextuality from the Vacuum
   event: Quantum Information Group Seminar
+  site_event_line: Quantum Information Group Seminar, Leibniz University Hannover
+    (April 2026)
   cv_event_line: Quantum Information Group Seminar, Leibniz University, Hannover
-  date: '2026-05-19'
-  cv_date_text: May 2026
+  date: '2026-04-01'
+  cv_date_text: April 2026
   duration: ''
   invited: true
   links: {}

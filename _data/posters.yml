@@ -1,6 +1,18 @@
+- id: poster-2026-04-23-contextuality-harvesting-bratislava-2026
+  kind: poster
+  event: Observers and Causality in Quantum Gravity Conference
+  event_line: Observers and Causality in Quantum Gravity Conference
+  title: Harvesting Contextuality from the Vacuum
+  date: '2026-04-23'
+  duration: ''
+  invited: false
+  links:
+    poster: /assets/files/posters/2026-04-23_Contextuality_Harvesting_Bratislava_2026.pdf
+  site_order: -1
 - id: poster-qiss-2025
   kind: poster
   event: QISS 2025 Conference
+  event_line: QISS 2025 Conference
   title: A Universal Quantum Computer from Relativistic Motion
   date: '2025-04-11'
   duration: ''
@@ -11,6 +23,7 @@
 - id: poster-seefeld-2024
   kind: poster
   event: 6th Seefeld Quantum Information Workshop
+  event_line: 6th Seefeld Quantum Information Workshop
   title: Quantum Multi-Excitation Projective Simulation
   date: '2024-06-26'
   duration: ''

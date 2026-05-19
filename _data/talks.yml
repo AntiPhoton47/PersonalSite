@@ -1,8 +1,10 @@
 - id: talk-2026-03-26-context-harvest-hannover
   kind: talk
   event: Quantum Information Group Seminar
+  event_line: Quantum Information Group Seminar, Leibniz University Hannover (April
+    2026)
   title: Harvesting Contextuality from the Vacuum
-  date: '2026-05-19'
+  date: '2026-04-01'
   duration: ''
   invited: true
   links:
@@ -11,6 +13,7 @@
 - id: talk-2026-03-27-rvqc-stockholm
   kind: talk
   event: Quantum Foundations Group Seminar
+  event_line: Quantum Foundations Group Seminar, NORDITA, Stockholm (March 2026)
   title: A Universal Quantum Computer From Relativistic Motion
   date: '2026-03-27'
   duration: ''
@@ -21,6 +24,7 @@
 - id: talk-rqin-2025
   kind: talk
   event: 15th Relativistic Quantum Information North Conference
+  event_line: 15th Relativistic Quantum Information North Conference
   title: A Universal Quantum Computer From Relativistic Motion
   date: '2025-06-25'
   duration: '3:26:54'
@@ -32,6 +36,7 @@
 - id: talk-rqin-2024
   kind: talk
   event: 14th Relativistic Quantum Information North Conference
+  event_line: 14th Relativistic Quantum Information North Conference
   title: A Universal Quantum Computer From Relativistic Motion
   date: '2024-08-07'
   duration: '32:48'
@@ -43,7 +48,8 @@
 - id: talk-ikhh-2025
   kind: talk
   event: Innsbruck-Konstanz-Hannover Meeting on Physics and Philosophy
-  title: ''
+  event_line: Innsbruck-Konstanz-Hannover Meeting on Physics and Philosophy (2025)
+  title: Relativistic Quantum Computing and Machine Learning
   date: '2025-09-16'
   duration: ''
   invited: false
@@ -53,6 +59,7 @@
 - id: talk-dpg-2024
   kind: talk
   event: DPG Spring Meeting 2024
+  event_line: DPG Spring Meeting 2024
   title: A Multi-Excitation Projective Simulation Agent
   date: '2024-03-20'
   duration: ''
@@ -63,6 +70,7 @@
 - id: talk-uw-2022
   kind: talk
   event: 36th Symposium on Chemical Physics
+  event_line: 36th Symposium on Chemical Physics
   title: Spontaneous Spherical Symmetry-Breaking in Open-Shell Atoms Through Polymer
     Self-Consistent Field Theory
   date: '2022-11-05'
@@ -74,6 +82,7 @@
 - id: talk-cap-2022
   kind: talk
   event: 2022 Canadian Association of Physicists Congress
+  event_line: 2022 Canadian Association of Physicists Congress
   title: Atomic Shell Structure in a Polymer-Based Approach to Orbital-Free Density-Functional
     Theory
   date: '2022-06-07'
@@ -85,6 +94,7 @@
 - id: talk-cupc-2019
   kind: talk
   event: Canadian Undergraduate Physics Conference 2019
+  event_line: Canadian Undergraduate Physics Conference 2019
   title: 'Thin-Shells as Neutron Stars: A Simple Stellar Model With Great Insight'
   date: '2019-11-20'
   duration: ''

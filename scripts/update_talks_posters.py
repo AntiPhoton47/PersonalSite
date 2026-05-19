@@ -256,6 +256,7 @@ def build_site_item(root_dir: Path, entry: Dict[str, Any]) -> Dict[str, Any]:
         "id": entry["id"],
         "kind": entry["kind"],
         "event": entry["event"],
+        "event_line": entry.get("site_event_line") or entry["event"],
         "title": entry.get("site_title") or entry["title"],
         "date": entry["date"],
         "duration": entry.get("duration", ""),
@@ -275,7 +276,7 @@ def build_site_item(root_dir: Path, entry: Dict[str, Any]) -> Dict[str, Any]:
 def render_site_block(talks: List[Dict[str, Any]], posters: List[Dict[str, Any]]) -> str:
     lines = [RESEARCH_MARKER_START, "## Conference Talks"]
     for talk in talks:
-        prefix = f"- {talk['event']}"
+        prefix = f"- {talk.get('event_line') or talk['event']}"
         if talk.get("invited"):
             prefix += " (invited talk)"
         title = (talk.get("title") or "").strip()
@@ -300,7 +301,7 @@ def render_site_block(talks: List[Dict[str, Any]], posters: List[Dict[str, Any]]
     lines.append("")
     lines.append("## Conference Posters")
     for poster in posters:
-        prefix = f"- {poster['event']}: {poster['title']}"
+        prefix = f"- {(poster.get('event_line') or poster['event'])}: {poster['title']}"
         poster_link = poster.get("links", {}).get("poster", "")
         if poster_link:
             prefix += f" / [poster]({poster_link})"
