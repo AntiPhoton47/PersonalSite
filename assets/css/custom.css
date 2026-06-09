@@ -1011,6 +1011,11 @@ html[data-theme-mode="light"] .page-shell__content h4 {
   overflow: visible;
 }
 
+.page__related-panel {
+  grid-column: 2;
+  width: 100%;
+}
+
 .page__related-title {
   margin: 0;
   font-size: 1.18rem;
@@ -1022,7 +1027,7 @@ html[data-theme-mode="light"] .page-shell__content h4 {
 }
 
 .page__related-section,
-.page__related-destinations-panel {
+.page__related-panel {
   padding: 1rem 1rem 1.1rem;
   border: 1px solid rgba(148, 163, 184, 0.22);
   border-radius: 1rem;
@@ -1039,11 +1044,16 @@ html[data-theme-mode="light"] .page-shell__content h4 {
   grid-auto-flow: column;
   grid-auto-columns: minmax(14rem, 15.75rem);
   gap: 0.85rem;
+  width: 100%;
+  max-width: 100%;
   margin-top: 0;
   justify-content: start;
   overflow-x: auto;
+  overflow-y: hidden;
   scroll-snap-type: x mandatory;
   padding-bottom: 0.25rem;
+  padding-right: 0.05rem;
+  box-sizing: border-box;
 }
 
 .page__related-card,
@@ -1103,10 +1113,17 @@ html[data-theme-mode="light"] .page-shell__content h4 {
 
 .page__related-section {
   margin: 0;
+  min-width: 0;
+  overflow: hidden;
 }
 
 .page__related-section .home-carousel-section__header {
   margin-bottom: 0.8rem;
+}
+
+.page__related-panel {
+  margin: 0;
+  min-width: 0;
 }
 
 .page__related-section .carousel-controls {
@@ -1137,7 +1154,8 @@ html[data-theme-mode="light"] .page-shell__content h4 {
 
 .page-shell > .page-shell__main,
 .page-shell > .archive,
-.page-shell > .page__related {
+.page-shell > .page__related,
+.page-shell > .page__related-panel {
   min-width: 0;
 }
 
@@ -2303,6 +2321,10 @@ html[data-theme-mode="light"] .research-graph__node {
   }
 
   .page__related {
+    grid-column: auto;
+  }
+
+  .page__related-panel {
     grid-column: auto;
   }
 

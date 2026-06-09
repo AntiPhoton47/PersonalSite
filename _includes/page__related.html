@@ -88,22 +88,22 @@
     {% endif %}
     </div>
   </section>
-
-  <section class="page__related-destinations-panel">
-    <h2 class="page__related-title page__related-title--destinations">{{ site.data.ui-text[site.locale].related_label | default: "Keep exploring" }}</h2>
-    <div class="related-destinations">
-      <a class="related-destinations__card" href="{{ '/posts/#explore-topics' | relative_url }}">
-        <span class="related-destinations__title">Browse by topic</span>
-        <span class="related-destinations__text">Move sideways into category, tag, and year archives.</span>
-      </a>
-      <a class="related-destinations__card" href="{{ '/research/' | relative_url }}">
-        <span class="related-destinations__title">Research overview</span>
-        <span class="related-destinations__text">Jump from blog posts into papers, talks, posters, and code.</span>
-      </a>
-      <a class="related-destinations__card" href="{{ '/resources/' | relative_url }}">
-        <span class="related-destinations__title">Resources</span>
-        <span class="related-destinations__text">Explore notes, explainers, and rendered code examples.</span>
-      </a>
-    </div>
-  </section>
 </div>
+
+<section class="page__related page__related-panel page__related-panel--destinations">
+  <h2 class="page__related-title page__related-title--destinations">{{ site.data.ui-text[site.locale].related_label | default: "Keep exploring" }}</h2>
+  <div class="related-destinations">
+    <a class="related-destinations__card" href="{{ '/posts/#explore-topics' | relative_url }}">
+      <span class="related-destinations__title">Browse by topic</span>
+      <span class="related-destinations__text">Move sideways into category, tag, and year archives.</span>
+    </a>
+    <a class="related-destinations__card" href="{{ '/research/' | relative_url }}">
+      <span class="related-destinations__title">Research overview</span>
+      <span class="related-destinations__text">Jump from blog posts into papers, talks, posters, and code.</span>
+    </a>
+    <a class="related-destinations__card" href="{{ '/resources/' | relative_url }}">
+      <span class="related-destinations__title">Resources</span>
+      <span class="related-destinations__text">Explore notes, explainers, and rendered code examples.</span>
+    </a>
+  </div>
+</section>
