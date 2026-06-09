@@ -118,10 +118,35 @@ Some of my favourite operas:
 - Le Nozze di Figaro, Mozart
 - Madama Butterfly, Puccini
 - Tosca, Puccini
+- Turandot, Puccini
 
 ## Art
 
-Museums and galleries are among my favourite places to wander. Whether it be contemporary art or medieval art, everything has something unique to say which will captivate you if you let it. I love all art, but I find myself enjoying modern impressionist and expressionist paintings along with renaissance masters such as Caravaggio and Michelangelo. I also love the absurdity and lack of spatial perspective of medieval art. Contemporary art can be hit or miss for me and part of its beauty is my lack of expectation for what I will see, but when I see a piece I really like, it will hold my attention for longer than the visit. 
+Museums and galleries are among my favourite places to wander. Whether it be contemporary art or medieval art, everything has something unique to say which will captivate you if you let it. I love all art, but I find myself enjoying modern impressionist and expressionist paintings along with renaissance masters such as Caravaggio and Michelangelo. I also love the absurdity and lack of spatial perspective of medieval art. Contemporary art can be hit or miss for me and part of its beauty is my lack of expectation for what I will see, but when I see a piece I really like, it will hold my attention for longer than the visit.
+
+Some of my favourite painters:
+- Michelangelo Buonarroti
+- Michelangelo Merisi da Caravaggio
+- Marc Chagall
+- Salvador Dali
+- Albrecht Dürer
+- Paul Gauguin
+- Wassily Kandinsky
+- Gustav Klimt
+- Oskar Kokoschka
+- Edouard Manet
+- Henri Matisse
+- Claude Monet
+- Edvard Munch
+- Pablo Picasso
+- Egon Schiele
+- Doménikos Theotokópoulos (El Greco)
+- Vincent van Gogh
+- Rembrandt van Rijn
+- Tiziano Vecellio
+- Johannes Vermeer
+- Leonardo da Vinci
+
 
 Some of my favourite galleries:
 - Albertina, Wien
