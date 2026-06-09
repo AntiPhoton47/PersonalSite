@@ -212,9 +212,9 @@ entries:
   auto_generated: true
   needs_review: true
   site_order: 0
-- id: talk-2026-03-26-context-harvest-hannover
+- id: talk-2026-05-19-context-harvest-hannover
   kind: talk
-  asset: assets/files/talks/2026-03-26_Context_Harvest_Hannover.pptx
+  asset: assets/files/talks/2026-05-19_Context_Harvest_Hannover.pptx
   include_in_site: true
   include_in_cv: true
   title: Harvesting Contextuality from the Vacuum
@@ -222,13 +222,33 @@ entries:
   cv_title: Harvesting Contextuality from the Vacuum
   event: Quantum Information Group Seminar
   site_event_line: Quantum Information Group Seminar, Leibniz University Hannover
-    (April 2026)
+    (May 2026)
   cv_event_line: Quantum Information Group Seminar, Leibniz University, Hannover
-  date: '2026-04-01'
-  cv_date_text: April 2026
+  date: '2026-05-19'
+  cv_date_text: May 2026
   duration: ''
   invited: true
   links: {}
   auto_generated: false
   needs_review: false
   site_order: -1
+- id: talk-2026-06-05-context-harvest-rqi-circuit-wien
+  kind: talk
+  asset: assets/files/talks/2026-06-05_Context_Harvest_RQI_Circuit_Wien.pptx
+  include_in_site: true
+  include_in_cv: true
+  title: Harvesting Contextuality from the Vacuum
+  site_title: Harvesting Contextuality from the Vacuum
+  cv_title: Harvesting Contextuality from the Vacuum
+  event: RQI Circuit 2026
+  site_event_line: RQI Circuit 2026, Wien (June 2026)
+  cv_event_line: RQI Circuit 2026, Wien, Austria
+  date: '2026-06-05'
+  cv_date_text: June 2026
+  duration: '7:02:09'
+  invited: false
+  links:
+    video: https://www.youtube.com/watch?v=gAh-DOPIScU
+  auto_generated: false
+  needs_review: false
+  site_order: -2

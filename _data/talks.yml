@@ -1,14 +1,26 @@
-- id: talk-2026-03-26-context-harvest-hannover
+- id: talk-2026-06-05-context-harvest-rqi-circuit-wien
+  kind: talk
+  event: RQI Circuit 2026
+  event_line: RQI Circuit 2026, Wien (June 2026)
+  title: Harvesting Contextuality from the Vacuum
+  date: '2026-06-05'
+  duration: '7:02:09'
+  invited: false
+  links:
+    video: https://www.youtube.com/watch?v=gAh-DOPIScU
+    slides: /assets/files/talks/2026-06-05_Context_Harvest_RQI_Circuit_Wien.pptx
+  site_order: -2
+- id: talk-2026-05-19-context-harvest-hannover
   kind: talk
   event: Quantum Information Group Seminar
-  event_line: Quantum Information Group Seminar, Leibniz University Hannover (April
+  event_line: Quantum Information Group Seminar, Leibniz University Hannover (May
     2026)
   title: Harvesting Contextuality from the Vacuum
-  date: '2026-04-01'
+  date: '2026-05-19'
   duration: ''
   invited: true
   links:
-    slides: /assets/files/talks/2026-03-26_Context_Harvest_Hannover.pptx
+    slides: /assets/files/talks/2026-05-19_Context_Harvest_Hannover.pptx
   site_order: -1
 - id: talk-2026-03-27-rvqc-stockholm
   kind: talk
