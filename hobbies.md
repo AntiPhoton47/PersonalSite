@@ -55,17 +55,50 @@ Photography makes me look harder at things I would otherwise pass by too quickly
 
 I am just an amateur iPhone photographer at this point in time, but one day I will own my very own high-end camera. Still, in this day and age you can do decently well with the iPhone camera. Here is a miniature gallery of some of my favourite shots:
 
-![A view of Festung Hohensalzburg.](/assets/images/Cool_shots/IMG_1456.jpeg)
-![An eye towards the Shard in London.](/assets/images/Cool_shots/IMG_2362.jpeg)
-![The calming waters below Mt. Vesuvio in Napoli.](/assets/images/Cool_shots/IMG_2864.jpeg)
-![Schloss Neuschwanstein near Füssen.](/assets/images/Cool_shots/IMG_4263.jpeg)
-![The elegant papal council seats of the Basilica di Santa Maria Gloriosa dei Frari in Venizia.](/assets/images/Cool_shots/IMG_4864.jpeg)
-![A view through a tree of Firenze.](/assets/images/Cool_shots/IMG_5093.jpeg)
-![A view of Kufstein through the archer slits of Festung Kufstein.](/assets/images/Cool_shots/IMG_5738.jpeg)
-![Another view of Kufstein over the icy steps up the Festung Kufstein.](/assets/images/Cool_shots/IMG_5739.jpeg)
-![The gorgeous mountain scenery of Seefeld at water level.](/assets/images/Cool_shots/IMG_6609.jpeg)
-![The beautiful mountain valley near Mutterberg in Tyrol, Austria.](/assets/images/Cool_shots/IMG_6651.jpeg)
-![A mesmerizing sunset in Waterloo, Canada.](/assets/images/Cool_shots/IMG_8987.jpeg)
+<figure>
+  <img src="/assets/images/Cool_shots/IMG_1456.jpeg" alt="A view of Festung Hohensalzburg.">
+  <figcaption>A view of Festung Hohensalzburg.</figcaption>
+</figure>
+<figure>
+  <img src="/assets/images/Cool_shots/IMG_2362.jpeg" alt="An eye towards the Shard in London.">
+  <figcaption>An eye towards the Shard in London.</figcaption>
+</figure>
+<figure>
+  <img src="/assets/images/Cool_shots/IMG_2864.jpeg" alt="The calming waters below Mt. Vesuvio in Napoli.">
+  <figcaption>The calming waters below Mt. Vesuvio in Napoli.</figcaption>
+</figure>
+<figure>
+  <img src="/assets/images/Cool_shots/IMG_4263.jpeg" alt="Schloss Neuschwanstein near Füssen.">
+  <figcaption>Schloss Neuschwanstein near Füssen.</figcaption>
+</figure>
+<figure>
+  <img src="/assets/images/Cool_shots/IMG_4864.jpeg" alt="The elegant papal council seats of the Basilica di Santa Maria Gloriosa dei Frari in Venizia.">
+  <figcaption>The elegant papal council seats of the Basilica di Santa Maria Gloriosa dei Frari in Venizia.</figcaption>
+</figure>
+<figure>
+  <img src="/assets/images/Cool_shots/IMG_5093.jpeg" alt="A view through a tree of Firenze.">
+  <figcaption>A view through a tree of Firenze.</figcaption>
+</figure>
+<figure>
+  <img src="/assets/images/Cool_shots/IMG_5738.jpeg" alt="A view of Kufstein through the archer slits of Festung Kufstein.">
+  <figcaption>A view of Kufstein through the archer slits of Festung Kufstein.</figcaption>
+</figure>
+<figure>
+  <img src="/assets/images/Cool_shots/IMG_5739.jpeg" alt="Another view of Kufstein over the icy steps up the Festung Kufstein.">
+  <figcaption>Another view of Kufstein over the icy steps up the Festung Kufstein.</figcaption>
+</figure>
+<figure>
+  <img src="/assets/images/Cool_shots/IMG_6609.jpeg" alt="The gorgeous mountain scenery of Seefeld at water level.">
+  <figcaption>The gorgeous mountain scenery of Seefeld at water level.</figcaption>
+</figure>
+<figure>
+  <img src="/assets/images/Cool_shots/IMG_6651.jpeg" alt="The beautiful mountain valley near Mutterberg in Tyrol, Austria.">
+  <figcaption>The beautiful mountain valley near Mutterberg in Tyrol, Austria.</figcaption>
+</figure>
+<figure>
+  <img src="/assets/images/Cool_shots/IMG_8987.jpeg" alt="A mesmerizing sunset in Waterloo, Canada.">
+  <figcaption>A mesmerizing sunset in Waterloo, Canada.</figcaption>
+</figure>
 
 ## Books
 
@@ -176,8 +209,14 @@ Some of my favourite galleries:
 
 I absolutely love artistic expression, especially in the form of painting, so one day I thought: "let's see what I can create." That amounted to mostly abstract painting since mastering painting requires immense dedication and a specific mode of expression that I simply cannot produce at this moment in time. However, I find bringing abstract figures to life very amusing and an excellent way to unwind. I have so far produced two works:
 
-![What does the ghost say to the sunflower?](/assets/images/Paintings&Sketches/IMG_3899.jpeg)
-![The mountainous teacup.](/assets/images/Paintings&Sketches/IMG_3950.jpeg)
+<figure>
+  <img src="/assets/images/Paintings&Sketches/IMG_3899.jpeg" alt="What does the ghost say to the sunflower?">
+  <figcaption>What does the ghost say to the sunflower?</figcaption>
+</figure>
+<figure>
+  <img src="/assets/images/Paintings&Sketches/IMG_3950.jpeg" alt="The mountainous teacup.">
+  <figcaption>The mountainous teacup.</figcaption>
+</figure>
 
 with many more on the way. One aspect of abstract painting that I find fascinating is how boldly it reflects the progress of human evolution. Modern humans started painting images of their direct perception without much regard for realism, then during the renaissance they refined their techniques to accurately portray the natural world. Then came new forms of expression which depicted nature and the human condition in a way that only vaguely resembles our perceptions, ultimately leading to the current state of painting: images almost complete divorced from reality. It is still an open issue when (if such a question actually makes sense to ask) exactly human consciousness and higher level reasoning came into the fore, but this transition is surely captured in our ability to imagine forms which could only have come from minds that have transcended natural evolution.
 
