@@ -9,7 +9,7 @@ comments: true
 show_blog_archive: true
 read_time: true
 header:
-  overlay_image: /assets/images/IMG_6115.JPG
+  overlay_image: /assets/images/Backgrounds/IMG_6115.JPG
 ---
 
 

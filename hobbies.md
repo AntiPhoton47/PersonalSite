@@ -55,17 +55,17 @@ Photography makes me look harder at things I would otherwise pass by too quickly
 
 I am just an amateur iPhone photographer at this point in time, but one day I will own my very own high-end camera. Still, in this day and age you can do decently well with the iPhone camera. Here is a miniature gallery of some of my favourite shots:
 
-![](/assets/images/Cool_shots/IMG_1456.jpeg)
-![](/assets/images/Cool_shots/IMG_2362.jpeg)
-![](/assets/images/Cool_shots/IMG_2864.jpeg)
-![](/assets/images/Cool_shots/IMG_4263.jpeg)
-![](/assets/images/Cool_shots/IMG_4864.jpeg)
-![](/assets/images/Cool_shots/IMG_5093.jpeg)
-![](/assets/images/Cool_shots/IMG_5738.jpeg)
-![](/assets/images/Cool_shots/IMG_5739.jpeg)
-![](/assets/images/Cool_shots/IMG_6609.jpeg)
-![](/assets/images/Cool_shots/IMG_6651.jpeg)
-![](/assets/images/Cool_shots/IMG_8987.jpeg)
+![A view of Festung Hohensalzburg.](/assets/images/Cool_shots/IMG_1456.jpeg)
+![An eye towards the Shard in London.](/assets/images/Cool_shots/IMG_2362.jpeg)
+![The calming waters below Mt. Vesuvio in Napoli.](/assets/images/Cool_shots/IMG_2864.jpeg)
+![Schloss Neuschwanstein near Füssen.](/assets/images/Cool_shots/IMG_4263.jpeg)
+![The elegant papal council seats of the Basilica di Santa Maria Gloriosa dei Frari in Venizia.](/assets/images/Cool_shots/IMG_4864.jpeg)
+![A view through a tree of Firenze.](/assets/images/Cool_shots/IMG_5093.jpeg)
+![A view of Kufstein through the archer slits of Festung Kufstein.](/assets/images/Cool_shots/IMG_5738.jpeg)
+![Another view of Kufstein over the icy steps up the Festung Kufstein.](/assets/images/Cool_shots/IMG_5739.jpeg)
+![The gorgeous mountain scenery of Seefeld at water level.](/assets/images/Cool_shots/IMG_6609.jpeg)
+![The beautiful mountain valley near Mutterberg in Tyrol, Austria.](/assets/images/Cool_shots/IMG_6651.jpeg)
+![A mesmerizing sunset in Waterloo, Canada.](/assets/images/Cool_shots/IMG_8987.jpeg)
 
 ## Books
 
@@ -176,8 +176,8 @@ Some of my favourite galleries:
 
 I absolutely love artistic expression, especially in the form of painting, so one day I thought: "let's see what I can create." That amounted to mostly abstract painting since mastering painting requires immense dedication and a specific mode of expression that I simply cannot produce at this moment in time. However, I find bringing abstract figures to life very amusing and an excellent way to unwind. I have so far produced two works:
 
-![](/assets/images/Paintings&Sketches/IMG_3899.jpeg)
-![](/assets/images/Paintings&Sketches/IMG_3950.jpeg)
+![What does the ghost say to the sunflower?](/assets/images/Paintings&Sketches/IMG_3899.jpeg)
+![The mountainous teacup.](/assets/images/Paintings&Sketches/IMG_3950.jpeg)
 
 with many more on the way. One aspect of abstract painting that I find fascinating is how boldly it reflects the progress of human evolution. Modern humans started painting images of their direct perception without much regard for realism, then during the renaissance they refined their techniques to accurately portray the natural world. Then came new forms of expression which depicted nature and the human condition in a way that only vaguely resembles our perceptions, ultimately leading to the current state of painting: images almost complete divorced from reality. It is still an open issue when (if such a question actually makes sense to ask) exactly human consciousness and higher level reasoning came into the fore, but this transition is surely captured in our ability to imagine forms which could only have come from minds that have transcended natural evolution.
 

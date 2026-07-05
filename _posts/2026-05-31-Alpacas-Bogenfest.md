@@ -9,7 +9,10 @@ comments: true
 show_blog_archive: true
 read_time: true
 header:
-  overlay_image: /assets/images/IMG_6115.JPG
+  overlay_image: /assets/images/Backgrounds/IMG_6115.JPG
 ---
 
 
+This year I finally turned the big three-O, and I have to say that after being around for three decades I feel just as spry as I did when I turned 20. The thing that has changed of course, is all the 
+
+For my birthday this year, I received a uniquely Tyrolian gift from my friend Desi: 

@@ -9,7 +9,7 @@ comments: true
 show_blog_archive: true
 read_time: true
 header:
-  overlay_image: /assets/images/IMG_6115.JPG
+  overlay_image: /assets/images/Backgrounds/IMG_6115.JPG
 ---
 
 I just got back from an extended nordic vacation where I visited Stockholm, Gothenburg, and Oslo. This was all on the back of an invitation I received from a collaborator to visit the Nordic Institute of Theoretical Physics (NORDITA) so we could push a couple of the projects we have going on currently. 

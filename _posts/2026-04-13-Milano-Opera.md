@@ -9,7 +9,7 @@ comments: true
 show_blog_archive: true
 read_time: true
 header:
-  overlay_image: /assets/images/IMG_6115.JPG
+  overlay_image: /assets/images/Backgrounds/IMG_6115.JPG
 ---
 
 My love of opera is a somewhat recent development that began shortly into my master's degree at Waterloo. It evolved principally from my admiration of classical music, which I was getting more into as a means for concentrating background music. Ironically, a lot of opera melodies and arias are quite striking and not the greatest background companions but I grew to really appreciate the technical aspects of the craft; not to mention that some of the most iconic pieces ever written were created for operas. Pieces such as Nessun Dorma by Giacomo Puccini, Largo al factotum della citta by Gioachino Rossini, or L'amour est un oiseau rebelle by Georges Bizet are firmly embedded in the public conciousness. 

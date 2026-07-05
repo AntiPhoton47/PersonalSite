@@ -9,7 +9,7 @@ comments: true
 show_blog_archive: true
 read_time: true
 header:
-  overlay_image: /assets/images/IMG_6115.JPG
+  overlay_image: /assets/images/Backgrounds/IMG_6115.JPG
 ---
 
 The towering mountains enclosing Innsbruck were looking particularly impressive today as my colleague and I prepared to welcome a group of aspiring scientists (high school students) from Italy to demonstrate our outreach booth. 
