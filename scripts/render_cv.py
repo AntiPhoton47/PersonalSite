@@ -93,6 +93,12 @@ def journal_name(entry: Dict[str, str]) -> str:
     return JOURNAL_ABBREVIATIONS.get(journal, journal)
 
 
+def journal_field_is_preformatted(journal: str) -> bool:
+    if not journal:
+        return False
+    return bool(re.search(r"\(\d{4}\)", journal) or re.search(r"\b\d+\b", journal))
+
+
 def entry_url(entry: Dict[str, str]) -> str:
     for field in ("cv_url", "url"):
         value = clean_bib_value(entry.get(field, ""))
@@ -110,6 +116,8 @@ def include_issue(entry: Dict[str, str]) -> bool:
 
 def format_venue(entry: Dict[str, str]) -> str:
     journal = journal_name(entry)
+    if journal_field_is_preformatted(journal):
+        return rf"\textit{{{tex_escape(journal)}}}."
     volume = clean_bib_value(entry.get("volume", ""))
     number = clean_bib_value(entry.get("number", ""))
     pages = clean_bib_value(entry.get("pages", ""))

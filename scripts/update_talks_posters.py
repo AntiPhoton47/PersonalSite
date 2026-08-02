@@ -327,33 +327,45 @@ def replace_research_block(research_md: Path, new_block: str) -> None:
 
 def render_cv_block(entries: List[Dict[str, Any]]) -> str:
     talks = [entry for entry in entries if entry.get("include_in_cv") and entry["kind"] == "talk"]
+    invited_talks = [entry for entry in talks if entry.get("invited")]
+    contributed_talks = [entry for entry in talks if not entry.get("invited")]
     posters = [entry for entry in entries if entry.get("include_in_cv") and entry["kind"] == "poster"]
 
-    lines = [r"\begin{rSection}{Presentations}", "", r"\textbf{Talks:}", ""]
-    for talk in talks:
+    def subsection_heading(title: str, first: bool = False) -> List[str]:
+        prefix = r"\vspace{0.15em}" if first else r"\vspace{0.65em}"
+        return [
+            prefix,
+            rf"\noindent\textsc{{\textbf{{{title}}}}}\par",
+            r"\sectionlineskip\noindent\rule{\linewidth}{0.4pt}\par\vspace{0.45em}",
+        ]
+
+    lines = []
+
+    if invited_talks:
+        lines.extend(subsection_heading("Invited Talks", first=True))
+    for talk in invited_talks:
         lines.append(
-            rf"\textbf{{LeMaitre, Philip A.}}. “{talk['cv_title']}”. \\"
+            rf"\textbf{{LeMaitre, Philip A.}}. “{talk['cv_title']}”. \hfill\textit{{{{{talk['cv_date_text']}}}}}\\"
         )
-        event_line = talk["cv_event_line"]
-        if talk.get("invited"):
-            event_line = f"Invited talk, {event_line}"
-        lines.append(
-            rf"{event_line} \hfill\textit{{{{{talk['cv_date_text']}}}}}"
-        )
+        lines.append(talk["cv_event_line"])
         lines.append("")
 
-    lines.append(r"\textbf{Posters:}")
-    lines.append("")
+    lines.extend(subsection_heading("Contributed Talks", first=not invited_talks))
+    for talk in contributed_talks:
+        lines.append(
+            rf"\textbf{{LeMaitre, Philip A.}}. “{talk['cv_title']}”. \hfill\textit{{{{{talk['cv_date_text']}}}}}\\"
+        )
+        lines.append(talk["cv_event_line"])
+        lines.append("")
+
+    lines.extend(subsection_heading("Posters"))
     for poster in posters:
         lines.append(
-            rf"\textbf{{LeMaitre, Philip A.}}. “{poster['cv_title']}”. \\"
+            rf"\textbf{{LeMaitre, Philip A.}}. “{poster['cv_title']}”. \hfill\textit{{{{{poster['cv_date_text']}}}}}\\"
         )
-        lines.append(
-            rf"{poster['cv_event_line']} \hfill\textit{{{{{poster['cv_date_text']}}}}}"
-        )
+        lines.append(poster["cv_event_line"])
         lines.append("")
 
-    lines.append(r"\end{rSection}")
     return "\n".join(lines)
 
 

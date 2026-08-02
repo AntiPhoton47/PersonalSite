@@ -10,13 +10,14 @@ mkdir -p "${CV_DIR}"
 
 BUILD_DIR="$(mktemp -d)"
 trap 'rm -rf "${BUILD_DIR}"' EXIT
-cp -R "${CV_DIR}" "${BUILD_DIR}/CV"
 
 pushd "${ROOT_DIR}" >/dev/null
 python3 scripts/update_talks_posters.py
 python3 scripts/render_cv.py \
   --bib _bibliography/publications.bib \
   --out assets/files/CV/auto_publications.tex
+
+cp -R "${CV_DIR}" "${BUILD_DIR}/CV"
 
 pushd "${BUILD_DIR}/CV" >/dev/null
 if command -v tectonic >/dev/null 2>&1; then
