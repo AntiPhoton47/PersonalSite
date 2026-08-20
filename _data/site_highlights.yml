@@ -31,6 +31,10 @@ featured_publications:
     category: "Paper"
 
 featured_presentations:
+  - title: "A Multi-Excitation Projective Simulation Agent"
+    url: "/assets/files/talks/2026-08-20_MEPS_IJCAI.pptx"
+    summary: "IJCAI 2026 conference talk on multi-excitation projective simulation and its many-body-physics-inspired inductive bias."
+    category: "Talk"
   - title: "A Universal Quantum Computer From Relativistic Motion"
     url: "https://www.youtube.com/live/pAlDsCJH-ds?si=Mc8rZPqEzI948X2d"
     summary: "Recorded conference talk from the 15th Relativistic Quantum Information North Conference."
