@@ -252,3 +252,22 @@ entries:
   auto_generated: false
   needs_review: false
   site_order: -2
+- id: talk-2026-08-20-meps-ijcai
+  kind: talk
+  asset: assets/files/talks/2026-08-20_MEPS_IJCAI.pptx
+  include_in_site: true
+  include_in_cv: true
+  title: A Multi-Excitation Projective Simulation Agent
+  site_title: A Multi-Excitation Projective Simulation Agent
+  cv_title: A Multi-Excitation Projective Simulation Agent
+  event: IJCAI 2026
+  site_event_line: IJCAI 2026, Bremen, Germany (August 2026)
+  cv_event_line: IJCAI 2026, Bremen, Germany
+  date: '2026-08-20'
+  cv_date_text: Aug. 2026
+  duration: ''
+  invited: false
+  links: {}
+  auto_generated: false
+  needs_review: false
+  site_order: -3

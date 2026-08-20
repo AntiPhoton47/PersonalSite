@@ -54,6 +54,7 @@ I have a number of interesting projects currently occupying my time, with many c
 
 <!-- presentations:start -->
 ## Conference Talks
+- IJCAI 2026, Bremen, Germany (August 2026): A Multi-Excitation Projective Simulation Agent / [slides](/assets/files/talks/2026-08-20_MEPS_IJCAI.pptx)
 - RQI Circuit 2026, Wien (June 2026): [Harvesting Contextuality from the Vacuum](https://www.youtube.com/watch?v=gAh-DOPIScU) (7:02:09) / [slides](/assets/files/talks/2026-06-05_Context_Harvest_RQI_Circuit_Wien.pptx)
 - Quantum Information Group Seminar, Leibniz University Hannover (May 2026) (invited talk): Harvesting Contextuality from the Vacuum / [slides](/assets/files/talks/2026-05-19_Context_Harvest_Hannover.pptx)
 - Quantum Foundations Group Seminar, NORDITA, Stockholm (March 2026) (invited talk): A Universal Quantum Computer From Relativistic Motion / [slides](/assets/files/talks/2026-03-27_RVQC_Stockholm.pptx)
