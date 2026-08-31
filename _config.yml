@@ -141,11 +141,13 @@ scholar:
 jekyll-archives:
   enabled:
     - year
+    - month
     - categories
     - tags
   layout: archive
   permalinks:
     year: '/:year/'
+    month: '/:year/:month/'
     tag: '/tag/:name/'
     category: '/category/:name/'
 

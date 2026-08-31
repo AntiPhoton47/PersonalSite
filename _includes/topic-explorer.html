@@ -26,7 +26,8 @@
           {% assign category_name = category_entry[0] %}
           {% assign category_posts = category_entry[1] %}
           {% assign category_info = site.data.post_taxonomy.categories[category_name] %}
-          <a class="topic-pill" href="{{ '/category/' | append: (category_name | slugify) | append: '/' | relative_url }}">
+          {% assign category_slug = category_name | slugify %}
+          <a class="topic-pill" href="{{ '/category/' | append: category_slug | append: '/' | relative_url }}">
             <span class="topic-pill__name">{{ category_name }}</span>
             <span class="topic-pill__count">{{ category_posts | size }}</span>
             {% if explorer_mode != "compact" and category_info and category_info.description %}
@@ -43,7 +44,8 @@
         {% for tag_entry in site.tags %}
           {% assign tag_name = tag_entry[0] %}
           {% assign tag_posts = tag_entry[1] %}
-          <a class="topic-pill" href="{{ '/tag/' | append: (tag_name | slugify) | append: '/' | relative_url }}">
+          {% assign tag_slug = tag_name | slugify %}
+          <a class="topic-pill" href="{{ '/tag/' | append: tag_slug | append: '/' | relative_url }}">
             <span class="topic-pill__name">{{ tag_name }}</span>
             <span class="topic-pill__count">{{ tag_posts | size }}</span>
           </a>

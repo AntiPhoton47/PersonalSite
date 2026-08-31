@@ -8,7 +8,7 @@
       {% assign month = g.name | slice: 5, 2 %}
       {% assign label = g.items[0].date | date: "%B %Y" %}
       <li>
-        <a href="{{ '/blog/' | append: year | append: '/' | append: month | append: '/' | relative_url }}">
+        <a href="{{ '/' | append: year | append: '/' | append: month | append: '/' | relative_url }}">
           {{ label }}
         </a>
       </li>

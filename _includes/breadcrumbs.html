@@ -1,5 +1,6 @@
 {% if page.collection == 'posts' %}
-  {% assign year_path = '/' | append: page.date | date: '%Y' | append: '/' %}
+  {% assign post_year = page.date | date: '%Y' %}
+  {% assign year_path = '/' | append: post_year | append: '/' %}
   {% assign primary_category = page.categories | first %}
   <nav class="breadcrumbs">
     <ol itemscope itemtype="https://schema.org/BreadcrumbList">
