@@ -6,19 +6,19 @@ toc: true
 toc_sticky: true
 ---
 
-This page collects a few causes and value commitments that matter to me outside of my formal research program. It is not meant to be exhaustive, but it does reflect the kinds of problems and communities I think are worth paying attention to.
+This page outlines a few causes and value commitments that are important to me outside of my research activities. It is not meant to be exhaustive, but it does reflect the kinds of problems and communities I think are worth paying attention to.
 
 ## Values
 
-I care a lot about intellectual honesty, scientific clarity, and trying to direct time and resources toward things that genuinely help. I am especially drawn to causes that combine moral seriousness with evidence-based thinking, long-term responsibility, and practical action.
+I care a lot about intellectual honesty and fairness, scientific clarity, critical thinking, barrier-free access to knowledge, and trying to direct time and resources toward things that genuinely help. I am especially drawn to causes that combine moral seriousness with evidence-based thinking, long-term responsibility, and practical action.
 
-I also think there is value in not separating technical life from moral life too sharply. The habits that matter in research -- being honest about uncertainty, revising beliefs when evidence shifts, and caring about clear explanation -- matter when deciding what to support and why.
+I also think there is value in bringing scientific practice to bare on moral life. The habits that matter in research -- being honest about uncertainty, revising beliefs when evidence shifts, and caring about clear explanation -- matter when deciding what to support and why.
 
 ## Cause Areas
 
 ### Effective Altruism and Better Giving
 
-I am interested in the effective altruism movement and the broader question of how to do the most good with limited time, attention, and resources. What I find most valuable here is the emphasis on comparing interventions carefully rather than defaulting to whatever is most visible or emotionally immediate.
+I am interested in the effective altruism movement and the broader question of how to do the most good with limited time, attention, and resources. What I find most valuable here is the emphasis on comparing interventions carefully rather than defaulting to whatever is most visible or poignant.
 
 Here are some places to get started:
 - [Centre for Effective Altruism](https://www.centreforeffectivealtruism.org/)
@@ -28,9 +28,9 @@ Here are some places to get started:
 
 ### Education and Scientific Communication
 
-I care about making difficult ideas more legible, especially in physics and mathematics. Good explanations widen access, lower barriers to entry, and give people a more realistic sense of what science actually is.
+I care about communicating difficult ideas in a digestable way, especially in physics and mathematics, because I believe that good explanations widen access, lower barriers to entry, and give people a more realistic sense of what science is actually about.
 
-This is part of why I care about talks, public communication, notes, and site-building in the first place. Explanation is not secondary to understanding; it is one of the ways understanding gets tested.
+This is part of why I care about talks, public communication, notes, and site-building in the first place. I think that explanation is the envoy of understanding, meaning that ones comprehension of a topic can be assessed from the clarity of their explanations.
 
 Here are some places to get started:
 - [Science Communication Institute](https://sci.institute/)
@@ -49,9 +49,7 @@ Here are some places to get started:
 
 ### Long-Term Thinking
 
-Some of the most important decisions people make have consequences that stretch far beyond the immediate present. I think it is worth taking existential risk, institutional quality, and the long-run trajectory of science and technology seriously.
-
-Long-term thinking can become vague if it is used as an excuse for abstraction without accountability. What interests me is the harder version: taking long horizons seriously while still asking what concrete actions help people and make sense now.
+Some of the most important decisions people make have consequences that stretch far beyond the immediate present. I think it is worth taking existential risk, institutional quality, and the long-run trajectory of science and technology seriously. Long-term thinking can become vague if it is used as an excuse for abstraction without accountability. What interests me is the harder version: taking long horizons seriously while still asking what concrete actions help people and make sense now.
 
 Here are some places to get started:
 - [Longview Philanthropy](https://longview.org/)
@@ -78,13 +76,6 @@ Here are some places to get started:
 - [Zooniverse](https://www.zooniverse.org/)
 - [European Citizen Science Platform](https://citizenscience.eu/)
 - [SciStarter](https://scistarter.org/)
-
-## Practical Attitudes
-
-- Take evidence seriously, but do not confuse a spreadsheet with wisdom.
-- Care about scale, neglectedness, and tractability, but also about whether a cause can support real understanding and durable action.
-- Leave room for moral uncertainty and revision.
-- Be suspicious of prestige and trend-following as substitutes for judgment.
 
 ## On This Site
 

@@ -3,7 +3,7 @@ title: "About"
 permalink: /about/
 ---
 
-I am a theoretical physics PhD candidate in the [group of Hans Briegel at the University of Innsbruck](https://www.uibk.ac.at/en/th-physik/qic-group/). My background is somewhat broad by design: across my studies and research I have worked in general relativity, quantum chemistry, scientific computing, reinforcement learning, and quantum information, and I have found that moving between those areas has given me a better feel for both the technical and conceptual sides of the subject. My current work sits at the intersection of quantum foundations, relativistic quantum information, and interpretable artificial intelligence. In practice, that has meant working on topics such as contextuality in quantum field-theoretic settings, relativistic models of quantum computation, and projective-simulation-based learning agents with physically motivated structure. What keeps drawing me to these problems is that they sit close to questions I find hard to ignore: what counts as information in a physical theory, what a learning or acting system can really know about its environment, and how much of that story is constrained by the structure of spacetime itself.
+I am a theoretical physics PhD candidate in the [group of Hans Briegel at the University of Innsbruck](https://www.uibk.ac.at/en/th-physik/qic-group/). My background is somewhat broad by design as I find many subjects fascinating and think quite highly of interdisciplinary research. I have worked in general relativity, quantum chemistry, scientific computing, explainable AI, relativistic quantum information, and quantum foundations. I have found that moving between those areas has given me a more holistic understanding of the discipline and helped me to conceptualize my ideas more broadly. My current work sits at the intersection of quantum foundations, relativistic quantum information, and interpretable artificial intelligence. In practice, that has meant working on topics such as contextuality in quantum field-theoretic settings, relativistic models of quantum computation, and reinforcement-learning agents with physically motivated structure. All of these relate to the general questions I am interested in: how do we model observers or agents in physical theories, what are the consequences of doing that, and what can those observers learn about those theories?
 
 - Current position: Theoretical Physics Ph. D. Candidate
 - Affiliations:
@@ -12,9 +12,9 @@ I am a theoretical physics PhD candidate in the [group of Hans Briegel at the Un
 
 ## Values and Causes
 
-Outside of research itself, I care about causes that reward clear thinking, broad compassion, and genuine usefulness. That includes strong scientific communication, education, better ways of doing good and helping those in need, and responsible approaches to artificial intelligence. I am especially interested in the effective altruism movement and related efforts to use evidence and careful reasoning to improve how we help others.
+Outside of research itself, I care about causes that reward clear thinking, broad compassion, and genuine usefulness. That includes strong scientific communication, education, better ways of doing good and helping those in need, open-access to knowledge, and responsible approaches to artificial intelligence. I am especially interested in the effective altruism movement and related efforts to use evidence and careful reasoning to improve how we help others.
 
-I wanted that part of the site to be explicit rather than buried in passing remarks, so I have collected it on a separate [Causes](/causes/) page.
+I wanted that part of the site to reflect my feelings towards it, so I have collected it on a separate [Causes](/causes/) page.
 
 ## Elsewhere on the Site
 

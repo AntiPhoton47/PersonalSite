@@ -10,16 +10,20 @@ Below you will find all information on my research interests and activities, inc
 
 ## Research Statement
 
-My research lies at the intersection of quantum foundations, relativistic quantum information, and interpretable artificial intelligence. A central theme running through this work is the role of physical structure in constraining what can be learned, processed, and operationally accessed by an agent embedded in the world. On one side, I study how nonclassical resources such as contextuality behave in relativistic and quantum-field-theoretic settings, with the broader aim of understanding what these resources can tell us about spacetime, causality, and the limits of physical knowledge. This includes work on contextuality harvesting from quantum fields and on relativistic models of quantum computation in which motion and field-mediated interactions become computational resources in their own right.
+My research lies at the intersection of quantum foundations, relativistic quantum information, and interpretable classical and quantum machine learning for scientific discovery. I am interested in how the physical structure of a theory constrains what an agent embedded in the world can know, represent, and compute from the operations available to it. This question connects my work on nonclassical resources in quantum fields, the emergence and reconstruction of spacetime, physical models of observers and their records, and learning agents whose internal representations can be related to the structure of their environment.
 
-In parallel, I work on interpretable learning models, especially projective simulation and its extensions, where physically motivated structure can be used both to improve performance and to preserve conceptual transparency. Here I am interested in the extent to which ideas from physics, such as locality, few-body structure, and dynamical constraints, can serve as useful inductive biases for learning agents without sacrificing interpretability. Taken together, these research directions reflect a common concern: how the formal structure of a theory shapes what systems can represent, infer, and do. I am particularly interested in problems where foundational questions and constructive models inform one another, so that advances in quantum theory, relativity, and machine learning can each sharpen the others.
+One branch of my research studies contextuality as both a resource and a probe of quantum theory outside the usual nonrelativistic setting. My work on contextuality harvesting asks when localized interactions with a quantum field make contextuality available in the measurement statistics of finite-dimensional probes, while my work on relativistic quantum computation investigates how motion, proper time, and field-mediated interactions can become computational resources. I am developing these questions through generalized and cohomological approaches to contextuality, with particular interest in how localization, causal structure, finite control, and operational equivalences determine whether locally accessible descriptions can be assembled into a common classical account. Relativistic and quantum-gravitational settings make these restrictions part of the physical problem and provide a natural setting in which to study what contextuality can tell us about spacetime and the limits of operational knowledge.
+
+The operational limits in these models also raise the question of how spacetime and classical records can arise from more fundamental quantum structure. I am interested in reconstructing geometric relations from correlations and localized probe statistics, as well as in algebraic and information-theoretic approaches in which spacetime is not assumed as a fixed background. The central issue is what geometry an embedded observer can infer at finite resolution, which ambiguities remain in the accessible data, and how physical clocks and stable records allow that observer to organize its observations. (*In collaboration with Johannes Fankhauser, I am developing a realist-relational formulation of quantum theory that begins from an inseparable whole and asks under which dynamical conditions a candidate observer-system division supports records that refer to system observables. Giving the subject-object relation a direct role in the formalism connects questions about observerhood and knowledge to relational observables, quantum gravity, and the emergence of a shared spacetime description.*)
+
+Interpretable machine learning gives me a constructive way to study these problems while remaining a research topic in its own right. I work with projective simulation and related learning architectures whose memories and transition rules remain open to direct analysis, and I study how locality, few-body structure, and dynamical constraints can serve as physically motivated inductive biases. My current directions include reinforcement-learning agents that acquire representations of spacetime from relativistic quantum-information tasks, agents that choose informative physical interactions for geometric reconstruction, and the relation between interpretability and performance in photonic quantum machine learning. By testing whether a learned memory predicts new observations and remains meaningful under changes of coordinates or controls, I aim to distinguish representations of recoverable physical structure from features tied only to a particular training task. I use these explicit models to make precise what a physical agent can observe, retain, infer, and use, allowing foundational questions and constructive methods to inform one another.
 
 ## Research Themes
 - Contextuality in relativistic settings and QFT
 - Relativistic quantum computing and machine learning
-- Projective simulation & explainable AI
-- AI for scientific discovery
-- Knowledge in quantum theory
+- Sophisticated and realistic models for memory & explainable AI
+- Interpretable AI for scientific discovery
+- Knowledge and observerhood in quantum theory
 
 {% include research-timeline.html %}
 {% include research-graph.html %}
@@ -49,6 +53,11 @@ I have a number of interesting projects currently occupying my time, with many c
 - Moving away from the gapless setting and loosening the parameter restrictions placed on the relativistic variational quantum computer that I developed with my colleagues T. R. Perche, M. Krumm, and H. J. Briegel
 - Equipping projective simulation to handle larger percept and action spaces in an interpretable way
 - Some more exotic setups for the contextuality harvesting protocol that I developed
+- Interpretable methods for quantum machine learning
+- Non-perturbative methods for the Unruh-DeWitt model
+- General characterizations of contextuality
+- Discovering and extracting spacetime structure from machine learning agents
+- A realist formulation of quantum theory that takes the observer more seriously
 
 {% include lay-summaries.html %}
 

@@ -23,9 +23,12 @@ Some of the awesome places I have been to:
 - Budapest, Hungary
 - Cape Town, South Africa
 - Chania, Greece
+- Copenhagen, Denmark
 - Edinburgh, UK
 - Firenze, Italy
 - Giza, Egypt
+- Gjirokastër, Albania
+- Hamburg, Germany
 - Istanbul, Türkiye
 - Köln, Germany
 - Krakow, Poland
@@ -42,18 +45,18 @@ Some of the awesome places I have been to:
 - Roma, Italy
 - Sevilla, Spain
 - Stockholm, Sweden
+- Tiranë, Albania
 - Toronto, Canada
 - Tulum, Mexico
 - Venizia, Italy
+- Verona, Italy
 - Wien, Austria
 
 More about these places in blog posts to come.
 
 ## Photography
 
-Photography makes me look harder at things I would otherwise pass by too quickly. I am especially drawn to light, texture, architecture, landscapes, and the accidental geometry of everyday scenes. A good photograph feels like a small act of attention.
-
-I am just an amateur iPhone photographer at this point in time, but one day I will own my very own high-end camera. Still, in this day and age you can do decently well with the iPhone camera. Here is a miniature gallery of some of my favourite shots:
+Photography makes me look harder at things I would otherwise pass by too quickly. I am especially drawn to light, texture, architecture, landscapes, and the accidental geometry of everyday scenes. I am just an amateur iPhone photographer at this point in time, but one day I will own my very own high-end camera. Still, in this day and age you can do decently well with the iPhone camera. Here is a miniature gallery of some of my favourite shots:
 
 <figure>
   <img src="/assets/images/Cool_shots/IMG_1456.jpeg" alt="A view of Festung Hohensalzburg.">
@@ -131,7 +134,7 @@ Some of my favourite books:
 
 Film scratches a different itch than books. I tend to enjoy movies with a strong atmosphere, visual patience, clear stylistic point of view, or strong character development rather than a purely plot-driven spectacle. That is not to say that a good plot wont rope me in though. Let it be known that I am also a sucker for science fiction, even if it normally would not be the best of movies.
 
-With the rise of streaming services, less people are attending screenings in cinemas worldwide, which is a real shame because the cinema is the optimal way to  experience any movie. Deluxe surround sound systems, large high-resolution screens, and perfect geometry await those who venture to the cinema; films shot for IMAX screens are particularly recommended. Beyond these (obvious) benefits, there is just something so magical to me about heading to the cinema, grabbing an oversized bag of popcorn and soda, and finding a cozy place to view the spectacle.
+With the rise of streaming services, less people are attending screenings in cinemas worldwide, which is a real shame because the cinema is the optimal way to  experience any movie. Deluxe surround sound systems, large high-resolution screens, and perfect geometry await those who venture to the cinema; films shot for IMAX screens are particularly recommended. Beyond these (obvious) benefits, there is just something so magical to me about heading to the cinema, grabbing an oversized bag of popcorn and soda, and finding a cozy place to settle down and view the show.
 
 Here are some movie lists I compiled on the app Letterboxd (which I highly recommend getting):
 - [Science Fiction Classics](https://boxd.it/guS7q)
@@ -139,7 +142,7 @@ Here are some movie lists I compiled on the app Letterboxd (which I highly recom
 
 ## Opera
 
-Opera is one of those art forms that feels slightly absurd until it suddenly feels indispensable. The plots may not be overly complex but the emotional force delivered by the actors through their singing and the beautiful classical music that accompanies it is second to none. 
+Opera is one of those art forms that feels slightly absurd. The plots may not be overly complex but the emotional force delivered by the actors through their singing and the beautiful classical music that accompanies it is second to none.
 
 It is really a shame that opera audiences have been declining over the years, but many opera companies have been trying their best to attract new, young faces to their productions. This comes in the form of (typically) heavy discounts for under 35's, so I encourage all people - but in particular young people - to experience the beauty of opera!
 
@@ -188,6 +191,7 @@ Some of my favourite galleries:
 - Galleria dell'Accademia di Firenze, Firenze
 - Gemäldegalerie, Berlin
 - Gemäldegalerie Alte Meister, Dresden
+- Hamburger Kunsthalle, Hamburg
 - Kunsthaus Zürich, Zürich
 - Kunsthistorisches Museum Wien, Wien
 - Leopold Museum, Wien
@@ -195,10 +199,12 @@ Some of my favourite galleries:
 - Museo Nacional Centro de Arte Reina Sofia, Madrid
 - Museo Nacional del Prado, Madrid
 - Nasjonalmuseet, Oslo
+- Ny Carlsberg Glyptothek, Copenhagen
 - Palazzo Pitti, Firenze
 - Picasso Museum Barcelona, Barcelona
 - Rijksmuseum, Amsterdam
 - Schloss Belvedere, Wien
+- Statens Museum for Kunst, Copenhagen
 - Tate Modern, London
 - The National Gallery, London
 - Thyssen-Bornemisza National Museum, Madrid
@@ -222,6 +228,10 @@ with many more on the way. One aspect of abstract painting that I find fascinati
 
 ## Writing
 
-Writing matters to me both as expression and as a tool for thought. A lot of the time I only know what I think once I have tried to put it into sentences that can survive being read the next day.
+Writing matters to me both as expression and as a tool for thought (especially with my chaotic brain), since a lot of the time I only know what I think once I have tried to wrestle it onto the page.
 
 I am currently trying to coerce myself into writing short stories, so hopefully this will pan out to be a great creative outlet for me, in addition to the blog I have just started. Stay tuned for some light (hopefully coherent) reading.
+
+## Fitness and Weightlifting
+
+I think it is important to take care of your body as you only have a finite time on this planet that you should make the most out of. I bought myself a touring bike a few years ago and I regularly cycle around the city as well as on longer tours through the countryside. I find it deeply relaxing to just forget everything and only focus on my existence in the moment while cruising through the open country (preferably with a view of the mountains). I have also invested considerable time into understanding how the musculature and metabolic processes of the body work, in an effort to make more informed living choices and to ensure I am getting the maximum gains at the gym I can. I do weightlifting often at the gym, mainly focusing on compound exercises that I combine to achieve full-body coverage each session.
